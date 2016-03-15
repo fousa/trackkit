@@ -25,5 +25,10 @@ class WaypointSpec: QuickSpec {
             pending("should have an age of gpx data") {}
             pending("should have a DGPS station id") {}
         }
+        
+        describe("waypoints") {
+            pending("should not have waypoints") {}
+            pending("should have waypoints") {}
+        }
     }
 }
