@@ -5,4 +5,7 @@ xcode_project: Example/GPXKit.xcworkspace
 xcode_scheme: GPXKit-Example
 
 script:
-- pod lib lint
+  - set -o pipefail
+  - xcodebuild -version
+  - xcodebuild -showsdks
+  - xcodebuild -workspace "Example/GPXKit.xcworkspace" -scheme "GPXKit-Example" -sdk "iphonesimulator9.2" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c;
