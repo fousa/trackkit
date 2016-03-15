@@ -1,6 +1,6 @@
 # GPXKit
 
-[![CI Status](http://img.shields.io/travis/Jelle Vandebeeck/GPXKit.svg?style=flat)](https://travis-ci.org/fousa/gpxkit)
+[![CI Status](http://img.shields.io/travis/fousa/gpxkit.svg?style=flat)](https://travis-ci.org/fousa/gpxkit)
 [![Version](https://img.shields.io/cocoapods/v/GPXKit.svg?style=flat)](http://cocoapods.org/pods/GPXKit)
 [![License](https://img.shields.io/cocoapods/l/GPXKit.svg?style=flat)](http://cocoapods.org/pods/GPXKit)
 [![Platform](https://img.shields.io/cocoapods/p/GPXKit.svg?style=flat)](http://cocoapods.org/pods/GPXKit)
