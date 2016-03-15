@@ -1,0 +1,25 @@
+{
+  "name": "GPXKit",
+  "version": "0.1.0",
+  "summary": "A short description of GPXKit.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/GPXKit",
+  "license": "MIT",
+  "authors": {
+    "Jelle Vandebeeck": "jelle@fousa.be"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/GPXKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "GPXKit": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
