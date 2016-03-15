@@ -10,7 +10,7 @@
 		2BAE4A579B22A11079307964 /* Pods_GPXKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC789E805664DCD53643471 /* Pods_GPXKit_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* CommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* CommonTests.swift */; };
 		622BF6CB1C98BE77008CE828 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 622BF6CA1C98BE77008CE828 /* Default-568h@2x.png */; };
 		8920824BEB7A02901CEC9EF8 /* Pods_GPXKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E948E09597994C6C28F6960 /* Pods_GPXKit_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -36,7 +36,7 @@
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* GPXKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPXKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* CommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTests.swift; sourceTree = "<group>"; };
 		622BF6CA1C98BE77008CE828 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		6E948E09597994C6C28F6960 /* Pods_GPXKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPXKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D78A64EDAA2871A412ECFF7 /* Pods-GPXKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPXKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GPXKit_Tests/Pods-GPXKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACEB1AFB9204008FA782 /* CommonTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -360,7 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* CommonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
