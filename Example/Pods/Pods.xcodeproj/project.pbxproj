@@ -29,7 +29,6 @@
 		3A92AEE86034356AF8987F20EE1F82DF /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B6303CCFDEBF93094E92D50CAFF38 /* EndWith.swift */; };
 		3AEAC447B09E7AABC140654C8529BC94 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43EEEBE209F0CF242FBC231937E6922 /* MatcherFunc.swift */; };
 		41B18E34C4DF5D16AAC77B1722A07698 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF695047E0AAFB3CA54EC10F0E97FD3 /* Configuration.swift */; };
-		42A789DB3BA06412DC9558A61E77CD3D /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99212C1434A84B7D1D722B27428A91AE /* ReplaceMe.swift */; };
 		43743012FDA71E46121B41C83A4ECE2E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279AA6492631DEFA8C439A9C088EEB8A /* XCTest.framework */; };
 		46A637A37A8153DD0CC8D0DCF2D923A6 /* GPXKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91574A7DCEDFF94227B68E96EBC0824C /* GPXKit-dummy.m */; };
 		488FC857D6464EBF02C590A1F5BCEF2F /* Pods-GPXKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2579707846A31D025358AE3BA3BEBB55 /* Pods-GPXKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,6 +40,13 @@
 		5BAC56301131A14247C5A5B6AA5F7200 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E3634125A20B9BA58962919B08DDC /* Closures.swift */; };
 		6238D16BAB99DC51758BC466451EF3DE /* GPXKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F12D2FDF3FBF7551BC39901FEF4748A1 /* GPXKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		628820B7B668CCFAFE8D8A067A934A8C /* Callsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D6E41BA9F922E7BBD3A24B7E5D00A /* Callsite.swift */; };
+		6297A9AC1C98C86700686120 /* GKFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9AB1C98C86700686120 /* GKFile.swift */; };
+		6297A9AE1C98C8B800686120 /* GKLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9AD1C98C8B800686120 /* GKLink.swift */; };
+		6297A9B01C98C8F800686120 /* GKBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9AF1C98C8F800686120 /* GKBounds.swift */; };
+		6297A9B21C98C92700686120 /* GKRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9B11C98C92700686120 /* GKRoute.swift */; };
+		6297A9B41C98C99400686120 /* GKPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9B31C98C99400686120 /* GKPoint.swift */; };
+		6297A9B61C98CBFB00686120 /* GKTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9B51C98CBFB00686120 /* GKTrack.swift */; };
+		6297A9B81C98CC6000686120 /* GKTrackSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9B71C98CC6000686120 /* GKTrackSegment.swift */; };
 		6C221769202DFDF9E03B3483A8C39FDC /* Pods-GPXKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B4DF4541B28EFEDFC48C192FBFEF60 /* Pods-GPXKit_Example-dummy.m */; };
 		72DF9F304DAA9BFC418AE2B1AA8E0D00 /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = AE670FBBCC7FBB0E81F05DA0C8EAAEE5 /* QuickConfiguration.m */; };
 		73695FA6A6CDFBB13C0CC73C2E5126C0 /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E9634CF58B22F95DF5AA222CDAF9B8 /* Nimble-dummy.m */; };
@@ -179,6 +185,13 @@
 		5D6A2E71DBC9D0DE17402BCFCFEEBDB2 /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
 		616BFD5BF73AEF373E5250D05560A338 /* Quick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Quick-dummy.m"; sourceTree = "<group>"; };
 		62241019A9DFE31F82A2CDF8690A163C /* QuickSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpec.m; path = Quick/QuickSpec.m; sourceTree = "<group>"; };
+		6297A9AB1C98C86700686120 /* GKFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKFile.swift; sourceTree = "<group>"; };
+		6297A9AD1C98C8B800686120 /* GKLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKLink.swift; sourceTree = "<group>"; };
+		6297A9AF1C98C8F800686120 /* GKBounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKBounds.swift; sourceTree = "<group>"; };
+		6297A9B11C98C92700686120 /* GKRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKRoute.swift; sourceTree = "<group>"; };
+		6297A9B31C98C99400686120 /* GKPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKPoint.swift; sourceTree = "<group>"; };
+		6297A9B51C98CBFB00686120 /* GKTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKTrack.swift; sourceTree = "<group>"; };
+		6297A9B71C98CC6000686120 /* GKTrackSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKTrackSegment.swift; sourceTree = "<group>"; };
 		64F0BEE5B67844F0E333920C2CB3416C /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		64F492985EB6550A418DD3DB1BCDE146 /* NSString+QCKSelectorName.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+QCKSelectorName.h"; path = "Quick/NSString+QCKSelectorName.h"; sourceTree = "<group>"; };
 		6727AA774C6723AFCA6CFCEF099071C7 /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
@@ -200,7 +213,6 @@
 		8E12C6F645E5DC0EDB23023A394F1CB1 /* BeLessThanOrEqual.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThanOrEqual.swift; path = Nimble/Matchers/BeLessThanOrEqual.swift; sourceTree = "<group>"; };
 		91574A7DCEDFF94227B68E96EBC0824C /* GPXKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GPXKit-dummy.m"; sourceTree = "<group>"; };
 		94A039912FDC46FCB2AF6DCEEB91ADB4 /* World+DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "World+DSL.h"; path = "Quick/DSL/World+DSL.h"; sourceTree = "<group>"; };
-		99212C1434A84B7D1D722B27428A91AE /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		9B7B38253A1BCE6F5991D9429C783170 /* GPXKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GPXKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C2167BCC31569879D0C756E0643C771 /* Pods-GPXKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GPXKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		A03BA625FC7457F26EEF311D0DFEF7BB /* Pods-GPXKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GPXKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -354,7 +366,8 @@
 		2A064C885DFF1066B154A4D5BCEBCD5E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				99212C1434A84B7D1D722B27428A91AE /* ReplaceMe.swift */,
+				6297A9A91C98C83F00686120 /* Models */,
+				6297A9AA1C98C83F00686120 /* Parser */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -401,6 +414,27 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/GPXKit";
+			sourceTree = "<group>";
+		};
+		6297A9A91C98C83F00686120 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6297A9AF1C98C8F800686120 /* GKBounds.swift */,
+				6297A9AB1C98C86700686120 /* GKFile.swift */,
+				6297A9AD1C98C8B800686120 /* GKLink.swift */,
+				6297A9B31C98C99400686120 /* GKPoint.swift */,
+				6297A9B11C98C92700686120 /* GKRoute.swift */,
+				6297A9B51C98CBFB00686120 /* GKTrack.swift */,
+				6297A9B71C98CC6000686120 /* GKTrackSegment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6297A9AA1C98C83F00686120 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 		64E98FF7B6454214F8290BB0AC208D8F /* Quick */ = {
@@ -724,7 +758,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -781,7 +815,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				46A637A37A8153DD0CC8D0DCF2D923A6 /* GPXKit-dummy.m in Sources */,
-				42A789DB3BA06412DC9558A61E77CD3D /* ReplaceMe.swift in Sources */,
+				6297A9B81C98CC6000686120 /* GKTrackSegment.swift in Sources */,
+				6297A9B21C98C92700686120 /* GKRoute.swift in Sources */,
+				6297A9AC1C98C86700686120 /* GKFile.swift in Sources */,
+				6297A9B01C98C8F800686120 /* GKBounds.swift in Sources */,
+				6297A9B41C98C99400686120 /* GKPoint.swift in Sources */,
+				6297A9B61C98CBFB00686120 /* GKTrack.swift in Sources */,
+				6297A9AE1C98C8B800686120 /* GKLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1040,6 +1080,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FC2F99C442BC60F801F241DF7F9F222 /* GPXKit.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1184,6 +1225,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FC2F99C442BC60F801F241DF7F9F222 /* GPXKit.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
