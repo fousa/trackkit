@@ -16,6 +16,7 @@
 		6297A9A21C98C36D00686120 /* WaypointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A11C98C36D00686120 /* WaypointTests.swift */; };
 		6297A9A51C98C4D500686120 /* RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A41C98C4D500686120 /* RouteTests.swift */; };
 		6297A9A71C98C69000686120 /* TrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A61C98C69000686120 /* TrackTests.swift */; };
+		6297A9C01C99611400686120 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9BF1C99611400686120 /* ParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		6297A9A11C98C36D00686120 /* WaypointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointTests.swift; sourceTree = "<group>"; };
 		6297A9A41C98C4D500686120 /* RouteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTests.swift; sourceTree = "<group>"; };
 		6297A9A61C98C69000686120 /* TrackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTests.swift; sourceTree = "<group>"; };
+		6297A9BF1C99611400686120 /* ParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
 		9619C591992377EFDB38B853 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACCB626DA3E6BB841B1419F4 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B0AEC724A4983534EB53F6E4 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,9 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				607FACEB1AFB9204008FA782 /* CommonTests.swift */,
+				6297A9BF1C99611400686120 /* ParserTests.swift */,
 				6297A9A41C98C4D500686120 /* RouteTests.swift */,
-				6297A9A11C98C36D00686120 /* WaypointTests.swift */,
 				6297A9A61C98C69000686120 /* TrackTests.swift */,
+				6297A9A11C98C36D00686120 /* WaypointTests.swift */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			files = (
 				6297A9A21C98C36D00686120 /* WaypointTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* CommonTests.swift in Sources */,
+				6297A9C01C99611400686120 /* ParserTests.swift in Sources */,
 				6297A9A51C98C4D500686120 /* RouteTests.swift in Sources */,
 				6297A9A71C98C69000686120 /* TrackTests.swift in Sources */,
 			);
