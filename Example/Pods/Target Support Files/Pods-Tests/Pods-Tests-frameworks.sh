@@ -84,12 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-GPXKit_Tests/GPXKit.framework"
-  install_framework "Pods-GPXKit_Tests/Nimble.framework"
-  install_framework "Pods-GPXKit_Tests/Quick.framework"
+  install_framework "Pods-Tests/GPXKit.framework"
+  install_framework "Pods-Tests/Nimble.framework"
+  install_framework "Pods-Tests/Quick.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-GPXKit_Tests/GPXKit.framework"
-  install_framework "Pods-GPXKit_Tests/Nimble.framework"
-  install_framework "Pods-GPXKit_Tests/Quick.framework"
+  install_framework "Pods-Tests/GPXKit.framework"
+  install_framework "Pods-Tests/Nimble.framework"
+  install_framework "Pods-Tests/Quick.framework"
 fi

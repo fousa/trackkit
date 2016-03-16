@@ -1,11 +1,11 @@
 PODS:
-  - GPXKit (0.1.0)
+  - GPXKit (1.0.0)
   - Nimble (3.0.0)
   - Quick (0.8.0)
 
 DEPENDENCIES:
   - GPXKit (from `../`)
-  - Nimble (= 3.0.0)
+  - Nimble (~> 3.0.0)
   - Quick (~> 0.8.0)
 
 EXTERNAL SOURCES:
@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GPXKit: 4a927276677582f3b19cf7d47edf837003c8442a
+  GPXKit: bf440348c8ac2bd5cc2021678747684d906d12da
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
 

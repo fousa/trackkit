@@ -1,13 +1,17 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'GPXKit_Example', :exclusive => true do
-  pod 'GPXKit', :path => '../'
+def common_pods
+  pod 'GPXKit', path: '../'
 end
 
-target 'GPXKit_Tests', :exclusive => true do
-  pod 'GPXKit', :path => '../'
+target 'Example', exclusive: true do
+  common_pods
+end
 
-  pod 'Quick', '~> 0.8.0'
-  pod 'Nimble', '3.0.0'
+target 'Tests', exclusive: true do
+  common_pods
+
+  pod 'Quick',  '~> 0.8.0'
+  pod 'Nimble', '~> 3.0.0'
 end
