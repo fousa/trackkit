@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/**/*'
 
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'AEXML', '~> 2.1.0'
 end
