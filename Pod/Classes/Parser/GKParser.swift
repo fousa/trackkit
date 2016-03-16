@@ -46,6 +46,17 @@ public struct GKParser {
     
 }
 
+extension AEXMLElement {
+    
+    var optionalValue: String? {
+        if name == AEXMLElement.errorElementName {
+            return nil
+        }
+        return value
+    }
+    
+}
+
 extension GKFile {
     
     private mutating func appendMetadata(fromDocument document: AEXMLDocument) {
@@ -54,9 +65,43 @@ extension GKFile {
         
         // Fetch the metadata from the metadata element.
         let metadata = document.root["metadata"]
-        name = metadata["name"].value
-        description = metadata["desc"].value
-        author = metadata["author"].value
+        name = metadata["name"].optionalValue
+        description = metadata["desc"].optionalValue
+        author = metadata["author"].optionalValue
+        
+        // Parse the metadata copyright notice.
+        copyrightNotice = GKCopyrightNotice(fromElement: metadata["copyright"])
+        
+        // Parse the metadata link.
+        link = GKLink(fromElement: metadata["link"])
+    }
+    
+}
+
+extension GKLink {
+    
+    init?(fromElement element: AEXMLElement?) {
+        guard let element = element else {
+            return nil
+        }
+        
+        mimeType = element["type"].optionalValue
+        text = element["text"].optionalValue
+        link = element.attributes["href"]
+    }
+    
+}
+
+extension GKCopyrightNotice {
+    
+    init?(fromElement element: AEXMLElement?) {
+        guard let element = element else {
+            return nil
+        }
+        
+        year = element["year"].intValue
+        license = element["license"].optionalValue
+        author = element.attributes["author"]
     }
     
 }

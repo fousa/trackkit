@@ -13,6 +13,18 @@ class CommonSpec: QuickSpec {
                                     + "<name>Jelle</name>"
                                     + "<desc>A GPX file</desc>"
                                     + "<author>Vandebeeck</author>"
+                    
+                                    // Copyright
+                                    + "<copyright author='Jelle Vandebeeck'>"
+                                        + "<year>2016</year>"
+                                        + "<license>MIT</license>"
+                                    + "</copyright>"
+                    
+                                    // Link
+                                    + "<link href='http://fousa.be'>"
+                                        + "<text>Fousa</text>"
+                                        + "<type>text/html</type>"
+                                    + "</link>"
                                 + "</metadata>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
@@ -36,8 +48,19 @@ class CommonSpec: QuickSpec {
                     expect(file.author).to(equal("Vandebeeck"))
                 }
                 
-                pending("should have a copyright notice") {}
-                pending("should have a link") {}
+                it("should have a copyright notice") {
+                    expect(file.copyrightNotice?.author).to(equal("Jelle Vandebeeck"))
+                    expect(file.copyrightNotice?.year).to(equal(2016))
+                    expect(file.copyrightNotice?.license).to(equal("MIT"))
+                }
+                
+                it("should have a link") {
+                    expect(file.link?.link).to(equal("http://fousa.be"))
+                    expect(file.link?.text).to(equal("Fousa"))
+                    print(file.link?.mimeType)
+                    expect(file.link?.mimeType).to(equal("text/html"))
+                }
+                
                 pending("should have a time") {}
                 pending("should have keywords") {}
                 pending("should have bounds") {}

@@ -11,4 +11,5 @@ import Foundation
 public struct GKLink {
     public var link: String?
     public var text: String?
+    public var mimeType: String?
 }
