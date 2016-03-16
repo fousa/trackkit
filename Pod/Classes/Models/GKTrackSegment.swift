@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct GKTrackSegment {
-    var points: [GKPoint]?
+public struct GKTrackSegment {
+    public var points: [GKPoint]?
 }

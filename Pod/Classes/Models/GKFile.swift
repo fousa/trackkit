@@ -8,20 +8,20 @@
 
 import Foundation
 
-struct GKFile {
-    var creator: String?
-    var name: String?
-    var description: String?
-    var author: String?
-    var copyrightNotice: String?
+public struct GKFile {
+    public var creator: String?
+    public var name: String?
+    public var description: String?
+    public var author: String?
+    public var copyrightNotice: GKCopyrightNotice?
     
-    var time: NSDate?
+    public var time: NSDate?
     
-    var link: GKLink?
+    public var link: GKLink?
     
-    var keyword: [String]?
-    var bounds: GKBounds?
-    var waypoints: [GKPoint]?
-    var routes: [GKRoute]?
-    var tracks: [GKTrack]?
+    public var keyword: [String]?
+    public var bounds: GKBounds?
+    public var waypoints: [GKPoint]?
+    public var routes: [GKRoute]?
+    public var tracks: [GKTrack]?
 }

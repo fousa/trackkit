@@ -36,6 +36,7 @@
 		59AF65967C95191774AF3D9063FA4F78 /* GKRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB35930ADE9B4FA21216C094ECE0FDAF /* GKRoute.swift */; };
 		5A6CD2336B46CCFFAAB37762F1B6B1F7 /* GKBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96154382BB33FF79DCF722FF15A582A /* GKBounds.swift */; };
 		607325FF7624708FB3FB101104E3D02B /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5434E17154ACDF547A9DC7F1647F2FB1 /* QuickConfiguration.m */; };
+		62866CD21C99AB77001E3C6F /* GKCopyrightNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62866CD11C99AB77001E3C6F /* GKCopyrightNotice.swift */; };
 		647875A2D006AB11BF61A9271B54D30D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DC374D5F4D2266F0B626591F471E38 /* Foundation.framework */; };
 		73695FA6A6CDFBB13C0CC73C2E5126C0 /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A602A8B7828D80C33600BB1B6F2CDC /* Nimble-dummy.m */; };
 		75BC05E0E39B702E1DA850B103714495 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866597F958F8D02B4D402586FAB3DCC5 /* XCTest.framework */; };
@@ -207,6 +208,7 @@
 		5FB7E7779941B286CECE2D9A735580B9 /* MatcherProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherProtocols.swift; path = Nimble/Matchers/MatcherProtocols.swift; sourceTree = "<group>"; };
 		61BBBD553EFB55F95C0B12619A494E3E /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		6207292DBCD23763AF12CD3922E71A92 /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
+		62866CD11C99AB77001E3C6F /* GKCopyrightNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKCopyrightNotice.swift; sourceTree = "<group>"; };
 		639DBE13EE250DB6B96E3A85A40F9323 /* Pods-Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-frameworks.sh"; sourceTree = "<group>"; };
 		64DFB87690166F9335B3461CDE8B1E21 /* GKTrackSegment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GKTrackSegment.swift; sourceTree = "<group>"; };
 		65CB53F4B232B13BDDB3854FC91DEE06 /* Pods-Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				DB35930ADE9B4FA21216C094ECE0FDAF /* GKRoute.swift */,
 				1A9F835488F063B1282C72764570D52F /* GKTrack.swift */,
 				64DFB87690166F9335B3461CDE8B1E21 /* GKTrackSegment.swift */,
+				62866CD11C99AB77001E3C6F /* GKCopyrightNotice.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -957,6 +960,7 @@
 				0A76FE25CF11675AAA1BCE28E62EC908 /* GKPoint.swift in Sources */,
 				59AF65967C95191774AF3D9063FA4F78 /* GKRoute.swift in Sources */,
 				20ED8B4A95503D9A8F48DC83691BB350 /* GKTrack.swift in Sources */,
+				62866CD21C99AB77001E3C6F /* GKCopyrightNotice.swift in Sources */,
 				95FEF283D235DCFC551AD80057CCD983 /* GKTrackSegment.swift in Sources */,
 				A4C7BAE1853F45C13CDAB74E9B19961C /* GPXKit-dummy.m in Sources */,
 			);

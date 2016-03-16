@@ -33,12 +33,30 @@ public struct GKParser {
     
     // MARK: - Parsing
     
-    public func parse() throws {
+    public func parse() throws -> GKFile {
         guard let document = try? AEXMLDocument(xmlData: data) else {
             throw GKParseError.InvalidFormat
         }
+        
+        var file = GKFile()
+        file.appendMetadata(fromDocument: document)
 
-        print(document)
+        return file
+    }
+    
+}
+
+extension GKFile {
+    
+    private mutating func appendMetadata(fromDocument document: AEXMLDocument) {
+        // Fetch the creator from the root element.
+        creator = document.root.attributes["creator"]
+        
+        // Fetch the metadata from the metadata element.
+        let metadata = document.root["metadata"]
+        name = metadata["name"].value
+        description = metadata["desc"].value
+        author = metadata["author"].value
     }
     
 }

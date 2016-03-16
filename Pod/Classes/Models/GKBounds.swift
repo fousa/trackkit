@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-struct GKBounds {
-    var minimumCoordinate: CLLocationCoordinate2D?
-    var maximumCoordinate: CLLocationCoordinate2D?
+public struct GKBounds {
+    public var minimumCoordinate: CLLocationCoordinate2D?
+    public var maximumCoordinate: CLLocationCoordinate2D?
 }

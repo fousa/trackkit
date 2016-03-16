@@ -9,26 +9,26 @@
 import Foundation
 import CoreLocation
 
-struct GKPoint {
-    var name: String?
-    var comment: String?
-    var description: String?
-    var source: String?
-    var symbol: String?
-    var type: String?
+public struct GKPoint {
+    public var name: String?
+    public var comment: String?
+    public var description: String?
+    public var source: String?
+    public var symbol: String?
+    public var type: String?
     
-    var satelites: Int?
+    public var satelites: Int?
     
-    var elevation: Float?
-    var meanSeaLevelHeight: Float?
-    var horizontalDilutionOfPrecision: Float?
-    var verticalDilutionOfPrecision: Float?
-    var positionDilutionOfPrecision: Float?
-    var ageOfTheGpxData: Float?
+    public var elevation: Float?
+    public var meanSeaLevelHeight: Float?
+    public var horizontalDilutionOfPrecision: Float?
+    public var verticalDilutionOfPrecision: Float?
+    public var positionDilutionOfPrecision: Float?
+    public var ageOfTheGpxData: Float?
     
-    var time: NSDate?
+    public var time: NSDate?
     
-    var coordinate: CLLocationCoordinate2D?
+    public var coordinate: CLLocationCoordinate2D?
     
-    var link: GKLink?
+    public var link: GKLink?
 }

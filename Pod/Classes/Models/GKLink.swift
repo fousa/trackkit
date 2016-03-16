@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GKLink {
-    var link: String?
-    var text: String?
+public struct GKLink {
+    public var link: String?
+    public var text: String?
 }

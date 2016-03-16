@@ -8,16 +8,16 @@
 
 import Foundation
 
-struct GKRoute {
-    var name: String?
-    var comment: String?
-    var description: String?
-    var source: String?
-    var type: String?
+public struct GKRoute {
+    public var name: String?
+    public var comment: String?
+    public var description: String?
+    public var source: String?
+    public var type: String?
     
-    var number: Int?
+    public var number: Int?
     
-    var link: GKLink?
+    public var link: GKLink?
     
-    var points: [GKPoint]?
+    public var points: [GKPoint]?
 }
