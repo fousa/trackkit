@@ -7,9 +7,12 @@
 //
 
 import Foundation
+import AEXML
 
 public enum GKParseError: ErrorType {
     case InvalidData
+    case InvalidFormat
+    case Empty
 }
 
 public struct GKParser {
@@ -26,6 +29,16 @@ public struct GKParser {
         }
         
         self.data = data
+    }
+    
+    // MARK: - Parsing
+    
+    public func parse() throws {
+        guard let document = try? AEXMLDocument(xmlData: data) else {
+            throw GKParseError.InvalidFormat
+        }
+
+        print(document)
     }
     
 }
