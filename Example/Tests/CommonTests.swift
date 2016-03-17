@@ -14,6 +14,7 @@ class CommonSpec: QuickSpec {
                                     + "<desc>A GPX file</desc>"
                                     + "<author>Vandebeeck</author>"
                                     + "<time>2016-03-10T10:05:12+02:00</time>"
+                                    + "<keywords>hiking, forest, wild</keywords>"
                     
                                     // Copyright
                                     + "<copyright author='Jelle Vandebeeck'>"
@@ -65,7 +66,10 @@ class CommonSpec: QuickSpec {
                     expect(file.time?.description).to(equal("2016-03-10 08:05:12 +0000"))
                 }
                 
-                pending("should have keywords") {}
+                it("should have keywords") {
+                    expect(file.keywords).to(equal(["hiking", "forest", "wild"]))
+                }
+                
                 pending("should have bounds") {}
             }
             

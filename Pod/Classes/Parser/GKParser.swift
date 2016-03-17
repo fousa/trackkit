@@ -91,6 +91,13 @@ extension GKFile {
         if let timeString = metadata["time"].optionalValue {
             time = NSDate(fromString: timeString, format: .ISO8601(nil))
         }
+        
+        // Parse the keywords.
+        if let keywordsString = metadata["keywords"].optionalValue {
+            keywords = keywordsString.componentsSeparatedByString(",").map {
+                $0.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+            }
+        }
     }
     
 }
