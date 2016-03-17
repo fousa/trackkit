@@ -8,6 +8,7 @@
 
 import Foundation
 import AEXML
+import AFDateHelper
 
 public enum GKParseError: ErrorType {
     case InvalidData
@@ -85,6 +86,11 @@ extension GKFile {
         
         // Parse the metadata link.
         link = GKLink(fromElement: metadata["link"])
+     
+        // Parse the time.
+        if let timeString = metadata["time"].optionalValue {
+            time = NSDate(fromString: timeString, format: .ISO8601(nil))
+        }
     }
     
 }

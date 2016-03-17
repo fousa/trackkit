@@ -13,6 +13,7 @@ class CommonSpec: QuickSpec {
                                     + "<name>Jelle</name>"
                                     + "<desc>A GPX file</desc>"
                                     + "<author>Vandebeeck</author>"
+                                    + "<time>2016-03-10T10:05:12+02:00</time>"
                     
                                     // Copyright
                                     + "<copyright author='Jelle Vandebeeck'>"
@@ -60,7 +61,10 @@ class CommonSpec: QuickSpec {
                     expect(file.link?.mimeType).to(equal("text/html"))
                 }
                 
-                pending("should have a time") {}
+                it("should have a time") {
+                    expect(file.time?.description).to(equal("2016-03-10 08:05:12 +0000"))
+                }
+                
                 pending("should have keywords") {}
                 pending("should have bounds") {}
             }
@@ -103,9 +107,17 @@ class CommonSpec: QuickSpec {
                         expect(file.link?.mimeType).to(beNil())
                     }
                     
-                    pending("should not have a time") {}
-                    pending("should not have keywords") {}
-                    pending("should not have bounds") {}
+                    it("should not have a time") {
+                        expect(file.time).to(beNil())
+                    }
+                    
+                    it("should not have keywords") {
+                        expect(file.keywords).to(beNil())
+                    }
+                    
+                    it("should not have bounds") {
+                        expect(file.bounds).to(beNil())
+                    }
                 }
             }
         }

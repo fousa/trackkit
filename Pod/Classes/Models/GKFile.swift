@@ -19,7 +19,7 @@ public struct GKFile {
     
     public var link: GKLink?
     
-    public var keyword: [String]?
+    public var keywords: [String]?
     public var bounds: GKBounds?
     public var waypoints: [GKPoint]?
     public var routes: [GKRoute]?
