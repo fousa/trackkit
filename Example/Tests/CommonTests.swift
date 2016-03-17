@@ -4,9 +4,9 @@ import GPXKit
 
 class CommonSpec: QuickSpec {
     override func spec() {
+        var file: GKFile!
+        
         describe("common data") {
-            var file: GKFile!
-            
             beforeEach {
                 let content = "<gpx creator='GPXKit'>"
                                 + "<metadata>"
@@ -57,7 +57,6 @@ class CommonSpec: QuickSpec {
                 it("should have a link") {
                     expect(file.link?.link).to(equal("http://fousa.be"))
                     expect(file.link?.text).to(equal("Fousa"))
-                    print(file.link?.mimeType)
                     expect(file.link?.mimeType).to(equal("text/html"))
                 }
                 
@@ -66,7 +65,49 @@ class CommonSpec: QuickSpec {
                 pending("should have bounds") {}
             }
             
-            context("empty file") {}
+            context("empty file") {
+                beforeEach {
+                    let content = "<gpx></gpx>"
+                    let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                    file = try! GKParser(data: data).parse()
+                }
+                
+                it("should not have a creator name") {
+                    expect(file.creator).to(beNil())
+                }
+                
+                context("metadata") {
+                    it("should not have a name") {
+                        expect(file.name).to(beNil())
+                    }
+                    
+                    it("should not have a description") {
+                        expect(file.description).to(beNil())
+                    }
+                    
+                    it("should not have a author") {
+                        expect(file.author).to(beNil())
+                    }
+                    
+                    it("should not have a copyright notice") {
+                        expect(file.copyrightNotice).to(beNil())
+                        expect(file.copyrightNotice?.author).to(beNil())
+                        expect(file.copyrightNotice?.year).to(beNil())
+                        expect(file.copyrightNotice?.license).to(beNil())
+                    }
+                    
+                    it("should not have a link") {
+                        expect(file.link).to(beNil())
+                        expect(file.link?.link).to(beNil())
+                        expect(file.link?.text).to(beNil())
+                        expect(file.link?.mimeType).to(beNil())
+                    }
+                    
+                    pending("should not have a time") {}
+                    pending("should not have keywords") {}
+                    pending("should not have bounds") {}
+                }
+            }
         }
     }
 }

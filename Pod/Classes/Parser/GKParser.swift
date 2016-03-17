@@ -49,10 +49,21 @@ public struct GKParser {
 extension AEXMLElement {
     
     var optionalValue: String? {
-        if name == AEXMLElement.errorElementName {
+        if isError {
             return nil
         }
         return value
+    }
+    
+    var optionalIntValue: Int? {
+        if isError {
+            return nil
+        }
+        return intValue
+    }
+    
+    var isError: Bool {
+        return name == AEXMLElement.errorElementName
     }
     
 }
@@ -80,10 +91,9 @@ extension GKFile {
 
 extension GKLink {
     
-    init?(fromElement element: AEXMLElement?) {
-        guard let element = element else {
-            return nil
-        }
+    init?(fromElement element: AEXMLElement) {
+        // When the element is an error, don't create the link instance.
+        guard !element.isError else { return nil }
         
         mimeType = element["type"].optionalValue
         text = element["text"].optionalValue
@@ -94,12 +104,11 @@ extension GKLink {
 
 extension GKCopyrightNotice {
     
-    init?(fromElement element: AEXMLElement?) {
-        guard let element = element else {
-            return nil
-        }
+    init?(fromElement element: AEXMLElement) {
+        // When the element is an error, don't create the copyright instance.
+        guard !element.isError else { return nil }
         
-        year = element["year"].intValue
+        year = element["year"].optionalIntValue
         license = element["license"].optionalValue
         author = element.attributes["author"]
     }
