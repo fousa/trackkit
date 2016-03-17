@@ -19,5 +19,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/**/*'
 
-  s.dependency 'AEXML', '~> 2.1.0'
+  s.dependency 'AEXML',        '~> 2.1.0'
+  s.dependency 'AFDateHelper', '~> 3.1.1'
 end

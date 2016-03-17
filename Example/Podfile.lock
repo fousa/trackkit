@@ -1,7 +1,9 @@
 PODS:
   - AEXML (2.1.0)
+  - AFDateHelper (3.1.1)
   - GPXKit (1.0.0):
     - AEXML (~> 2.1.0)
+    - AFDateHelper (~> 3.1.1)
   - Nimble (3.0.0)
   - Quick (0.8.0)
 
@@ -16,7 +18,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AEXML: 0e2f657fdc67e17905682a06d55583a863d80803
-  GPXKit: eaf8f40bd36e853e9ee27df001082930d9ed4d30
+  AFDateHelper: 22d6439a3529a144c89b7e6aa214ebbe4d5c2337
+  GPXKit: 34dd9426d02eb3a2da87f5dbc0f3f4a27100721a
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
 
