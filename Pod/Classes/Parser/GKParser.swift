@@ -80,7 +80,9 @@ extension GKFile {
         let metadata = document.root["metadata"]
         name = metadata["name"].optionalValue
         description = metadata["desc"].optionalValue
-        author = metadata["author"].optionalValue
+        
+        // Parse the author.
+        author = GKPerson(fromElement: metadata["author"])
         
         // Parse the metadata copyright notice.
         copyrightNotice = GKCopyrightNotice(fromElement: metadata["copyright"])
@@ -102,6 +104,32 @@ extension GKFile {
         
         // Parse the metadata bounds.
         bounds = GKBounds(fromElement: metadata["bounds"])
+    }
+    
+}
+
+extension GKPerson {
+    
+    init?(fromElement element: AEXMLElement) {
+        // When the element is an error, don't create the link instance.
+        guard !element.isError else { return nil }
+        
+        name = element["name"].optionalValue
+        email = ""
+        email = String(fromEmailElement: element["email"])
+        link = GKLink(fromElement: element["link"])
+    }
+    
+}
+
+extension String {
+    
+    init?(fromEmailElement element: AEXMLElement) {
+        guard let id = element.attributes["id"], let domain = element.attributes["domain"] else {
+            return nil
+        }
+        
+        self = "\(id)@\(domain)"
     }
     
 }

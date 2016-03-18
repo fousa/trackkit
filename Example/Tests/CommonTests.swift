@@ -12,9 +12,18 @@ class CommonSpec: QuickSpec {
                                 + "<metadata>"
                                     + "<name>Jelle</name>"
                                     + "<desc>A GPX file</desc>"
-                                    + "<author>Vandebeeck</author>"
                                     + "<time>2016-03-10T10:05:12+02:00</time>"
                                     + "<keywords>hiking, forest, wild</keywords>"
+                    
+                                    // Author
+                                    + "<author>"
+                                        + "<name>Jelle Vandebeeck</name>"
+                                        + "<email id='jelle' domain='vandebeeck.be' />"
+                                        + "<link href='http://fousa.be'>"
+                                            + "<text>Fousa</text>"
+                                            + "<type>text/html</type>"
+                                        + "</link>"
+                                    + "</author>"
                     
                                     // Copyright
                                     + "<copyright author='Jelle Vandebeeck'>"
@@ -50,7 +59,11 @@ class CommonSpec: QuickSpec {
                 }
                 
                 it("should have a author") {
-                    expect(file.author).to(equal("Vandebeeck"))
+                    expect(file.author?.name).to(equal("Jelle Vandebeeck"))
+                    expect(file.author?.email).to(equal("jelle@vandebeeck.be"))
+                    expect(file.author?.link?.link).to(equal("http://fousa.be"))
+                    expect(file.author?.link?.text).to(equal("Fousa"))
+                    expect(file.author?.link?.mimeType).to(equal("text/html"))
                 }
                 
                 it("should have a copyright notice") {

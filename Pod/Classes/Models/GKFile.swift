@@ -12,11 +12,11 @@ public struct GKFile {
     public var creator: String?
     public var name: String?
     public var description: String?
-    public var author: String?
     public var copyrightNotice: GKCopyrightNotice?
     
     public var time: NSDate?
     
+    public var author: GKPerson?
     public var link: GKLink?
     
     public var keywords: [String]?
