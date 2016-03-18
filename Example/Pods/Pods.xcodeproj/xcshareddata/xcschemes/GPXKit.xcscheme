@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4A4EC7AF227D966A8818FD3507F9A735"
+               BlueprintIdentifier = "3DF4A75B20AF6E92AD36014F8908C5E4"
                BuildableName = "GPXKit.framework"
                BlueprintName = "GPXKit"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4A4EC7AF227D966A8818FD3507F9A735"
+            BlueprintIdentifier = "3DF4A75B20AF6E92AD36014F8908C5E4"
             BuildableName = "GPXKit.framework"
             BlueprintName = "GPXKit"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4A4EC7AF227D966A8818FD3507F9A735"
+            BlueprintIdentifier = "3DF4A75B20AF6E92AD36014F8908C5E4"
             BuildableName = "GPXKit.framework"
             BlueprintName = "GPXKit"
             ReferencedContainer = "container:Pods.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4A4EC7AF227D966A8818FD3507F9A735"
+            BlueprintIdentifier = "3DF4A75B20AF6E92AD36014F8908C5E4"
             BuildableName = "GPXKit.framework"
             BlueprintName = "GPXKit"
             ReferencedContainer = "container:Pods.xcodeproj">

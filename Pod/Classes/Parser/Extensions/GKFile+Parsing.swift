@@ -45,4 +45,15 @@ extension GKFile {
         bounds = GKBounds(fromElement: metadata["bounds"])
     }
     
+    mutating func appendWaypoints(fromDocument document: AEXMLDocument) {
+        guard let elements = document.root["wpt"].all else {
+            return
+        }
+        
+        waypoints = [GKPoint]()
+        for _ in elements {
+            waypoints?.append(GKPoint())
+        }
+    }
+    
 }

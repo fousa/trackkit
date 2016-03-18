@@ -42,6 +42,7 @@ public struct GKParser {
         
         var file = GKFile()
         file.appendMetadata(fromDocument: document)
+        file.appendWaypoints(fromDocument: document)
 
         return file
     }

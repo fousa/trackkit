@@ -24,8 +24,24 @@ class WaypointSpec: QuickSpec {
         }
         
         describe("waypoints") {
-            pending("should not have waypoints") {}
-            pending("should have waypoints") {}
+            it("should not have waypoints") {
+                let content = "<gpx></gpx>"
+                let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                let file = try! GKParser(data: data).parse()
+            
+                expect(file.waypoints).to(beNil())
+            }
+            
+            it("should have waypoints") {
+                let content = "<gpx>"
+                                + "<wpt></wpt>"
+                                + "<wpt></wpt>"
+                            + "</gpx>"
+                let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                let file = try! GKParser(data: data).parse()
+                
+                expect(file.waypoints?.count) == 2
+            }
         }
     }
 }
