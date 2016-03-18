@@ -48,6 +48,7 @@ extension GKFile {
         bounds          <~ metadata["bounds"]
         waypoints       <~ element["wpt"].all
         routes          <~ element["rte"].all
+        tracks          <~ element["trk"].all
     }
     
 }
