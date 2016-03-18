@@ -20,7 +20,9 @@ func <~ <T: GKMappable>(inout lhs: T?, rhs: AEXMLElement) {
 }
 
 func <~ <T: GKMappable>(inout lhs: [T]?, rhs: [AEXMLElement]?) {
-    lhs = rhs?.flatMap { T(fromElement: $0) }
+    if let elements = rhs?.flatMap({ T(fromElement: $0) }) where elements.count > 0 {
+        lhs = elements
+    }
 }
 
 func <~ (inout lhs: String?, rhs: AEXMLElement) {

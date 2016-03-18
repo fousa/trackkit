@@ -15,13 +15,13 @@ class WaypointSpec: QuickSpec {
             
             it("should not have waypoints without a coordinate") {
                 let content = "<gpx>"
-                    + "<wpt></wpt>"
-                    + "<wpt></wpt>"
-                    + "</gpx>"
+                                + "<wpt></wpt>"
+                                + "<wpt></wpt>"
+                            + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
                 let file = try! GKParser(data: data).parse()
                 
-                expect(file.waypoints?.count) == 0
+                expect(file.waypoints).to(beNil())
             }
             
             it("should have waypoints") {

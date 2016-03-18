@@ -18,7 +18,7 @@ public final class GKCopyrightNotice {
 extension GKCopyrightNotice: GKMappable {
     
     convenience init?(fromElement element: AEXMLElement) {
-        // When the element is an error, don't create the copyright instance.
+        // When the element is an error, don't create the instance.
         if element.errored { return nil }
         self.init()
         

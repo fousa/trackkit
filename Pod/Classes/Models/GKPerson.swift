@@ -19,7 +19,7 @@ public final class GKPerson {
 extension GKPerson: GKMappable {
     
     convenience init?(fromElement element: AEXMLElement) {
-        // When the element is an error, don't create the link instance.
+        // When the element is an error, don't create the instance.
         if element.errored { return nil }
         self.init()
         
