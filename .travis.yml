@@ -6,6 +6,7 @@ xcode_scheme: GPXKit
 xcode_sdk: iphonesimulator9.2
 
 deploy:
+  skip_cleanup: true
   provider: script
   script:
     - source ~/.rvm/scripts/rvm
