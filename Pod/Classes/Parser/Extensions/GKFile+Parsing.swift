@@ -11,39 +11,29 @@ import AEXML
 
 extension GKFile {
     
-    mutating func appendMetadata(fromDocument document: AEXMLDocument) {
+    mutating func map(fromDocument document: AEXMLDocument) {
+        mapMetadata(fromDocument: document)
+        mapWaypoints(fromDocument: document)
+    }
+    
+    mutating func mapMetadata(fromDocument document: AEXMLDocument) {
         // Fetch the creator from the root element.
         creator = document.root.attributes["creator"]
         
         // Fetch the metadata from the metadata element.
         let metadata = document.root["metadata"]
-        name = metadata["name"].optionalValue
-        description = metadata["desc"].optionalValue
         
-        // Parse the author.
-        author = GKPerson(fromElement: metadata["author"])
-        
-        // Parse the metadata copyright notice.
-        copyrightNotice = GKCopyrightNotice(fromElement: metadata["copyright"])
-        
-        // Parse the metadata link.
-        link = GKLink(fromElement: metadata["link"])
-        
-        // Parse the time.
-        if let timeString = metadata["time"].optionalValue {
-            time = NSDate(fromString: timeString, format: .ISO8601(nil))
-        }
-        
-        // Parse the keywords.
-        keywords = metadata["keywords"].optionalValue?.componentsSeparatedByString(",").map {
-            $0.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-        }
-        
-        // Parse the metadata bounds.
-        bounds = GKBounds(fromElement: metadata["bounds"])
+        name            <~ metadata["name"]
+        description     <~ metadata["desc"]
+        author          <~ metadata["author"]
+        copyrightNotice <~ metadata["copyright"]
+        link            <~ metadata["link"]
+        time            <~ metadata["time"]
+        keywords        <~ metadata["keywords"]
+        bounds          <~ metadata["bounds"]
     }
     
-    mutating func appendWaypoints(fromDocument document: AEXMLDocument) {
+    mutating func mapWaypoints(fromDocument document: AEXMLDocument) {
         waypoints = document.root["wpt"].all?.flatMap { GKPoint(fromElement: $0) }
     }
     
