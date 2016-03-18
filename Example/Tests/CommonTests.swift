@@ -27,6 +27,9 @@ class CommonSpec: QuickSpec {
                                         + "<text>Fousa</text>"
                                         + "<type>text/html</type>"
                                     + "</link>"
+                    
+                                    // Bounds
+                                    + "<bounds minlat='42.1' minlon='-71.9' maxlat='42.4' maxlon='-71.1' />"
                                 + "</metadata>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
@@ -70,7 +73,12 @@ class CommonSpec: QuickSpec {
                     expect(file.keywords).to(equal(["hiking", "forest", "wild"]))
                 }
                 
-                pending("should have bounds") {}
+                it("should have bounds") {
+                    expect(file.bounds?.minimumCoordinate?.latitude).to(equal(42.1))
+                    expect(file.bounds?.minimumCoordinate?.longitude).to(equal(-71.9))
+                    expect(file.bounds?.maximumCoordinate?.latitude).to(equal(42.4))
+                    expect(file.bounds?.maximumCoordinate?.longitude).to(equal(-71.1))
+                }
             }
             
             context("empty file") {
