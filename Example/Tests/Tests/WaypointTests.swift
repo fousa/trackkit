@@ -135,6 +135,74 @@ class WaypointSpec: QuickSpec {
         }
         
         describe("empty waypoint") {
+            var point: GKPoint!
+            
+            beforeEach {
+                let content = "<gpx creator='GPXKit'>"
+                                + "<wpt lat='41.2' lon='-71.3'>"
+                                + "</wpt>"
+                            + "</gpx>"
+                let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                let file = try! GKParser(data: data).parse()
+                
+                point = file.waypoints?.first!
+            }
+            
+            it("should not have an elevation") {
+                expect(point.elevation).to(beNil())
+            }
+            
+            it("should not have a time") {
+                expect(point.time?.description).to(beNil())
+            }
+            
+            it("should not have a mean sea level height") {
+                expect(point.meanSeaLevelHeight).to(beNil())
+            }
+            
+            it("should not have a name") {
+                expect(point.name).to(beNil())
+            }
+            
+            it("should not have a comment") {
+                expect(point.comment).to(beNil())
+            }
+            
+            it("should not have a description") {
+                expect(point.description).to(beNil())
+            }
+            
+            it("should not have a source") {
+                expect(point.source).to(beNil())
+            }
+            
+            it("should not have a link") {
+                expect(point.link).to(beNil())
+            }
+            
+            it("should not have a symbol") {
+                expect(point.source).to(beNil())
+            }
+            
+            it("should not have satelites") {
+                expect(point.satelites).to(beNil())
+            }
+            
+            it("should not have a horizontal dilution of precision") {
+                expect(point.horizontalDilutionOfPrecision).to(beNil())
+            }
+            
+            it("should not have a vertical dilution of precision") {
+                expect(point.verticalDilutionOfPrecision).to(beNil())
+            }
+            
+            it("should not have a position dilution of precision") {
+                expect(point.positionDilutionOfPrecision).to(beNil())
+            }
+            
+            it("should not have an age of gpx data") {
+                expect(point.ageOfTheGpxData).to(beNil())
+            }
         }
     }
 }
