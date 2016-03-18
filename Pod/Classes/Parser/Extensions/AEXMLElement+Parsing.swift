@@ -25,6 +25,13 @@ extension AEXMLElement {
         return intValue
     }
     
+    var optionalFloatValue: Float? {
+        if errored {
+            return nil
+        }
+        return Float(doubleValue)
+    }
+    
     var errored: Bool {
         return name == AEXMLElement.errorElementName
     }

@@ -35,10 +35,8 @@ extension GKFile {
         }
         
         // Parse the keywords.
-        if let keywordsString = metadata["keywords"].optionalValue {
-            keywords = keywordsString.componentsSeparatedByString(",").map {
-                $0.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-            }
+        keywords = metadata["keywords"].optionalValue?.componentsSeparatedByString(",").map {
+            $0.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         }
         
         // Parse the metadata bounds.
@@ -46,14 +44,7 @@ extension GKFile {
     }
     
     mutating func appendWaypoints(fromDocument document: AEXMLDocument) {
-        guard let elements = document.root["wpt"].all else {
-            return
-        }
-        
-        waypoints = [GKPoint]()
-        for _ in elements {
-            waypoints?.append(GKPoint())
-        }
+        waypoints = document.root["wpt"].all?.flatMap { GKPoint(fromElement: $0) }
     }
     
 }
