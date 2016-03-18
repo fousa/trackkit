@@ -46,51 +46,51 @@ class CommonSpec: QuickSpec {
             }
             
             it("should have a creator name") {
-                expect(file.creator).to(equal("GPXKit"))
+                expect(file.creator) == "GPXKit"
             }
             
             context("metadata") {
                 it("should have a name") {
-                    expect(file.name).to(equal("Jelle"))
+                    expect(file.name) == "Jelle"
                 }
                 
                 it("should have a description") {
-                    expect(file.description).to(equal("A GPX file"))
+                    expect(file.description) == "A GPX file"
                 }
                 
                 it("should have a author") {
-                    expect(file.author?.name).to(equal("Jelle Vandebeeck"))
-                    expect(file.author?.email).to(equal("jelle@vandebeeck.be"))
-                    expect(file.author?.link?.link).to(equal("http://fousa.be"))
-                    expect(file.author?.link?.text).to(equal("Fousa"))
-                    expect(file.author?.link?.mimeType).to(equal("text/html"))
+                    expect(file.author?.name) == "Jelle Vandebeeck"
+                    expect(file.author?.email) == "jelle@vandebeeck.be"
+                    expect(file.author?.link?.link) == "http://fousa.be"
+                    expect(file.author?.link?.text) == "Fousa"
+                    expect(file.author?.link?.mimeType) == "text/html"
                 }
                 
                 it("should have a copyright notice") {
-                    expect(file.copyrightNotice?.author).to(equal("Jelle Vandebeeck"))
-                    expect(file.copyrightNotice?.year).to(equal(2016))
-                    expect(file.copyrightNotice?.license).to(equal("MIT"))
+                    expect(file.copyrightNotice?.author) == "Jelle Vandebeeck"
+                    expect(file.copyrightNotice?.year) == 2016
+                    expect(file.copyrightNotice?.license) == "MIT"
                 }
                 
                 it("should have a link") {
-                    expect(file.link?.link).to(equal("http://fousa.be"))
-                    expect(file.link?.text).to(equal("Fousa"))
-                    expect(file.link?.mimeType).to(equal("text/html"))
+                    expect(file.link?.link) == "http://fousa.be"
+                    expect(file.link?.text) == "Fousa"
+                    expect(file.link?.mimeType) == "text/html"
                 }
                 
                 it("should have a time") {
-                    expect(file.time?.description).to(equal("2016-03-10 08:05:12 +0000"))
+                    expect(file.time?.description) == "2016-03-10 08:05:12 +0000"
                 }
                 
                 it("should have keywords") {
-                    expect(file.keywords).to(equal(["hiking", "forest", "wild"]))
+                    expect(file.keywords) == ["hiking", "forest", "wild"]
                 }
                 
                 it("should have bounds") {
-                    expect(file.bounds?.minimumCoordinate?.latitude).to(equal(42.1))
-                    expect(file.bounds?.minimumCoordinate?.longitude).to(equal(-71.9))
-                    expect(file.bounds?.maximumCoordinate?.latitude).to(equal(42.4))
-                    expect(file.bounds?.maximumCoordinate?.longitude).to(equal(-71.1))
+                    expect(file.bounds?.minimumCoordinate?.latitude) == 42.1
+                    expect(file.bounds?.minimumCoordinate?.longitude) == -71.9
+                    expect(file.bounds?.maximumCoordinate?.latitude) == 42.4
+                    expect(file.bounds?.maximumCoordinate?.longitude) == -71.1
                 }
             }
             
