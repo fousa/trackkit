@@ -7,9 +7,25 @@
 //
 
 import Foundation
+import AEXML
 
-public struct GKCopyrightNotice {
+public final class GKCopyrightNotice {
     public var author: String?
     public var year: Int?
     public var license: String?
+}
+
+extension GKCopyrightNotice: GKMappable {
+    
+    convenience init?(fromElement element: AEXMLElement) {
+        // When the element is an error, don't create the copyright instance.
+        if element.errored { return nil }
+        self.init()
+        
+        author = element.attributes["author"]
+        
+        year    <~ element["year"]
+        license <~ element["license"]
+    }
+    
 }

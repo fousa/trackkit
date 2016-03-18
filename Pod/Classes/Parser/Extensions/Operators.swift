@@ -7,37 +7,46 @@
 //
 
 import Foundation
-import AEXML    
+import CoreLocation
+import AEXML
+
+protocol GKMappable {
+    init?(fromElement element: AEXMLElement)
+}
 
 infix operator <~ { associativity left }
-func <~ (inout lhs: GKLink?, rhs: AEXMLElement) {
-    lhs = GKLink(fromElement: rhs)
+func <~ <T: GKMappable>(inout lhs: T?, rhs: AEXMLElement) {
+    lhs = T(fromElement: rhs)
 }
 
-func <~ (inout lhs: GKCopyrightNotice?, rhs: AEXMLElement) {
-    lhs = GKCopyrightNotice(fromElement: rhs)
-}
-
-func <~ (inout lhs: GKPerson?, rhs: AEXMLElement) {
-    lhs = GKPerson(fromElement: rhs)
-}
-
-func <~ (inout lhs: GKBounds?, rhs: AEXMLElement) {
-    lhs = GKBounds(fromElement: rhs)
+func <~ <T: GKMappable>(inout lhs: [T]?, rhs: [AEXMLElement]?) {
+    lhs = rhs?.flatMap { T(fromElement: $0) }
 }
 
 func <~ (inout lhs: String?, rhs: AEXMLElement) {
-    lhs = rhs.optionalValue
+    lhs = rhs.optionalStringValue
+}
+
+func <~ (inout lhs: Int?, rhs: AEXMLElement) {
+    lhs = rhs.optionalIntValue
+}
+
+func <~ (inout lhs: Float?, rhs: AEXMLElement) {
+    lhs = rhs.optionalFloatValue
+}
+
+func <~ (inout lhs: CLLocationCoordinate2D?, rhs: (latitute: CLLocationDegrees, longitude: CLLocationDegrees)) {
+    lhs = CLLocationCoordinate2DMake(rhs.latitute, rhs.longitude)
 }
 
 func <~ (inout lhs: [String]?, rhs: AEXMLElement) {
-    lhs = rhs.optionalValue?.componentsSeparatedByString(",").map {
+    lhs = rhs.optionalStringValue?.componentsSeparatedByString(",").map {
         $0.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
     }
 }
 
 func <~ (inout lhs: NSDate?, rhs: AEXMLElement) {
-    if let timeString = rhs.optionalValue {
+    if let timeString = rhs.optionalStringValue {
         lhs = NSDate(fromString: timeString, format: .ISO8601(nil))
     }
 }

@@ -8,8 +8,9 @@
 
 import Foundation
 import CoreLocation
+import AEXML
 
-public struct GKPoint {
+public final class GKPoint {
     public var name: String?
     public var comment: String?
     public var description: String?
@@ -31,4 +32,36 @@ public struct GKPoint {
     public var coordinate: CLLocationCoordinate2D?
     
     public var link: GKLink?
+}
+
+extension GKPoint: GKMappable {
+    
+    convenience init?(fromElement element: AEXMLElement) {
+        // When the element is an error, don't create the link instance.
+        if element.errored { return nil }
+        
+        // Check if coordinate is avaiable.
+        guard let latitude = element.attributes["lat"], let longitude = element.attributes["lon"] else {
+            return nil
+        }
+        self.init()
+        
+        coordinate                    <~ (Double(latitude)!, Double(longitude)!)
+        elevation                     <~ element["ele"]
+        meanSeaLevelHeight            <~ element["geoidheight"]
+        name                          <~ element["name"]
+        comment                       <~ element["cmt"]
+        description                   <~ element["desc"]
+        source                        <~ element["src"]
+        symbol                        <~ element["sym"]
+        type                          <~ element["type"]
+        satelites                     <~ element["sat"]
+        horizontalDilutionOfPrecision <~ element["hdop"]
+        verticalDilutionOfPrecision   <~ element["vdop"]
+        positionDilutionOfPrecision   <~ element["pdop"]
+        ageOfTheGpxData               <~ element["ageofdgpsdata"]
+        time                          <~ element["time"]
+        link                          <~ element["link"]
+    }
+    
 }

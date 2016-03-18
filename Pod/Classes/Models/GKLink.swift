@@ -7,9 +7,25 @@
 //
 
 import Foundation
+import AEXML
 
-public struct GKLink {
-    public var link: String?
-    public var text: String?
-    public var mimeType: String?
+public final class GKLink {
+    public var link: String? = nil
+    public var text: String? = nil
+    public var mimeType: String? = nil
+}
+
+extension GKLink: GKMappable {
+    
+    convenience init?(fromElement element: AEXMLElement) {
+        // When the element is an error, don't create the link instance.
+        if element.errored { return nil }
+        self.init()
+        
+        link = element.attributes["href"]
+        
+        mimeType <~ element["type"]
+        text     <~ element["text"]
+    }
+    
 }

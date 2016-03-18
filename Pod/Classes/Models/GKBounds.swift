@@ -8,8 +8,24 @@
 
 import Foundation
 import CoreLocation
+import AEXML
 
-public struct GKBounds {
+public final class GKBounds {
     public var minimumCoordinate: CLLocationCoordinate2D?
     public var maximumCoordinate: CLLocationCoordinate2D?
+}
+
+extension GKBounds: GKMappable {
+    
+    convenience init?(fromElement element: AEXMLElement) {
+        // When the element misses some coordinate data, don't create the link instance.
+        guard let minimumLatitude = element.attributes["minlat"], let minimumLongitude = element.attributes["minlon"], let maximumLatitude = element.attributes["maxlat"], let maximumLongitude = element.attributes["maxlon"] else {
+            return nil
+        }
+        self.init()
+        
+        minimumCoordinate <~ (Double(minimumLatitude)!, Double(minimumLongitude)!)
+        maximumCoordinate <~ (Double(maximumLatitude)!, Double(maximumLongitude)!)
+    }
+    
 }

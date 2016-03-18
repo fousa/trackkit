@@ -11,7 +11,7 @@ import AEXML
 
 extension AEXMLElement {
     
-    var optionalValue: String? {
+    var optionalStringValue: String? {
         if errored {
             return nil
         }

@@ -40,10 +40,7 @@ public struct GKParser {
             throw GKParseError.InvalidFormat
         }
         
-        var file = GKFile()
-        file.map(fromDocument: document)
-
-        return file
+        return GKFile(fromElement: document.root)
     }
     
 }

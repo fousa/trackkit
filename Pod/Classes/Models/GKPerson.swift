@@ -7,10 +7,26 @@
 //
 
 import Foundation
+import AEXML
 
-public struct GKPerson {
+public final class GKPerson {
     public var name: String?
     public var email: String?
     
     public var link: GKLink?
+}
+
+extension GKPerson: GKMappable {
+    
+    convenience init?(fromElement element: AEXMLElement) {
+        // When the element is an error, don't create the link instance.
+        if element.errored { return nil }
+        self.init()
+        
+        email = String(fromEmailElement: element["email"])
+        
+        name  <~ element["name"]
+        link  <~ element["link"]
+    }
+    
 }
