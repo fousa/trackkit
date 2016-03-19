@@ -9,17 +9,32 @@
 import Foundation
 import AEXML
 
+/**
+ An ordered list of waypoints representing a series of turn points leading to a destination.
+*/
 public final class GKRoute {
+    /// GPS name of route.
     public var name: String?
+
+    /// GPS comment for route.
     public var comment: String?
+
+    /// Text description of route for user. Not sent to GPS.
     public var description: String?
+
+    /// Source of data. Included to give user some idea of reliability and accuracy of data.
     public var source: String?
-    public var type: String?
-    
-    public var number: Int?
-    
+
+    /// Links to external information about the route.
     public var link: GKLink?
-    
+
+    /// GPS route number.
+    public var number: Int?
+
+    /// Type (classification) of route.
+    public var type: String?
+
+    /// A list of route points.
     public var points: [GKPoint]?
 }
 
