@@ -9,10 +9,18 @@
 import Foundation
 import AEXML
 
+/**
+ A link to an external resource (Web page, digital photo, video clip, etc) with additional information.
+*/
 public final class GKLink {
-    public var link: String? = nil
-    public var text: String? = nil
-    public var mimeType: String? = nil
+    /// URL of hyperlink.
+    public var link: String?
+
+    /// Text of hyperlink.
+    public var text: String?
+    
+    /// Mime type of content.
+    public var mimeType: String?
 }
 
 extension GKLink: GKMappable {
