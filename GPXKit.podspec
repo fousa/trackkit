@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'GPXKit'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Parse a GPX file into a readable format with Swift.'
 
   s.description      = <<-DESC
