@@ -2,7 +2,7 @@
 
 ## Version 1.0.1
 
-* Cleanup the readme.
+* Cleanup the README.
 * Add inline documentation.
 
 ## Version 1.0.0
