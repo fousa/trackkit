@@ -11,12 +11,13 @@ import CoreLocation
 import AEXML
 
 /**
- The bounds define the extend of the GPX file. The area of the rectangle _-defined by the minimum coordinate and the maximum coordinate-_ will contain the entire GPX region.
+ Two coordinate defining the extent of an element.
 */
 public final class GKBounds {
-    /// The minimum coordinate used for the calculation of the region rectangle.
+    /// The minimum coordinate.
     public var minimumCoordinate: CLLocationCoordinate2D?
-    /// The maximum coordinate used for the calculation of the region rectangle.
+    
+    /// The maximum coordinate.
     public var maximumCoordinate: CLLocationCoordinate2D?
 }
 
