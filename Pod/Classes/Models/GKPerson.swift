@@ -9,10 +9,17 @@
 import Foundation
 import AEXML
 
+/**
+ A person or organization.
+*/
 public final class GKPerson {
+    /// Name of person or organization.
     public var name: String?
-    public var email: String?
     
+    /// Email address.
+    public var email: String?
+
+    /// Link to Web site or other external information about person.
     public var link: GKLink?
 }
 
