@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'GPXKit'
   s.version          = '1.0.0'
-  s.summary          = 'Parse a GPX file to a Swift representable struct.'
+  s.summary          = 'Parse a GPX file into a readable format with Swift.'
 
   s.description      = <<-DESC
   This pod makes it possible to parse a GPX file to a format that can
