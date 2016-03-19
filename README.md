@@ -42,5 +42,6 @@ let file = try! GKParser(data: data).parse()
 
 When the parsing fails an error will be thrown. There are currently **two** types of errors:
 
-- _InvalidData_ thrown when the data object is empty.
-- _InvalidFormat_ thrown when the data object can't be parsed.
+- `InvalidData` thrown when the data object is empty.
+- `InvalidFormat` thrown when the data object can't be parsed.
+- `Empty` thrown when no routes, tracks or waypoints can be found. _not yet implemented_

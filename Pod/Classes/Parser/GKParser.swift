@@ -20,8 +20,11 @@ import AFDateHelper
  - Empty: When no routes, tracks or waypoints can be found. _not yet implemented_
 */
 public enum GKParseError: ErrorType {
+    /// Thrown when the data object is empty.
     case InvalidData
+    /// Thrown when the data contains an incorrect format that can't be parsed.
     case InvalidFormat
+    /// Thrown when no routes, tracks or waypoints can be found. _not yet implemented_
     case Empty
 }
 
