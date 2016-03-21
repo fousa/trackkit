@@ -49,8 +49,5 @@ func <~ (inout lhs: [String]?, rhs: AEXMLElement) { // tailor:disable
 }
 
 func <~ (inout lhs: NSDate?, rhs: AEXMLElement) { // tailor:disable
-//    if let timeString = rhs.optionalStringValue {
     lhs = rhs.optionalStringValue?.isoDate()
-//        lhs = NSDate(fromString: timeString, format: .ISO8601(nil))
-//    }
 }
