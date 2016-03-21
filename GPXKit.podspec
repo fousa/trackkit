@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'GPXKit'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'Parse a GPX file into a readable format with Swift.'
 
   s.description      = <<-DESC
@@ -22,5 +22,5 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Sources/**/*'
 
-  s.dependency 'AEXML', '~> 2.1.0'
+  s.dependency 'AEXML', '~> 2.1'
 end
