@@ -24,6 +24,22 @@ class TrackSpec: QuickSpec {
                 expect(file.tracks).to(beNil())
             }
             
+            it("should not have tracks") {
+                let content = "<gpx>"
+                                + "<trk>"
+                                    + "<trkseg>"
+                                        + "<trkpt></trkpt>"
+                                        + "<trkpt></trkpt>"
+                                    + "</trkseg>"
+                                    + "<trkseg></trkseg>"
+                                + "</trk>"
+                            + "</gpx>"
+                let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                let file = try! GKParser(data: data).parse()
+                
+                expect(file.tracks).to(beNil())
+            }
+            
             it("should have tracks") {
                 let content = "<gpx>"
                                 + "<trk>"
