@@ -33,3 +33,4 @@ Carthage
 # Pods/
 Example/test_output
 test_output
+.build
