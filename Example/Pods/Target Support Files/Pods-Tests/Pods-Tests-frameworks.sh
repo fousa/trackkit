@@ -85,14 +85,12 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Tests/AEXML.framework"
-  install_framework "Pods-Tests/AFDateHelper.framework"
   install_framework "Pods-Tests/GPXKit.framework"
   install_framework "Pods-Tests/Nimble.framework"
   install_framework "Pods-Tests/Quick.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Tests/AEXML.framework"
-  install_framework "Pods-Tests/AFDateHelper.framework"
   install_framework "Pods-Tests/GPXKit.framework"
   install_framework "Pods-Tests/Nimble.framework"
   install_framework "Pods-Tests/Quick.framework"

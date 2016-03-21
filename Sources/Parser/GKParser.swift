@@ -9,7 +9,6 @@
 import Foundation
 import CoreLocation
 import AEXML
-import AFDateHelper
 
 /**
  A list of errors that can be thrown by the parser. These errors can be thrown during initialization or during the parsing process.
