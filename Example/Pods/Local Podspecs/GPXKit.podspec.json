@@ -1,6 +1,6 @@
 {
   "name": "GPXKit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "summary": "Parse a GPX file into a readable format with Swift.",
   "description": "This pod makes it possible to parse a GPX file to a format that can\nbe easily used in your code.",
   "homepage": "https://github.com/fousa/gpxkit",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/fousa/gpxkit.git",
-    "tag": "1.0.1"
+    "tag": "1.0.2"
   },
   "social_media_url": "https://twitter.com/fousa",
   "platforms": {
@@ -23,7 +23,7 @@
   "source_files": "Sources/**/*",
   "dependencies": {
     "AEXML": [
-      "~> 2.1.0"
+      "~> 2.1"
     ]
   }
 }
