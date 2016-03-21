@@ -45,12 +45,16 @@ extension GKTrack: GKMappable {
     
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.
-        if element.errored { return nil }
+        if element.errored {
+            return nil
+        }
         
         // When there are not route points, don't create the instance.
         var routeSegments: [GKTrackSegment]? = nil
         routeSegments <~ element["trkseg"].all
-        if routeSegments == nil { return nil }
+        if routeSegments == nil {
+            return nil
+        }
         
         self.init()
         

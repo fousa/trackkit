@@ -42,12 +42,16 @@ extension GKRoute: GKMappable {
     
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.
-        if element.errored { return nil }
+        if element.errored {
+            return nil
+        }
         
         // When there are not route points, don't create the instance.
         var routePoints: [GKPoint]? = nil
         routePoints <~ element["rtept"].all
-        if routePoints == nil { return nil }
+        if routePoints == nil {
+            return nil
+        }
         
         self.init()
         

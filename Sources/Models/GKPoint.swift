@@ -67,7 +67,9 @@ extension GKPoint: GKMappable {
     
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.
-        if element.errored { return nil }
+        if element.errored {
+            return nil
+        }
         
         // Check if coordinate is avaiable.
         guard let latitude = element.attributes["lat"], let longitude = element.attributes["lon"] else {
