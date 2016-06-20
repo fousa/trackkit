@@ -43,6 +43,7 @@ class WaypointSpec: QuickSpec {
                 let content = "<gpx creator='GPXKit'>"
                                 + "<wpt lat='41.2' lon='-71.3'>"
                                     + "<ele>1001</ele>"
+                                    + "<magvar>300</magvar>"
                                     + "<name>A waypoint</name>"
                                     + "<time>2016-03-10T10:05:12+02:00</time>"
                                     + "<geoidheight>56</geoidheight>"
@@ -77,6 +78,10 @@ class WaypointSpec: QuickSpec {
             
             it("should have an elevation") {
                 expect(point.elevation) == 1001
+            }
+            
+            it("should have a magnetic variation") {
+                expect(point.magneticVariation) == 300
             }
             
             it("should have a time") {
@@ -150,6 +155,10 @@ class WaypointSpec: QuickSpec {
             
             it("should not have an elevation") {
                 expect(point.elevation).to(beNil())
+            }
+            
+            it("should not have a magnetic variation") {
+                expect(point.magneticVariation).to(beNil())
             }
             
             it("should not have a time") {

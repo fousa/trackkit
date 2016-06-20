@@ -22,6 +22,9 @@ public final class Point {
 
     /// Creation/modification timestamp for element. Date and time in are in Univeral Coordinated Time (UTC), not local time.
     public var time: NSDate?
+    
+    /// Magnetic variation.
+    public var magneticVariation: Float?
 
     /// Height (in meters) of geoid (mean sea level) above WGS84 earth ellipsoid. As defined in NMEA GGA message.
     public var meanSeaLevelHeight: Float?
@@ -79,6 +82,7 @@ extension Point: Mappable {
         
         coordinate                    <~ (Double(latitude)!, Double(longitude)!)
         elevation                     <~ element["ele"]
+        magneticVariation             <~ element["magvar"]
         meanSeaLevelHeight            <~ element["geoidheight"]
         name                          <~ element["name"]
         comment                       <~ element["cmt"]
