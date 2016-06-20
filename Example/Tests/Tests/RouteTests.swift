@@ -6,7 +6,7 @@ class RouteSpec: QuickSpec {
     override func spec() {
         describe("routes") {
             it("should not have routes") {
-                let content = "<gpx></gpx>"
+                let content = "<gpx version='1.1'></gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
                 let file = try! Parser(data: data).parse()
                 
@@ -14,7 +14,7 @@ class RouteSpec: QuickSpec {
             }
             
             it("should not have routes without a points") {
-                let content = "<gpx>"
+                let content = "<gpx version='1.1'>"
                                 + "<rte></rte>"
                                 + "<rte></rte>"
                             + "</gpx>"
@@ -25,7 +25,7 @@ class RouteSpec: QuickSpec {
             }
             
             it("should have routes") {
-                let content = "<gpx>"
+                let content = "<gpx version='1.1'>"
                                 + "<rte>"
                                     + "<rtept lat='10' lon='10'></rtept>"
                                     + "<rtept lat='11' lon='11'></rtept>"
@@ -46,7 +46,7 @@ class RouteSpec: QuickSpec {
             var route: Route!
             
             beforeEach {
-                let content = "<gpx creator='GPXKit'>"
+                let content = "<gpx creator='GPXKit' version='1.1'>"
                                 + "<rte>"
                                     + "<name>A waypoint</name>"
                                     + "<cmt>A comment</cmt>"
@@ -105,7 +105,7 @@ class RouteSpec: QuickSpec {
             var point: Point!
             
             beforeEach {
-                let content = "<gpx creator='GPXKit'>"
+                let content = "<gpx creator='GPXKit' version='1.1'>"
                                 + "<rte>"
                                     + "<rtept lat='41.2' lon='-71.3'>"
                                         + "<ele>1001</ele>"
@@ -224,7 +224,7 @@ class RouteSpec: QuickSpec {
             var point: Point!
             
             beforeEach {
-                let content = "<gpx creator='GPXKit'>"
+                let content = "<gpx creator='GPXKit' version='1.1'>"
                                 + "<rte>"
                                     + "<rtept lat='41.2' lon='-71.3'></rtept>"
                                 + "</rte>"

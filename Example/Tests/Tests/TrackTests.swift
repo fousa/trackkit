@@ -6,7 +6,7 @@ class TrackSpec: QuickSpec {
     override func spec() {
         describe("tracks") {
             it("should not have tracks") {
-                let content = "<gpx></gpx>"
+                let content = "<gpx version='1.1'></gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
                 let file = try! Parser(data: data).parse()
                 
@@ -14,7 +14,7 @@ class TrackSpec: QuickSpec {
             }
             
             it("should not have tracks without a points") {
-                let content = "<gpx>"
+                let content = "<gpx version='1.1'>"
                                 + "<trk></trk>"
                                 + "<trk></trk>"
                             + "</gpx>"
@@ -25,7 +25,7 @@ class TrackSpec: QuickSpec {
             }
             
             it("should not have tracks") {
-                let content = "<gpx>"
+                let content = "<gpx version='1.1'>"
                                 + "<trk>"
                                     + "<trkseg>"
                                         + "<trkpt></trkpt>"
@@ -41,7 +41,7 @@ class TrackSpec: QuickSpec {
             }
             
             it("should have tracks") {
-                let content = "<gpx>"
+                let content = "<gpx version='1.1'>"
                                 + "<trk>"
                                     + "<trkseg>"
                                         + "<trkpt lat='10' lon='10'></trkpt>"
@@ -66,7 +66,7 @@ class TrackSpec: QuickSpec {
             var track: Track!
             
             beforeEach {
-                let content = "<gpx creator='GPXKit'>"
+                let content = "<gpx creator='GPXKit' version='1.1'>"
                                 + "<trk>"
                                     + "<name>A waypoint</name>"
                                     + "<cmt>A comment</cmt>"
@@ -129,7 +129,7 @@ class TrackSpec: QuickSpec {
             var point: Point!
             
             beforeEach {
-                let content = "<gpx creator='GPXKit'>"
+                let content = "<gpx creator='GPXKit' version='1.1'>"
                                 + "<trk>"
                                     + "<trkseg>"
                                         + "<trkpt lat='41.2' lon='-71.3'>"
@@ -250,7 +250,7 @@ class TrackSpec: QuickSpec {
             var point: Point!
             
             beforeEach {
-                let content = "<gpx creator='GPXKit'>"
+                let content = "<gpx creator='GPXKit' version='1.1'>"
                                 + "<trk>"
                                     + "<trkseg>"
                                         + "<trkpt lat='41.2' lon='-71.3'></trkpt>"

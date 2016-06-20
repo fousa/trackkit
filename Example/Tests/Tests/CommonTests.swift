@@ -8,7 +8,7 @@ class CommonSpec: QuickSpec {
         
         describe("common data") {
             beforeEach {
-                let content = "<gpx creator='GPXKit'>"
+                let content = "<gpx creator='GPXKit' version='1.1'>"
                                 + "<metadata>"
                                     + "<name>Jelle</name>"
                                     + "<desc>A GPX file</desc>"
@@ -96,7 +96,7 @@ class CommonSpec: QuickSpec {
             
             context("empty file") {
                 beforeEach {
-                    let content = "<gpx></gpx>"
+                    let content = "<gpx version='1.1'></gpx>"
                     let data = content.dataUsingEncoding(NSUTF8StringEncoding)
                     file = try! Parser(data: data).parse()
                 }

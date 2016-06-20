@@ -22,6 +22,8 @@ public enum ParseError: ErrorType {
     case InvalidData
     /// Thrown when the data contains an incorrect format that can't be parsed.
     case InvalidFormat
+    /// Thrown when the data contains an incorrect version that can't be parsed. Currently only version 1.1 is supported.
+    case InvalidVersion
 }
 
 /**
@@ -57,7 +59,8 @@ public struct Parser {
         Parse the data _passed through the initializer_ into a representable
         format.
     
-        - Throws: `GKParseError.InvalidFormat` if the data cannot be parsed.
+         - Throws: `GKParseError.InvalidFormat` if the data cannot be parsed.
+         - Throws: `GKParseError.InvalidVersion` if the versio is incorrect.
     
         - Returns: A parsed `GKFile` object.
     */
@@ -66,7 +69,11 @@ public struct Parser {
             throw ParseError.InvalidFormat
         }
         
-        return File(fromElement: document.root)
+        guard let file = File(fromElement: document.root) else {
+            throw ParseError.InvalidVersion
+        }
+        
+        return file
     }
     
 }

@@ -52,7 +52,11 @@ public class File {
 
 extension File {
     
-    convenience init(fromElement element: AEXMLElement) {
+    convenience init?(fromElement element: AEXMLElement) {
+        // When the element is an error, don't create the instance.
+        if element.attributes["version"] != "1.1" {
+            return nil
+        }
         self.init()
         
         // Fetch the creator from the root element.

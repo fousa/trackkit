@@ -6,7 +6,7 @@ class WaypointSpec: QuickSpec {
     override func spec() {
         describe("waypoints") {
             it("should not have waypoints") {
-                let content = "<gpx></gpx>"
+                let content = "<gpx version='1.1'></gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
                 let file = try! Parser(data: data).parse()
                 
@@ -14,7 +14,7 @@ class WaypointSpec: QuickSpec {
             }
             
             it("should not have waypoints without a coordinate") {
-                let content = "<gpx>"
+                let content = "<gpx version='1.1'>"
                                 + "<wpt></wpt>"
                                 + "<wpt></wpt>"
                             + "</gpx>"
@@ -25,10 +25,10 @@ class WaypointSpec: QuickSpec {
             }
             
             it("should have waypoints") {
-                let content = "<gpx>"
-                    + "<wpt lat='10' lon='10'></wpt>"
-                    + "<wpt lat='11' lon='11'></wpt>"
-                    + "</gpx>"
+                let content = "<gpx version='1.1'>"
+                                + "<wpt lat='10' lon='10'></wpt>"
+                                + "<wpt lat='11' lon='11'></wpt>"
+                            + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
                 let file = try! Parser(data: data).parse()
                 
@@ -40,7 +40,7 @@ class WaypointSpec: QuickSpec {
             var point: Point!
             
             beforeEach {
-                let content = "<gpx creator='GPXKit'>"
+                let content = "<gpx creator='GPXKit' version='1.1'>"
                                 + "<wpt lat='41.2' lon='-71.3'>"
                                     + "<ele>1001</ele>"
                                     + "<magvar>300</magvar>"
@@ -157,7 +157,7 @@ class WaypointSpec: QuickSpec {
             var point: Point!
             
             beforeEach {
-                let content = "<gpx creator='GPXKit'>"
+                let content = "<gpx creator='GPXKit' version='1.1'>"
                                 + "<wpt lat='41.2' lon='-71.3'>"
                                 + "</wpt>"
                             + "</gpx>"

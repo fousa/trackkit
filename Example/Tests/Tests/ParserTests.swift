@@ -16,6 +16,13 @@ class ParserSpec: QuickSpec {
             it("should throw an parse error") {
                 expect{ try Parser(data: NSData()).parse() }.to(throwError(ParseError.InvalidFormat))
             }
+            
+            it("should throw an invalid version error") {
+                let content = "<gpx version='1.0'></gpx>"
+                let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                
+                expect{ try Parser(data: data).parse() }.to(throwError(ParseError.InvalidVersion))
+            }
         }
     }
 }
