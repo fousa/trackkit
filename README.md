@@ -14,7 +14,7 @@ Integration
 Add this pod to your `Podfile` by adding the following line:
 
 ``` ruby
-pod 'GPXKit', '~> 1.0'
+pod 'GPXKit', '~> 1.1'
 ```
 
 _It's important to add the version to the `pod 'GPXKit'`, this way you are sure that a next update of the pod will not break your code._
