@@ -47,9 +47,9 @@ let file = try! GKParser(data: data).parse()
 
 When the parsing fails an error will be thrown. There are currently **two** types of errors:
 
-- `InvalidData` thrown when the data object is empty.
-- `InvalidFormat` thrown when the data object can't be parsed.
-- `InvalidVersion` thrown when the data object contains an incorrect version of the GPX file.
+- `invalidData` thrown when the data object is empty.
+- `invalidFormat` thrown when the data object can't be parsed.
+- `invalidVersion` thrown when the data object contains an incorrect version of the GPX file.
 
 License
 =======

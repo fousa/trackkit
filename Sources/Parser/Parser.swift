@@ -13,17 +13,17 @@ import AEXML
 /**
  A list of errors that can be thrown by the parser. These errors can be thrown during initialization or during the parsing process.
  
- - InvalidData: When the data object is empty.
- - InvalidFormat: When the data contains an incorrect format that can't be parsed.
- - Empty: When no routes, tracks or waypoints can be found. _not yet implemented_
+ - invalidData: When the data object is empty.
+ - invalidFormat: When the data contains an incorrect format that can't be parsed.
+ - invalidVersion: When the version of the file is invalid.
 */
 public enum ParseError: ErrorType {
     /// Thrown when the data object is empty.
-    case InvalidData
+    case invalidData
     /// Thrown when the data contains an incorrect format that can't be parsed.
-    case InvalidFormat
+    case invalidFormat
     /// Thrown when the data contains an incorrect version that can't be parsed. Currently only version 1.1 is supported.
-    case InvalidVersion
+    case invalidVersion
 }
 
 /**
@@ -43,11 +43,11 @@ public struct Parser {
 
         - Parameter data: The GPX data object you want to parse.
         
-        - Throws: `GKParseError.InvalidData` if the data object is empty.
+        - Throws: `GKParseError.invalidData` if the data object is empty.
     */
     public init(data: NSData?) throws { // tailor:disable
         guard let data = data else {
-            throw ParseError.InvalidData
+            throw ParseError.invalidData
         }
         
         self.data = data
@@ -59,18 +59,18 @@ public struct Parser {
         Parse the data _passed through the initializer_ into a representable
         format.
     
-         - Throws: `GKParseError.InvalidFormat` if the data cannot be parsed.
-         - Throws: `GKParseError.InvalidVersion` if the versio is incorrect.
+         - Throws: `GKParseError.invalidFormat` if the data cannot be parsed.
+         - Throws: `GKParseError.invalidVersion` if the versio is incorrect.
     
         - Returns: A parsed `GKFile` object.
     */
     public func parse() throws -> File {
         guard let document = try? AEXMLDocument(xmlData: data) else {
-            throw ParseError.InvalidFormat
+            throw ParseError.invalidFormat
         }
         
         guard let file = File(fromElement: document.root) else {
-            throw ParseError.InvalidVersion
+            throw ParseError.invalidVersion
         }
         
         return file
