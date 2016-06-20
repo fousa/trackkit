@@ -114,7 +114,7 @@ extension Point: Mappable {
         source                        <~ element["src"]
         symbol                        <~ element["sym"]
         type                          <~ element["type"]
-        fix                          <~ element["fix"]
+        fix                           <~ element["fix"]
         satelites                     <~ element["sat"]
         horizontalDilutionOfPrecision <~ element["hdop"]
         verticalDilutionOfPrecision   <~ element["vdop"]
