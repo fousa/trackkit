@@ -4,7 +4,7 @@ import GPXKit
 
 class CommonSpec: QuickSpec {
     override func spec() {
-        var file: GKFile!
+        var file: File!
         
         describe("common data") {
             beforeEach {
@@ -42,7 +42,7 @@ class CommonSpec: QuickSpec {
                                 + "</metadata>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                file = try! GKParser(data: data).parse()
+                file = try! Parser(data: data).parse()
             }
             
             it("should have a creator name") {
@@ -98,7 +98,7 @@ class CommonSpec: QuickSpec {
                 beforeEach {
                     let content = "<gpx></gpx>"
                     let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                    file = try! GKParser(data: data).parse()
+                    file = try! Parser(data: data).parse()
                 }
                 
                 it("should not have a creator name") {

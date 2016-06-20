@@ -12,7 +12,7 @@ import AEXML
 /**
  The root element in the XML file.
  */
-public class GKFile {
+public class File {
     /// You must include the name or URL of the software that created your GPX document. This allows others to inform the creator of a GPX instance document that fails to validate.
     public var creator: String?
 
@@ -23,13 +23,13 @@ public class GKFile {
     public var description: String?
 
     /// The person or organization who created the GPX file.
-    public var author: GKPerson?
+    public var author: Person?
 
     /// Copyright and license information governing use of the file.
-    public var copyrightNotice: GKCopyrightNotice?
+    public var copyrightNotice: CopyrightNotice?
 
     /// URLs associated with the location described in the file.
-    public var link: GKLink?
+    public var link: Link?
 
     /// The creation date of the file.
     public var time: NSDate?
@@ -38,19 +38,19 @@ public class GKFile {
     public var keywords: [String]?
 
     /// Minimum and maximum coordinates which describe the extent of the coordinates in the file.
-    public var bounds: GKBounds?
+    public var bounds: Bounds?
 
     /// A list of waypoints.
-    public var waypoints: [GKPoint]?
+    public var waypoints: [Point]?
 
     /// A list of routes.
-    public var routes: [GKRoute]?
+    public var routes: [Route]?
 
     /// A list of tracks.
-    public var tracks: [GKTrack]?
+    public var tracks: [Track]?
 }
 
-extension GKFile {
+extension File {
     
     convenience init(fromElement element: AEXMLElement) {
         self.init()

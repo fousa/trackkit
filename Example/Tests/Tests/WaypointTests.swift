@@ -8,7 +8,7 @@ class WaypointSpec: QuickSpec {
             it("should not have waypoints") {
                 let content = "<gpx></gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 expect(file.waypoints).to(beNil())
             }
@@ -19,7 +19,7 @@ class WaypointSpec: QuickSpec {
                                 + "<wpt></wpt>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 expect(file.waypoints).to(beNil())
             }
@@ -30,14 +30,14 @@ class WaypointSpec: QuickSpec {
                     + "<wpt lat='11' lon='11'></wpt>"
                     + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 expect(file.waypoints?.count) == 2
             }
         }
         
         describe("waypoint data") {
-            var point: GKPoint!
+            var point: Point!
             
             beforeEach {
                 let content = "<gpx creator='GPXKit'>"
@@ -65,7 +65,7 @@ class WaypointSpec: QuickSpec {
                                 + "</wpt>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 point = file.waypoints?.first!
             }
@@ -135,7 +135,7 @@ class WaypointSpec: QuickSpec {
         }
         
         describe("empty waypoint") {
-            var point: GKPoint!
+            var point: Point!
             
             beforeEach {
                 let content = "<gpx creator='GPXKit'>"
@@ -143,7 +143,7 @@ class WaypointSpec: QuickSpec {
                                 + "</wpt>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 point = file.waypoints?.first!
             }

@@ -8,7 +8,7 @@ class TrackSpec: QuickSpec {
             it("should not have tracks") {
                 let content = "<gpx></gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 expect(file.tracks).to(beNil())
             }
@@ -19,7 +19,7 @@ class TrackSpec: QuickSpec {
                                 + "<trk></trk>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 expect(file.tracks).to(beNil())
             }
@@ -35,7 +35,7 @@ class TrackSpec: QuickSpec {
                                 + "</trk>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 expect(file.tracks).to(beNil())
             }
@@ -56,14 +56,14 @@ class TrackSpec: QuickSpec {
                                 + "</trk>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 expect(file.tracks?.count) == 2
             }
         }
         
         describe("track data") {
-            var track: GKTrack!
+            var track: Track!
             
             beforeEach {
                 let content = "<gpx creator='GPXKit'>"
@@ -88,7 +88,7 @@ class TrackSpec: QuickSpec {
                                 + "</trk>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 track = file.tracks?.first!
             }
@@ -126,7 +126,7 @@ class TrackSpec: QuickSpec {
         }
         
         describe("track point data") {
-            var point: GKPoint!
+            var point: Point!
             
             beforeEach {
                 let content = "<gpx creator='GPXKit'>"
@@ -158,7 +158,7 @@ class TrackSpec: QuickSpec {
                                 + "</trk>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 point = file.tracks?.first?.segments?.first?.points?.first!
             }
@@ -228,7 +228,7 @@ class TrackSpec: QuickSpec {
         }
         
         describe("empty track point") {
-            var point: GKPoint!
+            var point: Point!
             
             beforeEach {
                 let content = "<gpx creator='GPXKit'>"
@@ -239,7 +239,7 @@ class TrackSpec: QuickSpec {
                                 + "</trk>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 point = file.tracks?.first?.segments?.first?.points?.first!
             }

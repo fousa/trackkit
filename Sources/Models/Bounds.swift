@@ -13,7 +13,7 @@ import AEXML
 /**
  Two coordinate defining the extent of an element.
 */
-public final class GKBounds {
+public final class Bounds {
     /// The minimum coordinate.
     public var minimumCoordinate: CLLocationCoordinate2D?
     
@@ -21,7 +21,7 @@ public final class GKBounds {
     public var maximumCoordinate: CLLocationCoordinate2D?
 }
 
-extension GKBounds: GKMappable {
+extension Bounds: Mappable {
     
     convenience init?(fromElement element: AEXMLElement) {
         // When the element misses some coordinate data, don't create the instance.

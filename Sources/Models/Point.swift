@@ -13,7 +13,7 @@ import AEXML
 /**
  Represents a waypoint, point of interest, or named feature on a map.
  */
-public final class GKPoint {
+public final class Point {
     /// The coordinate of the point.
     public var coordinate: CLLocationCoordinate2D?
 
@@ -39,7 +39,7 @@ public final class GKPoint {
     public var source: String?
 
     /// Link to additional information about the waypoint.
-    public var link: GKLink?
+    public var link: Link?
 
     /// Text of GPS symbol name. For interchange with other programs, use the exact spelling of the symbol as displayed on the GPS. If the GPS abbreviates words, spell them out.
     public var symbol: String?
@@ -63,7 +63,7 @@ public final class GKPoint {
     public var ageOfTheGpxData: Float?
 }
 
-extension GKPoint: GKMappable {
+extension Point: Mappable {
     
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.

@@ -10,17 +10,17 @@ import Foundation
 import CoreLocation
 import AEXML
 
-protocol GKMappable {
+protocol Mappable {
     init?(fromElement element: AEXMLElement)
 }
 
 infix operator <~ { associativity left }
 
-func <~ <T: GKMappable>(inout lhs: T?, rhs: AEXMLElement) { // tailor:disable
+func <~ <T: Mappable>(inout lhs: T?, rhs: AEXMLElement) { // tailor:disable
     lhs = T(fromElement: rhs)
 }
 
-func <~ <T: GKMappable>(inout lhs: [T]?, rhs: [AEXMLElement]?) { // tailor:disable
+func <~ <T: Mappable>(inout lhs: [T]?, rhs: [AEXMLElement]?) { // tailor:disable
     if let elements = rhs?.flatMap({ T(fromElement: $0) }) where elements.count > 0 {
         lhs = elements
     }

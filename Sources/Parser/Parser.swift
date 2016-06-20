@@ -17,7 +17,7 @@ import AEXML
  - InvalidFormat: When the data contains an incorrect format that can't be parsed.
  - Empty: When no routes, tracks or waypoints can be found. _not yet implemented_
 */
-public enum GKParseError: ErrorType {
+public enum ParseError: ErrorType {
     /// Thrown when the data object is empty.
     case InvalidData
     /// Thrown when the data contains an incorrect format that can't be parsed.
@@ -28,7 +28,7 @@ public enum GKParseError: ErrorType {
  The parser that is responsible for converting a given `NSData` representation of the GPX file
  into an understandable format.
 */
-public struct GKParser {
+public struct Parser {
     
     // MARK: - Properties
     
@@ -45,7 +45,7 @@ public struct GKParser {
     */
     public init(data: NSData?) throws { // tailor:disable
         guard let data = data else {
-            throw GKParseError.InvalidData
+            throw ParseError.InvalidData
         }
         
         self.data = data
@@ -61,12 +61,12 @@ public struct GKParser {
     
         - Returns: A parsed `GKFile` object.
     */
-    public func parse() throws -> GKFile {
+    public func parse() throws -> File {
         guard let document = try? AEXMLDocument(xmlData: data) else {
-            throw GKParseError.InvalidFormat
+            throw ParseError.InvalidFormat
         }
         
-        return GKFile(fromElement: document.root)
+        return File(fromElement: document.root)
     }
     
 }

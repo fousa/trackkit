@@ -12,7 +12,7 @@ import AEXML
 /**
  An ordered list of waypoints representing a series of turn points leading to a destination.
 */
-public final class GKRoute {
+public final class Route {
     /// GPS name of route.
     public var name: String?
 
@@ -26,7 +26,7 @@ public final class GKRoute {
     public var source: String?
 
     /// Links to external information about the route.
-    public var link: GKLink?
+    public var link: Link?
 
     /// GPS route number.
     public var number: Int?
@@ -35,10 +35,10 @@ public final class GKRoute {
     public var type: String?
 
     /// A list of route points.
-    public var points: [GKPoint]?
+    public var points: [Point]?
 }
 
-extension GKRoute: GKMappable {
+extension Route: Mappable {
     
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.
@@ -47,7 +47,7 @@ extension GKRoute: GKMappable {
         }
         
         // When there are not route points, don't create the instance.
-        var routePoints: [GKPoint]? = nil
+        var routePoints: [Point]? = nil
         routePoints <~ element["rtept"].all
         if routePoints == nil {
             return nil

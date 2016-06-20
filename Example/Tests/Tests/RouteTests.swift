@@ -8,7 +8,7 @@ class RouteSpec: QuickSpec {
             it("should not have routes") {
                 let content = "<gpx></gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 expect(file.routes).to(beNil())
             }
@@ -19,7 +19,7 @@ class RouteSpec: QuickSpec {
                                 + "<rte></rte>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 expect(file.routes).to(beNil())
             }
@@ -36,14 +36,14 @@ class RouteSpec: QuickSpec {
                                 + "</rte>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 expect(file.routes?.count) == 2
             }
         }
         
         describe("route data") {
-            var route: GKRoute!
+            var route: Route!
             
             beforeEach {
                 let content = "<gpx creator='GPXKit'>"
@@ -64,7 +64,7 @@ class RouteSpec: QuickSpec {
                                 + "</rte>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 route = file.routes?.first!
             }
@@ -102,7 +102,7 @@ class RouteSpec: QuickSpec {
         }
         
         describe("route point data") {
-            var point: GKPoint!
+            var point: Point!
             
             beforeEach {
                 let content = "<gpx creator='GPXKit'>"
@@ -132,7 +132,7 @@ class RouteSpec: QuickSpec {
                                 + "</rte>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 point = file.routes?.first?.points?.first!
             }
@@ -202,7 +202,7 @@ class RouteSpec: QuickSpec {
         }
         
         describe("empty route point") {
-            var point: GKPoint!
+            var point: Point!
             
             beforeEach {
                 let content = "<gpx creator='GPXKit'>"
@@ -211,7 +211,7 @@ class RouteSpec: QuickSpec {
                                 + "</rte>"
                             + "</gpx>"
                 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-                let file = try! GKParser(data: data).parse()
+                let file = try! Parser(data: data).parse()
                 
                 point = file.routes?.first?.points?.first!
             }

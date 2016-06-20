@@ -6,15 +6,15 @@ class ParserSpec: QuickSpec {
     override func spec() {
         describe("parser") {
             it("should be successful") {
-                expect{ try GKParser(data: NSData()) }.notTo(throwError())
+                expect{ try Parser(data: NSData()) }.notTo(throwError())
             }
             
             it("should throw an data error") {
-                expect{ try GKParser(data: nil) }.to(throwError(GKParseError.InvalidData))
+                expect{ try Parser(data: nil) }.to(throwError(ParseError.InvalidData))
             }
             
             it("should throw an parse error") {
-                expect{ try GKParser(data: NSData()).parse() }.to(throwError(GKParseError.InvalidFormat))
+                expect{ try Parser(data: NSData()).parse() }.to(throwError(ParseError.InvalidFormat))
             }
         }
     }

@@ -12,7 +12,7 @@ import AEXML
 /**
  A person or organization.
 */
-public final class GKPerson {
+public final class Person {
     /// Name of person or organization.
     public var name: String?
     
@@ -20,10 +20,10 @@ public final class GKPerson {
     public var email: String?
 
     /// Link to Web site or other external information about person.
-    public var link: GKLink?
+    public var link: Link?
 }
 
-extension GKPerson: GKMappable {
+extension Person: Mappable {
     
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.

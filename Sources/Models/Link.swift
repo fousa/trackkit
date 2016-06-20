@@ -12,7 +12,7 @@ import AEXML
 /**
  A link to an external resource (Web page, digital photo, video clip, etc) with additional information.
 */
-public final class GKLink {
+public final class Link {
     /// URL of hyperlink.
     public var link: String?
 
@@ -23,7 +23,7 @@ public final class GKLink {
     public var mimeType: String?
 }
 
-extension GKLink: GKMappable {
+extension Link: Mappable {
     
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.

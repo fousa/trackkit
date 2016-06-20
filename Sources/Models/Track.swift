@@ -12,7 +12,7 @@ import AEXML
 /**
  An ordered list of points describing a path.
 */
-public final class GKTrack {
+public final class Track {
     /// GPS name of track.
     public var name: String?
 
@@ -26,7 +26,7 @@ public final class GKTrack {
     public var source: String?
 
     /// Links to external information about track.
-    public var link: GKLink?
+    public var link: Link?
 
     /// GPS track number.
     public var number: Int?
@@ -38,10 +38,10 @@ public final class GKTrack {
     /// order. To represent a single GPS track where GPS reception was lost, or the
     /// GPS receiver was turned off, start a new Track Segment for each continuous span
     /// of track data.
-    public var segments: [GKTrackSegment]?
+    public var segments: [TrackSegment]?
 }
 
-extension GKTrack: GKMappable {
+extension Track: Mappable {
     
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.
@@ -50,7 +50,7 @@ extension GKTrack: GKMappable {
         }
         
         // When there are not route points, don't create the instance.
-        var routeSegments: [GKTrackSegment]? = nil
+        var routeSegments: [TrackSegment]? = nil
         routeSegments <~ element["trkseg"].all
         if routeSegments == nil {
             return nil
