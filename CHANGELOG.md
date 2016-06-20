@@ -1,5 +1,15 @@
 # GPXKit
 
+## Version 1.1.0
+
+- Remove the empty parse error notice.
+- Remove the `GK` prefix for all the classes.
+- The license property in the copyright notice is now in the correct `NSURL` format.
+- Add the magnetic variant property to a point.
+- Add the fix property to a point.
+- Add the dgps station type to point.
+- Throw an error when an incorrect GPX version is loaded. Only version **1.1** is supported by `GPXKit`.
+
 ## Version 1.0.2
 
 * Cleanup the code.
