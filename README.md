@@ -44,4 +44,8 @@ When the parsing fails an error will be thrown. There are currently **two** type
 
 - `InvalidData` thrown when the data object is empty.
 - `InvalidFormat` thrown when the data object can't be parsed.
-- `Empty` thrown when no routes, tracks or waypoints can be found. _not yet implemented_
+
+License
+=======
+
+GPXKit is available under the MIT license. See the LICENSE file for more info.
