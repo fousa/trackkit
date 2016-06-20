@@ -2,12 +2,12 @@ PODS:
   - AEXML (2.1.0)
   - GPXKit (1.0.2):
     - AEXML (~> 2.1)
-  - Nimble (3.0.0)
+  - Nimble (3.2.0)
   - Quick (0.8.0)
 
 DEPENDENCIES:
   - GPXKit (from `../`)
-  - Nimble (~> 3.0.0)
+  - Nimble (~> 3.2.0)
   - Quick (~> 0.8.0)
 
 EXTERNAL SOURCES:
@@ -17,7 +17,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AEXML: 0e2f657fdc67e17905682a06d55583a863d80803
   GPXKit: 1aadbab81175e80f670ec22ab99d8b5f4a73b163
-  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 2735f1452e2f1b970fe8b9ee07d1a5888599df37
+
+COCOAPODS: 1.0.1
