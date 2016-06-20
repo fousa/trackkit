@@ -22,5 +22,5 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Sources/**/*'
 
-  s.dependency 'AEXML', '~> 2.1'
+  s.dependency 'AEXML', '~> 3.0'
 end

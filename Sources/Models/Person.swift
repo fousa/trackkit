@@ -27,7 +27,7 @@ extension Person: Mappable {
     
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.
-        if element.errored {
+        if let _ = element.error {
             return nil
         }
         self.init()

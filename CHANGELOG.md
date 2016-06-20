@@ -9,6 +9,7 @@
 - Add the fix property to a point.
 - Add the dgps station type to point.
 - Throw an error when an incorrect GPX version is loaded. Only version **1.1** is supported by `GPXKit`.
+- Update AEXML to version **3.0**.
 
 ## Version 1.0.2
 
