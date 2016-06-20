@@ -58,7 +58,8 @@ class WaypointSpec: QuickSpec {
                                     + "<vdop>2.2</vdop>"
                                     + "<pdop>3.1</pdop>"
                                     + "<ageofdgpsdata>0.4</ageofdgpsdata>"
-                                    
+                                    + "<dgpsid>400</dgpsid>"
+                    
                                     // Link
                                     + "<link href='http://fousa.be'>"
                                         + "<text>Fousa</text>"
@@ -137,6 +138,10 @@ class WaypointSpec: QuickSpec {
             
             it("should have an age of gpx data") {
                 expect(point.ageOfTheGpxData) == 0.4
+            }
+            
+            it("should have a gps station type") {
+                expect(point.dgpsStationType) == 400
             }
             
             it("should have a type") {
@@ -228,6 +233,10 @@ class WaypointSpec: QuickSpec {
             
             it("should not have an age of gpx data") {
                 expect(point.ageOfTheGpxData).to(beNil())
+            }
+            
+            it("should have a gps station type") {
+                expect(point.dgpsStationType).to(beNil())
             }
         }
     }

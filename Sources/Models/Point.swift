@@ -85,6 +85,9 @@ public final class Point {
 
     /// Number of seconds since last DGPS update.
     public var ageOfTheGpxData: Float?
+    
+    /// Represents a differential GPS station.
+    public var dgpsStationType: Int?
 }
 
 extension Point: Mappable {
@@ -117,6 +120,7 @@ extension Point: Mappable {
         verticalDilutionOfPrecision   <~ element["vdop"]
         positionDilutionOfPrecision   <~ element["pdop"]
         ageOfTheGpxData               <~ element["ageofdgpsdata"]
+        dgpsStationType               <~ element["dgpsid"]
         time                          <~ element["time"]
         link                          <~ element["link"]
     }
