@@ -51,3 +51,9 @@ func <~ (inout lhs: [String]?, rhs: AEXMLElement) { // tailor:disable
 func <~ (inout lhs: NSDate?, rhs: AEXMLElement) { // tailor:disable
     lhs = rhs.optionalStringValue?.isoDate()
 }
+
+func <~ (inout lhs: NSURL?, rhs: AEXMLElement) { // tailor:disable
+    if let stringValue = rhs.optionalStringValue {
+        lhs = NSURL(string: stringValue)
+    }
+}

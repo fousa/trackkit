@@ -28,7 +28,7 @@ class CommonSpec: QuickSpec {
                                     // Copyright
                                     + "<copyright author='Jelle Vandebeeck'>"
                                         + "<year>2016</year>"
-                                        + "<license>MIT</license>"
+                                        + "<license>http://fousa.be/license.html</license>"
                                     + "</copyright>"
                     
                                     // Link
@@ -69,7 +69,7 @@ class CommonSpec: QuickSpec {
                 it("should have a copyright notice") {
                     expect(file.copyrightNotice?.author) == "Jelle Vandebeeck"
                     expect(file.copyrightNotice?.year) == 2016
-                    expect(file.copyrightNotice?.license) == "MIT"
+                    expect(file.copyrightNotice?.license) == NSURL(string: "http://fousa.be/license.html")
                 }
                 
                 it("should have a link") {
