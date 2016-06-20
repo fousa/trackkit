@@ -3,6 +3,11 @@ GPXKit [![CI Status](http://img.shields.io/travis/fousa/gpxkit.svg?style=flat)](
 
 `GPXKit` is allows you to easily parse a GPX file in Swift.
 
+GPX format
+==========
+
+The currently supported `GPX` format is version **1.1** as described in the [schema documentation](http://www.topografix.com/GPX/1/1/).
+
 Integration
 ===========
 
@@ -44,6 +49,7 @@ When the parsing fails an error will be thrown. There are currently **two** type
 
 - `InvalidData` thrown when the data object is empty.
 - `InvalidFormat` thrown when the data object can't be parsed.
+- `InvalidVersion` thrown when the data object contains an incorrect version of the GPX file.
 
 License
 =======
