@@ -10,6 +10,24 @@ import Foundation
 import CoreLocation
 import AEXML
 
+/// Type of GPS fix. none means GPS had no fix. To signify "the fix info is unknown, leave out fixType entirely. pps = military signal used.
+public enum FixType: String {
+    /// GPS had no fix.
+    case none = "none"
+    
+    /// 2 dimentional fix.
+    case twoD = "2d"
+    
+    /// 3 dimentional fix.
+    case threeD = "3d"
+    
+    /// Differential Global Positioning System.
+    case dgps = "dgps"
+    
+    /// Military signal used
+    case pps = "pps"
+}
+
 /**
  Represents a waypoint, point of interest, or named feature on a map.
  */
@@ -49,6 +67,9 @@ public final class Point {
 
     /// Type (classification) of the waypoint.
     public var type: String?
+    
+    /// Type of GPS fix.
+    public var fix: FixType?
 
     /// Number of satellites used to calculate the GPX fix.
     public var satelites: Int?
@@ -90,6 +111,7 @@ extension Point: Mappable {
         source                        <~ element["src"]
         symbol                        <~ element["sym"]
         type                          <~ element["type"]
+        fix                          <~ element["fix"]
         satelites                     <~ element["sat"]
         horizontalDilutionOfPrecision <~ element["hdop"]
         verticalDilutionOfPrecision   <~ element["vdop"]

@@ -119,6 +119,7 @@ class RouteSpec: QuickSpec {
                                         + "<sym>A symbol</sym>"
                                         + "<type>A type</type>"
                                         + "<sat>9</sat>"
+                                        + "<fix>dgps</fix>"
                                         + "<hdop>1.3</hdop>"
                                         + "<vdop>2.2</vdop>"
                                         + "<pdop>3.1</pdop>"
@@ -173,6 +174,14 @@ class RouteSpec: QuickSpec {
             
             it("should have a source") {
                 expect(point.source) == "A source"
+            }
+            
+            it("should have a fix") {
+                expect(point.fix) == FixType.dgps
+            }
+            
+            it("should have a type") {
+                expect(point.type) == "A type"
             }
             
             it("should have a link") {
@@ -255,6 +264,14 @@ class RouteSpec: QuickSpec {
             
             it("should not have a link") {
                 expect(point.link).to(beNil())
+            }
+            
+            it("should not have a type") {
+                expect(point.type).to(beNil())
+            }
+            
+            it("should not have a fix") {
+                expect(point.fix).to(beNil())
             }
             
             it("should not have a symbol") {

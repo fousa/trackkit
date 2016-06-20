@@ -57,3 +57,9 @@ func <~ (inout lhs: NSURL?, rhs: AEXMLElement) { // tailor:disable
         lhs = NSURL(string: stringValue)
     }
 }
+
+func <~ (inout lhs: FixType?, rhs: AEXMLElement) { // tailor:disable
+    if let stringValue = rhs.optionalStringValue {
+        lhs = FixType(rawValue: stringValue)
+    }
+}

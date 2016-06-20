@@ -52,6 +52,7 @@ class WaypointSpec: QuickSpec {
                                     + "<src>A source</src>"
                                     + "<sym>A symbol</sym>"
                                     + "<type>A type</type>"
+                                    + "<fix>dgps</fix>"
                                     + "<sat>9</sat>"
                                     + "<hdop>1.3</hdop>"
                                     + "<vdop>2.2</vdop>"
@@ -137,6 +138,14 @@ class WaypointSpec: QuickSpec {
             it("should have an age of gpx data") {
                 expect(point.ageOfTheGpxData) == 0.4
             }
+            
+            it("should have a type") {
+                expect(point.type) == "A type"
+            }
+            
+            it("should have a fix") {
+                expect(point.fix) == FixType.dgps
+            }
         }
         
         describe("empty waypoint") {
@@ -187,6 +196,14 @@ class WaypointSpec: QuickSpec {
             
             it("should not have a link") {
                 expect(point.link).to(beNil())
+            }
+            
+            it("should not have a type") {
+                expect(point.type).to(beNil())
+            }
+            
+            it("should not have a fix") {
+                expect(point.fix).to(beNil())
             }
             
             it("should not have a symbol") {
