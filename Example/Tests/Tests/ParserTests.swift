@@ -16,10 +16,6 @@ class ParserSpec: QuickSpec {
             it("should throw an parse error") {
                 expect{ try GKParser(data: NSData()).parse() }.to(throwError(GKParseError.InvalidFormat))
             }
-            
-            pending("should throw an empty error") {
-                expect{ try GKParser(data: NSData()).parse() }.to(throwError(GKParseError.Empty))
-            }
         }
     }
 }

@@ -22,8 +22,6 @@ public enum GKParseError: ErrorType {
     case InvalidData
     /// Thrown when the data contains an incorrect format that can't be parsed.
     case InvalidFormat
-    /// Thrown when no routes, tracks or waypoints can be found. _not yet implemented_
-    case Empty
 }
 
 /**
