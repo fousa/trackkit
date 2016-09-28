@@ -1,5 +1,5 @@
 osx_image: xcode8
-language: ruby
+language: objective-c
 rvm:
   - '2.2'
 
