@@ -1,0 +1,6 @@
+framework module TrackKit {
+  umbrella header "TrackKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

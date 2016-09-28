@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-import LogKit
+import TrackKit
 
 class ParserSpec: QuickSpec {
     override func spec() {

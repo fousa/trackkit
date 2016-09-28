@@ -2,7 +2,7 @@ use_frameworks!
 
 target 'Tests' do
   # Our pod.
-  pod 'LogKit', path: '../'
+  pod 'TrackKit', path: '../'
 
   # The testing pods.
   pod 'Quick',  '~> 0.10.0'

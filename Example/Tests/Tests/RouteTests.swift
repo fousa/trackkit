@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-import LogKit
+import TrackKit
 
 class RouteSpec: QuickSpec {
     override func spec() {
@@ -46,7 +46,7 @@ class RouteSpec: QuickSpec {
             var route: Route!
 
             beforeEach {
-                let content = "<gpx creator='LogKit' version='1.1'>"
+                let content = "<gpx creator='TrackKit' version='1.1'>"
                                 + "<rte>"
                                     + "<name>A waypoint</name>"
                                     + "<cmt>A comment</cmt>"
@@ -105,7 +105,7 @@ class RouteSpec: QuickSpec {
             var point: Point!
 
             beforeEach {
-                let content = "<gpx creator='LogKit' version='1.1'>"
+                let content = "<gpx creator='TrackKit' version='1.1'>"
                                 + "<rte>"
                                     + "<rtept lat='41.2' lon='-71.3'>"
                                         + "<ele>1001</ele>"
@@ -224,7 +224,7 @@ class RouteSpec: QuickSpec {
             var point: Point!
 
             beforeEach {
-                let content = "<gpx creator='LogKit' version='1.1'>"
+                let content = "<gpx creator='TrackKit' version='1.1'>"
                                 + "<rte>"
                                     + "<rtept lat='41.2' lon='-71.3'></rtept>"
                                 + "</rte>"
