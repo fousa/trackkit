@@ -1,5 +1,5 @@
 //
-//  GKPerson.swift
+//  Person.swift
 //  Pods
 //
 //  Created by Jelle Vandebeeck on 18/03/16.

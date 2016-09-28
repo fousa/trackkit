@@ -1,5 +1,5 @@
 //
-//  GKLink.swift
+//  Link.swift
 //  Pods
 //
 //  Created by Jelle Vandebeeck on 15/03/16.

@@ -1,5 +1,5 @@
 //
-//  GKFile.swift
+//  File.swift
 //  Pods
 //
 //  Created by Jelle Vandebeeck on 15/03/16.

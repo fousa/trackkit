@@ -1,5 +1,5 @@
 //
-//  GKTrack.swift
+//  Track.swift
 //  Pods
 //
 //  Created by Jelle Vandebeeck on 16/03/16.
