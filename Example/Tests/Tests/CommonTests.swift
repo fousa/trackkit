@@ -41,7 +41,7 @@ class CommonSpec: QuickSpec {
                                     + "<bounds minlat='42.1' minlon='-71.9' maxlat='42.4' maxlon='-71.1' />"
                                 + "</metadata>"
                             + "</gpx>"
-                let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                let data = content.data(using: String.Encoding.utf8)
                 file = try! Parser(data: data).parse()
             }
             
@@ -69,7 +69,7 @@ class CommonSpec: QuickSpec {
                 it("should have a copyright notice") {
                     expect(file.copyrightNotice?.author) == "Jelle Vandebeeck"
                     expect(file.copyrightNotice?.year) == 2016
-                    expect(file.copyrightNotice?.license) == NSURL(string: "http://fousa.be/license.html")
+                    expect(file.copyrightNotice?.license) == URL(string: "http://fousa.be/license.html")
                 }
                 
                 it("should have a link") {
@@ -97,7 +97,7 @@ class CommonSpec: QuickSpec {
             context("empty file") {
                 beforeEach {
                     let content = "<gpx version='1.1'></gpx>"
-                    let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                    let data = content.data(using: String.Encoding.utf8)
                     file = try! Parser(data: data).parse()
                 }
                 

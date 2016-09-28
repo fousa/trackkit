@@ -39,7 +39,7 @@ public final class Point {
     public var elevation: Float?
 
     /// Creation/modification timestamp for element. Date and time in are in Univeral Coordinated Time (UTC), not local time.
-    public var time: NSDate?
+    public var time: Date?
     
     /// Magnetic variation.
     public var magneticVariation: Float?

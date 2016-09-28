@@ -12,42 +12,42 @@ import AEXML
 /**
  The root element in the XML file.
  */
-public class File {
+open class File {
     /// You must include the name or URL of the software that created your GPX document. This allows others to inform the creator of a GPX instance document that fails to validate.
-    public var creator: String?
+    open var creator: String?
 
     /// The name of the GPX file.
-    public var name: String?
+    open var name: String?
 
     /// A description of the contents of the GPX file.
-    public var description: String?
+    open var description: String?
 
     /// The person or organization who created the GPX file.
-    public var author: Person?
+    open var author: Person?
 
     /// Copyright and license information governing use of the file.
-    public var copyrightNotice: CopyrightNotice?
+    open var copyrightNotice: CopyrightNotice?
 
     /// URLs associated with the location described in the file.
-    public var link: Link?
+    open var link: Link?
 
     /// The creation date of the file.
-    public var time: NSDate?
+    open var time: Date?
 
     /// Keywords associated with the file. Search engines or databases can use this information to classify the data.
-    public var keywords: [String]?
+    open var keywords: [String]?
 
     /// Minimum and maximum coordinates which describe the extent of the coordinates in the file.
-    public var bounds: Bounds?
+    open var bounds: Bounds?
 
     /// A list of waypoints.
-    public var waypoints: [Point]?
+    open var waypoints: [Point]?
 
     /// A list of routes.
-    public var routes: [Route]?
+    open var routes: [Route]?
 
     /// A list of tracks.
-    public var tracks: [Track]?
+    open var tracks: [Track]?
 }
 
 extension File {

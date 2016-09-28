@@ -10,11 +10,11 @@ import Foundation
 
 extension String {
     
-    func isoDate() -> NSDate? {
-        let formatter = NSDateFormatter()
+    func isoDate() -> Date? {
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        formatter.timeZone = NSTimeZone(abbreviation: "UTC")
-        return formatter.dateFromString(self)
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        return formatter.date(from: self)
     }
     
 }

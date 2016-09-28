@@ -20,7 +20,7 @@ public final class CopyrightNotice {
     public var year: Int?
     
     /// Link to external file containing license text.
-    public var license: NSURL?
+    public var license: URL?
 }
 
 extension CopyrightNotice: Mappable {

@@ -7,7 +7,7 @@ class RouteSpec: QuickSpec {
         describe("routes") {
             it("should not have routes") {
                 let content = "<gpx version='1.1'></gpx>"
-                let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                let data = content.data(using: String.Encoding.utf8)
                 let file = try! Parser(data: data).parse()
                 
                 expect(file.routes).to(beNil())
@@ -18,7 +18,7 @@ class RouteSpec: QuickSpec {
                                 + "<rte></rte>"
                                 + "<rte></rte>"
                             + "</gpx>"
-                let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                let data = content.data(using: String.Encoding.utf8)
                 let file = try! Parser(data: data).parse()
                 
                 expect(file.routes).to(beNil())
@@ -35,7 +35,7 @@ class RouteSpec: QuickSpec {
                                     + "<rtept lat='11' lon='11'></rtept>"
                                 + "</rte>"
                             + "</gpx>"
-                let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                let data = content.data(using: String.Encoding.utf8)
                 let file = try! Parser(data: data).parse()
                 
                 expect(file.routes?.count) == 2
@@ -63,7 +63,7 @@ class RouteSpec: QuickSpec {
                                     + "<rtept lat='41.2' lon='-71.3'></rtept>"
                                 + "</rte>"
                             + "</gpx>"
-                let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                let data = content.data(using: String.Encoding.utf8)
                 let file = try! Parser(data: data).parse()
                 
                 route = file.routes?.first!
@@ -134,7 +134,7 @@ class RouteSpec: QuickSpec {
                                     + "</rtept>"
                                 + "</rte>"
                             + "</gpx>"
-                let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                let data = content.data(using: String.Encoding.utf8)
                 let file = try! Parser(data: data).parse()
                 
                 point = file.routes?.first?.points?.first!
@@ -229,7 +229,7 @@ class RouteSpec: QuickSpec {
                                     + "<rtept lat='41.2' lon='-71.3'></rtept>"
                                 + "</rte>"
                             + "</gpx>"
-                let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+                let data = content.data(using: String.Encoding.utf8)
                 let file = try! Parser(data: data).parse()
                 
                 point = file.routes?.first?.points?.first!

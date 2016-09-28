@@ -17,7 +17,7 @@ import AEXML
  - invalidFormat: When the data contains an incorrect format that can't be parsed.
  - invalidVersion: When the version of the file is invalid.
 */
-public enum ParseError: ErrorType {
+public enum ParseError: Error {
     /// Thrown when the data object is empty.
     case invalidData
     /// Thrown when the data contains an incorrect format that can't be parsed.
@@ -34,7 +34,7 @@ public struct Parser {
     
     // MARK: - Properties
     
-    private let data: NSData
+    fileprivate let data: Data
     
     // MARK: - Initialization
 
@@ -45,7 +45,7 @@ public struct Parser {
         
         - Throws: `GKParseError.invalidData` if the data object is empty.
     */
-    public init(data: NSData?) throws { // tailor:disable
+    public init(data: Data?) throws { // tailor:disable
         guard let data = data else {
             throw ParseError.invalidData
         }
@@ -65,7 +65,7 @@ public struct Parser {
         - Returns: A parsed `GKFile` object.
     */
     public func parse() throws -> File {
-        guard let document = try? AEXMLDocument(xmlData: data) else {
+        guard let document = try? AEXMLDocument(xml: data) else {
             throw ParseError.invalidFormat
         }
         

@@ -22,14 +22,14 @@ extension AEXMLElement {
         if let _ = error {
             return nil
         }
-        return intValue
+        return int
     }
     
     var optionalFloatValue: Float? {
         if let _ = error {
             return nil
         }
-        return Float(doubleValue)
+        return Float(double)
     }
     
 }
