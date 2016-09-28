@@ -20,7 +20,10 @@
     "watchos": "2.0"
   },
   "requires_arc": true,
-  "default_subspecs": "GPX",
+  "default_subspecs": [
+    "GPX",
+    "TCX"
+  ],
   "subspecs": [
     {
       "name": "Core",
@@ -39,6 +42,15 @@
         ]
       },
       "source_files": "Sources/GPX/**/*"
+    },
+    {
+      "name": "TCX",
+      "dependencies": {
+        "TrackKit/Core": [
+
+        ]
+      },
+      "source_files": "Sources/TCX/**/*"
     }
   ]
 }

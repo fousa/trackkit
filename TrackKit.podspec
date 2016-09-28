@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # Set the default subspec.
-  s.default_subspecs = 'GPX'
+  s.default_subspecs = 'GPX', 'TCX'
 
   # The core components of TrackKit.
   s.subspec 'Core' do |ss|
@@ -33,5 +33,11 @@ Pod::Spec.new do |s|
   s.subspec 'GPX' do |ss|
     ss.dependency 'TrackKit/Core'
     ss.source_files = 'Sources/GPX/**/*'
+  end
+
+  # Everything needed to parse GPX files.
+  s.subspec 'TCX' do |ss|
+    ss.dependency 'TrackKit/Core'
+    ss.source_files = 'Sources/TCX/**/*'
   end
 end
