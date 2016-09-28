@@ -20,10 +20,25 @@
     "watchos": "2.0"
   },
   "requires_arc": true,
-  "source_files": "Sources/**/*",
-  "dependencies": {
-    "AEXML": [
-      "~> 4.0"
-    ]
-  }
+  "default_subspecs": "GPX",
+  "subspecs": [
+    {
+      "name": "Core",
+      "dependencies": {
+        "AEXML": [
+          "~> 4.0"
+        ]
+      },
+      "source_files": "Sources/Core/**/*"
+    },
+    {
+      "name": "GPX",
+      "dependencies": {
+        "TrackKit/Core": [
+
+        ]
+      },
+      "source_files": "Sources/GPX/**/*"
+    }
+  ]
 }
