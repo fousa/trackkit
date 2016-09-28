@@ -18,13 +18,13 @@ public final class TrackSegment {
 }
 
 extension TrackSegment: Mappable {
-    
+
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.
         if let _ = element.error {
             return nil
         }
-        
+
         // When there are not route points, don't create the instance.
         var trackPoints: [Point]? = nil
         trackPoints <~ element["trkpt"].all
@@ -32,8 +32,8 @@ extension TrackSegment: Mappable {
             return nil
         }
         self.init()
-        
+
         points = trackPoints
     }
-    
+
 }

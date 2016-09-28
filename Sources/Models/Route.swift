@@ -39,22 +39,22 @@ public final class Route {
 }
 
 extension Route: Mappable {
-    
+
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.
         if let _ = element.error {
             return nil
         }
-        
+
         // When there are not route points, don't create the instance.
         var routePoints: [Point]? = nil
         routePoints <~ element["rtept"].all
         if routePoints == nil {
             return nil
         }
-        
+
         self.init()
-        
+
         name        <~ element["name"]
         comment     <~ element["cmt"]
         description <~ element["desc"]
@@ -64,5 +64,5 @@ extension Route: Mappable {
         link        <~ element["link"]
         points      = routePoints
     }
-    
+
 }

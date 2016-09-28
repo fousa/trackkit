@@ -15,7 +15,7 @@ import AEXML
 public final class Person {
     /// Name of person or organization.
     public var name: String?
-    
+
     /// Email address.
     public var email: String?
 
@@ -24,18 +24,18 @@ public final class Person {
 }
 
 extension Person: Mappable {
-    
+
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.
         if let _ = element.error {
             return nil
         }
         self.init()
-        
+
         email = String(fromEmailElement: element["email"])
-        
+
         name  <~ element["name"]
         link  <~ element["link"]
     }
-    
+
 }

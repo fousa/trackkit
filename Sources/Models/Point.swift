@@ -14,16 +14,16 @@ import AEXML
 public enum FixType: String {
     /// GPS had no fix.
     case none = "none"
-    
+
     /// 2 dimentional fix.
     case twoD = "2d"
-    
+
     /// 3 dimentional fix.
     case threeD = "3d"
-    
+
     /// Differential Global Positioning System.
     case dgps = "dgps"
-    
+
     /// Military signal used
     case pps = "pps"
 }
@@ -40,7 +40,7 @@ public final class Point {
 
     /// Creation/modification timestamp for element. Date and time in are in Univeral Coordinated Time (UTC), not local time.
     public var time: Date?
-    
+
     /// Magnetic variation.
     public var magneticVariation: Float?
 
@@ -67,7 +67,7 @@ public final class Point {
 
     /// Type (classification) of the waypoint.
     public var type: String?
-    
+
     /// Type of GPS fix.
     public var fix: FixType?
 
@@ -85,25 +85,25 @@ public final class Point {
 
     /// Number of seconds since last DGPS update.
     public var ageOfTheGpxData: Float?
-    
+
     /// Represents a differential GPS station.
     public var dgpsStationType: Int?
 }
 
 extension Point: Mappable {
-    
+
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.
         if let _ = element.error {
             return nil
         }
-        
+
         // Check if coordinate is avaiable.
         guard let latitude = element.attributes["lat"], let longitude = element.attributes["lon"] else {
             return nil
         }
         self.init()
-        
+
         coordinate                    <~ (Double(latitude)!, Double(longitude)!)
         elevation                     <~ element["ele"]
         magneticVariation             <~ element["magvar"]
@@ -124,5 +124,5 @@ extension Point: Mappable {
         time                          <~ element["time"]
         link                          <~ element["link"]
     }
-    
+
 }

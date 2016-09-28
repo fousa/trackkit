@@ -51,20 +51,20 @@ open class File {
 }
 
 extension File {
-    
+
     convenience init?(fromElement element: AEXMLElement) {
         // When the element is an error, don't create the instance.
         if element.attributes["version"] != "1.1" {
             return nil
         }
         self.init()
-        
+
         // Fetch the creator from the root element.
         creator = element.attributes["creator"]
-        
+
         // Fetch the metadata from the metadata element.
         let metadata = element["metadata"]
-        
+
         name            <~ metadata["name"]
         description     <~ metadata["desc"]
         author          <~ metadata["author"]
@@ -77,5 +77,5 @@ extension File {
         routes          <~ element["rte"].all
         tracks          <~ element["trk"].all
     }
-    
+
 }

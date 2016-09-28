@@ -21,7 +21,7 @@ func <~ <T: Mappable>(lhs: inout T?, rhs: AEXMLElement) {
 }
 
 func <~ <T: Mappable>(lhs: inout [T]?, rhs: [AEXMLElement]?) {
-    if let elements = rhs?.flatMap({ T(fromElement: $0) }) , elements.count > 0 {
+    if let elements = rhs?.flatMap({ T(fromElement: $0) }), elements.count > 0 {
         lhs = elements
     }
 }
