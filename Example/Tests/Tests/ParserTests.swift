@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-import GPXKit
+import LogKit
 
 class ParserSpec: QuickSpec {
     override func spec() {

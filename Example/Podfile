@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'Example' do
-  pod 'GPXKit', path: '../'
+  pod 'LogKit', path: '../'
 
   target 'Tests' do
     inherit! :search_paths

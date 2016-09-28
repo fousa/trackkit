@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-import GPXKit
+import LogKit
 
 class CommonSpec: QuickSpec {
     override func spec() {
@@ -8,7 +8,7 @@ class CommonSpec: QuickSpec {
         
         describe("common data") {
             beforeEach {
-                let content = "<gpx creator='GPXKit' version='1.1'>"
+                let content = "<gpx creator='LogKit' version='1.1'>"
                                 + "<metadata>"
                                     + "<name>Jelle</name>"
                                     + "<desc>A GPX file</desc>"
@@ -46,7 +46,7 @@ class CommonSpec: QuickSpec {
             }
             
             it("should have a creator name") {
-                expect(file.creator) == "GPXKit"
+                expect(file.creator) == "LogKit"
             }
             
             context("metadata") {
