@@ -44,7 +44,7 @@ The only thing you have to do is make sure to get the contents of the GPX file i
 
 ``` swift
 let content: String = '...'
-let data = content.dataUsingEncoding(NSUTF8StringEncoding)
+let data = content.data(using: String.Encoding.utf8)
 let file = try! Parser(data: data).parse()
 ```
 
