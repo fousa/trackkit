@@ -13,7 +13,7 @@ install:
 script:
   - set -o pipefail
   - swiftlint
-  - xcodebuild clean test -workspace Example/TrackKit.xcworkspace -scheme Tests -destination "platform=iOS Simulator,name=iPhone 6" -enableCodeCoverage YES | xcpretty
+  - xcodebuild test -workspace Example/TrackKit.xcworkspace -scheme Tests -destination "platform=iOS Simulator,name=iPhone 6" -enableCodeCoverage YES | xcpretty
 
 deploy:
   skip_cleanup: true
