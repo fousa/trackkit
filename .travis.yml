@@ -8,7 +8,7 @@ before_install:
   - gem install cocoapods -v '1.1.0.rc2' -N --no-ri --no-rdoc
 
 install:
-  - ./install_swiftlint.sh
+  - ./scripts/setup_swiftlint.sh
 
 script:
   - set -o pipefail
