@@ -14,7 +14,12 @@ protocol Mappable {
     init?(fromElement element: AEXMLElement)
 }
 
-infix operator <~ { associativity left }
+precedencegroup OperatorPresedenceGroup {
+    associativity: left
+    higherThan: MultiplicationPrecedence
+}
+
+infix operator <~: OperatorPresedenceGroup
 
 func <~ <T: Mappable>(lhs: inout T?, rhs: AEXMLElement) {
     lhs = T(fromElement: rhs)
