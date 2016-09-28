@@ -45,7 +45,7 @@ public struct Parser {
         
         - Throws: `GKParseError.invalidData` if the data object is empty.
     */
-    public init(data: Data?) throws { // tailor:disable
+    public init(data: Data?) throws {
         guard let data = data else {
             throw ParseError.invalidData
         }
