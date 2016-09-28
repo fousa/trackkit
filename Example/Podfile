@@ -1,12 +1,18 @@
 use_frameworks!
 
-target 'Example' do
+target 'Tests' do
+  # Our pod.
   pod 'LogKit', path: '../'
 
-  target 'Tests' do
-    inherit! :search_paths
+  # The testing pods.
+  pod 'Quick',  '~> 0.10.0'
+  pod 'Nimble', '~> 5.0.0'
+end
 
-    pod 'Quick',  '~> 0.8.0'
-    pod 'Nimble', '~> 3.2.0'
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
   end
 end

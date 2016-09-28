@@ -1,0 +1,25 @@
+PODS:
+  - AEXML (4.0.0)
+  - LogKit (1.1.0):
+    - AEXML (~> 4.0)
+  - Nimble (5.0.0)
+  - Quick (0.10.0)
+
+DEPENDENCIES:
+  - LogKit (from `../`)
+  - Nimble (~> 5.0.0)
+  - Quick (~> 0.10.0)
+
+EXTERNAL SOURCES:
+  LogKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AEXML: 6fc6433aa35bdc15dd8eb8d54eb7aa4520a010eb
+  LogKit: da1c512b9e75813c3d874074cef4ddc8ba602bd6
+  Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
+  Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
+
+PODFILE CHECKSUM: 7a7684f65ee61ddf22567a09a8edc30d0bbd93b4
+
+COCOAPODS: 1.1.0.rc.2
