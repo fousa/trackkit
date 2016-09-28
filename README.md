@@ -1,12 +1,15 @@
-GPXKit [![CI Status](http://img.shields.io/travis/fousa/gpxkit.svg?style=flat)](https://travis-ci.org/fousa/gpxkit) [![Version](https://img.shields.io/cocoapods/v/GPXKit.svg?style=flat)](http://cocoapods.org/pods/GPXKit) [![License](https://img.shields.io/cocoapods/l/GPXKit.svg?style=flat)](http://cocoapods.org/pods/GPXKit) [![Platform](https://img.shields.io/cocoapods/p/GPXKit.svg?style=flat)](http://cocoapods.org/pods/GPXKit)
+LogKit [![CI Status](http://img.shields.io/travis/fousa/logkit.svg?style=flat)](https://travis-ci.org/fousa/logkit) [![Version](https://img.shields.io/cocoapods/v/LogKit.svg?style=flat)](http://cocoapods.org/pods/LogKit) [![License](https://img.shields.io/cocoapods/l/LogKit.svg?style=flat)](http://cocoapods.org/pods/LogKit) [![Platform](https://img.shields.io/cocoapods/p/LogKit.svg?style=flat)](http://cocoapods.org/pods/LogKit)
 ======
 
-`GPXKit` is allows you to easily parse a GPX file in Swift.
+`LogKit` is allows you to easily parse a GPX file in Swift.
 
-GPX format
-==========
+Supported Formats
+=================
 
-The currently supported `GPX` format is version **1.1** as described in the [schema documentation](http://www.topografix.com/GPX/1/1/).
+GPX
+---
+
+The `GPX` format that is support is version **1.1** as described in the [schema documentation](http://www.topografix.com/GPX/1/1/).
 
 Integration
 ===========
@@ -14,10 +17,10 @@ Integration
 Add this pod to your `Podfile` by adding the following line:
 
 ``` ruby
-pod 'GPXKit', '~> 1.1'
+pod 'LogKit', '~> 1.1'
 ```
 
-_It's important to add the version to the `pod 'GPXKit'`, this way you are sure that a next update of the pod will not break your code._
+_It's important to add the version to the `pod 'LogKit'`, this way you are sure that a next update of the pod will not break your code._
 
 Usage
 =====
@@ -27,7 +30,7 @@ You can take a look at the different specs on how to use this pod. But for now I
 Here is a sample GPX file with some data:
 
 ``` xml
-<gpx creator='GPXKit'>
+<gpx creator='LogKit'>
   <metadata>
     <name>Jelle Vandebeeck</name>
     <desc>A GPX file</desc>
@@ -37,12 +40,12 @@ Here is a sample GPX file with some data:
 </gpx>                    
 ```
 
-The only thing you have to do is make sure to get the contents of the GPX file into an `NSData` structure. When you have this you can easily parse the file into a `GKFile`.
+The only thing you have to do is make sure to get the contents of the GPX file into an `Data` structure. When you have this you can easily parse the file into a `File`.
 
 ``` swift
 let content: String = '...'
 let data = content.dataUsingEncoding(NSUTF8StringEncoding)
-let file = try! GKParser(data: data).parse()
+let file = try! Parser(data: data).parse()
 ```
 
 When the parsing fails an error will be thrown. There are currently **two** types of errors:
@@ -54,4 +57,4 @@ When the parsing fails an error will be thrown. There are currently **two** type
 License
 =======
 
-GPXKit is available under the MIT license. See the LICENSE file for more info.
+LogKit is available under the MIT license. See the LICENSE file for more info.
