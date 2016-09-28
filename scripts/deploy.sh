@@ -2,4 +2,5 @@
 
 source ~/.rvm/scripts/rvm
 rvm use default
-pod trunk push
+bundle install
+bundle exec pod trunk push

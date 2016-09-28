@@ -5,9 +5,9 @@ rvm:
 
 before_install:
   - gem install xcpretty -N --no-ri --no-rdoc
-  - gem install cocoapods -v '1.1.0.rc2' -N --no-ri --no-rdoc
 
 install:
+  - bundle install
   - ./scripts/setup_swiftlint.sh
 
 script:
