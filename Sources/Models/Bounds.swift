@@ -25,7 +25,11 @@ extension Bounds: Mappable {
 
     convenience init?(fromElement element: AEXMLElement) {
         // When the element misses some coordinate data, don't create the instance.
-        guard let minimumLatitude = element.attributes["minlat"], let minimumLongitude = element.attributes["minlon"], let maximumLatitude = element.attributes["maxlat"], let maximumLongitude = element.attributes["maxlon"] else {
+        guard
+            let minimumLatitude = element.attributes["minlat"],
+            let minimumLongitude = element.attributes["minlon"],
+            let maximumLatitude = element.attributes["maxlat"],
+            let maximumLongitude = element.attributes["maxlon"] else {
             return nil
         }
         self.init()

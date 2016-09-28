@@ -11,7 +11,8 @@ import CoreLocation
 import AEXML
 
 /**
- A list of errors that can be thrown by the parser. These errors can be thrown during initialization or during the parsing process.
+ A list of errors that can be thrown by the parser. These errors can be
+ thrown during initialization or during the parsing process.
 
  - invalidData: When the data object is empty.
  - invalidFormat: When the data contains an incorrect format that can't be parsed.
@@ -22,13 +23,14 @@ public enum ParseError: Error {
     case invalidData
     /// Thrown when the data contains an incorrect format that can't be parsed.
     case invalidFormat
-    /// Thrown when the data contains an incorrect version that can't be parsed. Currently only version 1.1 is supported.
+    /// Thrown when the data contains an incorrect version that can't be parsed.
+    /// Currently only version 1.1 is supported.
     case invalidVersion
 }
 
 /**
- The parser that is responsible for converting a given `NSData` representation of the GPX file
- into an understandable format.
+ The parser that is responsible for converting a given `NSData` representation of
+ the GPX file into an understandable format.
 */
 public struct Parser {
 

@@ -10,7 +10,8 @@ import Foundation
 import AEXML
 
 /**
- A link to an external resource (Web page, digital photo, video clip, etc) with additional information.
+ A link to an external resource (Web page, digital photo, video clip, etc)
+ with additional information.
 */
 public final class Link {
     /// URL of hyperlink.

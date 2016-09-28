@@ -7,8 +7,12 @@ before_install:
   - gem install xcpretty -N --no-ri --no-rdoc
   - gem install cocoapods -v '1.1.0.rc2' -N --no-ri --no-rdoc
 
+install:
+  - ./scripts/setup_swiftlint.sh
+
 script:
   - set -o pipefail
+  - swiftlint
   - xcodebuild clean test -workspace Example/LogKit.xcworkspace -scheme Example -destination "platform=iOS Simulator,name=iPhone 6" -enableCodeCoverage YES | xcpretty
 
 deploy:

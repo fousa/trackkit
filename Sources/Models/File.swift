@@ -13,7 +13,9 @@ import AEXML
  The root element in the XML file.
  */
 open class File {
-    /// You must include the name or URL of the software that created your GPX document. This allows others to inform the creator of a GPX instance document that fails to validate.
+    /// You must include the name or URL of the software that created your
+    /// GPX document. This allows others to inform the creator of a GPX instance
+    /// document that fails to validate.
     open var creator: String?
 
     /// The name of the GPX file.
@@ -34,10 +36,12 @@ open class File {
     /// The creation date of the file.
     open var time: Date?
 
-    /// Keywords associated with the file. Search engines or databases can use this information to classify the data.
+    /// Keywords associated with the file. Search engines or databases can use this
+    /// information to classify the data.
     open var keywords: [String]?
 
-    /// Minimum and maximum coordinates which describe the extent of the coordinates in the file.
+    /// Minimum and maximum coordinates which describe the extent of the coordinates
+    /// in the file.
     open var bounds: Bounds?
 
     /// A list of waypoints.

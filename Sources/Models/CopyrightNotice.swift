@@ -10,7 +10,9 @@ import Foundation
 import AEXML
 
 /**
- Information about the copyright holder and any license governing use of this file. By linking to an appropriate license, you may place your data into the public domain or grant additional usage rights.
+ Information about the copyright holder and any license governing use of this
+ file. By linking to an appropriate license, you may place your data into the public
+ domain or grant additional usage rights.
 */
 public final class CopyrightNotice {
     /// Copyright holder.
