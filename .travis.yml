@@ -1,14 +1,12 @@
 osx_image: xcode8
-language: generic
-rvm:
-  - 2.2
-
-install:
-  - ./install_swiftlint.sh
+language: ruby
 
 before_install:
   - gem install xcpretty -N --no-ri --no-rdoc
   - gem install cocoapods -v '1.1.0.rc2' -N --no-ri --no-rdoc
+
+install:
+  - ./install_swiftlint.sh
 
 script:
   - set -o pipefail
