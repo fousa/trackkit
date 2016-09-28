@@ -2,13 +2,13 @@ import Quick
 import Nimble
 import TrackKit
 
-class RouteSpec: QuickSpec {
+class GPXRouteSpec: QuickSpec {
     override func spec() {
         describe("routes") {
             it("should not have routes") {
                 let content = "<gpx version='1.1'></gpx>"
                 let data = content.data(using: String.Encoding.utf8)
-                let file = try! Parser(data: data).parse()
+                let file = try! GPXParser(data: data).parse()
 
                 expect(file.routes).to(beNil())
             }
@@ -19,7 +19,7 @@ class RouteSpec: QuickSpec {
                                 + "<rte></rte>"
                             + "</gpx>"
                 let data = content.data(using: String.Encoding.utf8)
-                let file = try! Parser(data: data).parse()
+                let file = try! GPXParser(data: data).parse()
 
                 expect(file.routes).to(beNil())
             }
@@ -36,7 +36,7 @@ class RouteSpec: QuickSpec {
                                 + "</rte>"
                             + "</gpx>"
                 let data = content.data(using: String.Encoding.utf8)
-                let file = try! Parser(data: data).parse()
+                let file = try! GPXParser(data: data).parse()
 
                 expect(file.routes?.count) == 2
             }
@@ -64,7 +64,7 @@ class RouteSpec: QuickSpec {
                                 + "</rte>"
                             + "</gpx>"
                 let data = content.data(using: String.Encoding.utf8)
-                let file = try! Parser(data: data).parse()
+                let file = try! GPXParser(data: data).parse()
 
                 route = file.routes?.first!
             }
@@ -135,7 +135,7 @@ class RouteSpec: QuickSpec {
                                 + "</rte>"
                             + "</gpx>"
                 let data = content.data(using: String.Encoding.utf8)
-                let file = try! Parser(data: data).parse()
+                let file = try! GPXParser(data: data).parse()
 
                 point = file.routes?.first?.points?.first!
             }
@@ -230,7 +230,7 @@ class RouteSpec: QuickSpec {
                                 + "</rte>"
                             + "</gpx>"
                 let data = content.data(using: String.Encoding.utf8)
-                let file = try! Parser(data: data).parse()
+                let file = try! GPXParser(data: data).parse()
 
                 point = file.routes?.first?.points?.first!
             }
