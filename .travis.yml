@@ -18,7 +18,7 @@ script:
 deploy:
   skip_cleanup: true
   provider: script
-  script: ./scripts/deploy.sh
+  script: bundle exec pod trunk push
   on:
     tags: true
     branch: master
