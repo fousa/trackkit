@@ -2,7 +2,7 @@
 
 ## Version 1.2.0
 
-- Rename `GPXKit` to `LogKit` because we want to be able to support multiple formats.
+- Rename `GPXKit` to `TrackKit` because we want to be able to support multiple formats.
 - Update the code to be Swift 3.0 compatible.
 
 ## Version 1.1.0

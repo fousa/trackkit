@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/hercules/projects/logkit/Example/LogKit.xcodeproj">
+      location = "self:/Users/hercules/projects/trackkit/Example/TrackKit.xcodeproj">
    </FileRef>
 </Workspace>
