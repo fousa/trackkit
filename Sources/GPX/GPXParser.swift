@@ -24,15 +24,14 @@ public enum ParseError: Error {
     /// Thrown when the data contains an incorrect format that can't be parsed.
     case invalidFormat
     /// Thrown when the data contains an incorrect version that can't be parsed.
-    /// Currently only version 1.1 is supported.
     case invalidVersion
 }
 
 /**
- The parser that is responsible for converting a given `NSData` representation of
+ The parser that is responsible for converting a given `Data` representation of
  the GPX file into an understandable format.
 */
-public struct Parser {
+public struct GPXParser: Parsable {
 
     // MARK: - Properties
 
@@ -45,7 +44,7 @@ public struct Parser {
 
         - Parameter data: The GPX data object you want to parse.
 
-        - Throws: `GKParseError.invalidData` if the data object is empty.
+        - Throws: `ParseError.invalidData` if the data object is empty.
     */
     public init(data: Data?) throws {
         guard let data = data else {
@@ -61,10 +60,10 @@ public struct Parser {
         Parse the data _passed through the initializer_ into a representable
         format.
 
-         - Throws: `GKParseError.invalidFormat` if the data cannot be parsed.
-         - Throws: `GKParseError.invalidVersion` if the versio is incorrect.
+         - Throws: `ParseError.invalidFormat` if the data cannot be parsed.
+         - Throws: `ParseError.invalidVersion` if the versio is incorrect.
 
-        - Returns: A parsed `GKFile` object.
+        - Returns: A parsed `File` object.
     */
     public func parse() throws -> File {
         guard let document = try? AEXMLDocument(xml: data) else {

@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import TrackKit
 
-class CommonSpec: QuickSpec {
+class GPXCommonSpec: QuickSpec {
     override func spec() {
         var file: File!
 
@@ -42,7 +42,7 @@ class CommonSpec: QuickSpec {
                                 + "</metadata>"
                             + "</gpx>"
                 let data = content.data(using: String.Encoding.utf8)
-                file = try! Parser(data: data).parse()
+                file = try! GPXParser(data: data).parse()
             }
 
             it("should have a creator name") {
@@ -98,7 +98,7 @@ class CommonSpec: QuickSpec {
                 beforeEach {
                     let content = "<gpx version='1.1'></gpx>"
                     let data = content.data(using: String.Encoding.utf8)
-                    file = try! Parser(data: data).parse()
+                    file = try! GPXParser(data: data).parse()
                 }
 
                 it("should not have a creator name") {

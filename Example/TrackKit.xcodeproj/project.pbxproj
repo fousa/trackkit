@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		587850AD6143220172BE544A /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A132C282698390E84D675EC /* Pods_Tests.framework */; };
-		607FACEC1AFB9204008FA782 /* CommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* CommonTests.swift */; };
-		6297A9A21C98C36D00686120 /* WaypointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A11C98C36D00686120 /* WaypointTests.swift */; };
-		6297A9A51C98C4D500686120 /* RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A41C98C4D500686120 /* RouteTests.swift */; };
-		6297A9A71C98C69000686120 /* TrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A61C98C69000686120 /* TrackTests.swift */; };
-		6297A9C01C99611400686120 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9BF1C99611400686120 /* ParserTests.swift */; };
+		607FACEC1AFB9204008FA782 /* GPXCommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* GPXCommonTests.swift */; };
+		6297A9A21C98C36D00686120 /* GPXWaypointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A11C98C36D00686120 /* GPXWaypointTests.swift */; };
+		6297A9A51C98C4D500686120 /* GPXRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A41C98C4D500686120 /* GPXRouteTests.swift */; };
+		6297A9A71C98C69000686120 /* GPXTrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A61C98C69000686120 /* GPXTrackTests.swift */; };
+		6297A9C01C99611400686120 /* GPXParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9BF1C99611400686120 /* GPXParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +21,11 @@
 		2A132C282698390E84D675EC /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACE51AFB9204008FA782 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* CommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTests.swift; sourceTree = "<group>"; };
-		6297A9A11C98C36D00686120 /* WaypointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointTests.swift; sourceTree = "<group>"; };
-		6297A9A41C98C4D500686120 /* RouteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTests.swift; sourceTree = "<group>"; };
-		6297A9A61C98C69000686120 /* TrackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTests.swift; sourceTree = "<group>"; };
-		6297A9BF1C99611400686120 /* ParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* GPXCommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXCommonTests.swift; sourceTree = "<group>"; };
+		6297A9A11C98C36D00686120 /* GPXWaypointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXWaypointTests.swift; sourceTree = "<group>"; };
+		6297A9A41C98C4D500686120 /* GPXRouteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXRouteTests.swift; sourceTree = "<group>"; };
+		6297A9A61C98C69000686120 /* GPXTrackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXTrackTests.swift; sourceTree = "<group>"; };
+		6297A9BF1C99611400686120 /* GPXParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +51,10 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				2EA3EDBF0BB067FF85406369 /* Frameworks */,
+				60AB0DD91E2DCEC8E00A50FF /* Pods */,
 				607FACD11AFB9204008FA782 /* Products */,
 				607FACE81AFB9204008FA782 /* Tests */,
-				60AB0DD91E2DCEC8E00A50FF /* Pods */,
-				2EA3EDBF0BB067FF85406369 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,13 +95,21 @@
 		6297A9A31C98C37700686120 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* CommonTests.swift */,
-				6297A9BF1C99611400686120 /* ParserTests.swift */,
-				6297A9A41C98C4D500686120 /* RouteTests.swift */,
-				6297A9A61C98C69000686120 /* TrackTests.swift */,
-				6297A9A11C98C36D00686120 /* WaypointTests.swift */,
+				62BB32D31D9C29B600310CF9 /* GPX */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		62BB32D31D9C29B600310CF9 /* GPX */ = {
+			isa = PBXGroup;
+			children = (
+				607FACEB1AFB9204008FA782 /* GPXCommonTests.swift */,
+				6297A9BF1C99611400686120 /* GPXParserTests.swift */,
+				6297A9A41C98C4D500686120 /* GPXRouteTests.swift */,
+				6297A9A61C98C69000686120 /* GPXTrackTests.swift */,
+				6297A9A11C98C36D00686120 /* GPXWaypointTests.swift */,
+			);
+			path = GPX;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,11 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6297A9A21C98C36D00686120 /* WaypointTests.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* CommonTests.swift in Sources */,
-				6297A9C01C99611400686120 /* ParserTests.swift in Sources */,
-				6297A9A51C98C4D500686120 /* RouteTests.swift in Sources */,
-				6297A9A71C98C69000686120 /* TrackTests.swift in Sources */,
+				6297A9A21C98C36D00686120 /* GPXWaypointTests.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* GPXCommonTests.swift in Sources */,
+				6297A9C01C99611400686120 /* GPXParserTests.swift in Sources */,
+				6297A9A51C98C4D500686120 /* GPXRouteTests.swift in Sources */,
+				6297A9A71C98C69000686120 /* GPXTrackTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
