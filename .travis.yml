@@ -1,5 +1,7 @@
 osx_image: xcode8
 language: ruby
+rvm:
+  - '2.0'
 
 before_install:
   - gem install xcpretty -N --no-ri --no-rdoc
