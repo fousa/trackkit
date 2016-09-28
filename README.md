@@ -1,7 +1,7 @@
-LogKit [![CI Status](http://img.shields.io/travis/fousa/logkit.svg?style=flat)](https://travis-ci.org/fousa/logkit) [![Version](https://img.shields.io/cocoapods/v/LogKit.svg?style=flat)](http://cocoapods.org/pods/LogKit) [![License](https://img.shields.io/cocoapods/l/LogKit.svg?style=flat)](http://cocoapods.org/pods/LogKit) [![Platform](https://img.shields.io/cocoapods/p/LogKit.svg?style=flat)](http://cocoapods.org/pods/LogKit)
+TrackKit [![CI Status](http://img.shields.io/travis/fousa/trackkit.svg?style=flat)](https://travis-ci.org/fousa/trackkit) [![Version](https://img.shields.io/cocoapods/v/TrackKit.svg?style=flat)](http://cocoapods.org/pods/TrackKit) [![License](https://img.shields.io/cocoapods/l/TrackKit.svg?style=flat)](http://cocoapods.org/pods/TrackKit) [![Platform](https://img.shields.io/cocoapods/p/TrackKit.svg?style=flat)](http://cocoapods.org/pods/TrackKit)
 ======
 
-`LogKit` is allows you to easily parse a GPX file in Swift.
+`TrackKit` is allows you to easily parse a GPX file in Swift.
 
 Supported Formats
 =================
@@ -17,10 +17,10 @@ Integration
 Add this pod to your `Podfile` by adding the following line:
 
 ``` ruby
-pod 'LogKit', '~> 1.2'
+pod 'TrackKit', '~> 1.2'
 ```
 
-_It's important to add the version to the `pod 'LogKit'`, this way you are sure that a next update of the pod will not break your code._
+_It's important to add the version to the `pod 'TrackKit'`, this way you are sure that a next update of the pod will not break your code._
 
 Usage
 =====
@@ -30,7 +30,7 @@ You can take a look at the different specs on how to use this pod. But for now I
 Here is a sample GPX file with some data:
 
 ``` xml
-<gpx creator='LogKit'>
+<gpx creator='TrackKit'>
   <metadata>
     <name>Jelle Vandebeeck</name>
     <desc>A GPX file</desc>
@@ -57,4 +57,4 @@ When the parsing fails an error will be thrown. There are currently **two** type
 License
 =======
 
-LogKit is available under the MIT license. See the LICENSE file for more info.
+TrackKit is available under the MIT license. See the LICENSE file for more info.

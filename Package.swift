@@ -1,8 +1,8 @@
 import PackageDescription
 
 let package = Package(
-  name: "LogKit",
+  name: "TrackKit",
   dependencies: [
-    .Package(url: "https://github.com/fousa/AEXML.git", majorVersion: 2, minor: 1)
+    .Package(url: "https://github.com/tadija/AEXML.git", majorVersion: 4, minor: 0)
   ]
 )

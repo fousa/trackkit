@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'LogKit'
+  s.name             = 'TrackKit'
   s.version          = '1.2.0'
   s.summary          = 'Parse a GPX file into a readable format with Swift.'
 
@@ -8,10 +8,10 @@ Pod::Spec.new do |s|
   be easily used in your code.
                        DESC
 
-  s.homepage         = 'https://github.com/fousa/logkit'
+  s.homepage         = 'https://github.com/fousa/trackkit'
   s.license          = 'MIT'
   s.author           = { 'Jelle Vandebeeck' => 'jelle@fousa.be' }
-  s.source           = { git: 'https://github.com/fousa/logkit.git', tag: s.version.to_s }
+  s.source           = { git: 'https://github.com/fousa/trackkit.git', tag: s.version.to_s }
   s.social_media_url = 'https://twitter.com/fousa'
 
   s.ios.deployment_target     = '9.0'
