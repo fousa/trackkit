@@ -8,8 +8,19 @@
 
 import AEXML
 
-public enum TrackType {
+public enum TrackType: String {
     case gpx
+    
+    // MARK: - Init
+    
+    public init?(fileExtension: String) {
+        guard let value = TrackType(rawValue: fileExtension.lowercased()) else {
+            return nil
+        }
+        self = value
+    }
+    
+    // MARK: - Parsing
     
     func parse(document: AEXMLDocument) throws -> File {
         switch self {
