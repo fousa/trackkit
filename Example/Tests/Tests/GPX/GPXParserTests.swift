@@ -10,18 +10,18 @@ class TrackParserSpec: QuickSpec {
             }
 
             it("should throw an data error") {
-                expect { try TrackParser(data: nil, type: .gpx) }.to(throwError(ParseError.invalidData))
+                expect { try TrackParser(data: nil, type: .gpx) }.to(throwError(TrackParseError.invalidData))
             }
 
             it("should throw an parse error") {
-                expect { try TrackParser(data: Data(), type: .gpx).parse() }.to(throwError(ParseError.invalidFormat))
+                expect { try TrackParser(data: Data(), type: .gpx).parse() }.to(throwError(TrackParseError.invalidFormat))
             }
 
             it("should throw an invalid version error") {
                 let content = "<gpx version='1.0'></gpx>"
                 let data = content.data(using: String.Encoding.utf8)
 
-                expect { try TrackParser(data: data, type: .gpx).parse() }.to(throwError(ParseError.invalidVersion))
+                expect { try TrackParser(data: data, type: .gpx).parse() }.to(throwError(TrackParseError.invalidVersion))
             }
         }
     }

@@ -14,7 +14,7 @@
  - invalidFormat: When the data contains an incorrect format that can't be parsed.
  - invalidVersion: When the version of the file is invalid.
  */
-public enum ParseError: Error {
+public enum TrackParseError: Error {
     /// Thrown when the data object is empty.
     case invalidData
     /// Thrown when the data contains an incorrect format that can't be parsed.

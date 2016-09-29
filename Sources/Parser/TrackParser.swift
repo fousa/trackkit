@@ -8,17 +8,6 @@
 
 import AEXML
 
-public enum TrackType {
-    case gpx
-    
-    func parse(document: AEXMLDocument) throws -> File {
-        switch self {
-        case .gpx:
-            return try File(gpx: document.root)
-        }
-    }
-}
-
 /**
  The parser that is responsible for converting a given `Data` representation of
  the GPX file into an understandable format.
@@ -41,7 +30,7 @@ public struct TrackParser {
      */
     public init(data: Data?, type: TrackType) throws {
         guard let data = data else {
-            throw ParseError.invalidData
+            throw TrackParseError.invalidData
         }
         
         self.type = type
@@ -59,7 +48,7 @@ public struct TrackParser {
      */
     public func parse() throws -> File {
         guard let document = try? AEXMLDocument(xml: data) else {
-            throw ParseError.invalidFormat
+            throw TrackParseError.invalidFormat
         }
         
         return try type.parse(document: document)

@@ -13,7 +13,7 @@ extension File {
     convenience init(gpx rootElement: AEXMLElement) throws {
         // When the element is an error, don't create the instance.
         if rootElement.attributes["version"] != "1.1" {
-            throw ParseError.invalidVersion
+            throw TrackParseError.invalidVersion
         }
         self.init()
 
