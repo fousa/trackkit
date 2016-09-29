@@ -22,4 +22,7 @@ Pod::Spec.new do |s|
   # Set source file requirements.
   s.requires_arc = true
   s.source_files = 'Sources/**/*'
+
+  # Dependencies
+  s.dependency 'AEXML', '~> 4.0'
 end
