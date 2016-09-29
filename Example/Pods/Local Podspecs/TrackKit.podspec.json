@@ -20,37 +20,5 @@
     "watchos": "2.0"
   },
   "requires_arc": true,
-  "default_subspecs": [
-    "GPX",
-    "TCX"
-  ],
-  "subspecs": [
-    {
-      "name": "Core",
-      "dependencies": {
-        "AEXML": [
-          "~> 4.0"
-        ]
-      },
-      "source_files": "Sources/Core/**/*"
-    },
-    {
-      "name": "GPX",
-      "dependencies": {
-        "TrackKit/Core": [
-
-        ]
-      },
-      "source_files": "Sources/GPX/**/*"
-    },
-    {
-      "name": "TCX",
-      "dependencies": {
-        "TrackKit/Core": [
-
-        ]
-      },
-      "source_files": "Sources/TCX/**/*"
-    }
-  ]
+  "source_files": "Sources/**/*"
 }

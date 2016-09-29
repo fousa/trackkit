@@ -1,16 +1,7 @@
 PODS:
-  - AEXML (4.0.0)
   - Nimble (5.0.0)
   - Quick (0.10.0)
-  - TrackKit (1.2.0):
-    - TrackKit/GPX (= 1.2.0)
-    - TrackKit/TCX (= 1.2.0)
-  - TrackKit/Core (1.2.0):
-    - AEXML (~> 4.0)
-  - TrackKit/GPX (1.2.0):
-    - TrackKit/Core
-  - TrackKit/TCX (1.2.0):
-    - TrackKit/Core
+  - TrackKit (1.2.0)
 
 DEPENDENCIES:
   - Nimble (~> 5.0.0)
@@ -22,10 +13,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AEXML: 6fc6433aa35bdc15dd8eb8d54eb7aa4520a010eb
   Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
   Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
-  TrackKit: 24768f3473cfdeee909518edbda155c883c5b30c
+  TrackKit: b1bd1690cb6d87b548d4fbbc3d1da22a13b26fd8
 
 PODFILE CHECKSUM: 68b9e25530149d7a07be58549cab62bbd644f8ce
 
