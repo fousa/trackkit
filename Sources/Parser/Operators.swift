@@ -17,15 +17,15 @@ precedencegroup OperatorPresedenceGroup {
 infix operator <~: OperatorPresedenceGroup
 
 func <~ (lhs: inout String?, rhs: AEXMLElement) {
-    lhs = rhs.optionalStringValue
+    lhs = rhs.optionalString
 }
 
 func <~ (lhs: inout Int?, rhs: AEXMLElement) {
-    lhs = rhs.optionalIntValue
+    lhs = rhs.optionalInt
 }
 
 func <~ (lhs: inout Float?, rhs: AEXMLElement) {
-    lhs = rhs.optionalFloatValue
+    lhs = rhs.optionalFloat
 }
 
 func <~ (lhs: inout CLLocationCoordinate2D?,
@@ -34,23 +34,23 @@ func <~ (lhs: inout CLLocationCoordinate2D?,
 }
 
 func <~ (lhs: inout [String]?, rhs: AEXMLElement) {
-    lhs = rhs.optionalStringValue?.components(separatedBy: ",").map {
+    lhs = rhs.optionalString?.components(separatedBy: ",").map {
         $0.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
 }
 
 func <~ (lhs: inout Date?, rhs: AEXMLElement) {
-    lhs = rhs.optionalStringValue?.isoDate() as Date?
+    lhs = rhs.optionalString?.isoDate() as Date?
 }
 
 func <~ (lhs: inout URL?, rhs: AEXMLElement) {
-    if let stringValue = rhs.optionalStringValue {
+    if let stringValue = rhs.optionalString {
         lhs = URL(string: stringValue)
     }
 }
 
 func <~ (lhs: inout FixType?, rhs: AEXMLElement) {
-    if let stringValue = rhs.optionalStringValue {
+    if let stringValue = rhs.optionalString {
         lhs = FixType(rawValue: stringValue)
     }
 }

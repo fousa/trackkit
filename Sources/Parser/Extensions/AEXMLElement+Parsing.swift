@@ -10,21 +10,21 @@ import AEXML
 
 extension AEXMLElement {
 
-    var optionalStringValue: String? {
+    var optionalString: String? {
         if let _ = error {
             return nil
         }
         return value
     }
 
-    var optionalIntValue: Int? {
+    var optionalInt: Int? {
         if let _ = error {
             return nil
         }
         return int
     }
 
-    var optionalFloatValue: Float? {
+    var optionalFloat: Float? {
         if let _ = error {
             return nil
         }
