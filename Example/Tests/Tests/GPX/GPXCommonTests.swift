@@ -42,7 +42,7 @@ class GPXCommonSpec: QuickSpec {
                                 + "</metadata>"
                             + "</gpx>"
                 let data = content.data(using: String.Encoding.utf8)
-                file = try! GPXParser(data: data).parse()
+                file = try! TrackParser(data: data, type: .gpx).parse()
             }
 
             it("should have a creator name") {
@@ -98,7 +98,7 @@ class GPXCommonSpec: QuickSpec {
                 beforeEach {
                     let content = "<gpx version='1.1'></gpx>"
                     let data = content.data(using: String.Encoding.utf8)
-                    file = try! GPXParser(data: data).parse()
+                    file = try! TrackParser(data: data, type: .gpx).parse()
                 }
 
                 it("should not have a creator name") {

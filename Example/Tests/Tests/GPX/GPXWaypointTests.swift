@@ -8,7 +8,7 @@ class GPXWaypointSpec: QuickSpec {
             it("should not have waypoints") {
                 let content = "<gpx version='1.1'></gpx>"
                 let data = content.data(using: String.Encoding.utf8)
-                let file = try! GPXParser(data: data).parse()
+                let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 expect(file.waypoints).to(beNil())
             }
@@ -19,7 +19,7 @@ class GPXWaypointSpec: QuickSpec {
                                 + "<wpt></wpt>"
                             + "</gpx>"
                 let data = content.data(using: String.Encoding.utf8)
-                let file = try! GPXParser(data: data).parse()
+                let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 expect(file.waypoints).to(beNil())
             }
@@ -30,7 +30,7 @@ class GPXWaypointSpec: QuickSpec {
                                 + "<wpt lat='11' lon='11'></wpt>"
                             + "</gpx>"
                 let data = content.data(using: String.Encoding.utf8)
-                let file = try! GPXParser(data: data).parse()
+                let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 expect(file.waypoints?.count) == 2
             }
@@ -68,7 +68,7 @@ class GPXWaypointSpec: QuickSpec {
                                 + "</wpt>"
                             + "</gpx>"
                 let data = content.data(using: String.Encoding.utf8)
-                let file = try! GPXParser(data: data).parse()
+                let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 point = file.waypoints?.first!
             }
@@ -162,7 +162,7 @@ class GPXWaypointSpec: QuickSpec {
                                 + "</wpt>"
                             + "</gpx>"
                 let data = content.data(using: String.Encoding.utf8)
-                let file = try! GPXParser(data: data).parse()
+                let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 point = file.waypoints?.first!
             }

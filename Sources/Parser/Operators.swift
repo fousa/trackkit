@@ -6,13 +6,8 @@
 //
 //
 
-import Foundation
 import CoreLocation
 import AEXML
-
-protocol Mappable {
-    init?(fromElement element: AEXMLElement)
-}
 
 precedencegroup OperatorPresedenceGroup {
     associativity: left
@@ -20,16 +15,6 @@ precedencegroup OperatorPresedenceGroup {
 }
 
 infix operator <~: OperatorPresedenceGroup
-
-func <~ <T: Mappable>(lhs: inout T?, rhs: AEXMLElement) {
-    lhs = T(fromElement: rhs)
-}
-
-func <~ <T: Mappable>(lhs: inout [T]?, rhs: [AEXMLElement]?) {
-    if let elements = rhs?.flatMap({ T(fromElement: $0) }), elements.count > 0 {
-        lhs = elements
-    }
-}
 
 func <~ (lhs: inout String?, rhs: AEXMLElement) {
     lhs = rhs.optionalStringValue

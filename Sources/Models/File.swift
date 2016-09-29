@@ -6,7 +6,6 @@
 //
 //
 
-import Foundation
 import AEXML
 
 /**
@@ -52,34 +51,4 @@ open class File {
 
     /// A list of tracks.
     open var tracks: [Track]?
-}
-
-extension File {
-
-    convenience init?(fromElement element: AEXMLElement) {
-        // When the element is an error, don't create the instance.
-        if element.attributes["version"] != "1.1" {
-            return nil
-        }
-        self.init()
-
-        // Fetch the creator from the root element.
-        creator = element.attributes["creator"]
-
-        // Fetch the metadata from the metadata element.
-        let metadata = element["metadata"]
-
-        name            <~ metadata["name"]
-        description     <~ metadata["desc"]
-        author          <~ metadata["author"]
-        copyrightNotice <~ metadata["copyright"]
-        link            <~ metadata["link"]
-        time            <~ metadata["time"]
-        keywords        <~ metadata["keywords"]
-        bounds          <~ metadata["bounds"]
-        waypoints       <~ element["wpt"].all
-        routes          <~ element["rte"].all
-        tracks          <~ element["trk"].all
-    }
-
 }

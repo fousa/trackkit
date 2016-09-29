@@ -18,24 +18,3 @@ public final class TrackSegment {
     /// for a single point in a track.
     public var points: [Point]?
 }
-
-extension TrackSegment: Mappable {
-
-    convenience init?(fromElement element: AEXMLElement) {
-        // When the element is an error, don't create the instance.
-        if let _ = element.error {
-            return nil
-        }
-
-        // When there are not route points, don't create the instance.
-        var trackPoints: [Point]? = nil
-        trackPoints <~ element["trkpt"].all
-        if trackPoints == nil {
-            return nil
-        }
-        self.init()
-
-        points = trackPoints
-    }
-
-}

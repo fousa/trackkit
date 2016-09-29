@@ -6,7 +6,6 @@
 //
 //
 
-import Foundation
 import AEXML
 
 /**
@@ -39,33 +38,4 @@ public final class Track {
     /// GPS receiver was turned off, start a new Track Segment for each continuous span
     /// of track data.
     public var segments: [TrackSegment]?
-}
-
-extension Track: Mappable {
-
-    convenience init?(fromElement element: AEXMLElement) {
-        // When the element is an error, don't create the instance.
-        if let _ = element.error {
-            return nil
-        }
-
-        // When there are not route points, don't create the instance.
-        var routeSegments: [TrackSegment]? = nil
-        routeSegments <~ element["trkseg"].all
-        if routeSegments == nil {
-            return nil
-        }
-
-        self.init()
-
-        name        <~ element["name"]
-        comment     <~ element["cmt"]
-        description <~ element["desc"]
-        source      <~ element["src"]
-        number      <~ element["number"]
-        type        <~ element["type"]
-        link        <~ element["link"]
-        segments    = routeSegments
-    }
-
 }

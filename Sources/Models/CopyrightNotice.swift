@@ -6,7 +6,6 @@
 //
 //
 
-import Foundation
 import AEXML
 
 /**
@@ -23,21 +22,4 @@ public final class CopyrightNotice {
 
     /// Link to external file containing license text.
     public var license: URL?
-}
-
-extension CopyrightNotice: Mappable {
-
-    convenience init?(fromElement element: AEXMLElement) {
-        // When the element is an error, don't create the instance.
-        if let _ = element.error {
-            return nil
-        }
-        self.init()
-
-        author = element.attributes["author"]
-
-        year    <~ element["year"]
-        license <~ element["license"]
-    }
-
 }

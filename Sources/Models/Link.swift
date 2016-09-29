@@ -6,7 +6,6 @@
 //
 //
 
-import Foundation
 import AEXML
 
 /**
@@ -22,21 +21,4 @@ public final class Link {
 
     /// Mime type of content.
     public var mimeType: String?
-}
-
-extension Link: Mappable {
-
-    convenience init?(fromElement element: AEXMLElement) {
-        // When the element is an error, don't create the instance.
-        if let _ = element.error {
-            return nil
-        }
-        self.init()
-
-        link = element.attributes["href"]
-
-        mimeType <~ element["type"]
-        text     <~ element["text"]
-    }
-
 }
