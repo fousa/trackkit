@@ -10,6 +10,7 @@ import AEXML
 
 public enum TrackType: String {
     case gpx
+    case tcx
     
     // MARK: - Init
     
@@ -26,6 +27,8 @@ public enum TrackType: String {
         switch self {
         case .gpx:
             return try File(gpx: document.root)
+        case .tcx:
+            return try File(tcx: document.root)
         }
     }
 }

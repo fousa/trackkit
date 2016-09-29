@@ -7,7 +7,7 @@ class GPXWaypointSpec: QuickSpec {
         describe("waypoints") {
             it("should not have waypoints") {
                 let content = "<gpx version='1.1'></gpx>"
-                let data = content.data(using: String.Encoding.utf8)
+                let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 expect(file.waypoints).to(beNil())
@@ -18,7 +18,7 @@ class GPXWaypointSpec: QuickSpec {
                                 + "<wpt></wpt>"
                                 + "<wpt></wpt>"
                             + "</gpx>"
-                let data = content.data(using: String.Encoding.utf8)
+                let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 expect(file.waypoints).to(beNil())
@@ -29,7 +29,7 @@ class GPXWaypointSpec: QuickSpec {
                                 + "<wpt lat='10' lon='10'></wpt>"
                                 + "<wpt lat='11' lon='11'></wpt>"
                             + "</gpx>"
-                let data = content.data(using: String.Encoding.utf8)
+                let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 expect(file.waypoints?.count) == 2
@@ -67,7 +67,7 @@ class GPXWaypointSpec: QuickSpec {
                                     + "</link>"
                                 + "</wpt>"
                             + "</gpx>"
-                let data = content.data(using: String.Encoding.utf8)
+                let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 point = file.waypoints?.first!
@@ -161,7 +161,7 @@ class GPXWaypointSpec: QuickSpec {
                                 + "<wpt lat='41.2' lon='-71.3'>"
                                 + "</wpt>"
                             + "</gpx>"
-                let data = content.data(using: String.Encoding.utf8)
+                let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 point = file.waypoints?.first!

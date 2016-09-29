@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import TrackKit
 
-class TrackParserSpec: QuickSpec {
+class GPXParserSpec: QuickSpec {
     override func spec() {
         describe("parser") {
             it("should be successful") {
@@ -19,9 +19,14 @@ class TrackParserSpec: QuickSpec {
 
             it("should throw an invalid version error") {
                 let content = "<gpx version='1.0'></gpx>"
-                let data = content.data(using: String.Encoding.utf8)
-
+                let data = content.data(using: .utf8)
                 expect { try TrackParser(data: data, type: .gpx).parse() }.to(throwError(TrackParseError.invalidVersion))
+            }
+            
+            it("should not throw an invalid version error") {
+                let content = "<gpx version='1.1'></gpx>"
+                let data = content.data(using: .utf8)
+                expect { try TrackParser(data: data, type: .gpx).parse() }.toNot(throwError(TrackParseError.invalidVersion))
             }
         }
     }

@@ -7,7 +7,7 @@ class GPXTrackSpec: QuickSpec {
         describe("tracks") {
             it("should not have tracks") {
                 let content = "<gpx version='1.1'></gpx>"
-                let data = content.data(using: String.Encoding.utf8)
+                let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 expect(file.tracks).to(beNil())
@@ -18,7 +18,7 @@ class GPXTrackSpec: QuickSpec {
                                 + "<trk></trk>"
                                 + "<trk></trk>"
                             + "</gpx>"
-                let data = content.data(using: String.Encoding.utf8)
+                let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 expect(file.tracks).to(beNil())
@@ -34,7 +34,7 @@ class GPXTrackSpec: QuickSpec {
                                     + "<trkseg></trkseg>"
                                 + "</trk>"
                             + "</gpx>"
-                let data = content.data(using: String.Encoding.utf8)
+                let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 expect(file.tracks).to(beNil())
@@ -55,7 +55,7 @@ class GPXTrackSpec: QuickSpec {
                                     + "</trkseg>"
                                 + "</trk>"
                             + "</gpx>"
-                let data = content.data(using: String.Encoding.utf8)
+                let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 expect(file.tracks?.count) == 2
@@ -87,7 +87,7 @@ class GPXTrackSpec: QuickSpec {
                                     + "</trkseg>"
                                 + "</trk>"
                             + "</gpx>"
-                let data = content.data(using: String.Encoding.utf8)
+                let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 track = file.tracks?.first!
@@ -160,7 +160,7 @@ class GPXTrackSpec: QuickSpec {
                                     + "</trkseg>"
                                 + "</trk>"
                             + "</gpx>"
-                let data = content.data(using: String.Encoding.utf8)
+                let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 point = file.tracks?.first?.segments?.first?.points?.first!
@@ -257,7 +257,7 @@ class GPXTrackSpec: QuickSpec {
                                     + "</trkseg>"
                                 + "</trk>"
                             + "</gpx>"
-                let data = content.data(using: String.Encoding.utf8)
+                let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .gpx).parse()
 
                 point = file.tracks?.first?.segments?.first?.points?.first!

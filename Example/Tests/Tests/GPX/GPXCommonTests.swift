@@ -41,7 +41,7 @@ class GPXCommonSpec: QuickSpec {
                                     + "<bounds minlat='42.1' minlon='-71.9' maxlat='42.4' maxlon='-71.1' />"
                                 + "</metadata>"
                             + "</gpx>"
-                let data = content.data(using: String.Encoding.utf8)
+                let data = content.data(using: .utf8)
                 file = try! TrackParser(data: data, type: .gpx).parse()
             }
 
@@ -97,7 +97,7 @@ class GPXCommonSpec: QuickSpec {
             context("empty file") {
                 beforeEach {
                     let content = "<gpx version='1.1'></gpx>"
-                    let data = content.data(using: String.Encoding.utf8)
+                    let data = content.data(using: .utf8)
                     file = try! TrackParser(data: data, type: .gpx).parse()
                 }
 

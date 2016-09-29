@@ -25,5 +25,19 @@ class TrackTypeSpec: QuickSpec {
                 expect(type?.rawValue) == "gpx"
             }
         }
+        
+        context("TCX") {
+            describe("Should parse tcx as tcx type") {
+                let type = TrackType(fileExtension: "tcx")
+                expect(type).toNot(beNil())
+                expect(type?.rawValue) == "tcx"
+            }
+            
+            describe("Should parse TCX as tcx type") {
+                let type = TrackType(fileExtension: "TCX")
+                expect(type).toNot(beNil())
+                expect(type?.rawValue) == "tcx"
+            }
+        }
     }
 }
