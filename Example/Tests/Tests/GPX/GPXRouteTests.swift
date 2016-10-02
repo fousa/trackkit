@@ -69,7 +69,6 @@ class GPXRouteSpec: QuickSpec {
                 route = file.routes?.first!
             }
 
-
             it("should have a name") {
                 expect(route.name) == "A waypoint"
             }

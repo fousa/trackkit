@@ -38,6 +38,9 @@ public final class Point {
     /// Elevation (in meters) of the point.
     public var elevation: Float?
 
+    /// Distance (in meters) of the point.
+    public var distance: Float?
+
     /// Creation/modification timestamp for element. Date and time in are in Univeral
     /// Coordinated Time (UTC), not local time.
     public var time: Date?
