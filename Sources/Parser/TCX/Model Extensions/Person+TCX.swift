@@ -17,7 +17,10 @@ extension Person: TCXable {
         }
         self.init()
         
-        name  <~ element["Name"]
+        name       <~ element["Name"]
+        build      <~ Build(tcx: element["Build"])
+        language   <~ element["LangID"]
+        partNumber <~ element["PartNumber"]
     }
     
 }
