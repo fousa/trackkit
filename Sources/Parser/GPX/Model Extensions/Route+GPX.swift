@@ -31,7 +31,7 @@ extension Route: GPXable {
         source      <~ element["src"]
         number      <~ element["number"]
         type        <~ element["type"]
-        link        <~ element["link"]
+        link        <~ Link(gpx: element["link"])
         points      = routePoints
     }
     

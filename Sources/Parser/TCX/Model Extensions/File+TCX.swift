@@ -16,6 +16,8 @@ extension File {
             throw TrackParseError.invalidVersion
         }
         self.init()
+        
+        author <~ Person(tcx: rootElement["Author"])
     }
 
 }

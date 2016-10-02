@@ -8,6 +8,6 @@
 
 import AEXML
 
-protocol TCXable {
+protocol TCXable: Parsable {
     init?(tcx element: AEXMLElement)
 }

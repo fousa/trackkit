@@ -9,6 +9,8 @@
 import CoreLocation
 import AEXML
 
+protocol Parsable {}
+
 precedencegroup OperatorPresedenceGroup {
     associativity: left
     higherThan: MultiplicationPrecedence
@@ -53,4 +55,8 @@ func <~ (lhs: inout FixType?, rhs: AEXMLElement) {
     if let stringValue = rhs.optionalString {
         lhs = FixType(rawValue: stringValue)
     }
+}
+
+func <~ <T: Parsable>(lhs: inout T?, rhs: T?) {
+    lhs = rhs
 }

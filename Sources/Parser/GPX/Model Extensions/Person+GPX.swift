@@ -20,7 +20,7 @@ extension Person: GPXable {
         email = String(gpx: element["email"])
         
         name  <~ element["name"]
-        link  <~ element["link"]
+        link  <~ Link(gpx: element["link"])
     }
     
 }

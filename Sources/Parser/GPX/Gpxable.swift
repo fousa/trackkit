@@ -8,6 +8,6 @@
 
 import AEXML
 
-protocol GPXable {
+protocol GPXable: Parsable {
     init?(gpx element: AEXMLElement)
 }

@@ -25,12 +25,12 @@ extension File {
 
         name            <~ metadata["name"]
         description     <~ metadata["desc"]
-        author          <~ metadata["author"]
-        copyrightNotice <~ metadata["copyright"]
-        link            <~ metadata["link"]
+        author          <~ Person(gpx: metadata["author"])
+        copyrightNotice <~ CopyrightNotice(gpx: metadata["copyright"])
+        link            <~ Link(gpx: metadata["link"])
         time            <~ metadata["time"]
         keywords        <~ metadata["keywords"]
-        bounds          <~ metadata["bounds"]
+        bounds          <~ Bounds(gpx: metadata["bounds"])
         waypoints       <~ rootElement["wpt"].all
         routes          <~ rootElement["rte"].all
         tracks          <~ rootElement["trk"].all

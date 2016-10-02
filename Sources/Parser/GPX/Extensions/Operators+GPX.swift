@@ -8,10 +8,6 @@
 
 import AEXML
 
-func <~ <T: GPXable>(lhs: inout T?, rhs: AEXMLElement) {
-    lhs = T(gpx: rhs)
-}
-
 func <~ <T: GPXable>(lhs: inout [T]?, rhs: [AEXMLElement]?) {
     if let elements = rhs?.flatMap({ T(gpx: $0) }), elements.count > 0 {
         lhs = elements
