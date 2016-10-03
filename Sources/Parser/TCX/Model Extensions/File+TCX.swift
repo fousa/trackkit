@@ -17,8 +17,8 @@ extension File {
         }
         self.init()
         
-        author  <~ Person(tcx: rootElement["Author"])
-        courses <~ rootElement["Courses"]["Course"].all?.flatMap { Course(tcx: $0) }
+        applicationAuthor <~ Author(tcx: rootElement["Author"])
+        courses           <~ rootElement["Courses"]["Course"].all?.flatMap { Course(tcx: $0) }
     }
 
 }

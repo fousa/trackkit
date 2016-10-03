@@ -8,7 +8,7 @@
 
 import AEXML
 
-extension Person: TCXable {
+extension Author: TCXable {
     
     convenience init?(tcx element: AEXMLElement) {
         // When the element is an error, don't create the instance.
@@ -18,7 +18,7 @@ extension Person: TCXable {
         self.init()
         
         name       <~ element["Name"]
-        build      <~ Build(tcx: element["Build"])
+        version    <~ Version(tcx: element["Build"]["Version"])
         language   <~ element["LangID"]
         partNumber <~ element["PartNumber"]
     }

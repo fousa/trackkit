@@ -26,6 +26,9 @@ open class File {
     /// The person or organization who created the GPX file.
     open var author: Person?
 
+    /// The person or organization who created the GPX file.
+    open var applicationAuthor: Author?
+
     /// Copyright and license information governing use of the file.
     open var copyrightNotice: CopyrightNotice?
 

@@ -38,23 +38,23 @@ class TCXCommonSpec: QuickSpec {
             
             context("metadata") {
                 it("should have an author name") {
-                    expect(file.author?.name) == "Jelle Vandebeeck"
+                    expect(file.applicationAuthor?.name) == "Jelle Vandebeeck"
                 }
 
                 it("should have an author version number") {
-                    expect(file.author?.build?.version?.versionNumber) == "1.2"
+                    expect(file.applicationAuthor?.version?.versionNumber) == "1.2"
                 }
 
                 it("should have an author build number") {
-                    expect(file.author?.build?.version?.buildNumber) == "3.4"
+                    expect(file.applicationAuthor?.version?.buildNumber) == "3.4"
                 }
 
                 it("should have an author language") {
-                    expect(file.author?.language) == "en"
+                    expect(file.applicationAuthor?.language) == "en"
                 }
 
                 it("should have an author part number") {
-                    expect(file.author?.partNumber) == "000-00000-00"
+                    expect(file.applicationAuthor?.partNumber) == "000-00000-00"
                 }
             }
 
@@ -71,23 +71,23 @@ class TCXCommonSpec: QuickSpec {
 
                 context("metadata") {
                     it("should not have an author name") {
-                        expect(file.author?.name).to(beNil())
+                        expect(file.applicationAuthor?.name).to(beNil())
                     }
 
                     it("should not have an author version number") {
-                        expect(file.author?.build?.version?.versionNumber).to(beNil())
+                        expect(file.applicationAuthor?.version?.versionNumber).to(beNil())
                     }
 
                     it("should not have an author build number") {
-                        expect(file.author?.build?.version?.buildNumber).to(beNil())
+                        expect(file.applicationAuthor?.version?.buildNumber).to(beNil())
                     }
 
                     it("should not have an author language") {
-                        expect(file.author?.language).to(beNil())
+                        expect(file.applicationAuthor?.language).to(beNil())
                     }
 
                     it("should not have an author part number") {
-                        expect(file.author?.partNumber).to(beNil())
+                        expect(file.applicationAuthor?.partNumber).to(beNil())
                     }
                 }
             }
