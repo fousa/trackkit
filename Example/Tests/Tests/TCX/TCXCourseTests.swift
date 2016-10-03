@@ -1,5 +1,5 @@
 //
-//  TCXRouteSpec.swift
+//  TCXcourseSpec.swift
 //  TrackKit
 //
 //  Created by Jelle Vandebeeck on 02/10/2016.
@@ -10,18 +10,18 @@ import Quick
 import Nimble
 import TrackKit
 
-class TCXRouteSpec: QuickSpec {
+class TCXCourseSpec: QuickSpec {
     override func spec() {
-        describe("routes") {
-            it("should not have routes") {
+        describe("courses") {
+            it("should not have courses") {
                 let content = "<TrainingCenterDatabase xmlns='http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2'></TrainingCenterDatabase>"
                 let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .tcx).parse()
 
-                expect(file.routes).to(beNil())
+                expect(file.courses).to(beNil())
             }
 
-            it("should not have routes without points") {
+            it("should not have courses without points") {
                 let content = "<TrainingCenterDatabase xmlns='http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2'>"
                                 + "<Courses>"
                                     + "<Course>"
@@ -33,11 +33,11 @@ class TCXRouteSpec: QuickSpec {
                 let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .tcx).parse()
 
-                expect(file.routes?.count).to(beNil())
+                expect(file.courses?.count).to(beNil())
             }
 
-            describe("route data") {
-                var route: Route!
+            describe("course data") {
+                var course: Course!
 
                 beforeEach {
                     let content = "<TrainingCenterDatabase xmlns='http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2'>"
@@ -71,37 +71,33 @@ class TCXRouteSpec: QuickSpec {
                     let data = content.data(using: .utf8)
                     let file = try! TrackParser(data: data, type: .tcx).parse()
 
-                    route = file.routes?.first!
+                    course = file.courses?.first!
                 }
 
                 it("should have a name") {
-                    expect(route.name) == "Jelle Vandebeeck"
-                }
-
-                it("should have a lap") {
-                    expect(route.lap).toNot(beNil())
+                    expect(course.name) == "Jelle Vandebeeck"
                 }
 
                 it("should have a lap with total time in seconds") {
-                    expect(route.lap?.totalTime) == 123
+                    expect(course.totalTime) == 123
                 }
 
                 it("should have a lap with total distance in meters") {
-                    expect(route.lap?.totalDistance) == 456
+                    expect(course.totalDistance) == 456
                 }
 
                 it("should have a lap with a begin position") {
-                    expect(route.lap?.beginPosition?.latitude) == 51.208845321089
-                    expect(route.lap?.beginPosition?.longitude) == 4.394159177318
+                    expect(course.beginPosition?.latitude) == 51.208845321089
+                    expect(course.beginPosition?.longitude) == 4.394159177318
                 }
 
                 it("should have a lap with an end position") {
-                    expect(route.lap?.endPosition?.latitude) == 51.208867281675
-                    expect(route.lap?.endPosition?.longitude) == 4.394087595865
+                    expect(course.endPosition?.latitude) == 51.208867281675
+                    expect(course.endPosition?.longitude) == 4.394087595865
                 }
 
                 it("should have a lap with an intensity") {
-                    expect(route.lap?.intensity) == .active
+                    expect(course.intensity) == .active
                 }
             }
 
@@ -129,7 +125,7 @@ class TCXRouteSpec: QuickSpec {
                     let data = content.data(using: .utf8)
                     let file = try! TrackParser(data: data, type: .tcx).parse()
 
-                    point = file.routes?.first?.points?.first!
+                    point = file.courses?.first?.points?.first!
                 }
 
                 it("should have a track point time") {
@@ -150,7 +146,7 @@ class TCXRouteSpec: QuickSpec {
                 }
             }
 
-            describe("empty route point") {
+            describe("empty course point") {
                 var point: Point!
 
                 beforeEach {
@@ -171,7 +167,7 @@ class TCXRouteSpec: QuickSpec {
                     let data = content.data(using: .utf8)
                     let file = try! TrackParser(data: data, type: .tcx).parse()
 
-                    point = file.routes?.first?.points?.first!
+                    point = file.courses?.first?.points?.first!
                 }
 
 

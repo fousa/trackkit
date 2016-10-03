@@ -1,8 +1,8 @@
 //
-//  Lap.swift
+//  Course.swift
 //  Pods
 //
-//  Created by Jelle Vandebeeck on 02/10/2016.
+//  Created by Jelle Vandebeeck on 03/10/2016.
 //
 //
 
@@ -21,7 +21,10 @@ public enum IntentityType: String {
 /**
  An ordered list of waypoints representing a series of turn points leading to a destination.
  */
-public final class Lap {
+public final class Course {
+    /// GPS name of route.
+    public var name: String?
+    
     /// Total time in seconds.
     public var totalTime: Double?
 
@@ -36,4 +39,7 @@ public final class Lap {
 
     /// Intensity of the route.
     public var intensity: IntentityType?
+
+    /// A list of route points.
+    public var points: [Point]?
 }

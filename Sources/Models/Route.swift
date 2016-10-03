@@ -33,9 +33,6 @@ public final class Route {
     /// Type (classification) of route.
     public var type: String?
 
-    /// Lap information for the course. _TCX only_
-    public var lap: Lap?
-
     /// A list of route points.
     public var points: [Point]?
 }

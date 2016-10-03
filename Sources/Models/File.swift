@@ -51,4 +51,7 @@ open class File {
 
     /// A list of tracks.
     open var tracks: [Track]?
+
+    /// A list of courses.
+    open var courses: [Course]?
 }
