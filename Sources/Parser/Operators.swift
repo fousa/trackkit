@@ -79,6 +79,12 @@ func <~ (lhs: inout SportType?, rhs: String?) {
     }
 }
 
+func <~ (lhs: inout TriggerMethod?, rhs: AEXMLElement) {
+    if let stringValue = rhs.optionalString {
+        lhs = TriggerMethod(rawValue: stringValue)
+    }
+}
+
 // MARK: - Relations
 
 func <~ <T: Parsable>(lhs: inout T?, rhs: T?) {

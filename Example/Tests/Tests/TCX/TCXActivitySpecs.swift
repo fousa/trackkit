@@ -119,7 +119,7 @@ class TCXActivitySpecs: QuickSpec {
                 }
 
                 it("should have a lap with a trigger method") {
-                    expect(activity.laps?.first!.triggerMethod) == "Manual"
+                    expect(activity.laps?.first!.triggerMethod) == .manual
                 }
 
                 it("should have a lap with an intensity") {
