@@ -6,8 +6,6 @@
 //
 //
 
-import AEXML
-
 /**
  An ordered list of points describing a path.
 */

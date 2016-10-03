@@ -7,7 +7,6 @@
 //
 
 import CoreLocation
-import AEXML
 
 /**
  Two coordinate defining the extent of an element.

@@ -6,8 +6,6 @@
 //
 //
 
-import AEXML
-
 /// Version information for an application that generated the track file. _TCX only_
 public final class Version {
     /// Version number.

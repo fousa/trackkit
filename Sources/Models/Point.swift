@@ -7,7 +7,6 @@
 //
 
 import CoreLocation
-import AEXML
 
 /// Type of GPS fix. none means GPS had no fix. To signify "the fix info is unknown,
 /// leave out fixType entirely. pps = military signal used.

@@ -6,8 +6,6 @@
 //
 //
 
-import AEXML
-
 /**
  An ordered list of waypoints representing a series of turn points leading to a destination.
 */
