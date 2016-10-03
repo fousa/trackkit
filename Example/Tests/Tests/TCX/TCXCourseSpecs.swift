@@ -170,8 +170,6 @@ class TCXCourseSpec: QuickSpec {
                     point = file.courses?.first?.points?.first!
                 }
 
-
-
                 it("should not have a track point time") {
                     expect(point.time?.description).to(beNil())
                 }

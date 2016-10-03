@@ -99,4 +99,10 @@ public final class Point {
 
     /// Represents a differential GPS station.
     public var dgpsStationType: Int?
+
+    /// Total distance in meters.
+    public var heartRate: Int?
+
+    /// Total distance in meters.
+    public var cadence: Int?
 }

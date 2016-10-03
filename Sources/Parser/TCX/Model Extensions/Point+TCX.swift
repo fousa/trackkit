@@ -27,6 +27,8 @@ extension Point: TCXable {
         coordinate <~ (latitude, longitude)
         elevation  <~ element["AltitudeMeters"]
         distance   <~ element["DistanceMeters"]
+        cadence    <~ element["Cadence"]
+        heartRate  <~ element["HeartRateBpm"]["Value"]
         time       <~ element["Time"]
     }
 

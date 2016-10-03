@@ -57,4 +57,7 @@ open class File {
 
     /// A list of courses.
     open var courses: [Course]?
+
+    /// A list of courses.
+    open var activities: [Activity]?
 }

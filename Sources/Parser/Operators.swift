@@ -42,7 +42,15 @@ func <~ (lhs: inout [String]?, rhs: AEXMLElement) {
 }
 
 func <~ (lhs: inout Date?, rhs: AEXMLElement) {
-    lhs = rhs.optionalString?.isoDate() as Date?
+    lhs <~ rhs.optionalString
+}
+
+func <~ <T>(lhs: inout T?, rhs: T?) {
+    lhs = rhs
+}
+
+func <~ (lhs: inout Date?, rhs: String?) {
+    lhs = (rhs?.isoDate() ?? rhs?.isoDateWithMilliseconds()) as Date?
 }
 
 func <~ (lhs: inout URL?, rhs: AEXMLElement) {
