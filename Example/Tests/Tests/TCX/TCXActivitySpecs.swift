@@ -83,7 +83,7 @@ class TCXActivitySpecs: QuickSpec {
                 }
 
                 it("should have an sport") {
-                    expect(activity.sport) == "Biking"
+                    expect(activity.sport) == .biking
                 }
 
                 it("should have a lap with a start time") {
