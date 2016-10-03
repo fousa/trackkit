@@ -18,6 +18,7 @@ extension File {
         self.init()
         
         author <~ Person(tcx: rootElement["Author"])
+        routes <~ rootElement["Courses"]["Course"].all?.flatMap { Route(tcx: $0) }
     }
 
 }

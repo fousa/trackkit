@@ -36,21 +36,21 @@ public final class Point {
     public var coordinate: CLLocationCoordinate2D?
 
     /// Elevation (in meters) of the point.
-    public var elevation: Float?
+    public var elevation: Double?
 
     /// Distance (in meters) of the point.
-    public var distance: Float?
+    public var distance: Double?
 
     /// Creation/modification timestamp for element. Date and time in are in Univeral
     /// Coordinated Time (UTC), not local time.
     public var time: Date?
 
     /// Magnetic variation.
-    public var magneticVariation: Float?
+    public var magneticVariation: Double?
 
     /// Height (in meters) of geoid (mean sea level) above WGS84 earth ellipsoid. As
     /// defined in NMEA GGA message.
-    public var meanSeaLevelHeight: Float?
+    public var meanSeaLevelHeight: Double?
 
     /// The GPS name of the waypoint. This field will be transferred to and from the
     /// GPS. GPX does not place restrictions on the length of this field or the characters
@@ -86,16 +86,16 @@ public final class Point {
     public var satelites: Int?
 
     /// Horizontal dilution of precision.
-    public var horizontalDilutionOfPrecision: Float?
+    public var horizontalDilutionOfPrecision: Double?
 
     /// Vertical dilution of precision.
-    public var verticalDilutionOfPrecision: Float?
+    public var verticalDilutionOfPrecision: Double?
 
     /// Position dilution of precision.
-    public var positionDilutionOfPrecision: Float?
+    public var positionDilutionOfPrecision: Double?
 
     /// Number of seconds since last DGPS update.
-    public var ageOfTheGpxData: Float?
+    public var ageOfTheGpxData: Double?
 
     /// Represents a differential GPS station.
     public var dgpsStationType: Int?

@@ -23,10 +23,10 @@ public enum IntentityType: String {
  */
 public final class Lap {
     /// Total time in seconds.
-    public var totalTime: Float?
+    public var totalTime: Double?
 
     /// Total distance in meters.
-    public var totalDistance: Float?
+    public var totalDistance: Double?
 
     /// The coordinate of the begin position.
     public var beginPosition: CLLocationCoordinate2D?

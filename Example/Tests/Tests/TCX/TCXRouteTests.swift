@@ -40,40 +40,38 @@ class TCXRouteSpec: QuickSpec {
                 var route: Route!
 
                 beforeEach {
-                    beforeEach {
-                        let content = "<TrainingCenterDatabase xmlns='http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2'>"
-                                        + "<Courses>"
-                                            + "<Course>"
-                                                + "<Name>Jelle Vandebeeck</Name>"
-                                                + "<Lap>"
-                                                    + "<TotalTimeSeconds>123</TotalTimeSeconds>"
-                                                    + "<DistanceMeters>456</DistanceMeters>"
-                                                    + "<BeginPosition>"
+                    let content = "<TrainingCenterDatabase xmlns='http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2'>"
+                                    + "<Courses>"
+                                        + "<Course>"
+                                            + "<Name>Jelle Vandebeeck</Name>"
+                                            + "<Lap>"
+                                                + "<TotalTimeSeconds>123</TotalTimeSeconds>"
+                                                + "<DistanceMeters>456</DistanceMeters>"
+                                                + "<BeginPosition>"
+                                                    + "<LatitudeDegrees>51.208845321089</LatitudeDegrees>"
+                                                    + "<LongitudeDegrees>4.394159177318</LongitudeDegrees>"
+                                                + "</BeginPosition>"
+                                                + "<EndPosition>"
+                                                    + "<LatitudeDegrees>51.208867281675</LatitudeDegrees>"
+                                                    + "<LongitudeDegrees>4.394087595865</LongitudeDegrees>"
+                                                + "</EndPosition>"
+                                                + "<Intensity>Active</Intensity>"
+                                            + "</Lap>"
+                                            + "<Track>"
+                                                + "<TrackPoint>"
+                                                    + "<Position>"
                                                         + "<LatitudeDegrees>51.208845321089</LatitudeDegrees>"
                                                         + "<LongitudeDegrees>4.394159177318</LongitudeDegrees>"
-                                                    + "</BeginPosition>"
-                                                    + "<EndPosition>"
-                                                        + "<LatitudeDegrees>51.208867281675</LatitudeDegrees>"
-                                                        + "<LongitudeDegrees>4.394087595865</LongitudeDegrees>"
-                                                    + "</EndPosition>"
-                                                    + "<Intensity>Active</Intensity>"
-                                                + "</Lap>"
-                                                + "<Track>"
-                                                    + "<TrackPoint>"
-                                                        + "<Position>"
-                                                            + "<LatitudeDegrees>51.208845321089</LatitudeDegrees>"
-                                                            + "<LongitudeDegrees>4.394159177318</LongitudeDegrees>"
-                                                        + "</Position>"
-                                                    + "</TrackPoint>"
-                                                + "</Track>"
-                                            + "</Course>"
-                                        + "</Courses>"
-                                    + "</TrainingCenterDatabase>"
-                        let data = content.data(using: .utf8)
-                        let file = try! TrackParser(data: data, type: .tcx).parse()
+                                                    + "</Position>"
+                                                + "</TrackPoint>"
+                                            + "</Track>"
+                                        + "</Course>"
+                                    + "</Courses>"
+                                + "</TrainingCenterDatabase>"
+                    let data = content.data(using: .utf8)
+                    let file = try! TrackParser(data: data, type: .tcx).parse()
 
-                        route = file.routes?.first!
-                    }
+                    route = file.routes?.first!
                 }
 
                 it("should have a name") {
@@ -85,7 +83,7 @@ class TCXRouteSpec: QuickSpec {
                 }
 
                 it("should have a lap with total time in seconds") {
-                    expect(route.lap?.totalTime) == 456
+                    expect(route.lap?.totalTime) == 123
                 }
 
                 it("should have a lap with total distance in meters") {
@@ -134,7 +132,7 @@ class TCXRouteSpec: QuickSpec {
                     point = file.routes?.first?.points?.first!
                 }
 
-                it("should have a track point") {
+                it("should have a track point time") {
                     expect(point.time?.description) == "2016-03-10 08:05:12 +0000"
                 }
 
@@ -149,6 +147,45 @@ class TCXRouteSpec: QuickSpec {
 
                 it("should have a distance in meters") {
                     expect(point.distance) == 456
+                }
+            }
+
+            describe("empty route point") {
+                var point: Point!
+
+                beforeEach {
+                    let content = "<TrainingCenterDatabase xmlns='http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2'>"
+                                    + "<Courses>"
+                                        + "<Course>"
+                                            + "<Track>"
+                                                + "<TrackPoint>"
+                                                    + "<Position>"
+                                                        + "<LatitudeDegrees>51.208845321089</LatitudeDegrees>"
+                                                        + "<LongitudeDegrees>4.394159177318</LongitudeDegrees>"
+                                                    + "</Position>"
+                                                + "</TrackPoint>"
+                                            + "</Track>"
+                                        + "</Course>"
+                                    + "</Courses>"
+                                + "</TrainingCenterDatabase>"
+                    let data = content.data(using: .utf8)
+                    let file = try! TrackParser(data: data, type: .tcx).parse()
+
+                    point = file.routes?.first?.points?.first!
+                }
+
+
+
+                it("should not have a track point time") {
+                    expect(point.time?.description).to(beNil())
+                }
+
+                it("should not have a altitude in meters") {
+                    expect(point.elevation).to(beNil())
+                }
+
+                it("should not have a distance in meters") {
+                    expect(point.distance).to(beNil())
                 }
             }
         }

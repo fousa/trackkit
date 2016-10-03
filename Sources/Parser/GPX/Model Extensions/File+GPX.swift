@@ -31,9 +31,9 @@ extension File {
         time            <~ metadata["time"]
         keywords        <~ metadata["keywords"]
         bounds          <~ Bounds(gpx: metadata["bounds"])
-        waypoints       <~ rootElement["wpt"].all
-        routes          <~ rootElement["rte"].all
-        tracks          <~ rootElement["trk"].all
+        waypoints       <~ rootElement["wpt"].all?.flatMap { Point(gpx: $0) }
+        routes          <~ rootElement["rte"].all?.flatMap { Route(gpx: $0) }
+        tracks          <~ rootElement["trk"].all?.flatMap { Track(gpx: $0) }
     }
 
 }

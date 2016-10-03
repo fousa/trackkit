@@ -26,8 +26,8 @@ func <~ (lhs: inout Int?, rhs: AEXMLElement) {
     lhs = rhs.optionalInt
 }
 
-func <~ (lhs: inout Float?, rhs: AEXMLElement) {
-    lhs = rhs.optionalFloat
+func <~ (lhs: inout Double?, rhs: AEXMLElement) {
+    lhs = rhs.optionalDouble
 }
 
 func <~ (lhs: inout CLLocationCoordinate2D?,
@@ -57,6 +57,18 @@ func <~ (lhs: inout FixType?, rhs: AEXMLElement) {
     }
 }
 
+func <~ (lhs: inout IntentityType?, rhs: AEXMLElement) {
+    if let stringValue = rhs.optionalString {
+        lhs = IntentityType(rawValue: stringValue)
+    }
+}
+
 func <~ <T: Parsable>(lhs: inout T?, rhs: T?) {
     lhs = rhs
+}
+
+func <~ <T: Parsable>(lhs: inout [T]?, rhs: [T]?) {
+    if let elements = rhs, elements.count > 0 {
+        lhs = elements
+    }
 }

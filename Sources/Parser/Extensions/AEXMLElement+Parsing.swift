@@ -24,11 +24,11 @@ extension AEXMLElement {
         return int
     }
 
-    var optionalFloat: Float? {
+    var optionalDouble: Double? {
         if let _ = error {
             return nil
         }
-        return Float(double)
+        return double
     }
 
 }
