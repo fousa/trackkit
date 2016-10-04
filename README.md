@@ -25,7 +25,7 @@ Integration
 Add this pod to your `Podfile` by adding the following line:
 
 ``` ruby
-pod 'TrackKit', '~> 1.2'
+pod 'TrackKit', '~> 2.0'
 ```
 
 _It's important to add the version to the `pod 'TrackKit'`, this way you are sure that a next update of the pod will not break your code._

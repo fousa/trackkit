@@ -1,5 +1,11 @@
 # TrackKit
 
+## Version 2.0.0
+
+- Cleanup the code.
+- Added `TCX` file support.
+- Extended the documentation.
+
 ## Version 1.2.0
 
 - Rename `GPXKit` to `TrackKit` because we want to be able to support multiple formats.

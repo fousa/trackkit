@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'TrackKit'
-  s.version          = '1.2.0'
-  s.summary          = 'Parse a GPX file into a readable format with Swift.'
+  s.version          = '2.0.0'
+  s.summary          = 'Parse a log file into a readable format with Swift.'
 
   s.description      = <<-DESC
-  This pod makes it possible to parse a GPX file to a format that can
+  This pod makes it possible to parse a GPX/TCX file to a format that can
   be easily used in your code.
                        DESC
 
