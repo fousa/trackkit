@@ -27,5 +27,5 @@ extension Activity: Tcxable {
         sport     <~ element.attributes["Sport"]
         self.laps = laps
     }
-    
+
 }

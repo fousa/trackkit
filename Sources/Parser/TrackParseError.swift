@@ -7,7 +7,7 @@
 /**
  A list of errors that can be thrown by the parser. These errors can be
  thrown during initialization or during the parsing process.
- 
+
  - invalidData: When the data object is empty.
  - invalidFormat: When the data contains an incorrect format that can't be parsed.
  - invalidVersion: When the version of the file is invalid.

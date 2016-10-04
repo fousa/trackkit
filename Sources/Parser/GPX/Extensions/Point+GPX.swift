@@ -7,13 +7,13 @@
 import AEXML
 
 extension Point: Gpxable {
-    
+
     convenience init?(gpx element: AEXMLElement) {
         // When the element is an error, don't create the instance.
         if let _ = element.error {
             return nil
         }
-        
+
         // Check if coordinate is avaiable.
         guard
             let latitude = element.attributes["lat"],
@@ -21,7 +21,7 @@ extension Point: Gpxable {
                 return nil
         }
         self.init()
-        
+
         coordinate                    <~ (Double(latitude)!, Double(longitude)!)
         elevation                     <~ element["ele"]
         magneticVariation             <~ element["magvar"]
@@ -42,5 +42,5 @@ extension Point: Gpxable {
         time                          <~ element["time"]
         link                          <~ Link(gpx: element["link"])
     }
-    
+
 }

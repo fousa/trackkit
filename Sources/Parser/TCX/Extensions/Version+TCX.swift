@@ -26,5 +26,5 @@ extension Version: Tcxable {
             buildNumber = "\(majorBuild).\(minorBuild)"
         }
     }
-    
+
 }

@@ -13,7 +13,7 @@ public enum TrackType: String {
 
     /// A TCX formatted track.
     case tcx
-    
+
     // MARK: - Init
 
     /// Initialize the TrackType by passing the file extension.
@@ -25,9 +25,9 @@ public enum TrackType: String {
         }
         self = value
     }
-    
+
     // MARK: - Parsing
-    
+
     func parse(document: AEXMLDocument) throws -> File {
         switch self {
         case .gpx:

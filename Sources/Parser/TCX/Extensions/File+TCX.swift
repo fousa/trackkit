@@ -14,7 +14,7 @@ extension File {
             throw TrackParseError.invalidVersion
         }
         self.init()
-        
+
         applicationAuthor <~ Author(tcx: rootElement["Author"])
         courses           <~ rootElement["Courses"]["Course"].all?.flatMap { Course(tcx: $0) }
         activities        <~ rootElement["Activities"]["Activity"].all?.flatMap { Activity(tcx: $0) }

@@ -35,5 +35,5 @@ extension Lap: Tcxable {
         intensity        <~ element["Intensity"]
         points           = routePoints
     }
-    
+
 }

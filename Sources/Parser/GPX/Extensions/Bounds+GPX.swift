@@ -7,7 +7,7 @@
 import AEXML
 
 extension Bounds: Gpxable {
-    
+
     convenience init?(gpx element: AEXMLElement) {
         // When the element misses some coordinate data, don't create the instance.
         guard
@@ -18,9 +18,9 @@ extension Bounds: Gpxable {
                 return nil
         }
         self.init()
-        
+
         minimumCoordinate <~ (Double(minimumLatitude)!, Double(minimumLongitude)!)
         maximumCoordinate <~ (Double(maximumLatitude)!, Double(maximumLongitude)!)
     }
-    
+
 }

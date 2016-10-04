@@ -23,7 +23,7 @@ public enum Intentity: String {
 public final class Course {
     /// Name of the course.
     public var name: String?
-    
+
     /// Total time in seconds.
     public var totalTime: Double?
 
