@@ -18,20 +18,11 @@ Pod::Spec.new do |s|
   s.osx.deployment_target     = '10.11'
   s.tvos.deployment_target    = '9.0'
   s.watchos.deployment_target = '2.0'
+
+  # Set source file requirements.
   s.requires_arc = true
+  s.source_files = 'Sources/**/*'
 
-  # Set the default subspec.
-  s.default_subspecs = 'GPX'
-
-  # The core components of TrackKit.
-  s.subspec 'Core' do |ss|
-    ss.dependency 'AEXML', '~> 4.0'
-    ss.source_files = 'Sources/Core/**/*'
-  end
-
-  # Everything needed to parse GPX files.
-  s.subspec 'GPX' do |ss|
-    ss.dependency 'TrackKit/Core'
-    ss.source_files = 'Sources/GPX/**/*'
-  end
+  # Dependencies
+  s.dependency 'AEXML', '~> 4.0'
 end
