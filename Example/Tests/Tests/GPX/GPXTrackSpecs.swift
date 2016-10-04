@@ -242,7 +242,7 @@ class GPXTrackSpec: QuickSpec {
             }
 
             it("should have a fix") {
-                expect(point.fix) == FixType.dgps
+                expect(point.fix) == .dgps
             }
         }
 

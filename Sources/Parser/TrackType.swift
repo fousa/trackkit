@@ -1,19 +1,24 @@
 //
-//  Operators.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 18/03/16.
-//
 //
 
 import AEXML
 
+/// The type of track is defined by this enum value.
 public enum TrackType: String {
+    /// A GPX formatted track.
     case gpx
+
+    /// A TCX formatted track.
     case tcx
     
     // MARK: - Init
-    
+
+    /// Initialize the TrackType by passing the file extension.
+    ///
+    /// - parameter: the file extension (case is not important)
     public init?(fileExtension: String) {
         guard let value = TrackType(rawValue: fileExtension.lowercased()) else {
             return nil

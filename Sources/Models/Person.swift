@@ -1,14 +1,12 @@
 //
-//  Person.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 18/03/16.
 //
-//
 
-/**
- A person or organization.
-*/
+/// A person or organization.
+///
+/// - important: Supported format: GPX
 public final class Person {
     /// Name of person or organization.
     public var name: String?

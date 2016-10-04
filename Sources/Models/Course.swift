@@ -1,16 +1,15 @@
 //
-//  Course.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 03/10/2016.
-//
 //
 
 import CoreLocation
 
-/// Type of GPS fix. none means GPS had no fix. To signify "the fix info is unknown,
-/// leave out fixType entirely. pps = military signal used.
-public enum IntentityType: String {
+/// The intensity definition.
+///
+/// - important: Supported format: TCX
+public enum Intentity: String {
     /// Active intentity
     case active = "Active"
 
@@ -18,11 +17,11 @@ public enum IntentityType: String {
     case resting = "Resting"
 }
 
-/**
- An ordered list of waypoints representing a series of turn points leading to a destination.
- */
+/// An ordered list of points representing your defined course.
+///
+/// - important: Supported format: TCX
 public final class Course {
-    /// GPS name of route.
+    /// Name of the course.
     public var name: String?
     
     /// Total time in seconds.
@@ -38,8 +37,8 @@ public final class Course {
     public var endPosition: CLLocationCoordinate2D?
 
     /// Intensity of the route.
-    public var intensity: IntentityType?
+    public var intensity: Intentity?
 
-    /// A list of route points.
+    /// A list of course points.
     public var points: [Point]?
 }

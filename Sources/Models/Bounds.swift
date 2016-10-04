@@ -1,16 +1,14 @@
 //
-//  Bounds.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 15/03/16.
-//
 //
 
 import CoreLocation
 
-/**
- Two coordinate defining the extent of an element.
-*/
+/// Two coordinate defining the extent of an element.
+///
+/// - important: Supported format: GPX
 public final class Bounds {
     /// The minimum coordinate.
     public var minimumCoordinate: CLLocationCoordinate2D?

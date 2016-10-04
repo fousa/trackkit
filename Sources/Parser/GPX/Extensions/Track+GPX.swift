@@ -1,14 +1,12 @@
 //
-//  File.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 15/03/16.
-//
 //
 
 import AEXML
 
-extension Track: GPXable {
+extension Track: Gpxable {
     
     convenience init?(gpx element: AEXMLElement) {
         // When the element is an error, don't create the instance.

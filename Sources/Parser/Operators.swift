@@ -1,9 +1,7 @@
 //
-//  Operators.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 18/03/16.
-//
 //
 
 import CoreLocation
@@ -61,21 +59,21 @@ func <~ (lhs: inout URL?, rhs: AEXMLElement) {
 
 // MARK: - Enums
 
-func <~ (lhs: inout FixType?, rhs: AEXMLElement) {
+func <~ (lhs: inout Fix?, rhs: AEXMLElement) {
     if let stringValue = rhs.optionalString {
-        lhs = FixType(rawValue: stringValue)
+        lhs = Fix(rawValue: stringValue)
     }
 }
 
-func <~ (lhs: inout IntentityType?, rhs: AEXMLElement) {
+func <~ (lhs: inout Intentity?, rhs: AEXMLElement) {
     if let stringValue = rhs.optionalString {
-        lhs = IntentityType(rawValue: stringValue)
+        lhs = Intentity(rawValue: stringValue)
     }
 }
 
-func <~ (lhs: inout SportType?, rhs: String?) {
+func <~ (lhs: inout Sport?, rhs: String?) {
     if let stringValue = rhs {
-        lhs = SportType(rawValue: stringValue)
+        lhs = Sport(rawValue: stringValue)
     }
 }
 

@@ -1,14 +1,12 @@
 //
-//  Route.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 15/03/16.
 //
-//
 
-/**
- An ordered list of waypoints representing a series of turn points leading to a destination.
-*/
+/// An ordered list of waypoints representing a series of turn points leading to a destination.
+///
+/// - important: Supported format: GPX
 public final class Route {
     /// GPS name of route.
     public var name: String?

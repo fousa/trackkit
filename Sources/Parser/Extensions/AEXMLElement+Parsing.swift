@@ -1,9 +1,7 @@
 //
-//  AEXMLElement.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 18/03/16.
-//
 //
 
 import AEXML

@@ -1,14 +1,12 @@
 //
-//  File.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 15/03/16.
-//
 //
 
 import AEXML
 
-extension Person: GPXable {
+extension CopyrightNotice: Gpxable {
     
     convenience init?(gpx element: AEXMLElement) {
         // When the element is an error, don't create the instance.
@@ -17,10 +15,10 @@ extension Person: GPXable {
         }
         self.init()
         
-        email = String(gpx: element["email"])
+        author = element.attributes["author"]
         
-        name  <~ element["name"]
-        link  <~ Link(gpx: element["link"])
+        year    <~ element["year"]
+        license <~ element["license"]
     }
     
 }

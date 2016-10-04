@@ -1,16 +1,14 @@
 //
-//  Operators.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 18/03/16.
-//
 //
 
 import AEXML
 
 /**
  The parser that is responsible for converting a given `Data` representation of
- the GPX file into an understandable format.
+ the GPX or TCX file into an understandable format.
  */
 public struct TrackParser {
     

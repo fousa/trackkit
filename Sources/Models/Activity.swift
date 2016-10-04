@@ -1,33 +1,33 @@
 //
-//  Activity.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 03/10/2016.
 //
-//
 
-/// Type of GPS fix. none means GPS had no fix. To signify "the fix info is unknown,
-/// leave out fixType entirely. pps = military signal used.
-public enum SportType: String {
-    /// Active intentity
+/// Type of sport that was performed during the activity.
+///
+/// - important: Supported format: TCX
+public enum Sport: String {
+    /// Running activity type.
     case running = "Running"
 
-    /// Resting intentity
+    /// Biking activity type.
     case biking = "Biking"
 
-    /// Resting intentity
+    /// Other activity type.
     case other = "Other"
 }
 
-/**
- An ordered list of points describing a path.
- */
+/// This is an activity as defined in the TCX file.
+///
+/// - important: Supported format: TCX
 public final class Activity {
-    /// GPS name of track.
+    /// The id if the activity.
     public var id: String?
 
-    /// Type (classification) of track.
-    public var sport: SportType?
+    /// Type of sport performed.
+    public var sport: Sport?
 
+    /// The number of laps an activity includes.
     public var laps: [Lap]?
 }

@@ -1,14 +1,12 @@
 //
-//  Track.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 16/03/16.
 //
-//
 
-/**
- An ordered list of points describing a path.
-*/
+/// An ordered list of points describing a path.
+///
+/// - important: Supported format: GPX
 public final class Track {
     /// GPS name of track.
     public var name: String?

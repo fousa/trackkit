@@ -1,14 +1,12 @@
 //
-//  Person+TCX.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 30/09/2016.
-//
 //
 
 import AEXML
 
-extension Author: TCXable {
+extension Author: Tcxable {
     
     convenience init?(tcx element: AEXMLElement) {
         // When the element is an error, don't create the instance.

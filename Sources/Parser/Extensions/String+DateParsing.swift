@@ -1,9 +1,7 @@
 //
-//  NSDate+Parsing.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 21/03/16.
-//
 //
 
 extension String {

@@ -65,10 +65,6 @@ class TCXCommonSpec: QuickSpec {
                     file = try! TrackParser(data: data, type: .tcx).parse()
                 }
 
-                it("should not have a creator name") {
-                    expect(file.creator).to(beNil())
-                }
-
                 context("metadata") {
                     it("should not have an author name") {
                         expect(file.applicationAuthor?.name).to(beNil())

@@ -1,13 +1,11 @@
 //
-//  Gpxable.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 29/09/2016.
-//
 //
 
 import AEXML
 
-protocol GPXable: Parsable {
+protocol Gpxable: Parsable {
     init?(gpx element: AEXMLElement)
 }

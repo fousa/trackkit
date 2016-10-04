@@ -1,14 +1,12 @@
 //
-//  Activity+TCX.swift
-//  Pods
+//  TrackKit
 //
 //  Created by Jelle Vandebeeck on 03/10/2016.
-//
 //
 
 import AEXML
 
-extension Activity: TCXable {
+extension Activity: Tcxable {
 
     convenience init?(tcx element: AEXMLElement) {
         // When the element is an error, don't create the instance.
