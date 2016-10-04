@@ -94,6 +94,26 @@ class GPXCommonSpec: QuickSpec {
                 }
             }
 
+            describe("email data") {
+                beforeEach {
+                    let content = "<gpx creator='TrackKit' version='1.1'>"
+                                    + "<metadata>"
+                                        + "<author>"
+                                            + "<email id='jelle' />"
+                                        + "</author>"
+                                    + "</metadata>"
+                                + "</gpx>"
+                    let data = content.data(using: .utf8)
+                    file = try! TrackParser(data: data, type: .gpx).parse()
+                }
+
+                context("metadata") {
+                    it("should not have an email") {
+                        expect(file.author?.email).to(beNil())
+                    }
+                }
+            }
+
             context("empty file") {
                 beforeEach {
                     let content = "<gpx version='1.1'></gpx>"
