@@ -4,7 +4,7 @@ TrackKit
 [![CI Status](http://img.shields.io/travis/fousa/trackkit.svg?style=flat)](https://travis-ci.org/fousa/trackkit) [![Version](https://img.shields.io/cocoapods/v/TrackKit.svg?style=flat)](http://cocoapods.org/pods/TrackKit) [![License](https://img.shields.io/cocoapods/l/TrackKit.svg?style=flat)](http://cocoapods.org/pods/TrackKit) [![Platform](https://img.shields.io/cocoapods/p/TrackKit.svg?style=flat)](http://cocoapods.org/pods/TrackKit)
 [![Language Swift 3.0](https://img.shields.io/badge/Language-Swift%203.0-orange.svg?style=flat)](https://swift.org)
 
-`TrackKit` is allows you to easily parse a GPX file in Swift.
+`TrackKit` is allows you to easily parse a log files in Swift.
 
 Supported Formats
 =================
@@ -13,6 +13,11 @@ GPX
 ---
 
 The `GPX` format that is support is version **1.1** as described in the [schema documentation](http://www.topografix.com/GPX/1/1/).
+
+TCX
+---
+
+The `TCX` format that is support is version **2** as described in the [schema documentation](http://www8.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd).
 
 Integration
 ===========
@@ -29,6 +34,9 @@ Usage
 =====
 
 You can take a look at the different specs on how to use this pod. But for now I describe in short how it can be used.
+
+GPX
+---
 
 Here is a sample GPX file with some data:
 
@@ -47,15 +55,74 @@ The only thing you have to do is make sure to get the contents of the GPX file i
 
 ``` swift
 let content: String = '...'
-let data = content.data(using: String.Encoding.utf8)
-let file = try! Parser(data: data).parse()
+let data = content.data(using: .utf8)
+let file = try! TrackParser(data: data, type: .gpx).parse()
 ```
+
+TCX
+---
+
+Here is a sample TCX file with some data:
+
+``` xml
+<TrainingCenterDatabase xmlns='http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2'>
+    <Courses>
+        <Course>
+            <Name>Jelle Vandebeeck</Name>
+            <Lap>
+                <TotalTimeSeconds>60</TotalTimeSeconds>
+                <DistanceMeters>1200</DistanceMeters>
+                <BeginPosition>
+                    <LatitudeDegrees>51.208845321089</LatitudeDegrees>
+                    <LongitudeDegrees>4.394159177318</LongitudeDegrees>
+                </BeginPosition>
+                <EndPosition>
+                    <LatitudeDegrees>51.208867281675</LatitudeDegrees>
+                    <LongitudeDegrees>4.394087595865</LongitudeDegrees>
+                </EndPosition>
+                <Intensity>Active</Intensity>
+            </Lap>
+            <Track>
+                <TrackPoint>
+                    <Position>
+                        <LatitudeDegrees>51.208845321089</LatitudeDegrees>
+                        <LongitudeDegrees>4.394159177318</LongitudeDegrees>
+                    </Position>
+                </TrackPoint>
+            </Track>
+        </Course>
+    </Courses>
+</TrainingCenterDatabase>
+```
+
+The only thing you have to do is make sure to get the contents of the TCX file into an `Data` structure. When you have this you can easily parse the file into a `File`.
+
+``` swift
+let content: String = '...'
+let data = content.data(using: .utf8)
+let file = try! TrackParser(data: data, type: .tcx).parse()
+```
+
+Type Handling
+-------------
+
+There is also an automated way to handle the type selection. Just pass the file extension to the `TrackType` enum.
+
+``` swift
+let gpxType = TrackType(fileExtension: 'GPX')
+let tcxType = TrackType(fileExtension: 'tcx')
+```
+
+_The `fileExtension` value that is passed ignores the case._
+
+Error Handling
+--------------
 
 When the parsing fails an error will be thrown. There are currently **two** types of errors:
 
 - `invalidData` thrown when the data object is empty.
 - `invalidFormat` thrown when the data object can't be parsed.
-- `invalidVersion` thrown when the data object contains an incorrect version of the GPX file.
+- `invalidVersion` thrown when the data object contains an incorrect version of the file.
 
 License
 =======
