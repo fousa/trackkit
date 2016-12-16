@@ -8,6 +8,13 @@
 ///
 /// - important: Supported format: GPX, TCX
 public final class File {
+    /// Returns the value of the type that the file is parsed from.
+    ///
+    /// Here is an overview of available options:
+    /// - gpx: A GPX formatted track.
+    /// - tcx: A TCX formatted track.
+    public let type: TrackType
+    
     /// You must include the name or URL of the software that created your
     /// GPX document. This allows others to inform the creator of a GPX instance
     /// document that fails to validate.
@@ -86,4 +93,11 @@ public final class File {
     ///
     /// - important: Supported format: TCX
     public var activities: [Activity]?
+    
+    // MARK: - Init
+    
+    /// You have to initialize a file with a given `TrackType`.
+    init(type: TrackType) {
+        self.type = type
+    }
 }

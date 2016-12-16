@@ -13,7 +13,7 @@ extension File {
         if rootElement.attributes["xmlns"] != "http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2" {
             throw TrackParseError.invalidVersion
         }
-        self.init()
+        self.init(type: .tcx)
 
         applicationAuthor <~ Author(tcx: rootElement["Author"])
         courses           <~ rootElement["Courses"]["Course"].all?.flatMap { Course(tcx: $0) }

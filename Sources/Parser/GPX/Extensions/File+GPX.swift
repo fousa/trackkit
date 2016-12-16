@@ -13,7 +13,7 @@ extension File {
         if rootElement.attributes["version"] != "1.1" {
             throw TrackParseError.invalidVersion
         }
-        self.init()
+        self.init(type: .gpx)
 
         // Fetch the creator from the root element.
         creator = rootElement.attributes["creator"]
