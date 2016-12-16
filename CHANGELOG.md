@@ -1,5 +1,10 @@
 # TrackKit
 
+## Version 2.0.1
+
+- Fix the `Trackpoint` parsing.
+- Add the `TrackType` property to the `File`.
+
 ## Version 2.0.0
 
 - Cleanup the code.
