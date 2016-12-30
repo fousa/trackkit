@@ -1,5 +1,10 @@
 # TrackKit
 
+## Future Version
+
+- Added `LOG` file support.
+- Extended the documentation.
+
 ## Version 2.0.1
 
 - Fix the `Trackpoint` parsing.
