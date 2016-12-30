@@ -2,7 +2,7 @@
   "name": "TrackKit",
   "version": "2.0.1",
   "summary": "Parse a log file into a readable format with Swift.",
-  "description": "This pod makes it possible to parse a GPX/TCX file to a format that can\nbe easily used in your code.",
+  "description": "This pod makes it possible to parse a GPX/LOC/TCX file to a format that can\nbe easily used in your code.",
   "homepage": "https://github.com/fousa/trackkit",
   "license": "MIT",
   "authors": {
