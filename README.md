@@ -12,7 +12,7 @@ Supported Formats
 GPX
 ---
 
-The `GPX` format that is supported is version **1.1** as described in the [schema documentation](http://www.topografix.com/GPX/1/1/).
+The `GPX` formats that are supported are versions **1.0** and **1.1** as described in [schema documentation for 1.0](http://www.topografix.com/gpx_manual.asp#gpx_private) and [schema documentation for 1.1](http://www.topografix.com/GPX/1/1/).
 
 LOC
 ---

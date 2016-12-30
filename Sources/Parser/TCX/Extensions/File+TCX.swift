@@ -9,11 +9,9 @@ import AEXML
 extension File {
 
     convenience init(tcx rootElement: AEXMLElement) throws {
-        // When the element is an error, don't create the instance.
-        if rootElement.attributes["xmlns"] != "http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2" {
-            throw TrackParseError.invalidVersion
-        }
-        self.init(type: .tcx)
+        // Fetch the type version.
+        let version = try TrackTypeVersion(type: .tcx, version: rootElement.attributes["xmlns"])
+        self.init(type: .tcx, version: version)
 
         applicationAuthor <~ Author(tcx: rootElement["Author"])
         courses           <~ rootElement["Courses"]["Course"].all?.flatMap { Course(tcx: $0) }

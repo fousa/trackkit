@@ -8,7 +8,7 @@ import AEXML
 
 extension Route: Gpxable {
 
-    convenience init?(gpx element: AEXMLElement) {
+    convenience init?(gpx element: AEXMLElement, version: TrackTypeVersion) {
         // When the element is an error, don't create the instance.
         if let _ = element.error {
             return nil
@@ -16,7 +16,7 @@ extension Route: Gpxable {
 
         // When there are not route points, don't create the instance.
         var routePoints: [Point]? = nil
-        routePoints <~ element["rtept"].all?.flatMap { Point(gpx: $0) }
+        routePoints <~ element["rtept"].all?.flatMap { Point(gpx: $0, version: version) }
         if routePoints == nil {
             return nil
         }
@@ -29,7 +29,7 @@ extension Route: Gpxable {
         source      <~ element["src"]
         number      <~ element["number"]
         type        <~ element["type"]
-        link        <~ Link(gpx: element["link"])
+        link        <~ Link(gpx: element, version: version)
         points      = routePoints
     }
 

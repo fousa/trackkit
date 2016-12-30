@@ -3,6 +3,7 @@
 ## Future Version
 
 - Added `LOG` file support.
+- Added `GPX` file version v1.0 support.
 - Extended the documentation.
 
 ## Version 2.0.1

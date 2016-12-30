@@ -12,8 +12,12 @@ public final class File {
     ///
     /// Here is an overview of available options:
     /// - gpx: A GPX formatted track.
+    /// - loc: A LOC formatted track.
     /// - tcx: A TCX formatted track.
     public let type: TrackType
+
+    /// Returns the version of the file type.
+    public let typeVersion: TrackTypeVersion
     
     /// You must include the name or URL of the software that created your
     /// GPX document. This allows others to inform the creator of a GPX instance
@@ -101,8 +105,9 @@ public final class File {
     
     // MARK: - Init
     
-    /// You have to initialize a file with a given `TrackType`.
-    init(type: TrackType) {
+    /// You have to initialize a file with a given `TrackType` and a `TrackTypeVersion`.
+    init(type: TrackType, version: TrackTypeVersion) {
         self.type = type
+        self.typeVersion = version
     }
 }

@@ -8,7 +8,7 @@ import AEXML
 
 extension Point: Gpxable {
 
-    convenience init?(gpx element: AEXMLElement) {
+    convenience init?(gpx element: AEXMLElement, version: TrackTypeVersion) {
         // When the element is an error, don't create the instance.
         if let _ = element.error {
             return nil
@@ -40,7 +40,7 @@ extension Point: Gpxable {
         ageOfTheGpxData               <~ element["ageofdgpsdata"]
         dgpsStationType               <~ element["dgpsid"]
         time                          <~ element["time"]
-        link                          <~ Link(gpx: element["link"])
+        link                          <~ Link(gpx: element, version: version)
     }
 
 }

@@ -8,8 +8,8 @@ target 'Tests' do
   pod 'TrackKit', path: '../'
 
   # The testing pods.
-  pod 'Quick',  '~> 0.10.0'
-  pod 'Nimble', '~> 5.0.0'
+  pod 'Quick',  '~> 1.0'
+  pod 'Nimble', '~> 5.1'
 end
 
 post_install do |installer|
