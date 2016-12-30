@@ -138,7 +138,7 @@ Type Handling
 There is also an automated way to handle the type selection. Just pass the file extension to the `TrackType` enum.
 
 ``` swift
-let gpxType = TrackType(fileExtension: 'GPX')
+let gpxType = TrackType(fileExtension: 'gpx')
 let locType = TrackType(fileExtension: 'loc')
 let tcxType = TrackType(fileExtension: 'tcx')
 ```
