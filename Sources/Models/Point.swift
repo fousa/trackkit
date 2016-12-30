@@ -33,7 +33,7 @@ public enum Fix: String {
 public final class Point {
     /// The coordinate of the point.
     ///
-    /// - important: Supported format: GPX, TCX
+    /// - important: Supported format: GPX, TCX, LOC
     public var coordinate: CLLocationCoordinate2D?
 
     /// Elevation (in meters) of the point.
@@ -68,7 +68,7 @@ public final class Point {
     /// contained in it. It is up to the receiving application to validate the field before
     /// sending it to the GPS.
     ///
-    /// - important: Supported format: GPX
+    /// - important: Supported format: GPX, LOC
     public var name: String?
 
     /// GPS waypoint comment. Sent to GPS as comment.
@@ -79,7 +79,7 @@ public final class Point {
     /// A text description of the element. Holds additional information about the element
     /// intended for the user, not the GPS.
     ///
-    /// - important: Supported format: GPX
+    /// - important: Supported format: GPX, LOC
     public var description: String?
 
     /// Source of data. Included to give user some idea of reliability and accuracy of data.
@@ -90,7 +90,7 @@ public final class Point {
 
     /// Link to additional information about the waypoint.
     ///
-    /// - important: Supported format: GPX
+    /// - important: Supported format: GPX, LOC
     public var link: Link?
 
     /// Text of GPS symbol name. For interchange with other programs, use the exact spelling
@@ -101,7 +101,7 @@ public final class Point {
 
     /// Type (classification) of the waypoint.
     ///
-    /// - important: Supported format: GPX
+    /// - important: Supported format: GPX, LOC
     public var type: String?
 
     /// Type of GPS fix.

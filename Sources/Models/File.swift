@@ -76,7 +76,7 @@ public final class File {
 
     /// A list of waypoints.
     ///
-    /// - important: Supported format: GPX
+    /// - important: Supported format: GPX, LOC
     public var waypoints: [Point]?
 
     /// A list of routes.
