@@ -12,14 +12,14 @@ import TrackKit
 
 class TrackTypeSpec: QuickSpec {
     override func spec() {
-        context("GPX") { 
-            describe("Should parse gpx as gpx type") {
+        context("GPX") {
+            it("Should parse gpx as gpx type") {
                 let type = TrackType(fileExtension: "gpx")
                 expect(type).toNot(beNil())
                 expect(type?.rawValue) == "gpx"
             }
             
-            describe("Should parse GPX as gpx type") {
+            it("Should parse GPX as gpx type") {
                 let type = TrackType(fileExtension: "GPX")
                 expect(type).toNot(beNil())
                 expect(type?.rawValue) == "gpx"
@@ -27,16 +27,30 @@ class TrackTypeSpec: QuickSpec {
         }
         
         context("TCX") {
-            describe("Should parse tcx as tcx type") {
+            it("Should parse tcx as tcx type") {
                 let type = TrackType(fileExtension: "tcx")
                 expect(type).toNot(beNil())
                 expect(type?.rawValue) == "tcx"
             }
             
-            describe("Should parse TCX as tcx type") {
+            it("Should parse TCX as tcx type") {
                 let type = TrackType(fileExtension: "TCX")
                 expect(type).toNot(beNil())
                 expect(type?.rawValue) == "tcx"
+            }
+        }
+
+        context("LOC") {
+            it("Should parse loc as loc type") {
+                let type = TrackType(fileExtension: "loc")
+                expect(type).toNot(beNil())
+                expect(type?.rawValue) == "loc"
+            }
+
+            it("Should parse LOC as loc type") {
+                let type = TrackType(fileExtension: "LOC")
+                expect(type).toNot(beNil())
+                expect(type?.rawValue) == "loc"
             }
         }
 
