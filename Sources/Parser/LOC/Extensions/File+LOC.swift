@@ -14,6 +14,9 @@ extension File {
             throw TrackParseError.invalidVersion
         }
         self.init(type: .loc)
+
+        // Fetch the creator from the root element.
+        source = rootElement.attributes["src"]
     }
 
 }
