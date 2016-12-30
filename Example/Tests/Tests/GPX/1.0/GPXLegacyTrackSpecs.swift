@@ -81,6 +81,11 @@ class GPXLegacyTrackSpec: QuickSpec {
                                     + "<number>9</number>"
                                     + "<url>http://fousa.be</url>"
                                     + "<urlname>Fousa</urlname>"
+
+                                    // Segments.
+                                    + "<trkseg>"
+                                        + "<trkpt lat='41.2' lon='-71.3'></trkpt>"
+                                    + "</trkseg>"
                                 + "</trk>"
                             + "</gpx>"
                 let data = content.data(using: .utf8)
@@ -109,7 +114,6 @@ class GPXLegacyTrackSpec: QuickSpec {
             it("should have a link") {
                 expect(track.link?.link) == "http://fousa.be"
                 expect(track.link?.text) == "Fousa"
-                expect(track.link?.mimeType) == "text/html"
             }
 
             it("should have a number") {
@@ -194,7 +198,6 @@ class GPXLegacyTrackSpec: QuickSpec {
             it("should have a link") {
                 expect(point.link?.link) == "http://fousa.be"
                 expect(point.link?.text) == "Fousa"
-                expect(point.link?.mimeType) == "text/html"
             }
 
             it("should have a symbol") {

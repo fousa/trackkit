@@ -89,7 +89,6 @@ class GPXLegacyRouteSpec: QuickSpec {
             it("should have a link") {
                 expect(route.link?.link) == "http://fousa.be"
                 expect(route.link?.text) == "Fousa"
-                expect(route.link?.mimeType) == "text/html"
             }
 
             it("should have a number") {

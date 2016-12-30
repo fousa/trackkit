@@ -40,7 +40,7 @@ extension Point: Gpxable {
         ageOfTheGpxData               <~ element["ageofdgpsdata"]
         dgpsStationType               <~ element["dgpsid"]
         time                          <~ element["time"]
-        link                          <~ Link(gpx: element["link"], version: version)
+        link                          <~ Link(gpx: element, version: version)
     }
 
 }

@@ -29,7 +29,7 @@ extension Track: Gpxable {
         source      <~ element["src"]
         number      <~ element["number"]
         type        <~ element["type"]
-        link        <~ Link(gpx: element["link"], version: version)
+        link        <~ Link(gpx: element, version: version)
         segments    = routeSegments
     }
 
