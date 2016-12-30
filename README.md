@@ -46,7 +46,7 @@ GPX
 Here is a sample GPX file with some data:
 
 ``` xml
-<gpx creator='TrackKit'>
+<gpx version='1.1' creator='TrackKit'>
   <metadata>
     <name>Jelle Vandebeeck</name>
     <desc>A GPX file</desc>
