@@ -1,6 +1,6 @@
 # TrackKit
 
-## Future Version
+## 2.1.0
 
 - Added `LOG` file support.
 - Added `GPX` file version v1.0 support.
