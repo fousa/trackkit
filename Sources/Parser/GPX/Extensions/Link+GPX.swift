@@ -9,35 +9,47 @@ import AEXML
 extension Link: Gpxable {
 
     convenience init?(gpx element: AEXMLElement, version: TrackTypeVersion) {
-        var rootElement = element
-        if version.versionString == "1.1" {
-            rootElement = element["link"]
-        }
+        // Define the root element.
+        let rootElement = Link.rootElement(for: version, element: element)
 
         // When the element is an error, don't create the instance.
-        if rootElement.error != nil {
+        guard Link.validate(element: rootElement, for: version) else {
             return nil
         }
-
-        var link: String?
-        if version.versionString == "1.0" {
-            link = rootElement["url"].optionalString
-        } else if version.versionString == "1.1" {
-            link = rootElement.attributes["href"]
-        }
-        guard let _ = link else {
-            return nil
-        }
-
         self.init()
 
         if version.versionString == "1.0" {
+            link <~ rootElement["url"]
             text <~ rootElement["urlname"]
         } else if version.versionString == "1.1" {
+            link = rootElement.attributes["href"]
             text     <~ rootElement["text"]
             mimeType <~ rootElement["type"]
         }
-        self.link = link
+    }
+
+    // MARK: - Helpers
+
+    private static func rootElement(for version: TrackTypeVersion, element: AEXMLElement) -> AEXMLElement {
+        if version.versionString == "1.1" {
+            return element["link"]
+        }
+        return element
+    }
+
+    private static func validate(element: AEXMLElement, for version: TrackTypeVersion) -> Bool {
+        // When the element is an error, don't create the instance.
+        guard element.error == nil else {
+            return false
+        }
+
+        if version.versionString == "1.0" {
+            return element["url"].optionalString != nil
+        } else if version.versionString == "1.1" {
+            return element.attributes["href"] != nil
+        }
+
+        return false
     }
 
 }
