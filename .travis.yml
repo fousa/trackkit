@@ -4,9 +4,6 @@ cache: bundler
 rvm:
   - 2.3.1
 
-before_install:
-  - gem install xcpretty -N --no-ri --no-rdoc
-
 install:
   - bundle install
   - ./scripts/setup_swiftlint.sh
@@ -14,7 +11,7 @@ install:
 script:
   - set -o pipefail
   - swiftlint
-  - xcodebuild test -workspace Example/TrackKit.xcworkspace -scheme Tests -destination "platform=iOS Simulator,name=iPhone 7" -enableCodeCoverage YES | xcpretty
+  - xcodebuild test -workspace Example/TrackKit.xcworkspace -scheme Tests -destination "platform=iOS Simulator,name=iPhone 7"
 
 deploy:
   skip_cleanup: true
