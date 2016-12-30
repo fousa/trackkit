@@ -7,5 +7,5 @@
 import AEXML
 
 protocol Gpxable: Parsable {
-    init?(gpx element: AEXMLElement)
+    init?(gpx element: AEXMLElement, version: TrackTypeVersion)
 }

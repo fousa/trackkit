@@ -42,6 +42,20 @@ public enum TrackTypeVersion {
         }
     }
 
+    // MARK: - Version
+
+    /// Return the version string for the file type.
+    var versionString: String {
+        switch self {
+        case .gpx(let version):
+            return version
+        case .loc(let version):
+            return version
+        case .tcx(let version):
+            return version
+        }
+    }
+
     // MARK: - Validation
 
     private static func validate(type: TrackType, version: String) -> Bool {

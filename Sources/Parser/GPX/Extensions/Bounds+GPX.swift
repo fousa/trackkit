@@ -8,7 +8,7 @@ import AEXML
 
 extension Bounds: Gpxable {
 
-    convenience init?(gpx element: AEXMLElement) {
+    convenience init?(gpx element: AEXMLElement, version: TrackTypeVersion) {
         // When the element misses some coordinate data, don't create the instance.
         guard
             let minimumLatitude = element.attributes["minlat"],
