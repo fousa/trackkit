@@ -63,6 +63,19 @@
 			path = LOC;
 			sourceTree = "<group>";
 		};
+		04206A121E16686D00B428C2 /* 1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				607FACEB1AFB9204008FA782 /* GPXCommonSpecs.swift */,
+				6297A9BF1C99611400686120 /* GPXParserSpecs.swift */,
+				6297A9A41C98C4D500686120 /* GPXRouteSpecs.swift */,
+				6297A9A61C98C69000686120 /* GPXTrackSpecs.swift */,
+				6297A9A11C98C36D00686120 /* GPXWaypointSpecs.swift */,
+			);
+			name = 1.1;
+			path = 1.1;
+			sourceTree = "<group>";
+		};
 		2EA3EDBF0BB067FF85406369 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,11 +142,7 @@
 		62BB32D31D9C29B600310CF9 /* GPX */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* GPXCommonSpecs.swift */,
-				6297A9BF1C99611400686120 /* GPXParserSpecs.swift */,
-				6297A9A41C98C4D500686120 /* GPXRouteSpecs.swift */,
-				6297A9A61C98C69000686120 /* GPXTrackSpecs.swift */,
-				6297A9A11C98C36D00686120 /* GPXWaypointSpecs.swift */,
+				04206A121E16686D00B428C2 /* 1.1 */,
 			);
 			path = GPX;
 			sourceTree = "<group>";
