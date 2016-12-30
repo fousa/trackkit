@@ -34,7 +34,7 @@ class LOCParserSpec: QuickSpec {
             it("should not throw an invalid version error for 1.0") {
                 let content = "<loc version='1.0'></loc>"
                 let data = content.data(using: .utf8)
-                expect { try TrackParser(data: data, type: .loc).parse() }.to(throwError(TrackParseError.invalidVersion))
+                expect { try TrackParser(data: data, type: .loc).parse() }.toNot(throwError(TrackParseError.invalidVersion))
             }
         }
     }

@@ -9,11 +9,9 @@ import AEXML
 extension File {
 
     convenience init(gpx rootElement: AEXMLElement) throws {
-        // When the element is an error, don't create the instance.
-        if rootElement.attributes["version"] != "1.1" {
-            throw TrackParseError.invalidVersion
-        }
-        self.init(type: .gpx)
+        // Fetch the type version.
+        let version = try TrackTypeVersion(type: .gpx, version: rootElement.attributes["version"])
+        self.init(type: .gpx, version: version)
 
         // Fetch the creator from the root element.
         creator = rootElement.attributes["creator"]

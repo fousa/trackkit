@@ -9,11 +9,9 @@ import AEXML
 extension File {
 
     convenience init(loc rootElement: AEXMLElement) throws {
-        // When the element is an error, don't create the instance.
-        if rootElement.attributes["version"] != "1.0" {
-            throw TrackParseError.invalidVersion
-        }
-        self.init(type: .loc)
+        // Fetch the type version.
+        let version = try TrackTypeVersion(type: .loc, version: rootElement.attributes["version"])
+        self.init(type: .loc, version: version)
 
         // Fetch the creator from the root element.
         source = rootElement.attributes["src"]
