@@ -6,7 +6,7 @@
 
 /// The main file.
 ///
-/// - important: Supported format: GPX, TCX
+/// - important: Supported format: GPX, TCX, LOC
 public final class File {
     /// Returns the value of the type that the file is parsed from.
     ///
@@ -21,6 +21,11 @@ public final class File {
     ///
     /// - important: Supported format: GPX
     public var creator: String?
+
+    /// Source of data.
+    ///
+    /// - important: Supported format: LOC
+    public var source: String?
 
     /// The name of the file.
     ///
@@ -71,7 +76,7 @@ public final class File {
 
     /// A list of waypoints.
     ///
-    /// - important: Supported format: GPX
+    /// - important: Supported format: GPX, LOC
     public var waypoints: [Point]?
 
     /// A list of routes.

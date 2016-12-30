@@ -12,12 +12,17 @@ Supported Formats
 GPX
 ---
 
-The `GPX` format that is support is version **1.1** as described in the [schema documentation](http://www.topografix.com/GPX/1/1/).
+The `GPX` format that is supported is version **1.1** as described in the [schema documentation](http://www.topografix.com/GPX/1/1/).
+
+LOC
+---
+
+The `GPX` format that is supported is version **1.0**. No schema description was found for this format, but we looked at how [Geoaching](http://geocaching.com) used it.
 
 TCX
 ---
 
-The `TCX` format that is support is version **2** as described in the [schema documentation](http://www8.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd).
+The `TCX` format that is supported is version **2** as described in the [schema documentation](http://www8.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd).
 
 Integration
 ===========
@@ -48,7 +53,7 @@ Here is a sample GPX file with some data:
     <time>2016-03-10T10:05:12+02:00</time>
     <keywords>hiking, forest, wild</keywords>
   </metadata>
-</gpx>                    
+</gpx>
 ```
 
 The only thing you have to do is make sure to get the contents of the GPX file into an `Data` structure. When you have this you can easily parse the file into a `File`.
@@ -57,6 +62,30 @@ The only thing you have to do is make sure to get the contents of the GPX file i
 let content: String = '...'
 let data = content.data(using: .utf8)
 let file = try! TrackParser(data: data, type: .gpx).parse()
+```
+
+LOC
+---
+
+Here is a sample LOC file with some data:
+
+``` xml
+<loc version='1.0'>
+  <waypoint>
+    <name id='GC54AMF'><![CDATA[Mortsel]]></name>
+    <coord lat='51.16215' lon='4.456933'/>
+    <type>Geocache</type>
+    <link text='Details'>http://www.geocaching.com</link>
+  </waypoint>
+</loc>
+```
+
+The only thing you have to do is make sure to get the contents of the LOC file into an `Data` structure. When you have this you can easily parse the file into a `File`.
+
+``` swift
+let content: String = '...'
+let data = content.data(using: .utf8)
+let file = try! TrackParser(data: data, type: .loc).parse()
 ```
 
 TCX
@@ -110,6 +139,7 @@ There is also an automated way to handle the type selection. Just pass the file 
 
 ``` swift
 let gpxType = TrackType(fileExtension: 'GPX')
+let locType = TrackType(fileExtension: 'loc')
 let tcxType = TrackType(fileExtension: 'tcx')
 ```
 

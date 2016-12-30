@@ -8,7 +8,7 @@ import AEXML
 
 /**
  The parser that is responsible for converting a given `Data` representation of
- the GPX or TCX file into an understandable format.
+ the GPX, LOC or TCX file into an understandable format.
  */
 public struct TrackParser {
 
@@ -22,7 +22,7 @@ public struct TrackParser {
     /**
      Initialize the parsed with a data instance.
 
-     - Parameter data: The GPX data object you want to parse.
+     - Parameter data: The data object you want to parse.
 
      - Throws: `ParseError.invalidData` if the data object is empty.
      */

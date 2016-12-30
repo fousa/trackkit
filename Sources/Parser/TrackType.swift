@@ -11,6 +11,9 @@ public enum TrackType: String {
     /// A GPX formatted track.
     case gpx
 
+    /// A LOC formatted track.
+    case loc
+
     /// A TCX formatted track.
     case tcx
 
@@ -32,6 +35,8 @@ public enum TrackType: String {
         switch self {
         case .gpx:
             return try File(gpx: document.root)
+        case .loc:
+            return try File(loc: document.root)
         case .tcx:
             return try File(tcx: document.root)
         }
