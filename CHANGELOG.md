@@ -1,5 +1,9 @@
 # TrackKit
 
+## 2.2.0
+
+- Added full support for `GPX`'s `TrackPointExtensions`.
+
 ## 2.1.0
 
 - Added `LOG` file support.
