@@ -12,20 +12,11 @@
 > This is not a robust full featured XML parser, but rather simple,  
 lightweight and easy to use utility for casual XML handling.
 
-**AEXML** is a [minion](http://tadija.net/public/minion.png) which consists of these classes:  
-
-Class | Description
------------- | -------------
-`AEXMLElement` | Base class
-`AEXMLDocument` | Inherited from `AEXMLElement` with a few addons
-`AEXMLParser` | Simple (private) wrapper around `Foundation.XMLParser`
-
 ## Index
 - [Features](#features)
-- [Example](#example)
+- [Usage](#usage)
     - [Read XML](#read-xml)
     - [Write XML](#write-xml)
-- [Requirements](#requirements)
 - [Installation](#installation)
 - [License](#license)
 
@@ -33,9 +24,9 @@ Class | Description
 - **Read XML** data
 - **Write XML** string
 - Covered with [unit tests](https://github.com/tadija/AEXML/blob/master/Tests/AEXMLTests.swift)
-- Covered with [docs](http://cocoadocs.org/docsets/AEXML)
+- Covered with inline docs
 
-## Example
+## Usage
 
 ### Read XML
 Let's say this is some XML string you picked up somewhere and made a variable `data: Data` from that.
@@ -173,10 +164,6 @@ getStockPrice.addChild(name: "m:StockName", value: "AAPL")
 // prints the same XML structure as original
 print(soapRequest.xml)
 ```
-
-## Requirements
-- Xcode 8.0+
-- AEXML doesn't require any additional libraries for it to work.
 
 ## Installation
 
