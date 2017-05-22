@@ -41,6 +41,17 @@ extension Point: Gpxable {
         dgpsStationType               <~ element["dgpsid"]
         time                          <~ element["time"]
         link                          <~ Link(gpx: element, version: version)
+        
+        // TrackPointExtensions
+        let extensionsElement = element["extensions"]["gpxtpx:TrackPointExtension"]
+        airTemperature   <~ extensionsElement["gpxtpx:atemp"]
+        waterTemperature <~ extensionsElement["gpxtpx:wtemp"]
+        depth            <~ extensionsElement["gpxtpx:depth"]
+        heartRate        <~ extensionsElement["gpxtpx:hr"]
+        cadence          <~ extensionsElement["gpxtpx:cad"]
+        speed            <~ extensionsElement["gpxtpx:speed"]
+        course           <~ extensionsElement["gpxtpx:course"]
+        bearing          <~ extensionsElement["gpxtpx:bearing"]
     }
 
 }
