@@ -149,10 +149,15 @@ public final class Point {
     /// - important: Supported format: TCX, GPX
     public var cadence: Int?
     
-    /// Temperature at this point.
+    /// Air temperature at this point.
     ///
     /// - important: Supported format: GPX
-    public var temperature: Double?
+    public var airTemperature: Double?
+    
+    /// Water temperature at this point.
+    ///
+    /// - important: Supported format: GPX
+    public var waterTemperature: Double?
     
     /// Depth at this point.
     ///
