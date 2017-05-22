@@ -157,6 +157,142 @@ class GPXWaypointSpec: QuickSpec {
             it("should have a fix") {
                 expect(point.fix) == .dgps
             }
+            
+            it("should not have a temperature") {
+                expect(point.temperature).to(beNil())
+            }
+            
+            it("should not have a depth") {
+                expect(point.depth).to(beNil())
+            }
+            
+            it("should not have a heart rate") {
+                expect(point.heartRate).to(beNil())
+            }
+            
+            it("should not have a cadence") {
+                expect(point.cadence).to(beNil())
+            }
+            
+            it("should not have a speed") {
+                expect(point.speed).to(beNil())
+            }
+            
+            it("should not have a course") {
+                expect(point.course).to(beNil())
+            }
+            
+            it("should not have a bearing") {
+                expect(point.bearing).to(beNil())
+            }
+        }
+        
+        describe("extensions") {
+            context("TrackPointExtensions") {
+                var point: Point!
+                
+                beforeEach {
+                    let content = "<gpx creator='TrackKit' version='1.1'>"
+                                    + "<wpt lat='41.2' lon='-71.3'>"
+                                    
+                                        // Extensions
+                                        + "<extensions>"
+                                            + "<gpxtpx:TrackPointExtension>"
+                                                + "<gpxtpx:atemp>11</gpxtpx:atemp>"
+                                                + "<gpxtpx:depth>15</gpxtpx:depth>"
+                                                + "<gpxtpx:hr>116</gpxtpx:hr>"
+                                                + "<gpxtpx:cad>87</gpxtpx:cad>"
+                                                + "<gpxtpx:speed>4</gpxtpx:speed>"
+                                                + "<gpxtpx:course>120</gpxtpx:course>"
+                                                + "<gpxtpx:bearing>130</gpxtpx:bearing>"
+                                            + "</gpxtpx:TrackPointExtension>"
+                                        + "</extensions>"
+                                    + "</wpt>"
+                                + "</gpx>"
+                    let data = content.data(using: .utf8)
+                    let file = try! TrackParser(data: data, type: .gpx).parse()
+                    
+                    point = file.waypoints?.first!
+                }
+                
+                it("should have a temperature") {
+                    expect(point.temperature) == 11
+                }
+                
+                it("should have a depth") {
+                    expect(point.depth) == 15
+                }
+                
+                it("should have a heart rate") {
+                    expect(point.heartRate) == 116
+                }
+                
+                it("should have a cadence") {
+                    expect(point.cadence) == 87
+                }
+                
+                it("should have a speed") {
+                    expect(point.speed) == 4
+                }
+                
+                it("should have a course") {
+                    expect(point.course) == 120
+                }
+                
+                it("should have a bearing") {
+                    expect(point.bearing) == 130
+                }
+            }
+            
+            
+            context("TrackPointExtensions with wtemp") {
+                var point: Point!
+                
+                beforeEach {
+                    let content = "<gpx creator='TrackKit' version='1.1'>"
+                                    + "<wpt lat='41.2' lon='-71.3'>"
+                                        // Extensions
+                                        + "<extensions>"
+                                            + "<gpxtpx:TrackPointExtension>"
+                                                + "<gpxtpx:wtemp>11</gpxtpx:wtemp>"
+                                            + "</gpxtpx:TrackPointExtension>"
+                                        + "</extensions>"
+                                    + "</wpt>"
+                                + "</gpx>"
+                    let data = content.data(using: .utf8)
+                    let file = try! TrackParser(data: data, type: .gpx).parse()
+                    
+                    point = file.waypoints?.first!
+                }
+                
+                it("should have a temperature") {
+                    expect(point.temperature) == 11
+                }
+                
+                it("should not have a depth") {
+                    expect(point.depth).to(beNil())
+                }
+                
+                it("should not have a heart rate") {
+                    expect(point.heartRate).to(beNil())
+                }
+                
+                it("should not have a cadence") {
+                    expect(point.cadence).to(beNil())
+                }
+                
+                it("should not have a speed") {
+                    expect(point.speed).to(beNil())
+                }
+                
+                it("should not have a course") {
+                    expect(point.course).to(beNil())
+                }
+                
+                it("should not have a bearing") {
+                    expect(point.bearing).to(beNil())
+                }
+            }
         }
 
         describe("empty waypoint") {
@@ -243,6 +379,34 @@ class GPXWaypointSpec: QuickSpec {
 
             it("should have a gps station type") {
                 expect(point.dgpsStationType).to(beNil())
+            }
+            
+            it("should not have a temperature") {
+                expect(point.temperature).to(beNil())
+            }
+            
+            it("should not have a depth") {
+                expect(point.depth).to(beNil())
+            }
+            
+            it("should not have a heart rate") {
+                expect(point.heartRate).to(beNil())
+            }
+            
+            it("should not have a cadence") {
+                expect(point.cadence).to(beNil())
+            }
+            
+            it("should not have a speed") {
+                expect(point.speed).to(beNil())
+            }
+            
+            it("should not have a course") {
+                expect(point.course).to(beNil())
+            }
+            
+            it("should not have a bearing") {
+                expect(point.bearing).to(beNil())
             }
         }
     }
