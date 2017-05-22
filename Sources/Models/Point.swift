@@ -141,11 +141,36 @@ public final class Point {
 
     /// Heartrate at this point.
     ///
-    /// - important: Supported format: TCX
+    /// - important: Supported format: TCX, GPX
     public var heartRate: Int?
 
     /// Cadence at this point.
     ///
-    /// - important: Supported format: TCX
+    /// - important: Supported format: TCX, GPX
     public var cadence: Int?
+    
+    /// Temperature at this point.
+    ///
+    /// - important: Supported format: GPX
+    public var temperature: Double?
+    
+    /// Depth at this point.
+    ///
+    /// - important: Supported format: GPX
+    public var depth: Double?
+    
+    /// Speed at this point.
+    ///
+    /// - important: Supported format: GPX
+    public var speed: Double?
+    
+    /// Course at this point.
+    ///
+    /// - important: Supported format: GPX
+    public var course: Int?
+    
+    /// Bearing at this point.
+    ///
+    /// - important: Supported format: GPX
+    public var bearing: Int?
 }
