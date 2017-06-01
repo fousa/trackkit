@@ -7,7 +7,7 @@
 import CoreLocation
 import AEXML
 
-protocol Parsable {}
+protocol XMLParsable {}
 
 precedencegroup OperatorPresedenceGroup {
     associativity: left
@@ -85,11 +85,11 @@ func <~ (lhs: inout TriggerMethod?, rhs: AEXMLElement) {
 
 // MARK: - Relations
 
-func <~ <T: Parsable>(lhs: inout T?, rhs: T?) {
+func <~ <T: XMLParsable>(lhs: inout T?, rhs: T?) {
     lhs = rhs
 }
 
-func <~ <T: Parsable>(lhs: inout [T]?, rhs: [T]?) {
+func <~ <T: XMLParsable>(lhs: inout [T]?, rhs: [T]?) {
     if let elements = rhs, elements.count > 0 {
         lhs = elements
     }

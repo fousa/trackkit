@@ -8,7 +8,7 @@ import AEXML
 
 /**
  The parser that is responsible for converting a given `Data` representation of
- the GPX, LOC or TCX file into an understandable format.
+ the GPX, LOC, NMEA or TCX file into an understandable format.
  */
 public struct TrackParser {
 
@@ -40,15 +40,11 @@ public struct TrackParser {
      format.
 
      - Throws: `ParseError.invalidFormat` if the data cannot be parsed.
-     - Throws: `ParseError.invalidVersion` if the versio is incorrect.
+     - Throws: `ParseError.invalidVersion` if the version is incorrect.
 
      - Returns: A parsed `File` object.
      */
     public func parse() throws -> File {
-        guard let document = try? AEXMLDocument(xml: data) else {
-            throw TrackParseError.invalidFormat
-        }
-
-        return try type.parse(document: document)
+        return try type.parse(data: data)
     }
 }

@@ -16,6 +16,9 @@ public enum TrackTypeVersion {
     /// A LOC formatted track with it's version.
     case loc(String)
 
+    /// A NMEA formatted track.
+    case nmea(String)
+
     /// A TCX formatted track with it's version.
     case tcx(String)
 
@@ -37,6 +40,8 @@ public enum TrackTypeVersion {
             self = .gpx(version)
         case .loc:
             self = .loc(version)
+        case .nmea:
+            self = .nmea(version)
         case .tcx:
             self = .tcx(version)
         }
@@ -45,11 +50,13 @@ public enum TrackTypeVersion {
     // MARK: - Version
 
     /// Return the version string for the file type.
-    var versionString: String {
+    public var versionString: String? {
         switch self {
         case .gpx(let version):
             return version
         case .loc(let version):
+            return version
+        case .nmea(let version):
             return version
         case .tcx(let version):
             return version
@@ -65,6 +72,8 @@ public enum TrackTypeVersion {
             supportedVersions = ["1.0", "1.1"]
         case .loc:
             supportedVersions = ["1.0"]
+        case .nmea:
+            supportedVersions = ["NMEA-0183"]
         case .tcx:
             supportedVersions = ["http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2"]
         }

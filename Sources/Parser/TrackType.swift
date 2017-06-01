@@ -14,6 +14,9 @@ public enum TrackType: String {
     /// A LOC formatted track.
     case loc
 
+    /// A NMEA formatted track.
+    case nmea
+
     /// A TCX formatted track.
     case tcx
 
@@ -31,14 +34,34 @@ public enum TrackType: String {
 
     // MARK: - Parsing
 
-    func parse(document: AEXMLDocument) throws -> File {
+    func parse(data: Data) throws -> File {
         switch self {
         case .gpx:
+            let document = try parseXML(data: data)
             return try File(gpx: document.root)
         case .loc:
+            let document = try parseXML(data: data)
             return try File(loc: document.root)
+        case .nmea:
+            let rawData = try parseCSV(data: data)
+            return try File(nmea: rawData)
         case .tcx:
+            let document = try parseXML(data: data)
             return try File(tcx: document.root)
         }
+    }
+
+    private func parseXML(data: Data) throws -> AEXMLDocument {
+        guard let document = try? AEXMLDocument(xml: data) else {
+            throw TrackParseError.invalidFormat
+        }
+        return document
+    }
+
+    private func parseCSV(data: Data) throws -> [[String]] {
+        guard data.count > 0 else {
+            throw TrackParseError.invalidFormat
+        }
+        return [[String]]()
     }
 }

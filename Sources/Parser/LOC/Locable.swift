@@ -7,6 +7,6 @@
 
 import AEXML
 
-protocol Locable: Parsable {
+protocol Locable: XMLParsable {
     init?(loc element: AEXMLElement)
 }
