@@ -16,6 +16,7 @@
 		04206A211E1670DD00B428C2 /* LOCParserSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04206A201E1670DD00B428C2 /* LOCParserSpecs.swift */; };
 		042B2F7A1DA18E51003B5E7D /* TCXCourseSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B2F791DA18E51003B5E7D /* TCXCourseSpecs.swift */; };
 		042B2F881DA21F47003B5E7D /* TCXActivitySpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B2F871DA21F47003B5E7D /* TCXActivitySpecs.swift */; };
+		046664D21EE09DE7009701B1 /* NMEAParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046664D11EE09DE7009701B1 /* NMEAParserSpec.swift */; };
 		587850AD6143220172BE544A /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A132C282698390E84D675EC /* Pods_Tests.framework */; };
 		607FACEC1AFB9204008FA782 /* GPXCommonSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* GPXCommonSpecs.swift */; };
 		6297A9A21C98C36D00686120 /* GPXWaypointSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A11C98C36D00686120 /* GPXWaypointSpecs.swift */; };
@@ -37,6 +38,7 @@
 		04206A201E1670DD00B428C2 /* LOCParserSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LOCParserSpecs.swift; sourceTree = "<group>"; };
 		042B2F791DA18E51003B5E7D /* TCXCourseSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCXCourseSpecs.swift; sourceTree = "<group>"; };
 		042B2F871DA21F47003B5E7D /* TCXActivitySpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCXActivitySpecs.swift; sourceTree = "<group>"; };
+		046664D11EE09DE7009701B1 /* NMEAParserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMEAParserSpec.swift; sourceTree = "<group>"; };
 		0CAC83A93CB924B5791F0A9F /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		195DC69CEC13724CA3568D75 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2A132C282698390E84D675EC /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,14 @@
 			path = 1.0;
 			sourceTree = "<group>";
 		};
+		046664D01EE09DD0009701B1 /* NMEA */ = {
+			isa = PBXGroup;
+			children = (
+				046664D11EE09DE7009701B1 /* NMEAParserSpec.swift */,
+			);
+			path = NMEA;
+			sourceTree = "<group>";
+		};
 		2EA3EDBF0BB067FF85406369 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 			children = (
 				62BB32D31D9C29B600310CF9 /* GPX */,
 				04206A031E1653AE00B428C2 /* LOC */,
+				046664D01EE09DD0009701B1 /* NMEA */,
 				62BB32DA1D9DB45100310CF9 /* TCX */,
 				62BB32D81D9DAEE100310CF9 /* TrackTypeSpecs.swift */,
 			);
@@ -303,6 +314,7 @@
 			files = (
 				04206A1C1E1668CD00B428C2 /* GPXLegacyTrackSpecs.swift in Sources */,
 				042B2F7A1DA18E51003B5E7D /* TCXCourseSpecs.swift in Sources */,
+				046664D21EE09DE7009701B1 /* NMEAParserSpec.swift in Sources */,
 				04206A1B1E1668CD00B428C2 /* GPXLegacyRouteSpecs.swift in Sources */,
 				62BB32D91D9DAEE100310CF9 /* TrackTypeSpecs.swift in Sources */,
 				6297A9A21C98C36D00686120 /* GPXWaypointSpecs.swift in Sources */,

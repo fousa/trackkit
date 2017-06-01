@@ -54,6 +54,20 @@ class TrackTypeSpec: QuickSpec {
             }
         }
 
+        context("NMEA") {
+            it("Should parse nmea as nmea type") {
+                let type = TrackType(fileExtension: "nmea")
+                expect(type).toNot(beNil())
+                expect(type?.rawValue) == "nmea"
+            }
+
+            it("Should parse NMEA as nmea type") {
+                let type = TrackType(fileExtension: "NMEA")
+                expect(type).toNot(beNil())
+                expect(type?.rawValue) == "nmea"
+            }
+        }
+
         context("Unknown") {
             describe("Should not parse the type") {
                 let type = TrackType(fileExtension: "some")
