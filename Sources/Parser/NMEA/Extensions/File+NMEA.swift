@@ -13,7 +13,8 @@ extension File {
         let version = try TrackTypeVersion(type: .nmea, version: "NMEA-0183")
         self.init(type: .nmea, version: version)
 
-        records = rawData.flatMap { Point(nmea: $0) }
+        let records = rawData.flatMap { Point(nmea: $0) }
+        self.records = records.count > 0 ? records : nil
     }
 
 }

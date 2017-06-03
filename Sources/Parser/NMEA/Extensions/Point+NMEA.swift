@@ -24,8 +24,16 @@ extension Point {
         }
         self.init()
 
-        recordType <~ rawData[.recordType]
-        coordinate <~ (latitude, longitude)
+        recordType                    <~ rawData[.recordType]
+        time                          <~ rawData[.time]
+        coordinate                    <~ (latitude, longitude)
+        gpsQuality                    <~ rawData[.gpsQuality]
+        numberOfSatellites            <~ rawData[.numberOfSatellites]
+        horizontalDilutionOfPrecision <~ rawData[.horizontalDilutionOfPrecision]
+        meanSeaLevelHeight            <~ rawData[.meanSeaLevelHeight]
+        heightOfGeoid                 <~ rawData[.heightOfGeoid]
+        timeSinceLastUpdate           <~ rawData[.timeSinceLastUpdate]
+        stationId                     <~ rawData[.stationId]
     }
     
 }

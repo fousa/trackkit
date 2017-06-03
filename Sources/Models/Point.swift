@@ -185,7 +185,7 @@ public final class Point {
     /// Reference station ID.
     ///
     /// - important: Supported format: NMEA
-    public var stationId: Int?
+    public var stationId: String?
 
     /// GPS Quality indicator.
     ///

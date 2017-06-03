@@ -22,7 +22,7 @@ class NMEAParserSpec: QuickSpec {
             }
 
             it("should throw an parse error") {
-                expect { try TrackParser(data: Data(), type: .nmea).parse() }.to(throwError(TrackParseError.invalidFormat))
+                expect { try TrackParser(data: Data(), type: .nmea).parse() }.to(throwError(TrackParseError.invalidData))
             }
 
             it("should not throw an invalid version error") {

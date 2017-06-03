@@ -51,6 +51,26 @@ func <~ (lhs: inout Date?, rhs: String?) {
     lhs = (rhs?.isoDate() ?? rhs?.isoDateWithMilliseconds()) as Date?
 }
 
+func <~ (lhs: inout Date?, rhs: Any?) {
+    lhs = rhs as? Date
+}
+
+func <~ (lhs: inout Int?, rhs: Any?) {
+    if let stringValue = rhs as? String {
+        lhs = Int(stringValue)
+    }
+}
+
+func <~ (lhs: inout Double?, rhs: Any?) {
+    if let stringValue = rhs as? String {
+        lhs = Double(stringValue)
+    }
+}
+
+func <~ (lhs: inout String?, rhs: Any?) {
+    lhs = rhs as? String
+}
+
 func <~ (lhs: inout URL?, rhs: AEXMLElement) {
     if let stringValue = rhs.optionalString {
         lhs = URL(string: stringValue)
@@ -74,6 +94,12 @@ func <~ (lhs: inout Fix?, rhs: AEXMLElement) {
 func <~ (lhs: inout RecordType?, rhs: Any?) {
     if let stringValue = rhs as? String {
         lhs = RecordType(rawValue: stringValue)
+    }
+}
+
+func <~ (lhs: inout GPSQuality?, rhs: Any?) {
+    if let stringValue = rhs as? String {
+        lhs = GPSQuality(rawValue: stringValue)
     }
 }
 

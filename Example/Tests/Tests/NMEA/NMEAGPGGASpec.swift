@@ -21,7 +21,7 @@ class NMEAGPGGASpec: QuickSpec {
                 expect(file.records).to(beNil())
             }
 
-            describe("record point data") {
+            context("record point data") {
                 var point: Point!
 
                 beforeEach {
@@ -32,7 +32,7 @@ class NMEAGPGGASpec: QuickSpec {
                     point = file.records?.first!
                 }
 
-                fit("should have a gga point record type") {
+                it("should have a gga point record type") {
                     expect(point.recordType) == .gga
                 }
 
@@ -40,7 +40,7 @@ class NMEAGPGGASpec: QuickSpec {
                     expect(point.time?.description).to(endWith("17:28:14 +0000"))
                 }
 
-                fit("should have a coordinate") {
+                it("should have a coordinate") {
                     expect(point.coordinate?.latitude) == 37.391097950666669
                     expect(point.coordinate?.longitude) == -122.03782631066667
                 }
@@ -70,7 +70,7 @@ class NMEAGPGGASpec: QuickSpec {
                 }
 
                 it("should have a station id") {
-                    expect(point.stationId) == 0031
+                    expect(point.stationId) == "0031"
                 }
             }
         }
