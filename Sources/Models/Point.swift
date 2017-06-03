@@ -27,9 +27,37 @@ public enum Fix: String {
     case pps = "pps"
 }
 
+/// Type of GPS Quality indicator.
+///
+/// - important: Supported format: NMEA
+public enum GPSQuality: String {
+    /// Fix not valid.
+    case invalid = "0"
+
+    /// GPX Fix
+    case gpsFix = "1"
+
+    /// Differential GPS fix, OmniSTAR VBS
+    case differentialGPSFix = "2"
+
+    /// Real-Time Kinematic, fixed integers
+    case realTimeKinematicFixed = "4"
+
+    /// Real-Time Kinematic, float integers, OmniSTAR XP/HP or Location RTK
+    case realTimeKinematicFloat = "5"
+}
+
+/// NMEA Record type, only the types below are supported.
+///
+/// - important: Supported format: NMEA
+public enum RecordType: String {
+    /// Global Positioning System Fix Data
+    case gga
+}
+
 /// Represents a waypoint, point of interest, or named feature on a map.
 ///
-/// - important: Supported format: GPX, TCX
+/// - important: Supported format: GPX, TCX, NMEA
 public final class Point {
     /// The coordinate of the point.
     ///
@@ -49,7 +77,7 @@ public final class Point {
     /// Creation/modification timestamp for element. Date and time in are in Univeral
     /// Coordinated Time (UTC), not local time.
     ///
-    /// - important: Supported format: GPX, TCX
+    /// - important: Supported format: GPX, TCX, NMEA
     public var time: Date?
 
     /// Magnetic variation.
@@ -138,6 +166,36 @@ public final class Point {
     ///
     /// - important: Supported format: GPX
     public var dgpsStationType: Int?
+
+    /// Number of satelittes in use.
+    ///
+    /// - important: Supported format: NMEA
+    public var numberOfSatellites: Int?
+
+    /// Height of geoid above WGS84 ellipsoid (in meters).
+    ///
+    /// - important: Supported format: NMEA
+    public var heightOfGeoid: Double?
+
+    /// Age of differential GPS data record.
+    ///
+    /// - important: Supported format: NMEA
+    public var timeSinceLastUpdate: Double?
+
+    /// Reference station ID.
+    ///
+    /// - important: Supported format: NMEA
+    public var stationId: Int?
+
+    /// GPS Quality indicator.
+    ///
+    /// - important: Supported format: NMEA
+    public var gpsQuality: GPSQuality?
+
+    /// The NMEA record type.
+    ///
+    /// - important: Supported format: NMEA
+    public var recordType: RecordType?
 
     /// Heartrate at this point.
     ///

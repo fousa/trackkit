@@ -102,6 +102,11 @@ public final class File {
     ///
     /// - important: Supported format: TCX
     public var activities: [Activity]?
+
+    /// A list of points.
+    ///
+    /// - important: Supported format: NMEA
+    public var records: [Point]?
     
     // MARK: - Init
     
