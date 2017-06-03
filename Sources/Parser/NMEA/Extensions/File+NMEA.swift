@@ -12,6 +12,8 @@ extension File {
         // Fetch the type version.
         let version = try TrackTypeVersion(type: .nmea, version: "NMEA-0183")
         self.init(type: .nmea, version: version)
+
+        records = rawData.flatMap { Point(nmea: $0) }
     }
 
 }

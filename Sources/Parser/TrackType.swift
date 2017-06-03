@@ -59,9 +59,16 @@ public enum TrackType: String {
     }
 
     private func parseCSV(data: Data) throws -> [[String]] {
-        guard data.count > 0 else {
-            throw TrackParseError.invalidFormat
+        guard let rawString = String(data: data, encoding: .utf8) else {
+            throw TrackParseError.invalidData
         }
-        return [[String]]()
+
+        var result: [[String]] = []
+        let rows = rawString.csvEscaped.components(separatedBy: "\n")
+        for row in rows {
+            let columns = row.components(separatedBy: ",")
+            result.append(columns)
+        }
+        return result
     }
 }

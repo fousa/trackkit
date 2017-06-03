@@ -52,7 +52,7 @@ public enum GPSQuality: String {
 /// - important: Supported format: NMEA
 public enum RecordType: String {
     /// Global Positioning System Fix Data
-    case gga
+    case gga = "$GPGGA"
 }
 
 /// Represents a waypoint, point of interest, or named feature on a map.

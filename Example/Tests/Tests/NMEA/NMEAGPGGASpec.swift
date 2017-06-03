@@ -40,11 +40,9 @@ class NMEAGPGGASpec: QuickSpec {
                     expect(point.time?.description).to(endWith("17:28:14 +0000"))
                 }
 
-                it("should have a coordinate") {
-                    //                    37°23.46587704'N
-                    //                    122°02.26957864'W
-                    expect(point.coordinate?.latitude) == 51.208845321089
-                    expect(point.coordinate?.longitude) == 4.394159177318
+                fit("should have a coordinate") {
+                    expect(point.coordinate?.latitude) == 37.391097950666669
+                    expect(point.coordinate?.longitude) == -122.03782631066667
                 }
 
                 it("should have a gpx quality indicator") {

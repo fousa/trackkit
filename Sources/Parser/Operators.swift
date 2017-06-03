@@ -59,15 +59,21 @@ func <~ (lhs: inout URL?, rhs: AEXMLElement) {
 
 // MARK: - Enums
 
+func <~ (lhs: inout Intentity?, rhs: AEXMLElement) {
+    if let stringValue = rhs.optionalString {
+        lhs = Intentity(rawValue: stringValue)
+    }
+}
+
 func <~ (lhs: inout Fix?, rhs: AEXMLElement) {
     if let stringValue = rhs.optionalString {
         lhs = Fix(rawValue: stringValue)
     }
 }
 
-func <~ (lhs: inout Intentity?, rhs: AEXMLElement) {
-    if let stringValue = rhs.optionalString {
-        lhs = Intentity(rawValue: stringValue)
+func <~ (lhs: inout RecordType?, rhs: Any?) {
+    if let stringValue = rhs as? String {
+        lhs = RecordType(rawValue: stringValue)
     }
 }
 
