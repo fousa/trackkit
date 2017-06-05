@@ -16,16 +16,20 @@ extension Point {
         }
         self.init()
 
-        self.recordType = parser.recordType
-        self.time = parser.time
-        self.coordinate = parser.coordinate
-        self.gpsQuality = parser.gpsQuality
-        self.numberOfSatellites = parser.numberOfSatellites
-        self.horizontalDilutionOfPrecision = parser.horizontalDilutionOfPrecision
-        self.meanSeaLevelHeight = parser.meanSeaLevelHeight
-        self.heightOfGeoid = parser.heightOfGeoid
-        self.timeSinceLastUpdate = parser.timeSinceLastUpdate
-        self.stationId = parser.stationId
+        recordType = parser.recordType
+        time = parser.time
+        coordinate = parser.coordinate
+        gpsQuality = parser.gpsQuality
+        navigationReceiverWarning = parser.navigationReceiverWarning
+        numberOfSatellites = parser.numberOfSatellites
+        horizontalDilutionOfPrecision = parser.horizontalDilutionOfPrecision
+        meanSeaLevelHeight = parser.meanSeaLevelHeight
+        heightOfGeoid = parser.heightOfGeoid
+        timeSinceLastUpdate = parser.timeSinceLastUpdate
+        speed = parser.speed
+        magneticVariation = parser.magneticVariation
+        trackAngle = parser.trackAngle
+        stationId = parser.stationId
     }
     
 }

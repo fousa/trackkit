@@ -13,11 +13,15 @@ class GPGGAParser: NMEAParsable {
     private(set) var time: Date?
     private(set) var coordinate: CLLocationCoordinate2D?
     private(set) var gpsQuality: GPSQuality?
+    private(set) var navigationReceiverWarning: NavigationReceiverWarning?
     private(set) var numberOfSatellites: Int?
     private(set) var horizontalDilutionOfPrecision: Double?
     private(set) var meanSeaLevelHeight: Double?
     private(set) var heightOfGeoid: Double?
     private(set) var timeSinceLastUpdate: Double?
+    private(set) var speed: Double?
+    private(set) var trackAngle: Double?
+    private(set) var magneticVariation: Double?
     private(set) var stationId: String?
 
     required init?(line: [String]) {
@@ -46,23 +50,6 @@ class GPGGAParser: NMEAParsable {
 
         // Parse the station id without the checksum.
         stationId = self[14]?.components(separatedBy: "*").first
-    }
-
-    // MARK: - Helpers
-
-    private func parseCoordinateValue(from value: String?, direction: String?, offset: Int) -> CLLocationDegrees? {
-        guard
-            let degrees = value?[0..<offset],
-            let degreesValue = Double(degrees),
-            let startIndex = value?.startIndex,
-            let index = value?.index(startIndex, offsetBy: offset),
-            let minutes = value?.substring(from: index),
-            let minutesValue = Double(minutes) else {
-                return nil
-        }
-
-        let isReversed = direction == "S" || direction == "W"
-        return (degreesValue + minutesValue / 60.0) * (isReversed ? -1.0 : 1.0)
     }
     
 }

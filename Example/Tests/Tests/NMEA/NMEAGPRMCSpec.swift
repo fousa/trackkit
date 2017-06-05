@@ -12,7 +12,7 @@ import TrackKit
 
 class NMEAGPRMCSpec: QuickSpec {
     override func spec() {
-        fdescribe("GPRMC") {
+        describe("GPRMC") {
             it("should not have records") {
                 let content = "123"
                 let data = content.data(using: .utf8)
@@ -25,7 +25,7 @@ class NMEAGPRMCSpec: QuickSpec {
                 var point: Point!
 
                 beforeEach {
-                    let content = "$GPRMC,172814,A,3723.46587704,N,12202.26957864,W,000.5,240.0,130998,011.3,E*62"
+                    let content = "$GPRMC,172814,A,3723.46587704,N,12202.26957864,W,001.5,240.0,130998,011.3,E*62"
                     let data = content.data(using: .utf8)
                     let file = try! TrackParser(data: data, type: .nmea).parse()
 
@@ -37,7 +37,7 @@ class NMEAGPRMCSpec: QuickSpec {
                 }
 
                 it("should have a track point time") {
-                    expect(point.time?.description).to(endWith("17:28:14 +0000"))
+                    expect(point.time?.description) == "1998-09-13 17:28:14 +0000"
                 }
 
                 it("should have a navigation receiver warning") {
@@ -50,15 +50,31 @@ class NMEAGPRMCSpec: QuickSpec {
                 }
 
                 it("should have a speed") {
-                    expect(point.speed) == 5
+                    expect(point.speed) == 1.5
                 }
 
                 it("should have a track angle") {
-                    expect(point.trackAngle) == 240
+                    expect(point.trackAngle) == 240.0
                 }
 
                 it("should have a magnetic variation") {
                     expect(point.magneticVariation) == 11.3
+                }
+            }
+
+            context("alternat record point data") {
+                var point: Point!
+
+                beforeEach {
+                    let content = "$GPRMC,172814,A,3723.46587704,N,12202.26957864,W,001.5,240.0,130998,011.3,W*62"
+                    let data = content.data(using: .utf8)
+                    let file = try! TrackParser(data: data, type: .nmea).parse()
+
+                    point = file.records?.first!
+                }
+
+                it("should have a magnetic variation") {
+                    expect(point.magneticVariation) == -11.3
                 }
             }
 

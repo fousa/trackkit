@@ -21,6 +21,10 @@ extension String {
         return String.timeFormatter.date(from: dateString)
     }
 
+    var nmeaNavigationReceiverWarning: NavigationReceiverWarning? {
+        return NavigationReceiverWarning(rawValue: self)
+    }
+
     var nmeaGPSQuality: GPSQuality? {
         return GPSQuality(rawValue: self)
     }
