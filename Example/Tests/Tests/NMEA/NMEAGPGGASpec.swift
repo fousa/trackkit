@@ -12,7 +12,7 @@ import TrackKit
 
 class NMEAGPGGASpec: QuickSpec {
     override func spec() {
-        fdescribe("GPGGA") {
+        describe("GPGGA") {
             it("should not have records") {
                 let content = "123"
                 let data = content.data(using: .utf8)
@@ -71,6 +71,55 @@ class NMEAGPGGASpec: QuickSpec {
 
                 it("should have a station id") {
                     expect(point.stationId) == "0031"
+                }
+            }
+
+            context("empty record point data") {
+                var point: Point!
+
+                beforeEach {
+                    let content = "$GPGGA,,3723.46587704,N,12202.26957864,W"
+                    let data = content.data(using: .utf8)
+                    let file = try! TrackParser(data: data, type: .nmea).parse()
+
+                    point = file.records?.first!
+                }
+
+                it("should have a gga point record type") {
+                    expect(point.recordType) == .gga
+                }
+
+                it("should have a coordinate") {
+                    expect(point.coordinate?.latitude) == 37.391097950666669
+                    expect(point.coordinate?.longitude) == -122.03782631066667
+                }
+
+                it("should not have a gpx quality indicator") {
+                    expect(point.gpsQuality).to(beNil())
+                }
+
+                it("should not have a number of satellites") {
+                    expect(point.numberOfSatellites).to(beNil())
+                }
+
+                it("should not have a horizontal dilution of precision") {
+                    expect(point.horizontalDilutionOfPrecision).to(beNil())
+                }
+
+                it("should not have a main sea level height") {
+                    expect(point.meanSeaLevelHeight).to(beNil())
+                }
+
+                it("should not have a height of geoid") {
+                    expect(point.heightOfGeoid).to(beNil())
+                }
+
+                it("should not have a time since last update") {
+                    expect(point.timeSinceLastUpdate).to(beNil())
+                }
+
+                it("should not have a station id") {
+                    expect(point.stationId).to(beNil())
                 }
             }
         }
