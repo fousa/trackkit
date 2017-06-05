@@ -93,6 +93,10 @@ class NMEAGPRMCSpec: QuickSpec {
                     expect(point.recordType) == .rmc
                 }
 
+                it("should not have a time") {
+                    expect(point.time?.description).to(beNil())
+                }
+
                 it("should have a coordinate") {
                     expect(point.coordinate?.latitude) == 37.391097950666669
                     expect(point.coordinate?.longitude) == -122.03782631066667
