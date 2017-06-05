@@ -101,6 +101,8 @@ extension RecordType {
             return GPGGAParser(line: line)
         case .rmc:
             return GPRMCParser(line: line)
+        case .gll:
+            return GPGLLParser(line: line)
         }
     }
     

@@ -67,6 +67,9 @@ public enum RecordType: String {
 
     /// Recommended minimum specific GPS/Transit data
     case rmc = "$GPRMC"
+
+    /// Geographic Position, Latitude / Longitude and time
+    case gll = "$GPGLL"
 }
 
 /// Represents a waypoint, point of interest, or named feature on a map.

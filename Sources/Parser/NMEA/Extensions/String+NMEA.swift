@@ -16,7 +16,9 @@ extension String {
     var nmeaTimeValue: Date? {
         // Remove the `.` from the date string when set.
         let dateComponent = components(separatedBy: ".")
-        guard let dateString = dateComponent.first else { return nil }
+        guard
+            let dateString = dateComponent.first,
+            dateString != "" else { return nil }
 
         return String.timeFormatter.date(from: dateString)
     }
