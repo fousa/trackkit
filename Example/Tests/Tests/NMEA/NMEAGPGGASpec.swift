@@ -12,7 +12,7 @@ import TrackKit
 
 class NMEAGPGGASpec: QuickSpec {
     override func spec() {
-        describe("GPGGA") {
+        fdescribe("GPGGA") {
             it("should not have records") {
                 let content = "123"
                 let data = content.data(using: .utf8)

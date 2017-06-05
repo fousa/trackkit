@@ -4,8 +4,6 @@
 //  Created by Jelle Vandebeeck on 15/03/16.
 //
 
-import AEXML
-
 extension File {
 
     convenience init(nmea rawData: [[String]]) throws {

@@ -6,35 +6,26 @@
 //
 //
 
-import Foundation
+import CoreLocation
 
 extension Point {
 
-    convenience init?(nmea rawData: RawData) {
-        // When the data is empty, don't create the instance.
-        if rawData.isEmpty {
+    convenience init?(nmea line: [String]) {
+        guard let parser = NMEAParser(line: line) else {
             return nil
-        }
-
-        // Check if coordinate is avaiable.
-        guard
-            let latitude = rawData[.latitude] as? Double,
-            let longitude = rawData[.longitude] as? Double else {
-                return nil
         }
         self.init()
 
-        recordType                    <~ rawData[.recordType]
-        time                          <~ rawData[.time]
-        coordinate                    <~ (latitude, longitude)
-        gpsQuality                    <~ rawData[.gpsQuality]
-        numberOfSatellites            <~ rawData[.numberOfSatellites]
-        horizontalDilutionOfPrecision <~ rawData[.horizontalDilutionOfPrecision]
-        meanSeaLevelHeight            <~ rawData[.meanSeaLevelHeight]
-        heightOfGeoid                 <~ rawData[.heightOfGeoid]
-        timeSinceLastUpdate           <~ rawData[.timeSinceLastUpdate]
-        stationId                     <~ rawData[.stationId]
+        self.recordType = parser.recordType
+        self.time = parser.time
+        self.coordinate = parser.coordinate
+        self.gpsQuality = parser.gpsQuality
+        self.numberOfSatellites = parser.numberOfSatellites
+        self.horizontalDilutionOfPrecision = parser.horizontalDilutionOfPrecision
+        self.meanSeaLevelHeight = parser.meanSeaLevelHeight
+        self.heightOfGeoid = parser.heightOfGeoid
+        self.timeSinceLastUpdate = parser.timeSinceLastUpdate
+        self.stationId = parser.stationId
     }
     
 }
-
