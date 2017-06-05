@@ -31,5 +31,5 @@ extension Point {
         trackAngle = parser.trackAngle
         stationId = parser.stationId
     }
-    
+
 }

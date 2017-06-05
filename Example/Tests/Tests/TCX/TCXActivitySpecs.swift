@@ -79,7 +79,7 @@ class TCXActivitySpecs: QuickSpec {
                 }
 
                 it("should have an id") {
-                    expect(activity.id) == "2016-10-02T09:31:26.000Z"
+                    expect(activity.identifier) == "2016-10-02T09:31:26.000Z"
                 }
 
                 it("should have an sport") {

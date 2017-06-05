@@ -18,21 +18,21 @@ class TrackTypeSpec: QuickSpec {
                 expect(type).toNot(beNil())
                 expect(type?.rawValue) == "gpx"
             }
-            
+
             it("Should parse GPX as gpx type") {
                 let type = TrackType(fileExtension: "GPX")
                 expect(type).toNot(beNil())
                 expect(type?.rawValue) == "gpx"
             }
         }
-        
+
         context("TCX") {
             it("Should parse tcx as tcx type") {
                 let type = TrackType(fileExtension: "tcx")
                 expect(type).toNot(beNil())
                 expect(type?.rawValue) == "tcx"
             }
-            
+
             it("Should parse TCX as tcx type") {
                 let type = TrackType(fileExtension: "TCX")
                 expect(type).toNot(beNil())

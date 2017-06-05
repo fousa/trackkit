@@ -10,7 +10,7 @@ extension Activity: Tcxable {
 
     convenience init?(tcx element: AEXMLElement) {
         // When the element is an error, don't create the instance.
-        if let _ = element.error {
+        if element.error != nil {
             return nil
         }
 
@@ -23,8 +23,8 @@ extension Activity: Tcxable {
 
         self.init()
 
-        id        <~ element["Id"]
-        sport     <~ element.attributes["Sport"]
+        identifier <~ element["Id"]
+        sport      <~ element.attributes["Sport"]
         self.laps = laps
     }
 

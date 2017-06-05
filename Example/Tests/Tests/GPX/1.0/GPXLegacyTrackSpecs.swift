@@ -94,7 +94,6 @@ class GPXLegacyTrackSpec: QuickSpec {
                 track = file.tracks?.first!
             }
 
-
             it("should have a name") {
                 expect(track.name) == "A waypoint"
             }

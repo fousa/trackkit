@@ -105,5 +105,5 @@ extension RecordType {
             return GPGLLParser(line: line)
         }
     }
-    
+
 }

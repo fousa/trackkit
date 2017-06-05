@@ -10,7 +10,7 @@ extension TrackSegment: Gpxable {
 
     convenience init?(gpx element: AEXMLElement, version: TrackTypeVersion) {
         // When the element is an error, don't create the instance.
-        if let _ = element.error {
+        if element.error != nil {
             return nil
         }
 

@@ -23,7 +23,7 @@ public enum Sport: String {
 /// - important: Supported format: TCX
 public final class Activity {
     /// The id if the activity.
-    public var id: String?
+    public var identifier: String?
 
     /// Type of sport performed.
     public var sport: Sport?

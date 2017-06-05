@@ -41,5 +41,5 @@ class GPGLLParser: NMEAParsable {
         // Parse the navigation receiver warning.
         navigationReceiverWarning = self[6]?.components(separatedBy: "*").first?.nmeaNavigationReceiverWarning
     }
-    
+
 }

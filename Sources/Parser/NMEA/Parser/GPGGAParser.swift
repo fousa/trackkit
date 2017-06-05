@@ -51,5 +51,5 @@ class GPGGAParser: NMEAParsable {
         // Parse the station id without the checksum.
         stationId = self[14]?.components(separatedBy: "*").first
     }
-    
+
 }

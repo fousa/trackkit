@@ -32,6 +32,7 @@ public enum Fix: String {
 /// - important: Supported format: NMEA
 public enum NavigationReceiverWarning: String {
     /// Ok
+    // swiftlint:disable identifier_name
     case ok = "A"
 
     /// Warning
@@ -233,32 +234,32 @@ public final class Point {
     ///
     /// - important: Supported format: TCX, GPX
     public var cadence: Int?
-    
+
     /// Air temperature at this point.
     ///
     /// - important: Supported format: GPX
     public var airTemperature: Double?
-    
+
     /// Water temperature at this point.
     ///
     /// - important: Supported format: GPX
     public var waterTemperature: Double?
-    
+
     /// Depth at this point.
     ///
     /// - important: Supported format: GPX
     public var depth: Double?
-    
+
     /// Speed at this point.
     ///
     /// - important: Supported format: GPX, NMEA
     public var speed: Double?
-    
+
     /// Course at this point.
     ///
     /// - important: Supported format: GPX
     public var course: Int?
-    
+
     /// Bearing at this point.
     ///
     /// - important: Supported format: GPX

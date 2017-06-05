@@ -71,5 +71,5 @@ class GPRMCParser: NMEAParsable {
 
         return GPRMCParser.timeFormatter.date(from: "\(rawDate)\(rawTime)")
     }
-    
+
 }
