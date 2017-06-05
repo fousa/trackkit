@@ -27,6 +27,17 @@ public enum Fix: String {
     case pps = "pps"
 }
 
+/// Navigation receiver warning.
+///
+/// - important: Supported format: NMEA
+public enum NavigationReceiverWarning: String {
+    /// Ok
+    case ok = "A"
+
+    /// Warning
+    case warning = "V"
+}
+
 /// Type of GPS Quality indicator.
 ///
 /// - important: Supported format: NMEA
@@ -53,6 +64,9 @@ public enum GPSQuality: String {
 public enum RecordType: String {
     /// Global Positioning System Fix Data
     case gga = "$GPGGA"
+
+    /// Recommended minimum specific GPS/Transit data
+    case rmc = "$GPRMC"
 }
 
 /// Represents a waypoint, point of interest, or named feature on a map.
@@ -196,6 +210,16 @@ public final class Point {
     ///
     /// - important: Supported format: NMEA
     public var recordType: RecordType?
+
+    /// The navigation receiver warning.
+    ///
+    /// - important: Supported format: NMEA
+    public var navigationReceiverWarning: NavigationReceiverWarning?
+
+    /// Track angle in degrees.
+    ///
+    /// - important: Supported format: NMEA
+    public var trackAngle: Double?
 
     /// Heartrate at this point.
     ///

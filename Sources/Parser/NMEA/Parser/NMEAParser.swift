@@ -74,6 +74,8 @@ extension RecordType {
         switch self {
         case .gga:
             return GPGGAParser(line: line)
+        default:
+            return nil
         }
     }
     
