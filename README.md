@@ -19,6 +19,16 @@ LOC
 
 The `GPX` format that is supported is version **1.0**. No schema description was found for this format, but we looked at how [Geoaching](http://geocaching.com) used it.
 
+NMEA
+----
+
+The `NMEA` format that is supported is version NMEA-0183. The different identifiers that are supported by TrackKit are:
+
+- GPGGA
+- GPGLL
+- GPRMC
+- GPWPL
+
 TCX
 ---
 
@@ -30,7 +40,7 @@ Integration
 Add this pod to your `Podfile` by adding the following line:
 
 ``` ruby
-pod 'TrackKit', '~> 2.2'
+pod 'TrackKit', '~> 2.3'
 ```
 
 _It's important to add the version to the `pod 'TrackKit'`, this way you are sure that a next update of the pod will not break your code._
@@ -86,6 +96,25 @@ The only thing you have to do is make sure to get the contents of the LOC file i
 let content: String = '...'
 let data = content.data(using: .utf8)
 let file = try! TrackParser(data: data, type: .loc).parse()
+```
+
+NMEA
+----
+
+Here is a sample NMEA file with some data:
+
+``` csv
+$GPRMC,134732.000,A,5540.3244,N,01231.2941,E,1.75,90.16,041112,,,A*5E
+$GPRMC,134735.000,A,5540.3232,N,01231.2946,E,1.97,88.98,041112,,,A*5C
+$GPWPL,5540.2823,N,01231.1182,E,00001*7E
+```
+
+The only thing you have to do is make sure to get the contents of the NMEA file into an `Data` structure. When you have this you can easily parse the file into a `File`.
+
+``` swift
+let content: String = '...'
+let data = content.data(using: .utf8)
+let file = try! TrackParser(data: data, type: .nmea).parse()
 ```
 
 TCX

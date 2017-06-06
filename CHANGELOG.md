@@ -1,5 +1,9 @@
 # TrackKit
 
+## 2.3.0
+
+- Added `NMEA` file support. _Currently supported identifiers are GPGGA, GPGLL, GPRMC & GPWPL._
+
 ## 2.2.0
 
 - Added full support for `GPX`'s `TrackPointExtensions`.
