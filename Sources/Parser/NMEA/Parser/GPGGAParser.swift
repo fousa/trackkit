@@ -10,6 +10,7 @@ class GPGGAParser: NMEAParsable {
 
     private(set) var line: [String]
 
+    private(set) var name: String?
     private(set) var time: Date?
     private(set) var coordinate: CLLocationCoordinate2D?
     private(set) var gpsQuality: GPSQuality?
@@ -49,7 +50,7 @@ class GPGGAParser: NMEAParsable {
         timeSinceLastUpdate = self[13]?.doubleValue
 
         // Parse the station id without the checksum.
-        stationId = self[14]?.components(separatedBy: "*").first
+        stationId = self[14]?.checksumEscapedString
     }
 
 }

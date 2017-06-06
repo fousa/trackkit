@@ -10,6 +10,7 @@ class GPRMCParser: NMEAParsable {
 
     private(set) var line: [String]
 
+    private(set) var name: String?
     private(set) var time: Date?
     private(set) var coordinate: CLLocationCoordinate2D?
     private(set) var gpsQuality: GPSQuality?
@@ -47,7 +48,7 @@ class GPRMCParser: NMEAParsable {
         magneticVariation = self[10]?.doubleValue
         if
             let magneticVariation = magneticVariation,
-            let variationDirection = self[11]?.components(separatedBy: "*").first,
+            let variationDirection = self[11]?.checksumEscapedString,
             variationDirection == "W" {
             self.magneticVariation = magneticVariation * -1.0
         }

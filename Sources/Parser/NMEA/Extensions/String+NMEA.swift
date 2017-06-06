@@ -39,4 +39,8 @@ extension String {
         return Double(self)
     }
 
+    var checksumEscapedString: String? {
+        return components(separatedBy: "*").first
+    }
+
 }

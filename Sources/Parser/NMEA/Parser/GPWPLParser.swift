@@ -6,7 +6,7 @@
 
 import CoreLocation
 
-class GPGLLParser: NMEAParsable {
+class GPWPLParser: NMEAParsable {
 
     private(set) var line: [String]
 
@@ -32,15 +32,12 @@ class GPGLLParser: NMEAParsable {
         guard
             let latitude = parseCoordinateValue(from: self[1], direction: self[2], offset: 2),
             let longitude = parseCoordinateValue(from: self[3], direction: self[4], offset: 3) else {
-                return nil
+            return nil
         }
         coordinate = CLLocationCoordinate2DMake(latitude, longitude)
 
-        // Parse the time.
-        time = self[5]?.nmeaTimeValue
-
-        // Parse the navigation receiver warning.
-        navigationReceiverWarning = self[6]?.checksumEscapedString?.nmeaNavigationReceiverWarning
+        // Parse the main properties.
+        name = self[5]?.checksumEscapedString
     }
 
 }

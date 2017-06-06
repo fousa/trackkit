@@ -12,7 +12,7 @@ import TrackKit
 
 class NMEAGPWPLSpec: QuickSpec {
     override func spec() {
-        fdescribe("GPWPL") {
+        describe("GPWPL") {
             it("should not have records") {
                 let content = "123"
                 let data = content.data(using: .utf8)
@@ -67,7 +67,7 @@ class NMEAGPWPLSpec: QuickSpec {
                 }
 
                 it("should not have a waypoint name") {
-                    expect(point.name).to(beNil())
+                    expect(point.name) == ""
                 }
             }
         }

@@ -17,6 +17,7 @@ extension Point {
         self.init()
 
         recordType = parser.recordType
+        name = parser.name
         time = parser.time
         coordinate = parser.coordinate
         gpsQuality = parser.gpsQuality

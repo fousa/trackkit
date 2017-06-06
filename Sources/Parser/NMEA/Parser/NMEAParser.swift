@@ -10,6 +10,7 @@ protocol NMEAParsable {
 
     var line: [String] { get }
 
+    var name: String? { get }
     var time: Date? { get }
     var coordinate: CLLocationCoordinate2D? { get }
     var gpsQuality: GPSQuality? { get }
@@ -63,6 +64,7 @@ class NMEAParser {
 
     var recordType: RecordType
 
+    var name: String? { return parser.name }
     var time: Date? { return parser.time }
     var coordinate: CLLocationCoordinate2D? { return parser.coordinate }
     var gpsQuality: GPSQuality? { return parser.gpsQuality }
@@ -103,6 +105,8 @@ extension RecordType {
             return GPRMCParser(line: line)
         case .gll:
             return GPGLLParser(line: line)
+        case .wpl:
+            return GPWPLParser(line: line)
         }
     }
 

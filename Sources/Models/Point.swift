@@ -71,6 +71,9 @@ public enum RecordType: String {
 
     /// Geographic Position, Latitude / Longitude and time
     case gll = "$GPGLL"
+
+    /// Waypoint location
+    case wpl = "$GPWPL"
 }
 
 /// Represents a waypoint, point of interest, or named feature on a map.
@@ -114,7 +117,7 @@ public final class Point {
     /// contained in it. It is up to the receiving application to validate the field before
     /// sending it to the GPS.
     ///
-    /// - important: Supported format: GPX, LOC
+    /// - important: Supported format: GPX, LOC, NMEA
     public var name: String?
 
     /// GPS waypoint comment. Sent to GPS as comment.
