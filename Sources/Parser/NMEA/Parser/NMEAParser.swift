@@ -17,7 +17,7 @@ protocol NMEAParsable {
     var navigationReceiverWarning: NavigationReceiverWarning? { get }
     var numberOfSatellites: Int? { get }
     var horizontalDilutionOfPrecision: Double? { get }
-    var meanSeaLevelHeight: Double? { get }
+    var elevation: Double? { get }
     var heightOfGeoid: Double? { get }
     var timeSinceLastUpdate: Double? { get }
     var speed: Double? { get }
@@ -71,7 +71,7 @@ class NMEAParser {
     var navigationReceiverWarning: NavigationReceiverWarning? { return parser.navigationReceiverWarning }
     var numberOfSatellites: Int? { return parser.numberOfSatellites }
     var horizontalDilutionOfPrecision: Double? { return parser.horizontalDilutionOfPrecision }
-    var meanSeaLevelHeight: Double? { return parser.meanSeaLevelHeight }
+    var elevation: Double? { return parser.elevation }
     var heightOfGeoid: Double? { return parser.heightOfGeoid }
     var timeSinceLastUpdate: Double? { return parser.timeSinceLastUpdate }
     var speed: Double? { return parser.speed }

@@ -17,7 +17,7 @@ class GPWPLParser: NMEAParsable {
     private(set) var navigationReceiverWarning: NavigationReceiverWarning?
     private(set) var numberOfSatellites: Int?
     private(set) var horizontalDilutionOfPrecision: Double?
-    private(set) var meanSeaLevelHeight: Double?
+    private(set) var elevation: Double?
     private(set) var heightOfGeoid: Double?
     private(set) var timeSinceLastUpdate: Double?
     private(set) var speed: Double?

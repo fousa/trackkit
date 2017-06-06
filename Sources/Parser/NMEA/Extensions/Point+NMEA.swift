@@ -24,7 +24,7 @@ extension Point {
         navigationReceiverWarning = parser.navigationReceiverWarning
         numberOfSatellites = parser.numberOfSatellites
         horizontalDilutionOfPrecision = parser.horizontalDilutionOfPrecision
-        meanSeaLevelHeight = parser.meanSeaLevelHeight
+        elevation = parser.elevation
         heightOfGeoid = parser.heightOfGeoid
         timeSinceLastUpdate = parser.timeSinceLastUpdate
         speed = parser.speed

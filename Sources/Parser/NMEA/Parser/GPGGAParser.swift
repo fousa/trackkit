@@ -17,7 +17,7 @@ class GPGGAParser: NMEAParsable {
     private(set) var navigationReceiverWarning: NavigationReceiverWarning?
     private(set) var numberOfSatellites: Int?
     private(set) var horizontalDilutionOfPrecision: Double?
-    private(set) var meanSeaLevelHeight: Double?
+    private(set) var elevation: Double?
     private(set) var heightOfGeoid: Double?
     private(set) var timeSinceLastUpdate: Double?
     private(set) var speed: Double?
@@ -45,7 +45,7 @@ class GPGGAParser: NMEAParsable {
         // Parse the main properties.
         numberOfSatellites = self[7]?.integerValue
         horizontalDilutionOfPrecision = self[8]?.doubleValue
-        meanSeaLevelHeight = self[9]?.doubleValue
+        elevation = self[9]?.doubleValue
         heightOfGeoid = self[11]?.doubleValue
         timeSinceLastUpdate = self[13]?.doubleValue
 

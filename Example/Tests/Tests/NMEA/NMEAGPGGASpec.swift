@@ -58,7 +58,7 @@ class NMEAGPGGASpec: QuickSpec {
                 }
 
                 it("should have a main sea level height") {
-                    expect(point.meanSeaLevelHeight) == 18.893
+                    expect(point.elevation) == 18.893
                 }
 
                 it("should have a height of geoid") {
@@ -107,7 +107,7 @@ class NMEAGPGGASpec: QuickSpec {
                 }
 
                 it("should not have a main sea level height") {
-                    expect(point.meanSeaLevelHeight).to(beNil())
+                    expect(point.elevation).to(beNil())
                 }
 
                 it("should not have a height of geoid") {

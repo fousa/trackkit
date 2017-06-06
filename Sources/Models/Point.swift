@@ -87,7 +87,7 @@ public final class Point {
 
     /// Elevation (in meters) of the point.
     ///
-    /// - important: Supported format: GPX, TCX
+    /// - important: Supported format: GPX, TCX, NMEA
     public var elevation: Double?
 
     /// Distance (in meters) of the point.
