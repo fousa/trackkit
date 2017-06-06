@@ -10,7 +10,7 @@ extension Point: Gpxable {
 
     convenience init?(gpx element: AEXMLElement, version: TrackTypeVersion) {
         // When the element is an error, don't create the instance.
-        if let _ = element.error {
+        if element.error != nil {
             return nil
         }
 
@@ -41,7 +41,7 @@ extension Point: Gpxable {
         dgpsStationType               <~ element["dgpsid"]
         time                          <~ element["time"]
         link                          <~ Link(gpx: element, version: version)
-        
+
         // TrackPointExtensions
         let extensionsElement = element["extensions"]["gpxtpx:TrackPointExtension"]
         airTemperature   <~ extensionsElement["gpxtpx:atemp"]

@@ -18,21 +18,21 @@ class TrackTypeSpec: QuickSpec {
                 expect(type).toNot(beNil())
                 expect(type?.rawValue) == "gpx"
             }
-            
+
             it("Should parse GPX as gpx type") {
                 let type = TrackType(fileExtension: "GPX")
                 expect(type).toNot(beNil())
                 expect(type?.rawValue) == "gpx"
             }
         }
-        
+
         context("TCX") {
             it("Should parse tcx as tcx type") {
                 let type = TrackType(fileExtension: "tcx")
                 expect(type).toNot(beNil())
                 expect(type?.rawValue) == "tcx"
             }
-            
+
             it("Should parse TCX as tcx type") {
                 let type = TrackType(fileExtension: "TCX")
                 expect(type).toNot(beNil())
@@ -51,6 +51,20 @@ class TrackTypeSpec: QuickSpec {
                 let type = TrackType(fileExtension: "LOC")
                 expect(type).toNot(beNil())
                 expect(type?.rawValue) == "loc"
+            }
+        }
+
+        context("NMEA") {
+            it("Should parse nmea as nmea type") {
+                let type = TrackType(fileExtension: "nmea")
+                expect(type).toNot(beNil())
+                expect(type?.rawValue) == "nmea"
+            }
+
+            it("Should parse NMEA as nmea type") {
+                let type = TrackType(fileExtension: "NMEA")
+                expect(type).toNot(beNil())
+                expect(type?.rawValue) == "nmea"
             }
         }
 

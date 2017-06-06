@@ -6,6 +6,6 @@
 
 import AEXML
 
-protocol Tcxable: Parsable {
+protocol Tcxable: XMLParsable {
     init?(tcx element: AEXMLElement)
 }

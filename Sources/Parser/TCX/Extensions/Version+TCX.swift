@@ -10,7 +10,7 @@ extension Version: Tcxable {
 
     convenience init?(tcx element: AEXMLElement) {
         // When the element is an error, don't create the instance.
-        if let _ = element.error {
+        if element.error != nil {
             return nil
         }
         self.init()

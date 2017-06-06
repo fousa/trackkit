@@ -34,7 +34,7 @@ class GPXParserSpec: QuickSpec {
                 let data = content.data(using: .utf8)
                 expect { try TrackParser(data: data, type: .gpx).parse() }.toNot(throwError(TrackParseError.invalidVersion))
             }
-            
+
             it("should not throw an invalid version error for 1.1") {
                 let content = "<gpx version='1.1'></gpx>"
                 let data = content.data(using: .utf8)

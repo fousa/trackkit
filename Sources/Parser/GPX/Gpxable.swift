@@ -6,6 +6,6 @@
 
 import AEXML
 
-protocol Gpxable: Parsable {
+protocol Gpxable: XMLParsable {
     init?(gpx element: AEXMLElement, version: TrackTypeVersion)
 }

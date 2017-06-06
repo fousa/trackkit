@@ -13,7 +13,7 @@ import TrackKit
 class TCXCommonSpec: QuickSpec {
     override func spec() {
         var file: File!
-        
+
         describe("common data") {
             beforeEach {
                 let content = "<TrainingCenterDatabase xmlns='http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2'>"
@@ -35,7 +35,7 @@ class TCXCommonSpec: QuickSpec {
                 let data = content.data(using: .utf8)
                 file = try! TrackParser(data: data, type: .tcx).parse()
             }
-            
+
             context("metadata") {
                 it("should have an author name") {
                     expect(file.applicationAuthor?.name) == "Jelle Vandebeeck"

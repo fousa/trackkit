@@ -27,9 +27,58 @@ public enum Fix: String {
     case pps = "pps"
 }
 
+/// Navigation receiver warning.
+///
+/// - important: Supported format: NMEA
+public enum NavigationReceiverWarning: String {
+    /// Ok
+    // swiftlint:disable identifier_name
+    case ok = "A"
+
+    /// Warning
+    case warning = "V"
+}
+
+/// Type of GPS Quality indicator.
+///
+/// - important: Supported format: NMEA
+public enum GPSQuality: String {
+    /// Fix not valid.
+    case invalid = "0"
+
+    /// GPX Fix
+    case gpsFix = "1"
+
+    /// Differential GPS fix, OmniSTAR VBS
+    case differentialGPSFix = "2"
+
+    /// Real-Time Kinematic, fixed integers
+    case realTimeKinematicFixed = "4"
+
+    /// Real-Time Kinematic, float integers, OmniSTAR XP/HP or Location RTK
+    case realTimeKinematicFloat = "5"
+}
+
+/// NMEA Record type, only the types below are supported.
+///
+/// - important: Supported format: NMEA
+public enum RecordType: String {
+    /// Global Positioning System Fix Data
+    case gga = "$GPGGA"
+
+    /// Recommended minimum specific GPS/Transit data
+    case rmc = "$GPRMC"
+
+    /// Geographic Position, Latitude / Longitude and time
+    case gll = "$GPGLL"
+
+    /// Waypoint location
+    case wpl = "$GPWPL"
+}
+
 /// Represents a waypoint, point of interest, or named feature on a map.
 ///
-/// - important: Supported format: GPX, TCX
+/// - important: Supported format: GPX, TCX, NMEA
 public final class Point {
     /// The coordinate of the point.
     ///
@@ -49,7 +98,7 @@ public final class Point {
     /// Creation/modification timestamp for element. Date and time in are in Univeral
     /// Coordinated Time (UTC), not local time.
     ///
-    /// - important: Supported format: GPX, TCX
+    /// - important: Supported format: GPX, TCX, NMEA
     public var time: Date?
 
     /// Magnetic variation.
@@ -68,7 +117,7 @@ public final class Point {
     /// contained in it. It is up to the receiving application to validate the field before
     /// sending it to the GPS.
     ///
-    /// - important: Supported format: GPX, LOC
+    /// - important: Supported format: GPX, LOC, NMEA
     public var name: String?
 
     /// GPS waypoint comment. Sent to GPS as comment.
@@ -139,6 +188,46 @@ public final class Point {
     /// - important: Supported format: GPX
     public var dgpsStationType: Int?
 
+    /// Number of satelittes in use.
+    ///
+    /// - important: Supported format: NMEA
+    public var numberOfSatellites: Int?
+
+    /// Height of geoid above WGS84 ellipsoid (in meters).
+    ///
+    /// - important: Supported format: NMEA
+    public var heightOfGeoid: Double?
+
+    /// Age of differential GPS data record.
+    ///
+    /// - important: Supported format: NMEA
+    public var timeSinceLastUpdate: Double?
+
+    /// Reference station ID.
+    ///
+    /// - important: Supported format: NMEA
+    public var stationId: String?
+
+    /// GPS Quality indicator.
+    ///
+    /// - important: Supported format: NMEA
+    public var gpsQuality: GPSQuality?
+
+    /// The NMEA record type.
+    ///
+    /// - important: Supported format: NMEA
+    public var recordType: RecordType?
+
+    /// The navigation receiver warning.
+    ///
+    /// - important: Supported format: NMEA
+    public var navigationReceiverWarning: NavigationReceiverWarning?
+
+    /// Track angle in degrees.
+    ///
+    /// - important: Supported format: NMEA
+    public var trackAngle: Double?
+
     /// Heartrate at this point.
     ///
     /// - important: Supported format: TCX, GPX
@@ -148,32 +237,32 @@ public final class Point {
     ///
     /// - important: Supported format: TCX, GPX
     public var cadence: Int?
-    
+
     /// Air temperature at this point.
     ///
     /// - important: Supported format: GPX
     public var airTemperature: Double?
-    
+
     /// Water temperature at this point.
     ///
     /// - important: Supported format: GPX
     public var waterTemperature: Double?
-    
+
     /// Depth at this point.
     ///
     /// - important: Supported format: GPX
     public var depth: Double?
-    
+
     /// Speed at this point.
     ///
-    /// - important: Supported format: GPX
+    /// - important: Supported format: GPX, NMEA
     public var speed: Double?
-    
+
     /// Course at this point.
     ///
     /// - important: Supported format: GPX
     public var course: Int?
-    
+
     /// Bearing at this point.
     ///
     /// - important: Supported format: GPX

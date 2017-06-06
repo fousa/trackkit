@@ -7,7 +7,7 @@
 import CoreLocation
 import AEXML
 
-protocol Parsable {}
+protocol XMLParsable {}
 
 precedencegroup OperatorPresedenceGroup {
     associativity: left
@@ -59,15 +59,15 @@ func <~ (lhs: inout URL?, rhs: AEXMLElement) {
 
 // MARK: - Enums
 
-func <~ (lhs: inout Fix?, rhs: AEXMLElement) {
-    if let stringValue = rhs.optionalString {
-        lhs = Fix(rawValue: stringValue)
-    }
-}
-
 func <~ (lhs: inout Intentity?, rhs: AEXMLElement) {
     if let stringValue = rhs.optionalString {
         lhs = Intentity(rawValue: stringValue)
+    }
+}
+
+func <~ (lhs: inout Fix?, rhs: AEXMLElement) {
+    if let stringValue = rhs.optionalString {
+        lhs = Fix(rawValue: stringValue)
     }
 }
 
@@ -85,11 +85,11 @@ func <~ (lhs: inout TriggerMethod?, rhs: AEXMLElement) {
 
 // MARK: - Relations
 
-func <~ <T: Parsable>(lhs: inout T?, rhs: T?) {
+func <~ <T: XMLParsable>(lhs: inout T?, rhs: T?) {
     lhs = rhs
 }
 
-func <~ <T: Parsable>(lhs: inout [T]?, rhs: [T]?) {
+func <~ <T: XMLParsable>(lhs: inout [T]?, rhs: [T]?) {
     if let elements = rhs, elements.count > 0 {
         lhs = elements
     }

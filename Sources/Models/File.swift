@@ -18,7 +18,7 @@ public final class File {
 
     /// Returns the version of the file type.
     public let typeVersion: TrackTypeVersion
-    
+
     /// You must include the name or URL of the software that created your
     /// GPX document. This allows others to inform the creator of a GPX instance
     /// document that fails to validate.
@@ -102,9 +102,14 @@ public final class File {
     ///
     /// - important: Supported format: TCX
     public var activities: [Activity]?
-    
+
+    /// A list of points.
+    ///
+    /// - important: Supported format: NMEA
+    public var records: [Point]?
+
     // MARK: - Init
-    
+
     /// You have to initialize a file with a given `TrackType` and a `TrackTypeVersion`.
     init(type: TrackType, version: TrackTypeVersion) {
         self.type = type

@@ -11,7 +11,7 @@ extension Point: Locable {
 
     convenience init?(loc element: AEXMLElement) {
         // When the element is an error, don't create the instance.
-        if let _ = element.error {
+        if element.error != nil {
             return nil
         }
 
@@ -31,5 +31,5 @@ extension Point: Locable {
         type        <~ element["type"]
         link        <~ Link(loc: element["link"])
     }
-    
+
 }
