@@ -19,17 +19,23 @@ class NMEAGPGGASpec: QuickSpec {
                 let file = try! TrackParser(data: data, type: .nmea).parse()
 
                 expect(file.records).to(beNil())
+                expect(file.waypoints).to(beNil())
             }
 
             context("record point data") {
                 var point: Point!
+                var file: File!
 
                 beforeEach {
                     let content = "$GPGGA,172814.0,3723.46587704,N,12202.26957864,W,2,6,1.2,18.893,M,-25.669,M,2.0,0031*4F"
                     let data = content.data(using: .utf8)
-                    let file = try! TrackParser(data: data, type: .nmea).parse()
 
+                    file = try! TrackParser(data: data, type: .nmea).parse()
                     point = file.records?.first!
+                }
+
+                it("should have no waypoints") {
+                    expect(file.waypoints).to(beNil())
                 }
 
                 it("should have a gga point record type") {

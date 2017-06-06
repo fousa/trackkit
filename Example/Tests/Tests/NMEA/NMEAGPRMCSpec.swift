@@ -19,17 +19,22 @@ class NMEAGPRMCSpec: QuickSpec {
                 let file = try! TrackParser(data: data, type: .nmea).parse()
 
                 expect(file.records).to(beNil())
+                expect(file.waypoints).to(beNil())
             }
 
             context("record point data") {
                 var point: Point!
+                var file: File!
 
                 beforeEach {
                     let content = "$GPRMC,172814,A,3723.46587704,N,12202.26957864,W,001.5,240.0,130998,011.3,E*62"
                     let data = content.data(using: .utf8)
-                    let file = try! TrackParser(data: data, type: .nmea).parse()
-
+                    file = try! TrackParser(data: data, type: .nmea).parse()
                     point = file.records?.first!
+                }
+
+                it("should have no waypoints") {
+                    expect(file.waypoints).to(beNil())
                 }
 
                 it("should have a rmc point record type") {

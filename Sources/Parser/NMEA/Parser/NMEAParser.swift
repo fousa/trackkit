@@ -54,6 +54,19 @@ extension NMEAParsable {
 
 }
 
+extension RecordType {
+
+    var isWaypoint: Bool {
+        switch self {
+        case .wpl:
+            return true
+        default:
+            return false
+        }
+    }
+
+}
+
 class NMEAParser {
 
     // MARK: - Internals

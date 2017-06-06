@@ -18,18 +18,24 @@ class NMEAGPWPLSpec: QuickSpec {
                 let data = content.data(using: .utf8)
                 let file = try! TrackParser(data: data, type: .nmea).parse()
 
+                expect(file.waypoints).to(beNil())
                 expect(file.records).to(beNil())
             }
 
             context("record point data") {
                 var point: Point!
+                var file: File!
 
                 beforeEach {
                     let content = "$GPWPL,3723.46587704,N,12202.26957864,W,EBBT*62"
                     let data = content.data(using: .utf8)
-                    let file = try! TrackParser(data: data, type: .nmea).parse()
+                    file = try! TrackParser(data: data, type: .nmea).parse()
 
-                    point = file.records?.first!
+                    point = file.waypoints?.first!
+                }
+
+                it("should have no records") {
+                    expect(file.records).to(beNil())
                 }
 
                 it("should have a wpl point record type") {
@@ -54,7 +60,7 @@ class NMEAGPWPLSpec: QuickSpec {
                     let data = content.data(using: .utf8)
                     let file = try! TrackParser(data: data, type: .nmea).parse()
 
-                    point = file.records?.first!
+                    point = file.waypoints?.first!
                 }
 
                 it("should have a wpl point record type") {
