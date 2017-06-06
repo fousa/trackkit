@@ -1,22 +1,20 @@
-osx_image: xcode8.1
+osx_image: xcode8.2
 language: objective-c
-cache: bundler
 rvm:
   - 2.3.1
 
-install:
-  - bundle install
-  - ./scripts/setup_swiftlint.sh
+before_install:
+  - gem install xcpretty -N --no-ri --no-rdoc
+  - gem install cocoapods -v '1.2.0' -N --no-ri --no-rdoc
 
 script:
   - set -o pipefail
-  - swiftlint
-  - xcodebuild test -workspace Example/TrackKit.xcworkspace -scheme Tests -destination "platform=iOS Simulator,name=iPhone 7"
+  - xcodebuild test -workspace Example/TrackKit.xcworkspace -scheme Tests -destination "platform=iOS Simulator,name=iPhone 7" | xcpretty
 
 deploy:
   skip_cleanup: true
   provider: script
-  script: 'PATH="${TRAVIS_BUILD_DIR}/bin:$PATH" rvm "$TRAVIS_RUBY_VERSION" do bundle exec pod trunk push'
+  script: 'PATH="${TRAVIS_BUILD_DIR}/bin:$PATH" pod trunk push'
   on:
     tags: true
     branch: master
