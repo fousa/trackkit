@@ -6,6 +6,18 @@
 
 import AEXML
 
+private extension String {
+    #if swift(>=4.0)
+        var characterCount: Int {
+            return count
+        }
+    #else
+        var characterCount: Int {
+            return characters.count
+        }
+#endif
+}
+
 /// The type of track is defined by this enum value.
 public enum TrackType: String {
     /// A GPX formatted track.
@@ -61,7 +73,7 @@ public enum TrackType: String {
     private func parseCSV(data: Data) throws -> [[String]] {
         guard
             let rawString = String(data: data, encoding: .utf8),
-            rawString.count > 0 else {
+            rawString.characterCount > 0 else {
             throw TrackParseError.invalidData
         }
 

@@ -29,6 +29,14 @@ protocol NMEAParsable {
 
 }
 
+#if swift(>=4.0)
+    private extension String {
+        func substring(from: String.Index) -> String {
+            return String(self[from...])
+        }
+    }
+#endif
+
 extension NMEAParsable {
 
     subscript (index: Int) -> String? {
@@ -43,7 +51,7 @@ extension NMEAParsable {
             let degreesValue = Double(degrees),
             let startIndex = value?.startIndex,
             let index = value?.index(startIndex, offsetBy: offset),
-            let minutes = value?[index...],
+            let minutes = value?.substring(from: index),
             let minutesValue = Double(minutes) else {
             return nil
         }
