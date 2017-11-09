@@ -1,5 +1,9 @@
 # TrackKit
 
+## 2.3.1
+
+- Added support for Swift 4.
+
 ## 2.3.0
 
 - Added `NMEA` file support. _Currently supported identifiers are GPGGA, GPGLL, GPRMC & GPWPL._
