@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TrackKit'
-  s.version          = '2.3.0'
+  s.version          = '2.3.1'
   s.summary          = 'Parse a log file into a readable format with Swift.'
 
   s.description      = <<-DESC
