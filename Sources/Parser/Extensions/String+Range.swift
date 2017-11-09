@@ -19,7 +19,7 @@ extension String {
             return nil
         }
 
-        return self[Range(start ..< end)]
+        return String(self[Range(start ..< end)])
     }
 
 }

@@ -43,9 +43,9 @@ extension NMEAParsable {
             let degreesValue = Double(degrees),
             let startIndex = value?.startIndex,
             let index = value?.index(startIndex, offsetBy: offset),
-            let minutes = value?.substring(from: index),
+            let minutes = value?[index...],
             let minutesValue = Double(minutes) else {
-                return nil
+            return nil
         }
 
         let isReversed = direction == "S" || direction == "W"

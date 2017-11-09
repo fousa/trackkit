@@ -61,7 +61,7 @@ public enum TrackType: String {
     private func parseCSV(data: Data) throws -> [[String]] {
         guard
             let rawString = String(data: data, encoding: .utf8),
-            rawString.characters.count > 0 else {
+            rawString.count > 0 else {
             throw TrackParseError.invalidData
         }
 
