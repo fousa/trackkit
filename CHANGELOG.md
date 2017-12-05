@@ -1,5 +1,9 @@
 # TrackKit
 
+## 2.3.2
+
+- Update AEXML.
+
 ## 2.3.1
 
 - Added support for Swift 4.
