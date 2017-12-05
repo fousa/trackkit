@@ -13,7 +13,7 @@ private extension String {
         }
     #else
         var characterCount: Int {
-            return characters.count
+            return count
         }
 #endif
 }
