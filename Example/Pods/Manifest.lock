@@ -1,9 +1,9 @@
 PODS:
-  - AEXML (4.1.0)
-  - Nimble (7.0.2)
+  - AEXML (4.2.2)
+  - Nimble (7.0.3)
   - Quick (1.2.0)
   - TrackKit (2.3.1):
-    - AEXML (~> 4.1)
+    - AEXML (~> 4.2)
 
 DEPENDENCIES:
   - Nimble (~> 7.0)
@@ -15,11 +15,11 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  AEXML: 647fbb051280f3fb38a1a7caa62b0344055a851c
-  Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
+  AEXML: 5ebafc1b75e0bcf0f1b09b8ca8fed2d5a199479b
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  TrackKit: d8929fd44cd65ce1339c9378a9f04bf614317f43
+  TrackKit: 1ae32fc81dac0ffbfb1fc273ce7c30f832446abe
 
-PODFILE CHECKSUM: 1ee3f354b5d29c8ffdb72419c1964a74041970da
+PODFILE CHECKSUM: 13693b146e73644e1b97a7d674e00ccd2b55adb9
 
 COCOAPODS: 1.3.1
