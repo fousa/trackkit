@@ -34,4 +34,10 @@ public final class Track {
     /// GPS receiver was turned off, start a new Track Segment for each continuous span
     /// of track data.
     public var segments: [TrackSegment]?
+    
+    /// A Track Point holds the coordinates, elevation, timestamp, and metadata
+    /// for a single point in a track.
+    ///
+    /// - important: Supported format: TRACK
+    public var points: [Point]?
 }

@@ -67,6 +67,20 @@ class TrackTypeSpec: QuickSpec {
                 expect(type?.rawValue) == "nmea"
             }
         }
+        
+        context("TRACK JSON") {
+            it("Should parse track as track type") {
+                let type = TrackType(fileExtension: "track")
+                expect(type).toNot(beNil())
+                expect(type?.rawValue) == "track"
+            }
+            
+            it("Should parse TRACK as track type") {
+                let type = TrackType(fileExtension: "TRACK")
+                expect(type).toNot(beNil())
+                expect(type?.rawValue) == "track"
+            }
+        }
 
         context("Unknown") {
             describe("Should not parse the type") {
