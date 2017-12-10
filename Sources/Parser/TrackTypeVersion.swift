@@ -21,6 +21,9 @@ public enum TrackTypeVersion {
 
     /// A TCX formatted track with it's version.
     case tcx(String)
+    
+    /// A TRACK formatted track with it's version.
+    case track(String)
 
     // MARK: - Init
 
@@ -44,6 +47,8 @@ public enum TrackTypeVersion {
             self = .nmea(version)
         case .tcx:
             self = .tcx(version)
+        case .track:
+            self = .track(version)
         }
     }
 
@@ -59,6 +64,8 @@ public enum TrackTypeVersion {
         case .nmea(let version):
             return version
         case .tcx(let version):
+            return version
+        case .track(let version):
             return version
         }
     }
@@ -76,6 +83,8 @@ public enum TrackTypeVersion {
             supportedVersions = ["NMEA-0183"]
         case .tcx:
             supportedVersions = ["http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2"]
+        case .track:
+            supportedVersions = ["1.0"]
         }
         return supportedVersions.index(of: version) != nil
     }

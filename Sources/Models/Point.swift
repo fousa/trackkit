@@ -255,16 +255,26 @@ public final class Point {
 
     /// Speed at this point.
     ///
-    /// - important: Supported format: GPX, NMEA
+    /// - important: Supported format: GPX, NMEA, TRACK
     public var speed: Double?
 
     /// Course at this point.
     ///
-    /// - important: Supported format: GPX
+    /// - important: Supported format: GPX, TRACK
     public var course: Int?
 
     /// Bearing at this point.
     ///
     /// - important: Supported format: GPX
     public var bearing: Int?
+    
+    /// Horizontal accuracy.
+    ///
+    /// - important: Supported format: TRACK
+    public var horizontalAccuracy: Double?
+    
+    /// Vertical accuracy.
+    ///
+    /// - important: Supported format: TRACK
+    public var verticalAccuracy: Double?
 }

@@ -8,7 +8,7 @@ import Quick
 import Nimble
 import TrackKit
 
-class GPXTrackSpec: QuickSpec {
+class TRACKTrackSpec: QuickSpec {
     override func spec() {
         describe("tracks") {
             it("should not have tracks") {
@@ -96,7 +96,7 @@ class GPXTrackSpec: QuickSpec {
             }
             
             it("should have a speed") {
-                expect(point.sped) == 4
+                expect(point.speed) == 4
             }
         }
     }
