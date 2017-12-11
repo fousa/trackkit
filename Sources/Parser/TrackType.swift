@@ -31,6 +31,9 @@ public enum TrackType: String {
 
     /// A TCX formatted track.
     case tcx
+    
+    /// A custom json formatted track.
+    case track
 
     // MARK: - Init
 
@@ -60,6 +63,8 @@ public enum TrackType: String {
         case .tcx:
             let document = try parseXML(data: data)
             return try File(tcx: document.root)
+        case .track:
+            return try File(track: data)
         }
     }
 
@@ -85,4 +90,5 @@ public enum TrackType: String {
         }
         return result
     }
+    
 }
