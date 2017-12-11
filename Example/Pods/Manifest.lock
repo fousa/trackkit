@@ -2,7 +2,7 @@ PODS:
   - AEXML (4.2.2)
   - Nimble (7.0.3)
   - Quick (1.2.0)
-  - TrackKit (2.3.1):
+  - TrackKit (2.3.2):
     - AEXML (~> 4.2)
 
 DEPENDENCIES:
@@ -18,7 +18,7 @@ SPEC CHECKSUMS:
   AEXML: 5ebafc1b75e0bcf0f1b09b8ca8fed2d5a199479b
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  TrackKit: 1ae32fc81dac0ffbfb1fc273ce7c30f832446abe
+  TrackKit: 41bab5d1ce98befb66004020ac8a0c5bf86cea86
 
 PODFILE CHECKSUM: 13693b146e73644e1b97a7d674e00ccd2b55adb9
 
