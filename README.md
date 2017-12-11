@@ -34,13 +34,33 @@ TCX
 
 The `TCX` format that is supported is version **2** as described in the [schema documentation](http://www8.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd).
 
+TRACK
+-----
+
+The `TRACK`format is a custom format that is created by yours truly. It looks to be a custom data file, but when you just open a `.track` file with a text editor you'll notice that it is a simple JSON format. Here is an example on how it's formatted:
+
+``` json
+[
+	{
+		"latitude": 10.0,
+		"longitude": 20.0,
+		"altitude": 120,
+		"horizontalAccuracy": 10,
+		"verticalAccuracy": 10, 
+		"course": 30,
+		"speed": 12,
+		"timestamp": 123456 
+	}
+]
+```
+
 Integration
 ===========
 
 Add this pod to your `Podfile` by adding the following line:
 
 ``` ruby
-pod 'TrackKit', '~> 2.3'
+pod 'TrackKit', '~> 2.4'
 ```
 
 _It's important to add the version to the `pod 'TrackKit'`, this way you are sure that a next update of the pod will not break your code._

@@ -1,5 +1,9 @@
 # TrackKit
 
+## 2.4.0
+
+- Added support for a custom `.track` format.
+
 ## 2.3.2
 
 - Update AEXML.
