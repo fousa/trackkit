@@ -107,6 +107,12 @@ public final class File {
     ///
     /// - important: Supported format: NMEA
     public var records: [Point]?
+    
+    /// A list of locations from the custom Track format.
+    ///
+    /// - important: Supported format: TRACK
+    public var locations: [Point]?
+    
 
     // MARK: - Init
 

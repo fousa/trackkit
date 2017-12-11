@@ -12,37 +12,33 @@ class TRACKTrackSpec: QuickSpec {
     override func spec() {
         describe("tracks") {
             it("should not have tracks") {
-                let content = "{}"
-                let data = content.data(using: .utf8)
+                let content = [String: String]()
+                let data = try! JSONEncoder().encode(content)
                 let file = try! TrackParser(data: data, type: .track).parse()
 
                 expect(file.tracks).to(beNil())
             }
 
             it("should not have tracks without a points") {
-                let content = "{"
-                                + "["
-                                    + "{}"
-                                    + "{}"
-                                + "]"
-                            + "}"
-                let data = content.data(using: .utf8)
+                let content = [
+                    [String: String](),
+                    [String: String](),
+                ]
+                let data = try! JSONEncoder().encode(content)
                 let file = try! TrackParser(data: data, type: .track).parse()
 
                 expect(file.tracks).to(beNil())
             }
 
             it("should have tracks") {
-                let content = "{"
-                                + "["
-                                    + "{ latitude: 10, longitude: 10 }"
-                                    + "{ latitude: 11, longitude: 11 }"
-                                + "]"
-                            + "}"
-                let data = content.data(using: .utf8)
+                let content = [
+                    ["latitude":10, "longitude":10],
+                    ["latitude":11, "longitude":11]
+                ]
+                let data = try! JSONEncoder().encode(content)
                 let file = try! TrackParser(data: data, type: .track).parse()
 
-                expect(file.tracks?.count) == 2
+                expect(file.locations?.count) == 2
             }
         }
 
@@ -50,24 +46,22 @@ class TRACKTrackSpec: QuickSpec {
             var point: Point!
 
             beforeEach {
-                let content = "{"
-                                + "["
-                                    + "{"
-                                        + "latitude: 41.2,"
-                                        + "longitude: -71.3,"
-                                        + "altitude: 1001,"
-                                        + "horizontalAccuracy: 10,"
-                                        + "verticalAccuracy: 20,"
-                                        + "course: 30,"
-                                        + "speed: 4,"
-                                        + "timestamp: 1234"
-                                    + "}"
-                                + "]"
-                            + "}"
-                let data = content.data(using: .utf8)
+                let content = [
+                    [
+                        "latitude": 41.2,
+                        "longitude": -71.3,
+                        "altitude": 1001,
+                        "horizontalAccuracy": 10,
+                        "verticalAccuracy": 20,
+                        "course": 30,
+                        "speed": 4,
+                        "timestamp": 1234
+                    ]
+                ]
+                let data = try! JSONEncoder().encode(content)
                 let file = try! TrackParser(data: data, type: .track).parse()
 
-                point = file.tracks?.first?.points?.first!
+                point = file.locations?.first!
             }
 
             it("should have a coordinate") {
@@ -80,7 +74,7 @@ class TRACKTrackSpec: QuickSpec {
             }
 
             it("should have a time") {
-                expect(point.time?.description) == "2016-03-10 08:05:12 +0000"
+                expect(point.time?.description) == "2001-01-01 00:20:34 +0000"
             }
 
             it("should have a horizontal accuracy") {

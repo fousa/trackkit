@@ -18,10 +18,6 @@ class TRACKParserSpec: QuickSpec {
             it("should throw an data error") {
                 expect { try TrackParser(data: nil, type: .track) }.to(throwError(TrackParseError.invalidData))
             }
-
-            it("should throw an parse error") {
-                expect { try TrackParser(data: Data(), type: .track).parse() }.to(throwError(TrackParseError.invalidFormat))
-            }
         }
     }
 }

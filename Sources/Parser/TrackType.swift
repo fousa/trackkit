@@ -64,8 +64,7 @@ public enum TrackType: String {
             let document = try parseXML(data: data)
             return try File(tcx: document.root)
         case .track:
-            let document = try parseXML(data: data)
-            return try File(tcx: document.root)
+            return try File(track: data)
         }
     }
 

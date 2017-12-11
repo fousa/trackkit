@@ -79,7 +79,7 @@ public enum RecordType: String {
 /// Represents a waypoint, point of interest, or named feature on a map.
 ///
 /// - important: Supported format: GPX, TCX, NMEA
-public final class Point {
+public final class Point: Codable {
     /// The coordinate of the point.
     ///
     /// - important: Supported format: GPX, TCX, LOC
@@ -261,7 +261,7 @@ public final class Point {
     /// Course at this point.
     ///
     /// - important: Supported format: GPX, TRACK
-    public var course: Int?
+    public var course: CLLocationDirection?
 
     /// Bearing at this point.
     ///
@@ -277,4 +277,22 @@ public final class Point {
     ///
     /// - important: Supported format: TRACK
     public var verticalAccuracy: Double?
+    
+    public init() {
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        let latitude = try container.decode(CLLocationDegrees.self, forKey: .latitude)
+        let longitude = try container.decode(CLLocationDegrees.self, forKey: .longitude)
+        coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+        
+        elevation = try? container.decode(CLLocationDistance.self, forKey: .altitude)
+        horizontalAccuracy = try? container.decode(CLLocationAccuracy.self, forKey: .horizontalAccuracy)
+        verticalAccuracy = try? container.decode(CLLocationAccuracy.self, forKey: .verticalAccuracy)
+        course = try? container.decode(CLLocationDirection.self, forKey: .course)
+        speed = try? container.decode(CLLocationSpeed.self, forKey: .speed)
+        time = try? container.decode(Date.self, forKey: .timestamp)
+    }
 }
