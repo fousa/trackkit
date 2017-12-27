@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "SomeClass.h"
 
 FOUNDATION_EXPORT double TrackKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char TrackKitVersionString[];

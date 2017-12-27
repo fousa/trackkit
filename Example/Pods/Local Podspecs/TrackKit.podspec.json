@@ -20,7 +20,7 @@
     "watchos": "2.0"
   },
   "requires_arc": true,
-  "source_files": "Sources/**/*",
+  "source_files": "Sources/Classes/**/*",
   "dependencies": {
     "AEXML": [
       "~> 4.2"
