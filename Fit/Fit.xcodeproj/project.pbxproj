@@ -35,7 +35,12 @@
 		9D27D2402002A65300031749 /* FitReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27D23A2002A61A00031749 /* FitReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D27D2412002A79700031749 /* Fit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D27D1BA20028F7D00031749 /* Fit.framework */; };
 		9D27D2422002A79700031749 /* Fit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D27D1BA20028F7D00031749 /* Fit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9D27D2452002A94400031749 /* libFitSdkCppiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D27CFF32002886900031749 /* libFitSdkCppiOS.a */; };
+		9D27D24A2002B21D00031749 /* FitRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D27D2482002B18900031749 /* FitRecord.m */; };
+		9D27D24B2002B22000031749 /* FitRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D27D2482002B18900031749 /* FitRecord.m */; };
+		9D27D24C2002B22300031749 /* FitRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27D2472002B18900031749 /* FitRecord.h */; };
+		9D27D24D2002B22300031749 /* FitRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27D2472002B18900031749 /* FitRecord.h */; };
+		9D27D3FD2002CB2F00031749 /* libFitSdkCppiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D27D32B2002CB2400031749 /* libFitSdkCppiOS.a */; };
+		9D27D3FE2002CB3300031749 /* libFitSdkCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D27D3FC2002CB2500031749 /* libFitSdkCpp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,218 +69,6 @@
 
 /* Begin PBXFileReference section */
 		9D27CD392002639300031749 /* Fit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fit.h; sourceTree = "<group>"; };
-		9D27CF202002886900031749 /* fit_power_zone_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_power_zone_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF212002886900031749 /* fit_segment_point_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_point_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF222002886900031749 /* fit_monitoring_info_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_monitoring_info_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF232002886900031749 /* fit_workout_step_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_step_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF242002886900031749 /* fit_dive_gas_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_gas_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF252002886900031749 /* fit_bike_profile_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_bike_profile_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF262002886900031749 /* fit_obdii_data_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_obdii_data_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF272002886900031749 /* fit_hrv_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_hrv_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF282002886900031749 /* fit_sdm_profile_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_sdm_profile_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF292002886900031749 /* fit_session_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_session_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF2A2002886900031749 /* fit_ant_rx_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_rx_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF2B2002886900031749 /* fit_camera_event_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_camera_event_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF2C2002886900031749 /* fit_ant_tx_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_tx_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF2D2002886900031749 /* fit_mesg_broadcast_plugin.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_broadcast_plugin.hpp; sourceTree = "<group>"; };
-		9D27CF2E2002886900031749 /* fit_weather_conditions_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_weather_conditions_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF2F2002886900031749 /* fit_segment_point_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_point_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF302002886900031749 /* fit_developer_data_id_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_data_id_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF312002886900031749 /* fit_software_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_software_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF322002886900031749 /* fit_watchface_settings_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_watchface_settings_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF332002886900031749 /* fit_monitoring_info_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_monitoring_info_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF342002886900031749 /* fit_barometer_data_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_barometer_data_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF352002886900031749 /* fit_field_capabilities_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_field_capabilities_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF362002886900031749 /* fit_accumulated_field.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_accumulated_field.hpp; sourceTree = "<group>"; };
-		9D27CF372002886900031749 /* fit_cadence_zone_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_cadence_zone_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF382002886900031749 /* fit_unicode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_unicode.hpp; sourceTree = "<group>"; };
-		9D27CF392002886900031749 /* fit_slave_device_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_slave_device_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF3A2002886900031749 /* fit_ant_channel_id_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_channel_id_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF3B2002886900031749 /* fit_file_id_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_file_id_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF3C2002886900031749 /* fit_record_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_record_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF3D2002886900031749 /* fit_segment_leaderboard_entry_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_leaderboard_entry_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF3E2002886900031749 /* fit_video_clip_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_video_clip_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF3F2002886900031749 /* fit_file_creator_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_file_creator_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF402002886900031749 /* fit_exd_data_field_configuration_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_data_field_configuration_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF412002886900031749 /* fit_ant_rx_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_rx_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF422002886900031749 /* fit_field_description_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_field_description_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF432002886900031749 /* fit_schedule_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_schedule_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF442002886900031749 /* fit_zones_target_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_zones_target_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF452002886900031749 /* fit_video_clip_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_video_clip_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF462002886900031749 /* fit_device_settings_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_device_settings_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF472002886900031749 /* FitMesg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitMesg.h; sourceTree = "<group>"; };
-		9D27CF482002886900031749 /* fit_accelerometer_data_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_accelerometer_data_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF492002886900031749 /* fit_met_zone_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_met_zone_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF4A2002886900031749 /* fit_hrm_profile_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_hrm_profile_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF4B2002886900031749 /* fit_speed_zone_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_speed_zone_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF4C2002886900031749 /* fit_weather_alert_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_weather_alert_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF4D2002886900031749 /* fit_goal_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_goal_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF4E2002886900031749 /* fit_factory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_factory.hpp; sourceTree = "<group>"; };
-		9D27CF4F2002886900031749 /* fit_memo_glob_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_memo_glob_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF502002886900031749 /* FitMesgDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitMesgDefinition.h; sourceTree = "<group>"; };
-		9D27CF512002886900031749 /* fit_cadence_zone_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_cadence_zone_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF522002886900031749 /* fit_buffered_record_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_buffered_record_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF532002886900031749 /* fit_workout_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF542002886900031749 /* fit_gps_metadata_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_gps_metadata_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF552002886900031749 /* fit_three_d_sensor_calibration_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_three_d_sensor_calibration_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF562002886900031749 /* fit_video_title_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_video_title_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF572002886900031749 /* fit_three_d_sensor_calibration_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_three_d_sensor_calibration_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF582002886900031749 /* fit_buffered_record_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_buffered_record_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF592002886900031749 /* fit_activity_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_activity_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF5A2002886900031749 /* fit_runtime_exception.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_runtime_exception.hpp; sourceTree = "<group>"; };
-		9D27CF5B2002886900031749 /* FitField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitField.h; sourceTree = "<group>"; };
-		9D27CF5C2002886900031749 /* fit_record_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_record_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF5D2002886900031749 /* fit_aviation_attitude_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_aviation_attitude_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF5E2002886900031749 /* fit_user_profile_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_user_profile_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF5F2002886900031749 /* fit_monitoring_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_monitoring_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF602002886900031749 /* fit_session_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_session_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF612002886900031749 /* fit_schedule_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_schedule_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF622002886900031749 /* fit_hr_zone_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_hr_zone_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF632002886900031749 /* fit_developer_field_definition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_field_definition.hpp; sourceTree = "<group>"; };
-		9D27CF642002886900031749 /* fit_mesg_broadcaster.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_broadcaster.hpp; sourceTree = "<group>"; };
-		9D27CF652002886900031749 /* FitDeveloperField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitDeveloperField.h; sourceTree = "<group>"; };
-		9D27CF662002886900031749 /* fit_mesg_capabilities_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_capabilities_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF672002886900031749 /* fit_device_info_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_device_info_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF682002886900031749 /* fit_field_base.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_field_base.hpp; sourceTree = "<group>"; };
-		9D27CF692002886900031749 /* fit_mesg_with_event_broadcaster.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_with_event_broadcaster.hpp; sourceTree = "<group>"; };
-		9D27CF6A2002886900031749 /* fit_length_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_length_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF6B2002886900031749 /* fit_workout_step_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_step_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF6C2002886900031749 /* fit_course_point_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_course_point_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF6D2002886900031749 /* fit_workout_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF6E2002886900031749 /* fit_activity_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_activity_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF6F2002886900031749 /* fit_video_frame_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_video_frame_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF702002886900031749 /* fit_bike_profile_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_bike_profile_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF712002886900031749 /* fit_exd_data_field_configuration_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_data_field_configuration_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF722002886900031749 /* fit_video_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_video_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF732002886900031749 /* fit_sport_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_sport_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF742002886900031749 /* fit_sdm_profile_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_sdm_profile_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF752002886900031749 /* fit_dive_settings_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_settings_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF762002886900031749 /* fit_gyroscope_data_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_gyroscope_data_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF772002886900031749 /* fit_segment_leaderboard_entry_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_leaderboard_entry_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF782002886900031749 /* fit_timestamp_correlation_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_timestamp_correlation_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF792002886900031749 /* fit_segment_id_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_id_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF7A2002886900031749 /* fit_camera_event_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_camera_event_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF7B2002886900031749 /* fit_totals_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_totals_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF7C2002886900031749 /* fit_file_capabilities_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_file_capabilities_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF7D2002886900031749 /* fit_magnetometer_data_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_magnetometer_data_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF7E2002886900031749 /* fit_mesg_with_event.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_with_event.hpp; sourceTree = "<group>"; };
-		9D27CF7F2002886900031749 /* fit_monitoring_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_monitoring_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF802002886900031749 /* fit_nmea_sentence_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_nmea_sentence_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF812002886900031749 /* fit_crc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_crc.hpp; sourceTree = "<group>"; };
-		9D27CF822002886900031749 /* fit_video_description_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_video_description_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF832002886900031749 /* fit_event_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_event_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF842002886900031749 /* fit.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit.hpp; sourceTree = "<group>"; };
-		9D27CF852002886900031749 /* fit_ant_tx_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_tx_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF862002886900031749 /* fit_exercise_title_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_exercise_title_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF872002886900031749 /* fit_workout_session_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_session_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF882002886900031749 /* fit_barometer_data_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_barometer_data_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF892002886900031749 /* fit_lap_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_lap_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF8A2002886900031749 /* fit_one_d_sensor_calibration_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_one_d_sensor_calibration_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF8B2002886900031749 /* fit_dive_alarm_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_alarm_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF8C2002886900031749 /* fit_file_capabilities_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_file_capabilities_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF8D2002886900031749 /* fit_nmea_sentence_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_nmea_sentence_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF8E2002886900031749 /* fit_ant_channel_id_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_channel_id_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF8F2002886900031749 /* fit_field.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_field.hpp; sourceTree = "<group>"; };
-		9D27CF902002886900031749 /* fit_mesg_with_event_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_with_event_listener.hpp; sourceTree = "<group>"; };
-		9D27CF912002886900031749 /* fit_goal_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_goal_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF922002886900031749 /* fit_workout_session_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_session_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF932002886900031749 /* fit_zones_target_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_zones_target_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF942002886900031749 /* fit_field_description_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_field_description_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF952002886900031749 /* fit_profile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_profile.hpp; sourceTree = "<group>"; };
-		9D27CF962002886900031749 /* fit_dive_summary_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_summary_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF972002886900031749 /* fit_dive_settings_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_settings_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF982002886900031749 /* fit_hrv_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_hrv_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF992002886900031749 /* fit_met_zone_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_met_zone_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF9A2002886900031749 /* fit_capabilities_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_capabilities_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF9B2002886900031749 /* fit_aviation_attitude_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_aviation_attitude_mesg.hpp; sourceTree = "<group>"; };
-		9D27CF9C2002886900031749 /* fit_capabilities_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_capabilities_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF9D2002886900031749 /* fit_file_id_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_file_id_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF9E2002886900031749 /* fit_exd_data_concept_configuration_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_data_concept_configuration_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CF9F2002886900031749 /* fit_speed_zone_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_speed_zone_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFA02002886900031749 /* fit_watchface_settings_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_watchface_settings_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFA12002886900031749 /* fit_pad_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_pad_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFA22002886900031749 /* fit_obdii_data_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_obdii_data_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFA32002886900031749 /* fit_device_settings_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_device_settings_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFA42002886900031749 /* fit_totals_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_totals_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFA52002886900031749 /* fit_connectivity_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_connectivity_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFA62002886900031749 /* fit_mesg_definition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_definition.hpp; sourceTree = "<group>"; };
-		9D27CFA72002886900031749 /* fit_video_title_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_video_title_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFA82002886900031749 /* FitDecode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitDecode.h; sourceTree = "<group>"; };
-		9D27CFA92002886900031749 /* fit_segment_lap_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_lap_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFAA2002886900031749 /* fit_training_file_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_training_file_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFAB2002886900031749 /* fit_file_creator_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_file_creator_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFAC2002886900031749 /* fit_blood_pressure_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_blood_pressure_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFAD2002886900031749 /* fit_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFAE2002886900031749 /* fit_encode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_encode.hpp; sourceTree = "<group>"; };
-		9D27CFAF2002886900031749 /* fit_device_info_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_device_info_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFB02002886900031749 /* fit_one_d_sensor_calibration_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_one_d_sensor_calibration_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFB12002886900031749 /* fit_mesg_definition_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_definition_listener.hpp; sourceTree = "<group>"; };
-		9D27CFB22002886900031749 /* fit_weather_conditions_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_weather_conditions_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFB32002886900031749 /* fit_date_time.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_date_time.hpp; sourceTree = "<group>"; };
-		9D27CFB42002886900031749 /* fit_field_definition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_field_definition.hpp; sourceTree = "<group>"; };
-		9D27CFB52002886900031749 /* fit_field_capabilities_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_field_capabilities_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFB62002886900031749 /* fit_developer_field_description.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_field_description.hpp; sourceTree = "<group>"; };
-		9D27CFB72002886900031749 /* fit_course_point_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_course_point_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFB82002886900031749 /* FitEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitEncode.h; sourceTree = "<group>"; };
-		9D27CFB92002886900031749 /* fit_hr_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_hr_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFBA2002886900031749 /* fit_slave_device_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_slave_device_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFBB2002886900031749 /* fit_dive_alarm_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_alarm_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFBC2002886900031749 /* fit_hr_zone_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_hr_zone_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFBD2002886900031749 /* fit_weight_scale_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_weight_scale_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFBE2002886900031749 /* fit_pad_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_pad_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFBF2002886900031749 /* fit_buffer_encode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_buffer_encode.hpp; sourceTree = "<group>"; };
-		9D27CFC02002886900031749 /* fit_video_description_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_video_description_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFC12002886900031749 /* fit_developer_data_id_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_data_id_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFC22002886900031749 /* fit_timestamp_correlation_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_timestamp_correlation_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFC32002886900031749 /* fit_weather_alert_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_weather_alert_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFC42002886900031749 /* fit_exd_data_concept_configuration_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_data_concept_configuration_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFC52002886900031749 /* fit_buffered_mesg_broadcaster.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_buffered_mesg_broadcaster.hpp; sourceTree = "<group>"; };
-		9D27CFC62002886900031749 /* fit_sport_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_sport_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFC72002886900031749 /* fit_stress_level_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_stress_level_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFC82002886900031749 /* fit_dive_summary_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_summary_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFC92002886900031749 /* fit_video_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_video_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFCA2002886900031749 /* fit_developer_field.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_field.hpp; sourceTree = "<group>"; };
-		9D27CFCB2002886900031749 /* fit_weight_scale_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_weight_scale_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFCC2002886900031749 /* FitFieldDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FitFieldDefinition.h; sourceTree = "<group>"; };
-		9D27CFCD2002886900031749 /* fit_course_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_course_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFCE2002886900031749 /* fit_config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_config.hpp; sourceTree = "<group>"; };
-		9D27CFCF2002886900031749 /* fit_gyroscope_data_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_gyroscope_data_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFD02002886900031749 /* fit_lap_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_lap_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFD12002886900031749 /* fit_blood_pressure_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_blood_pressure_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFD22002886900031749 /* fit_ohr_settings_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_ohr_settings_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFD32002886900031749 /* fit_segment_id_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_id_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFD42002886900031749 /* fit_decode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_decode.hpp; sourceTree = "<group>"; };
-		9D27CFD52002886900031749 /* fit_protocol_validator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_protocol_validator.hpp; sourceTree = "<group>"; };
-		9D27CFD62002886900031749 /* fit_memo_glob_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_memo_glob_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFD72002886900031749 /* fit_segment_file_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_file_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFD82002886900031749 /* fit_segment_lap_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_lap_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFD92002886900031749 /* fit_developer_field_description_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_field_description_listener.hpp; sourceTree = "<group>"; };
-		9D27CFDA2002886900031749 /* fit_exd_screen_configuration_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_screen_configuration_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFDB2002886900031749 /* fit_exercise_title_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_exercise_title_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFDC2002886900031749 /* fit_training_file_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_training_file_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFDD2002886900031749 /* fit_user_profile_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_user_profile_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFDE2002886900031749 /* fit_software_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_software_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFDF2002886900031749 /* fit_length_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_length_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFE02002886900031749 /* fit_accumulator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_accumulator.hpp; sourceTree = "<group>"; };
-		9D27CFE12002886900031749 /* fit_accelerometer_data_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_accelerometer_data_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFE22002886900031749 /* fit_dive_gas_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_gas_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFE32002886900031749 /* fit_segment_file_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_file_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFE42002886900031749 /* fit_course_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_course_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFE52002886900031749 /* fit_event_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_event_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFE62002886900031749 /* fit_exd_screen_configuration_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_screen_configuration_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFE72002886900031749 /* fit_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFE82002886900031749 /* fit_video_frame_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_video_frame_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFE92002886900031749 /* fit_connectivity_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_connectivity_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFEA2002886900031749 /* fit_magnetometer_data_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_magnetometer_data_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFEB2002886900031749 /* fit_ohr_settings_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_ohr_settings_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFEC2002886900031749 /* fit_gps_metadata_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_gps_metadata_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFED2002886900031749 /* fit_power_zone_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_power_zone_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFEE2002886900031749 /* fit_buffered_record_mesg_broadcaster.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_buffered_record_mesg_broadcaster.hpp; sourceTree = "<group>"; };
-		9D27CFEF2002886900031749 /* fit_stress_level_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_stress_level_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFF02002886900031749 /* fit_hrm_profile_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_hrm_profile_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFF12002886900031749 /* fit_hr_mesg.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_hr_mesg.hpp; sourceTree = "<group>"; };
-		9D27CFF22002886900031749 /* fit_mesg_capabilities_mesg_listener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_capabilities_mesg_listener.hpp; sourceTree = "<group>"; };
-		9D27CFF32002886900031749 /* libFitSdkCppiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFitSdkCppiOS.a; sourceTree = "<group>"; };
 		9D27D1BA20028F7D00031749 /* Fit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D27D1C720028F9800031749 /* Fit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D27D20F20029F5600031749 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +83,425 @@
 		9D27D2312002A14600031749 /* ActivityExample.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ActivityExample.mm; sourceTree = "<group>"; };
 		9D27D23A2002A61A00031749 /* FitReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitReader.h; sourceTree = "<group>"; };
 		9D27D23B2002A61A00031749 /* FitReader.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FitReader.mm; sourceTree = "<group>"; };
+		9D27D2472002B18900031749 /* FitRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitRecord.h; sourceTree = "<group>"; };
+		9D27D2482002B18900031749 /* FitRecord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FitRecord.m; sourceTree = "<group>"; };
+		9D27D2582002CB2400031749 /* fit_power_zone_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_power_zone_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2592002CB2400031749 /* fit_segment_point_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_point_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D25A2002CB2400031749 /* fit_monitoring_info_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_monitoring_info_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D25B2002CB2400031749 /* fit_workout_step_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_step_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D25C2002CB2400031749 /* fit_dive_gas_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_gas_mesg.hpp; sourceTree = "<group>"; };
+		9D27D25D2002CB2400031749 /* fit_bike_profile_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_bike_profile_mesg.hpp; sourceTree = "<group>"; };
+		9D27D25E2002CB2400031749 /* fit_obdii_data_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_obdii_data_mesg.hpp; sourceTree = "<group>"; };
+		9D27D25F2002CB2400031749 /* fit_hrv_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hrv_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2602002CB2400031749 /* fit_sdm_profile_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_sdm_profile_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2612002CB2400031749 /* fit_session_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_session_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2622002CB2400031749 /* fit_ant_rx_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_rx_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2632002CB2400031749 /* fit_camera_event_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_camera_event_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2642002CB2400031749 /* fit_ant_tx_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_tx_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2652002CB2400031749 /* fit_mesg_broadcast_plugin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_broadcast_plugin.hpp; sourceTree = "<group>"; };
+		9D27D2662002CB2400031749 /* fit_weather_conditions_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_weather_conditions_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2672002CB2400031749 /* fit_segment_point_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_point_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2682002CB2400031749 /* fit_developer_data_id_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_data_id_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2692002CB2400031749 /* fit_software_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_software_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D26A2002CB2400031749 /* fit_watchface_settings_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_watchface_settings_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D26B2002CB2400031749 /* fit_monitoring_info_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_monitoring_info_mesg.hpp; sourceTree = "<group>"; };
+		9D27D26C2002CB2400031749 /* fit_barometer_data_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_barometer_data_mesg.hpp; sourceTree = "<group>"; };
+		9D27D26D2002CB2400031749 /* fit_field_capabilities_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field_capabilities_mesg.hpp; sourceTree = "<group>"; };
+		9D27D26E2002CB2400031749 /* fit_accumulated_field.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_accumulated_field.hpp; sourceTree = "<group>"; };
+		9D27D26F2002CB2400031749 /* fit_cadence_zone_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_cadence_zone_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2702002CB2400031749 /* fit_unicode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_unicode.hpp; sourceTree = "<group>"; };
+		9D27D2712002CB2400031749 /* fit_slave_device_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_slave_device_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2722002CB2400031749 /* fit_ant_channel_id_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_channel_id_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2732002CB2400031749 /* fit_file_id_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_file_id_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2742002CB2400031749 /* fit_record_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_record_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2752002CB2400031749 /* fit_segment_leaderboard_entry_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_leaderboard_entry_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2762002CB2400031749 /* fit_video_clip_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_clip_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2772002CB2400031749 /* fit_file_creator_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_file_creator_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2782002CB2400031749 /* fit_exd_data_field_configuration_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_data_field_configuration_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2792002CB2400031749 /* fit_ant_rx_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_rx_mesg.hpp; sourceTree = "<group>"; };
+		9D27D27A2002CB2400031749 /* fit_field_description_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field_description_mesg.hpp; sourceTree = "<group>"; };
+		9D27D27B2002CB2400031749 /* fit_schedule_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_schedule_mesg.hpp; sourceTree = "<group>"; };
+		9D27D27C2002CB2400031749 /* fit_zones_target_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_zones_target_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D27D2002CB2400031749 /* fit_video_clip_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_clip_mesg.hpp; sourceTree = "<group>"; };
+		9D27D27E2002CB2400031749 /* fit_device_settings_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_device_settings_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D27F2002CB2400031749 /* FitMesg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitMesg.h; sourceTree = "<group>"; };
+		9D27D2802002CB2400031749 /* fit_accelerometer_data_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_accelerometer_data_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2812002CB2400031749 /* fit_met_zone_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_met_zone_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2822002CB2400031749 /* fit_hrm_profile_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hrm_profile_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2832002CB2400031749 /* fit_speed_zone_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_speed_zone_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2842002CB2400031749 /* fit_weather_alert_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_weather_alert_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2852002CB2400031749 /* fit_goal_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_goal_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2862002CB2400031749 /* fit_factory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_factory.hpp; sourceTree = "<group>"; };
+		9D27D2872002CB2400031749 /* fit_memo_glob_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_memo_glob_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2882002CB2400031749 /* FitMesgDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitMesgDefinition.h; sourceTree = "<group>"; };
+		9D27D2892002CB2400031749 /* fit_cadence_zone_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_cadence_zone_mesg.hpp; sourceTree = "<group>"; };
+		9D27D28A2002CB2400031749 /* fit_buffered_record_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_buffered_record_mesg.hpp; sourceTree = "<group>"; };
+		9D27D28B2002CB2400031749 /* fit_workout_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D28C2002CB2400031749 /* fit_gps_metadata_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_gps_metadata_mesg.hpp; sourceTree = "<group>"; };
+		9D27D28D2002CB2400031749 /* fit_three_d_sensor_calibration_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_three_d_sensor_calibration_mesg.hpp; sourceTree = "<group>"; };
+		9D27D28E2002CB2400031749 /* fit_video_title_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_title_mesg.hpp; sourceTree = "<group>"; };
+		9D27D28F2002CB2400031749 /* fit_three_d_sensor_calibration_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_three_d_sensor_calibration_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2902002CB2400031749 /* fit_buffered_record_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_buffered_record_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2912002CB2400031749 /* fit_activity_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_activity_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2922002CB2400031749 /* fit_runtime_exception.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_runtime_exception.hpp; sourceTree = "<group>"; };
+		9D27D2932002CB2400031749 /* FitField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitField.h; sourceTree = "<group>"; };
+		9D27D2942002CB2400031749 /* fit_record_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_record_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2952002CB2400031749 /* fit_aviation_attitude_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_aviation_attitude_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2962002CB2400031749 /* fit_user_profile_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_user_profile_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2972002CB2400031749 /* fit_monitoring_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_monitoring_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2982002CB2400031749 /* fit_session_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_session_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2992002CB2400031749 /* fit_schedule_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_schedule_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D29A2002CB2400031749 /* fit_hr_zone_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hr_zone_mesg.hpp; sourceTree = "<group>"; };
+		9D27D29B2002CB2400031749 /* fit_developer_field_definition.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_field_definition.hpp; sourceTree = "<group>"; };
+		9D27D29C2002CB2400031749 /* fit_mesg_broadcaster.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_broadcaster.hpp; sourceTree = "<group>"; };
+		9D27D29D2002CB2400031749 /* FitDeveloperField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitDeveloperField.h; sourceTree = "<group>"; };
+		9D27D29E2002CB2400031749 /* fit_mesg_capabilities_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_capabilities_mesg.hpp; sourceTree = "<group>"; };
+		9D27D29F2002CB2400031749 /* fit_device_info_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_device_info_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2A02002CB2400031749 /* fit_field_base.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field_base.hpp; sourceTree = "<group>"; };
+		9D27D2A12002CB2400031749 /* fit_mesg_with_event_broadcaster.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_with_event_broadcaster.hpp; sourceTree = "<group>"; };
+		9D27D2A22002CB2400031749 /* fit_length_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_length_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2A32002CB2400031749 /* fit_workout_step_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_step_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2A42002CB2400031749 /* fit_course_point_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_course_point_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2A52002CB2400031749 /* fit_workout_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2A62002CB2400031749 /* fit_activity_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_activity_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2A72002CB2400031749 /* fit_video_frame_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_frame_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2A82002CB2400031749 /* fit_bike_profile_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_bike_profile_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2A92002CB2400031749 /* fit_exd_data_field_configuration_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_data_field_configuration_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2AA2002CB2400031749 /* fit_video_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2AB2002CB2400031749 /* fit_sport_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_sport_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2AC2002CB2400031749 /* fit_sdm_profile_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_sdm_profile_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2AD2002CB2400031749 /* fit_dive_settings_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_settings_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2AE2002CB2400031749 /* fit_gyroscope_data_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_gyroscope_data_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2AF2002CB2400031749 /* fit_segment_leaderboard_entry_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_leaderboard_entry_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2B02002CB2400031749 /* fit_timestamp_correlation_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_timestamp_correlation_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2B12002CB2400031749 /* fit_segment_id_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_id_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2B22002CB2400031749 /* fit_camera_event_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_camera_event_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2B32002CB2400031749 /* fit_totals_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_totals_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2B42002CB2400031749 /* fit_file_capabilities_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_file_capabilities_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2B52002CB2400031749 /* fit_magnetometer_data_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_magnetometer_data_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2B62002CB2400031749 /* fit_mesg_with_event.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_with_event.hpp; sourceTree = "<group>"; };
+		9D27D2B72002CB2400031749 /* fit_monitoring_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_monitoring_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2B82002CB2400031749 /* fit_nmea_sentence_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_nmea_sentence_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2B92002CB2400031749 /* fit_crc.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_crc.hpp; sourceTree = "<group>"; };
+		9D27D2BA2002CB2400031749 /* fit_video_description_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_description_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2BB2002CB2400031749 /* fit_event_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_event_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2BC2002CB2400031749 /* fit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit.hpp; sourceTree = "<group>"; };
+		9D27D2BD2002CB2400031749 /* fit_ant_tx_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_tx_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2BE2002CB2400031749 /* fit_exercise_title_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exercise_title_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2BF2002CB2400031749 /* fit_workout_session_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_session_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2C02002CB2400031749 /* fit_barometer_data_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_barometer_data_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2C12002CB2400031749 /* fit_lap_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_lap_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2C22002CB2400031749 /* fit_one_d_sensor_calibration_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_one_d_sensor_calibration_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2C32002CB2400031749 /* fit_dive_alarm_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_alarm_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2C42002CB2400031749 /* fit_file_capabilities_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_file_capabilities_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2C52002CB2400031749 /* fit_nmea_sentence_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_nmea_sentence_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2C62002CB2400031749 /* fit_ant_channel_id_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_channel_id_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2C72002CB2400031749 /* fit_field.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field.hpp; sourceTree = "<group>"; };
+		9D27D2C82002CB2400031749 /* fit_mesg_with_event_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_with_event_listener.hpp; sourceTree = "<group>"; };
+		9D27D2C92002CB2400031749 /* fit_goal_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_goal_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2CA2002CB2400031749 /* fit_workout_session_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_session_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2CB2002CB2400031749 /* fit_zones_target_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_zones_target_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2CC2002CB2400031749 /* fit_field_description_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field_description_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2CD2002CB2400031749 /* fit_profile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_profile.hpp; sourceTree = "<group>"; };
+		9D27D2CE2002CB2400031749 /* fit_dive_summary_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_summary_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2CF2002CB2400031749 /* fit_dive_settings_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_settings_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2D02002CB2400031749 /* fit_hrv_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hrv_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2D12002CB2400031749 /* fit_met_zone_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_met_zone_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2D22002CB2400031749 /* fit_capabilities_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_capabilities_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2D32002CB2400031749 /* fit_aviation_attitude_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_aviation_attitude_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2D42002CB2400031749 /* fit_capabilities_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_capabilities_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2D52002CB2400031749 /* fit_file_id_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_file_id_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2D62002CB2400031749 /* fit_exd_data_concept_configuration_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_data_concept_configuration_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2D72002CB2400031749 /* fit_speed_zone_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_speed_zone_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2D82002CB2400031749 /* fit_watchface_settings_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_watchface_settings_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2D92002CB2400031749 /* fit_pad_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_pad_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2DA2002CB2400031749 /* fit_obdii_data_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_obdii_data_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2DB2002CB2400031749 /* fit_device_settings_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_device_settings_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2DC2002CB2400031749 /* fit_totals_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_totals_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2DD2002CB2400031749 /* fit_connectivity_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_connectivity_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2DE2002CB2400031749 /* fit_mesg_definition.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_definition.hpp; sourceTree = "<group>"; };
+		9D27D2DF2002CB2400031749 /* fit_video_title_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_title_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2E02002CB2400031749 /* FitDecode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitDecode.h; sourceTree = "<group>"; };
+		9D27D2E12002CB2400031749 /* fit_segment_lap_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_lap_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2E22002CB2400031749 /* fit_training_file_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_training_file_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2E32002CB2400031749 /* fit_file_creator_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_file_creator_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2E42002CB2400031749 /* fit_blood_pressure_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_blood_pressure_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2E52002CB2400031749 /* fit_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2E62002CB2400031749 /* fit_encode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_encode.hpp; sourceTree = "<group>"; };
+		9D27D2E72002CB2400031749 /* fit_device_info_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_device_info_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2E82002CB2400031749 /* fit_one_d_sensor_calibration_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_one_d_sensor_calibration_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2E92002CB2400031749 /* fit_mesg_definition_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_definition_listener.hpp; sourceTree = "<group>"; };
+		9D27D2EA2002CB2400031749 /* fit_weather_conditions_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_weather_conditions_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2EB2002CB2400031749 /* fit_date_time.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_date_time.hpp; sourceTree = "<group>"; };
+		9D27D2EC2002CB2400031749 /* fit_field_definition.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field_definition.hpp; sourceTree = "<group>"; };
+		9D27D2ED2002CB2400031749 /* fit_field_capabilities_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field_capabilities_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2EE2002CB2400031749 /* fit_developer_field_description.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_field_description.hpp; sourceTree = "<group>"; };
+		9D27D2EF2002CB2400031749 /* fit_course_point_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_course_point_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2F02002CB2400031749 /* FitEncode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitEncode.h; sourceTree = "<group>"; };
+		9D27D2F12002CB2400031749 /* fit_hr_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hr_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2F22002CB2400031749 /* fit_slave_device_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_slave_device_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2F32002CB2400031749 /* fit_dive_alarm_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_alarm_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2F42002CB2400031749 /* fit_hr_zone_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hr_zone_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2F52002CB2400031749 /* fit_weight_scale_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_weight_scale_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2F62002CB2400031749 /* fit_pad_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_pad_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2F72002CB2400031749 /* fit_buffer_encode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_buffer_encode.hpp; sourceTree = "<group>"; };
+		9D27D2F82002CB2400031749 /* fit_video_description_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_description_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2F92002CB2400031749 /* fit_developer_data_id_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_data_id_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2FA2002CB2400031749 /* fit_timestamp_correlation_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_timestamp_correlation_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2FB2002CB2400031749 /* fit_weather_alert_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_weather_alert_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2FC2002CB2400031749 /* fit_exd_data_concept_configuration_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_data_concept_configuration_mesg.hpp; sourceTree = "<group>"; };
+		9D27D2FD2002CB2400031749 /* fit_buffered_mesg_broadcaster.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_buffered_mesg_broadcaster.hpp; sourceTree = "<group>"; };
+		9D27D2FE2002CB2400031749 /* fit_sport_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_sport_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D2FF2002CB2400031749 /* fit_stress_level_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_stress_level_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3002002CB2400031749 /* fit_dive_summary_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_summary_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3012002CB2400031749 /* fit_video_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3022002CB2400031749 /* fit_developer_field.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_field.hpp; sourceTree = "<group>"; };
+		9D27D3032002CB2400031749 /* fit_weight_scale_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_weight_scale_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3042002CB2400031749 /* FitFieldDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitFieldDefinition.h; sourceTree = "<group>"; };
+		9D27D3052002CB2400031749 /* fit_course_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_course_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3062002CB2400031749 /* fit_config.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_config.hpp; sourceTree = "<group>"; };
+		9D27D3072002CB2400031749 /* fit_gyroscope_data_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_gyroscope_data_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3082002CB2400031749 /* fit_lap_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_lap_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3092002CB2400031749 /* fit_blood_pressure_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_blood_pressure_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D30A2002CB2400031749 /* fit_ohr_settings_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ohr_settings_mesg.hpp; sourceTree = "<group>"; };
+		9D27D30B2002CB2400031749 /* fit_segment_id_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_id_mesg.hpp; sourceTree = "<group>"; };
+		9D27D30C2002CB2400031749 /* fit_decode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_decode.hpp; sourceTree = "<group>"; };
+		9D27D30D2002CB2400031749 /* fit_protocol_validator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_protocol_validator.hpp; sourceTree = "<group>"; };
+		9D27D30E2002CB2400031749 /* fit_memo_glob_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_memo_glob_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D30F2002CB2400031749 /* fit_segment_file_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_file_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3102002CB2400031749 /* fit_segment_lap_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_lap_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3112002CB2400031749 /* fit_developer_field_description_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_field_description_listener.hpp; sourceTree = "<group>"; };
+		9D27D3122002CB2400031749 /* fit_exd_screen_configuration_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_screen_configuration_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3132002CB2400031749 /* fit_exercise_title_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exercise_title_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3142002CB2400031749 /* fit_training_file_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_training_file_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3152002CB2400031749 /* fit_user_profile_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_user_profile_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3162002CB2400031749 /* fit_software_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_software_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3172002CB2400031749 /* fit_length_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_length_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3182002CB2400031749 /* fit_accumulator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_accumulator.hpp; sourceTree = "<group>"; };
+		9D27D3192002CB2400031749 /* fit_accelerometer_data_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_accelerometer_data_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D31A2002CB2400031749 /* fit_dive_gas_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_gas_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D31B2002CB2400031749 /* fit_segment_file_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_file_mesg.hpp; sourceTree = "<group>"; };
+		9D27D31C2002CB2400031749 /* fit_course_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_course_mesg.hpp; sourceTree = "<group>"; };
+		9D27D31D2002CB2400031749 /* fit_event_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_event_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D31E2002CB2400031749 /* fit_exd_screen_configuration_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_screen_configuration_mesg.hpp; sourceTree = "<group>"; };
+		9D27D31F2002CB2400031749 /* fit_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3202002CB2400031749 /* fit_video_frame_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_frame_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3212002CB2400031749 /* fit_connectivity_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_connectivity_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3222002CB2400031749 /* fit_magnetometer_data_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_magnetometer_data_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3232002CB2400031749 /* fit_ohr_settings_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ohr_settings_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3242002CB2400031749 /* fit_gps_metadata_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_gps_metadata_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3252002CB2400031749 /* fit_power_zone_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_power_zone_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3262002CB2400031749 /* fit_buffered_record_mesg_broadcaster.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_buffered_record_mesg_broadcaster.hpp; sourceTree = "<group>"; };
+		9D27D3272002CB2400031749 /* fit_stress_level_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_stress_level_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3282002CB2400031749 /* fit_hrm_profile_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hrm_profile_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3292002CB2400031749 /* fit_hr_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hr_mesg.hpp; sourceTree = "<group>"; };
+		9D27D32A2002CB2400031749 /* fit_mesg_capabilities_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_capabilities_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D32B2002CB2400031749 /* libFitSdkCppiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFitSdkCppiOS.a; sourceTree = "<group>"; };
+		9D27D3302002CB2400031749 /* fit_power_zone_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_power_zone_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3312002CB2400031749 /* fit_segment_point_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_point_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3322002CB2400031749 /* fit_monitoring_info_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_monitoring_info_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3332002CB2400031749 /* fit_workout_step_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_step_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3342002CB2400031749 /* fit_dive_gas_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_gas_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3352002CB2400031749 /* fit_bike_profile_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_bike_profile_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3362002CB2400031749 /* fit_obdii_data_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_obdii_data_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3372002CB2400031749 /* fit_hrv_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hrv_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3382002CB2400031749 /* fit_sdm_profile_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_sdm_profile_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3392002CB2400031749 /* fit_session_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_session_mesg.hpp; sourceTree = "<group>"; };
+		9D27D33A2002CB2400031749 /* fit_ant_rx_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_rx_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D33B2002CB2400031749 /* fit_camera_event_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_camera_event_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D33C2002CB2400031749 /* fit_ant_tx_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_tx_mesg.hpp; sourceTree = "<group>"; };
+		9D27D33D2002CB2400031749 /* fit_mesg_broadcast_plugin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_broadcast_plugin.hpp; sourceTree = "<group>"; };
+		9D27D33E2002CB2400031749 /* fit_weather_conditions_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_weather_conditions_mesg.hpp; sourceTree = "<group>"; };
+		9D27D33F2002CB2400031749 /* fit_segment_point_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_point_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3402002CB2400031749 /* fit_developer_data_id_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_data_id_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3412002CB2400031749 /* fit_software_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_software_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3422002CB2400031749 /* fit_watchface_settings_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_watchface_settings_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3432002CB2400031749 /* fit_monitoring_info_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_monitoring_info_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3442002CB2400031749 /* fit_barometer_data_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_barometer_data_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3452002CB2400031749 /* fit_field_capabilities_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field_capabilities_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3462002CB2400031749 /* fit_accumulated_field.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_accumulated_field.hpp; sourceTree = "<group>"; };
+		9D27D3472002CB2400031749 /* fit_cadence_zone_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_cadence_zone_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3482002CB2400031749 /* fit_unicode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_unicode.hpp; sourceTree = "<group>"; };
+		9D27D3492002CB2400031749 /* fit_slave_device_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_slave_device_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D34A2002CB2400031749 /* fit_ant_channel_id_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_channel_id_mesg.hpp; sourceTree = "<group>"; };
+		9D27D34B2002CB2400031749 /* fit_file_id_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_file_id_mesg.hpp; sourceTree = "<group>"; };
+		9D27D34C2002CB2400031749 /* fit_record_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_record_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D34D2002CB2400031749 /* fit_segment_leaderboard_entry_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_leaderboard_entry_mesg.hpp; sourceTree = "<group>"; };
+		9D27D34E2002CB2400031749 /* fit_video_clip_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_clip_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D34F2002CB2400031749 /* fit_file_creator_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_file_creator_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3502002CB2400031749 /* fit_exd_data_field_configuration_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_data_field_configuration_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3512002CB2400031749 /* fit_ant_rx_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_rx_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3522002CB2400031749 /* fit_field_description_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field_description_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3532002CB2400031749 /* fit_schedule_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_schedule_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3542002CB2400031749 /* fit_zones_target_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_zones_target_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3552002CB2400031749 /* fit_video_clip_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_clip_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3562002CB2400031749 /* fit_device_settings_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_device_settings_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3572002CB2400031749 /* fit_accelerometer_data_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_accelerometer_data_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3582002CB2400031749 /* fit_met_zone_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_met_zone_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3592002CB2400031749 /* fit_hrm_profile_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hrm_profile_mesg.hpp; sourceTree = "<group>"; };
+		9D27D35A2002CB2400031749 /* fit_speed_zone_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_speed_zone_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D35B2002CB2400031749 /* fit_weather_alert_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_weather_alert_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D35C2002CB2400031749 /* fit_goal_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_goal_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D35D2002CB2400031749 /* fit_factory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_factory.hpp; sourceTree = "<group>"; };
+		9D27D35E2002CB2400031749 /* fit_memo_glob_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_memo_glob_mesg.hpp; sourceTree = "<group>"; };
+		9D27D35F2002CB2400031749 /* fit_cadence_zone_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_cadence_zone_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3602002CB2400031749 /* fit_buffered_record_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_buffered_record_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3612002CB2400031749 /* fit_workout_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3622002CB2400031749 /* fit_gps_metadata_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_gps_metadata_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3632002CB2400031749 /* fit_three_d_sensor_calibration_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_three_d_sensor_calibration_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3642002CB2400031749 /* fit_video_title_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_title_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3652002CB2400031749 /* fit_three_d_sensor_calibration_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_three_d_sensor_calibration_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3662002CB2400031749 /* fit_buffered_record_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_buffered_record_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3672002CB2400031749 /* fit_activity_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_activity_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3682002CB2400031749 /* fit_runtime_exception.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_runtime_exception.hpp; sourceTree = "<group>"; };
+		9D27D3692002CB2400031749 /* fit_record_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_record_mesg.hpp; sourceTree = "<group>"; };
+		9D27D36A2002CB2400031749 /* fit_aviation_attitude_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_aviation_attitude_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D36B2002CB2400031749 /* fit_user_profile_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_user_profile_mesg.hpp; sourceTree = "<group>"; };
+		9D27D36C2002CB2400031749 /* fit_monitoring_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_monitoring_mesg.hpp; sourceTree = "<group>"; };
+		9D27D36D2002CB2400031749 /* fit_session_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_session_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D36E2002CB2400031749 /* fit_schedule_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_schedule_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D36F2002CB2400031749 /* fit_hr_zone_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hr_zone_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3702002CB2400031749 /* fit_developer_field_definition.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_field_definition.hpp; sourceTree = "<group>"; };
+		9D27D3712002CB2400031749 /* fit_mesg_broadcaster.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_broadcaster.hpp; sourceTree = "<group>"; };
+		9D27D3722002CB2400031749 /* fit_mesg_capabilities_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_capabilities_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3732002CB2400031749 /* fit_device_info_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_device_info_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3742002CB2400031749 /* fit_field_base.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field_base.hpp; sourceTree = "<group>"; };
+		9D27D3752002CB2400031749 /* fit_mesg_with_event_broadcaster.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_with_event_broadcaster.hpp; sourceTree = "<group>"; };
+		9D27D3762002CB2400031749 /* fit_length_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_length_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3772002CB2400031749 /* fit_workout_step_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_step_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3782002CB2400031749 /* fit_course_point_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_course_point_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3792002CB2400031749 /* fit_workout_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_mesg.hpp; sourceTree = "<group>"; };
+		9D27D37A2002CB2400031749 /* fit_activity_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_activity_mesg.hpp; sourceTree = "<group>"; };
+		9D27D37B2002CB2400031749 /* fit_video_frame_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_frame_mesg.hpp; sourceTree = "<group>"; };
+		9D27D37C2002CB2400031749 /* fit_bike_profile_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_bike_profile_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D37D2002CB2400031749 /* fit_exd_data_field_configuration_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_data_field_configuration_mesg.hpp; sourceTree = "<group>"; };
+		9D27D37E2002CB2400031749 /* fit_video_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_mesg.hpp; sourceTree = "<group>"; };
+		9D27D37F2002CB2400031749 /* fit_sport_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_sport_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3802002CB2400031749 /* fit_sdm_profile_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_sdm_profile_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3812002CB2400031749 /* fit_dive_settings_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_settings_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3822002CB2400031749 /* fit_gyroscope_data_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_gyroscope_data_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3832002CB2400031749 /* fit_segment_leaderboard_entry_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_leaderboard_entry_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3842002CB2400031749 /* fit_timestamp_correlation_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_timestamp_correlation_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3852002CB2400031749 /* fit_segment_id_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_id_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3862002CB2400031749 /* fit_camera_event_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_camera_event_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3872002CB2400031749 /* fit_totals_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_totals_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3882002CB2400031749 /* fit_file_capabilities_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_file_capabilities_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3892002CB2400031749 /* fit_magnetometer_data_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_magnetometer_data_mesg.hpp; sourceTree = "<group>"; };
+		9D27D38A2002CB2400031749 /* fit_mesg_with_event.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_with_event.hpp; sourceTree = "<group>"; };
+		9D27D38B2002CB2400031749 /* fit_monitoring_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_monitoring_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D38C2002CB2400031749 /* fit_nmea_sentence_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_nmea_sentence_mesg.hpp; sourceTree = "<group>"; };
+		9D27D38D2002CB2400031749 /* fit_crc.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_crc.hpp; sourceTree = "<group>"; };
+		9D27D38E2002CB2400031749 /* fit_video_description_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_description_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D38F2002CB2400031749 /* fit_event_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_event_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3902002CB2400031749 /* fit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit.hpp; sourceTree = "<group>"; };
+		9D27D3912002CB2400031749 /* fit_ant_tx_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_tx_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3922002CB2400031749 /* fit_exercise_title_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exercise_title_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3932002CB2400031749 /* fit_workout_session_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_session_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3942002CB2400031749 /* fit_barometer_data_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_barometer_data_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3952002CB2400031749 /* fit_lap_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_lap_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3962002CB2400031749 /* fit_one_d_sensor_calibration_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_one_d_sensor_calibration_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3972002CB2400031749 /* fit_dive_alarm_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_alarm_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3982002CB2400031749 /* fit_file_capabilities_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_file_capabilities_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3992002CB2400031749 /* fit_nmea_sentence_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_nmea_sentence_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D39A2002CB2400031749 /* fit_ant_channel_id_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ant_channel_id_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D39B2002CB2400031749 /* fit_field.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field.hpp; sourceTree = "<group>"; };
+		9D27D39C2002CB2400031749 /* fit_mesg_with_event_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_with_event_listener.hpp; sourceTree = "<group>"; };
+		9D27D39D2002CB2400031749 /* fit_goal_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_goal_mesg.hpp; sourceTree = "<group>"; };
+		9D27D39E2002CB2400031749 /* fit_workout_session_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_workout_session_mesg.hpp; sourceTree = "<group>"; };
+		9D27D39F2002CB2400031749 /* fit_zones_target_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_zones_target_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3A02002CB2400031749 /* fit_field_description_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field_description_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3A12002CB2400031749 /* fit_profile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_profile.hpp; sourceTree = "<group>"; };
+		9D27D3A22002CB2400031749 /* fit_dive_summary_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_summary_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3A32002CB2400031749 /* fit_dive_settings_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_settings_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3A42002CB2400031749 /* fit_hrv_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hrv_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3A52002CB2400031749 /* fit_met_zone_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_met_zone_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3A62002CB2400031749 /* fit_capabilities_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_capabilities_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3A72002CB2400031749 /* fit_aviation_attitude_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_aviation_attitude_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3A82002CB2400031749 /* fit_capabilities_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_capabilities_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3A92002CB2400031749 /* fit_file_id_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_file_id_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3AA2002CB2400031749 /* fit_exd_data_concept_configuration_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_data_concept_configuration_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3AB2002CB2400031749 /* fit_speed_zone_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_speed_zone_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3AC2002CB2400031749 /* fit_watchface_settings_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_watchface_settings_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3AD2002CB2400031749 /* fit_pad_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_pad_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3AE2002CB2400031749 /* fit_obdii_data_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_obdii_data_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3AF2002CB2400031749 /* fit_device_settings_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_device_settings_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3B02002CB2400031749 /* fit_totals_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_totals_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3B12002CB2400031749 /* fit_connectivity_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_connectivity_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3B22002CB2400031749 /* fit_mesg_definition.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_definition.hpp; sourceTree = "<group>"; };
+		9D27D3B32002CB2400031749 /* fit_video_title_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_title_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3B42002CB2400031749 /* fit_segment_lap_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_lap_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3B52002CB2400031749 /* fit_training_file_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_training_file_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3B62002CB2400031749 /* fit_file_creator_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_file_creator_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3B72002CB2400031749 /* fit_blood_pressure_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_blood_pressure_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3B82002CB2400031749 /* fit_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3B92002CB2400031749 /* fit_encode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_encode.hpp; sourceTree = "<group>"; };
+		9D27D3BA2002CB2400031749 /* fit_device_info_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_device_info_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3BB2002CB2400031749 /* fit_one_d_sensor_calibration_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_one_d_sensor_calibration_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3BC2002CB2400031749 /* fit_mesg_definition_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_definition_listener.hpp; sourceTree = "<group>"; };
+		9D27D3BD2002CB2400031749 /* fit_weather_conditions_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_weather_conditions_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3BE2002CB2400031749 /* fit_date_time.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_date_time.hpp; sourceTree = "<group>"; };
+		9D27D3BF2002CB2400031749 /* fit_field_definition.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field_definition.hpp; sourceTree = "<group>"; };
+		9D27D3C02002CB2400031749 /* fit_field_capabilities_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_field_capabilities_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3C12002CB2400031749 /* fit_developer_field_description.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_field_description.hpp; sourceTree = "<group>"; };
+		9D27D3C22002CB2400031749 /* fit_course_point_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_course_point_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3C32002CB2400031749 /* fit_hr_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hr_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3C42002CB2400031749 /* fit_slave_device_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_slave_device_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3C52002CB2400031749 /* fit_dive_alarm_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_alarm_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3C62002CB2400031749 /* fit_hr_zone_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hr_zone_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3C72002CB2400031749 /* fit_weight_scale_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_weight_scale_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3C82002CB2400031749 /* fit_pad_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_pad_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3C92002CB2400031749 /* fit_buffer_encode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_buffer_encode.hpp; sourceTree = "<group>"; };
+		9D27D3CA2002CB2400031749 /* fit_video_description_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_description_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3CB2002CB2400031749 /* fit_developer_data_id_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_data_id_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3CC2002CB2400031749 /* fit_timestamp_correlation_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_timestamp_correlation_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3CD2002CB2400031749 /* fit_weather_alert_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_weather_alert_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3CE2002CB2400031749 /* fit_exd_data_concept_configuration_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_data_concept_configuration_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3CF2002CB2400031749 /* fit_buffered_mesg_broadcaster.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_buffered_mesg_broadcaster.hpp; sourceTree = "<group>"; };
+		9D27D3D02002CB2500031749 /* fit_sport_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_sport_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3D12002CB2500031749 /* fit_stress_level_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_stress_level_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3D22002CB2500031749 /* fit_dive_summary_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_summary_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3D32002CB2500031749 /* fit_video_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3D42002CB2500031749 /* fit_developer_field.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_field.hpp; sourceTree = "<group>"; };
+		9D27D3D52002CB2500031749 /* fit_weight_scale_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_weight_scale_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3D62002CB2500031749 /* fit_course_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_course_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3D72002CB2500031749 /* fit_config.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_config.hpp; sourceTree = "<group>"; };
+		9D27D3D82002CB2500031749 /* fit_gyroscope_data_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_gyroscope_data_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3D92002CB2500031749 /* fit_lap_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_lap_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3DA2002CB2500031749 /* fit_blood_pressure_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_blood_pressure_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3DB2002CB2500031749 /* fit_ohr_settings_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ohr_settings_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3DC2002CB2500031749 /* fit_segment_id_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_id_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3DD2002CB2500031749 /* fit_decode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_decode.hpp; sourceTree = "<group>"; };
+		9D27D3DE2002CB2500031749 /* fit_protocol_validator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_protocol_validator.hpp; sourceTree = "<group>"; };
+		9D27D3DF2002CB2500031749 /* fit_memo_glob_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_memo_glob_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3E02002CB2500031749 /* fit_segment_file_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_file_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3E12002CB2500031749 /* fit_segment_lap_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_lap_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3E22002CB2500031749 /* fit_developer_field_description_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_developer_field_description_listener.hpp; sourceTree = "<group>"; };
+		9D27D3E32002CB2500031749 /* fit_exd_screen_configuration_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_screen_configuration_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3E42002CB2500031749 /* fit_exercise_title_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exercise_title_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3E52002CB2500031749 /* fit_training_file_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_training_file_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3E62002CB2500031749 /* fit_user_profile_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_user_profile_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3E72002CB2500031749 /* fit_software_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_software_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3E82002CB2500031749 /* fit_length_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_length_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3E92002CB2500031749 /* fit_accumulator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_accumulator.hpp; sourceTree = "<group>"; };
+		9D27D3EA2002CB2500031749 /* fit_accelerometer_data_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_accelerometer_data_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3EB2002CB2500031749 /* fit_dive_gas_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_dive_gas_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3EC2002CB2500031749 /* fit_segment_file_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_segment_file_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3ED2002CB2500031749 /* fit_course_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_course_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3EE2002CB2500031749 /* fit_event_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_event_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3EF2002CB2500031749 /* fit_exd_screen_configuration_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_exd_screen_configuration_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3F02002CB2500031749 /* fit_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3F12002CB2500031749 /* fit_video_frame_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_video_frame_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3F22002CB2500031749 /* fit_connectivity_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_connectivity_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3F32002CB2500031749 /* fit_magnetometer_data_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_magnetometer_data_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3F42002CB2500031749 /* fit_ohr_settings_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_ohr_settings_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3F52002CB2500031749 /* fit_gps_metadata_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_gps_metadata_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3F62002CB2500031749 /* fit_power_zone_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_power_zone_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3F72002CB2500031749 /* fit_buffered_record_mesg_broadcaster.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_buffered_record_mesg_broadcaster.hpp; sourceTree = "<group>"; };
+		9D27D3F82002CB2500031749 /* fit_stress_level_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_stress_level_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3F92002CB2500031749 /* fit_hrm_profile_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hrm_profile_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3FA2002CB2500031749 /* fit_hr_mesg.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_hr_mesg.hpp; sourceTree = "<group>"; };
+		9D27D3FB2002CB2500031749 /* fit_mesg_capabilities_mesg_listener.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fit_mesg_capabilities_mesg_listener.hpp; sourceTree = "<group>"; };
+		9D27D3FC2002CB2500031749 /* libFitSdkCpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFitSdkCpp.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,7 +509,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D27D2452002A94400031749 /* libFitSdkCppiOS.a in Frameworks */,
+				9D27D3FD2002CB2F00031749 /* libFitSdkCppiOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +517,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D27D3FE2002CB3300031749 /* libFitSdkCpp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,244 +565,10 @@
 		9D27CF1C2002886900031749 /* FitSDK */ = {
 			isa = PBXGroup;
 			children = (
-				9D27CF1D2002886900031749 /* usr */,
-				9D27CFF32002886900031749 /* libFitSdkCppiOS.a */,
+				9D27D2542002CB2400031749 /* iOS */,
+				9D27D32C2002CB2400031749 /* macOS */,
 			);
 			path = FitSDK;
-			sourceTree = "<group>";
-		};
-		9D27CF1D2002886900031749 /* usr */ = {
-			isa = PBXGroup;
-			children = (
-				9D27CF1E2002886900031749 /* local */,
-			);
-			path = usr;
-			sourceTree = "<group>";
-		};
-		9D27CF1E2002886900031749 /* local */ = {
-			isa = PBXGroup;
-			children = (
-				9D27CF1F2002886900031749 /* include */,
-			);
-			path = local;
-			sourceTree = "<group>";
-		};
-		9D27CF1F2002886900031749 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				9D27CF202002886900031749 /* fit_power_zone_mesg_listener.hpp */,
-				9D27CF212002886900031749 /* fit_segment_point_mesg_listener.hpp */,
-				9D27CF222002886900031749 /* fit_monitoring_info_mesg_listener.hpp */,
-				9D27CF232002886900031749 /* fit_workout_step_mesg_listener.hpp */,
-				9D27CF242002886900031749 /* fit_dive_gas_mesg.hpp */,
-				9D27CF252002886900031749 /* fit_bike_profile_mesg.hpp */,
-				9D27CF262002886900031749 /* fit_obdii_data_mesg.hpp */,
-				9D27CF272002886900031749 /* fit_hrv_mesg.hpp */,
-				9D27CF282002886900031749 /* fit_sdm_profile_mesg.hpp */,
-				9D27CF292002886900031749 /* fit_session_mesg.hpp */,
-				9D27CF2A2002886900031749 /* fit_ant_rx_mesg_listener.hpp */,
-				9D27CF2B2002886900031749 /* fit_camera_event_mesg_listener.hpp */,
-				9D27CF2C2002886900031749 /* fit_ant_tx_mesg.hpp */,
-				9D27CF2D2002886900031749 /* fit_mesg_broadcast_plugin.hpp */,
-				9D27CF2E2002886900031749 /* fit_weather_conditions_mesg.hpp */,
-				9D27CF2F2002886900031749 /* fit_segment_point_mesg.hpp */,
-				9D27CF302002886900031749 /* fit_developer_data_id_mesg.hpp */,
-				9D27CF312002886900031749 /* fit_software_mesg_listener.hpp */,
-				9D27CF322002886900031749 /* fit_watchface_settings_mesg_listener.hpp */,
-				9D27CF332002886900031749 /* fit_monitoring_info_mesg.hpp */,
-				9D27CF342002886900031749 /* fit_barometer_data_mesg.hpp */,
-				9D27CF352002886900031749 /* fit_field_capabilities_mesg.hpp */,
-				9D27CF362002886900031749 /* fit_accumulated_field.hpp */,
-				9D27CF372002886900031749 /* fit_cadence_zone_mesg_listener.hpp */,
-				9D27CF382002886900031749 /* fit_unicode.hpp */,
-				9D27CF392002886900031749 /* fit_slave_device_mesg_listener.hpp */,
-				9D27CF3A2002886900031749 /* fit_ant_channel_id_mesg.hpp */,
-				9D27CF3B2002886900031749 /* fit_file_id_mesg.hpp */,
-				9D27CF3C2002886900031749 /* fit_record_mesg_listener.hpp */,
-				9D27CF3D2002886900031749 /* fit_segment_leaderboard_entry_mesg.hpp */,
-				9D27CF3E2002886900031749 /* fit_video_clip_mesg_listener.hpp */,
-				9D27CF3F2002886900031749 /* fit_file_creator_mesg_listener.hpp */,
-				9D27CF402002886900031749 /* fit_exd_data_field_configuration_mesg_listener.hpp */,
-				9D27CF412002886900031749 /* fit_ant_rx_mesg.hpp */,
-				9D27CF422002886900031749 /* fit_field_description_mesg.hpp */,
-				9D27CF432002886900031749 /* fit_schedule_mesg.hpp */,
-				9D27CF442002886900031749 /* fit_zones_target_mesg_listener.hpp */,
-				9D27CF452002886900031749 /* fit_video_clip_mesg.hpp */,
-				9D27CF462002886900031749 /* fit_device_settings_mesg_listener.hpp */,
-				9D27CF472002886900031749 /* FitMesg.h */,
-				9D27CF482002886900031749 /* fit_accelerometer_data_mesg.hpp */,
-				9D27CF492002886900031749 /* fit_met_zone_mesg.hpp */,
-				9D27CF4A2002886900031749 /* fit_hrm_profile_mesg.hpp */,
-				9D27CF4B2002886900031749 /* fit_speed_zone_mesg_listener.hpp */,
-				9D27CF4C2002886900031749 /* fit_weather_alert_mesg_listener.hpp */,
-				9D27CF4D2002886900031749 /* fit_goal_mesg_listener.hpp */,
-				9D27CF4E2002886900031749 /* fit_factory.hpp */,
-				9D27CF4F2002886900031749 /* fit_memo_glob_mesg.hpp */,
-				9D27CF502002886900031749 /* FitMesgDefinition.h */,
-				9D27CF512002886900031749 /* fit_cadence_zone_mesg.hpp */,
-				9D27CF522002886900031749 /* fit_buffered_record_mesg.hpp */,
-				9D27CF532002886900031749 /* fit_workout_mesg_listener.hpp */,
-				9D27CF542002886900031749 /* fit_gps_metadata_mesg.hpp */,
-				9D27CF552002886900031749 /* fit_three_d_sensor_calibration_mesg.hpp */,
-				9D27CF562002886900031749 /* fit_video_title_mesg.hpp */,
-				9D27CF572002886900031749 /* fit_three_d_sensor_calibration_mesg_listener.hpp */,
-				9D27CF582002886900031749 /* fit_buffered_record_mesg_listener.hpp */,
-				9D27CF592002886900031749 /* fit_activity_mesg_listener.hpp */,
-				9D27CF5A2002886900031749 /* fit_runtime_exception.hpp */,
-				9D27CF5B2002886900031749 /* FitField.h */,
-				9D27CF5C2002886900031749 /* fit_record_mesg.hpp */,
-				9D27CF5D2002886900031749 /* fit_aviation_attitude_mesg_listener.hpp */,
-				9D27CF5E2002886900031749 /* fit_user_profile_mesg.hpp */,
-				9D27CF5F2002886900031749 /* fit_monitoring_mesg.hpp */,
-				9D27CF602002886900031749 /* fit_session_mesg_listener.hpp */,
-				9D27CF612002886900031749 /* fit_schedule_mesg_listener.hpp */,
-				9D27CF622002886900031749 /* fit_hr_zone_mesg.hpp */,
-				9D27CF632002886900031749 /* fit_developer_field_definition.hpp */,
-				9D27CF642002886900031749 /* fit_mesg_broadcaster.hpp */,
-				9D27CF652002886900031749 /* FitDeveloperField.h */,
-				9D27CF662002886900031749 /* fit_mesg_capabilities_mesg.hpp */,
-				9D27CF672002886900031749 /* fit_device_info_mesg_listener.hpp */,
-				9D27CF682002886900031749 /* fit_field_base.hpp */,
-				9D27CF692002886900031749 /* fit_mesg_with_event_broadcaster.hpp */,
-				9D27CF6A2002886900031749 /* fit_length_mesg.hpp */,
-				9D27CF6B2002886900031749 /* fit_workout_step_mesg.hpp */,
-				9D27CF6C2002886900031749 /* fit_course_point_mesg.hpp */,
-				9D27CF6D2002886900031749 /* fit_workout_mesg.hpp */,
-				9D27CF6E2002886900031749 /* fit_activity_mesg.hpp */,
-				9D27CF6F2002886900031749 /* fit_video_frame_mesg.hpp */,
-				9D27CF702002886900031749 /* fit_bike_profile_mesg_listener.hpp */,
-				9D27CF712002886900031749 /* fit_exd_data_field_configuration_mesg.hpp */,
-				9D27CF722002886900031749 /* fit_video_mesg.hpp */,
-				9D27CF732002886900031749 /* fit_sport_mesg.hpp */,
-				9D27CF742002886900031749 /* fit_sdm_profile_mesg_listener.hpp */,
-				9D27CF752002886900031749 /* fit_dive_settings_mesg.hpp */,
-				9D27CF762002886900031749 /* fit_gyroscope_data_mesg_listener.hpp */,
-				9D27CF772002886900031749 /* fit_segment_leaderboard_entry_mesg_listener.hpp */,
-				9D27CF782002886900031749 /* fit_timestamp_correlation_mesg_listener.hpp */,
-				9D27CF792002886900031749 /* fit_segment_id_mesg_listener.hpp */,
-				9D27CF7A2002886900031749 /* fit_camera_event_mesg.hpp */,
-				9D27CF7B2002886900031749 /* fit_totals_mesg.hpp */,
-				9D27CF7C2002886900031749 /* fit_file_capabilities_mesg_listener.hpp */,
-				9D27CF7D2002886900031749 /* fit_magnetometer_data_mesg.hpp */,
-				9D27CF7E2002886900031749 /* fit_mesg_with_event.hpp */,
-				9D27CF7F2002886900031749 /* fit_monitoring_mesg_listener.hpp */,
-				9D27CF802002886900031749 /* fit_nmea_sentence_mesg.hpp */,
-				9D27CF812002886900031749 /* fit_crc.hpp */,
-				9D27CF822002886900031749 /* fit_video_description_mesg_listener.hpp */,
-				9D27CF832002886900031749 /* fit_event_mesg.hpp */,
-				9D27CF842002886900031749 /* fit.hpp */,
-				9D27CF852002886900031749 /* fit_ant_tx_mesg_listener.hpp */,
-				9D27CF862002886900031749 /* fit_exercise_title_mesg.hpp */,
-				9D27CF872002886900031749 /* fit_workout_session_mesg_listener.hpp */,
-				9D27CF882002886900031749 /* fit_barometer_data_mesg_listener.hpp */,
-				9D27CF892002886900031749 /* fit_lap_mesg_listener.hpp */,
-				9D27CF8A2002886900031749 /* fit_one_d_sensor_calibration_mesg.hpp */,
-				9D27CF8B2002886900031749 /* fit_dive_alarm_mesg.hpp */,
-				9D27CF8C2002886900031749 /* fit_file_capabilities_mesg.hpp */,
-				9D27CF8D2002886900031749 /* fit_nmea_sentence_mesg_listener.hpp */,
-				9D27CF8E2002886900031749 /* fit_ant_channel_id_mesg_listener.hpp */,
-				9D27CF8F2002886900031749 /* fit_field.hpp */,
-				9D27CF902002886900031749 /* fit_mesg_with_event_listener.hpp */,
-				9D27CF912002886900031749 /* fit_goal_mesg.hpp */,
-				9D27CF922002886900031749 /* fit_workout_session_mesg.hpp */,
-				9D27CF932002886900031749 /* fit_zones_target_mesg.hpp */,
-				9D27CF942002886900031749 /* fit_field_description_mesg_listener.hpp */,
-				9D27CF952002886900031749 /* fit_profile.hpp */,
-				9D27CF962002886900031749 /* fit_dive_summary_mesg.hpp */,
-				9D27CF972002886900031749 /* fit_dive_settings_mesg_listener.hpp */,
-				9D27CF982002886900031749 /* fit_hrv_mesg_listener.hpp */,
-				9D27CF992002886900031749 /* fit_met_zone_mesg_listener.hpp */,
-				9D27CF9A2002886900031749 /* fit_capabilities_mesg.hpp */,
-				9D27CF9B2002886900031749 /* fit_aviation_attitude_mesg.hpp */,
-				9D27CF9C2002886900031749 /* fit_capabilities_mesg_listener.hpp */,
-				9D27CF9D2002886900031749 /* fit_file_id_mesg_listener.hpp */,
-				9D27CF9E2002886900031749 /* fit_exd_data_concept_configuration_mesg_listener.hpp */,
-				9D27CF9F2002886900031749 /* fit_speed_zone_mesg.hpp */,
-				9D27CFA02002886900031749 /* fit_watchface_settings_mesg.hpp */,
-				9D27CFA12002886900031749 /* fit_pad_mesg_listener.hpp */,
-				9D27CFA22002886900031749 /* fit_obdii_data_mesg_listener.hpp */,
-				9D27CFA32002886900031749 /* fit_device_settings_mesg.hpp */,
-				9D27CFA42002886900031749 /* fit_totals_mesg_listener.hpp */,
-				9D27CFA52002886900031749 /* fit_connectivity_mesg_listener.hpp */,
-				9D27CFA62002886900031749 /* fit_mesg_definition.hpp */,
-				9D27CFA72002886900031749 /* fit_video_title_mesg_listener.hpp */,
-				9D27CFA82002886900031749 /* FitDecode.h */,
-				9D27CFA92002886900031749 /* fit_segment_lap_mesg.hpp */,
-				9D27CFAA2002886900031749 /* fit_training_file_mesg_listener.hpp */,
-				9D27CFAB2002886900031749 /* fit_file_creator_mesg.hpp */,
-				9D27CFAC2002886900031749 /* fit_blood_pressure_mesg.hpp */,
-				9D27CFAD2002886900031749 /* fit_mesg_listener.hpp */,
-				9D27CFAE2002886900031749 /* fit_encode.hpp */,
-				9D27CFAF2002886900031749 /* fit_device_info_mesg.hpp */,
-				9D27CFB02002886900031749 /* fit_one_d_sensor_calibration_mesg_listener.hpp */,
-				9D27CFB12002886900031749 /* fit_mesg_definition_listener.hpp */,
-				9D27CFB22002886900031749 /* fit_weather_conditions_mesg_listener.hpp */,
-				9D27CFB32002886900031749 /* fit_date_time.hpp */,
-				9D27CFB42002886900031749 /* fit_field_definition.hpp */,
-				9D27CFB52002886900031749 /* fit_field_capabilities_mesg_listener.hpp */,
-				9D27CFB62002886900031749 /* fit_developer_field_description.hpp */,
-				9D27CFB72002886900031749 /* fit_course_point_mesg_listener.hpp */,
-				9D27CFB82002886900031749 /* FitEncode.h */,
-				9D27CFB92002886900031749 /* fit_hr_mesg_listener.hpp */,
-				9D27CFBA2002886900031749 /* fit_slave_device_mesg.hpp */,
-				9D27CFBB2002886900031749 /* fit_dive_alarm_mesg_listener.hpp */,
-				9D27CFBC2002886900031749 /* fit_hr_zone_mesg_listener.hpp */,
-				9D27CFBD2002886900031749 /* fit_weight_scale_mesg.hpp */,
-				9D27CFBE2002886900031749 /* fit_pad_mesg.hpp */,
-				9D27CFBF2002886900031749 /* fit_buffer_encode.hpp */,
-				9D27CFC02002886900031749 /* fit_video_description_mesg.hpp */,
-				9D27CFC12002886900031749 /* fit_developer_data_id_mesg_listener.hpp */,
-				9D27CFC22002886900031749 /* fit_timestamp_correlation_mesg.hpp */,
-				9D27CFC32002886900031749 /* fit_weather_alert_mesg.hpp */,
-				9D27CFC42002886900031749 /* fit_exd_data_concept_configuration_mesg.hpp */,
-				9D27CFC52002886900031749 /* fit_buffered_mesg_broadcaster.hpp */,
-				9D27CFC62002886900031749 /* fit_sport_mesg_listener.hpp */,
-				9D27CFC72002886900031749 /* fit_stress_level_mesg.hpp */,
-				9D27CFC82002886900031749 /* fit_dive_summary_mesg_listener.hpp */,
-				9D27CFC92002886900031749 /* fit_video_mesg_listener.hpp */,
-				9D27CFCA2002886900031749 /* fit_developer_field.hpp */,
-				9D27CFCB2002886900031749 /* fit_weight_scale_mesg_listener.hpp */,
-				9D27CFCC2002886900031749 /* FitFieldDefinition.h */,
-				9D27CFCD2002886900031749 /* fit_course_mesg_listener.hpp */,
-				9D27CFCE2002886900031749 /* fit_config.hpp */,
-				9D27CFCF2002886900031749 /* fit_gyroscope_data_mesg.hpp */,
-				9D27CFD02002886900031749 /* fit_lap_mesg.hpp */,
-				9D27CFD12002886900031749 /* fit_blood_pressure_mesg_listener.hpp */,
-				9D27CFD22002886900031749 /* fit_ohr_settings_mesg.hpp */,
-				9D27CFD32002886900031749 /* fit_segment_id_mesg.hpp */,
-				9D27CFD42002886900031749 /* fit_decode.hpp */,
-				9D27CFD52002886900031749 /* fit_protocol_validator.hpp */,
-				9D27CFD62002886900031749 /* fit_memo_glob_mesg_listener.hpp */,
-				9D27CFD72002886900031749 /* fit_segment_file_mesg_listener.hpp */,
-				9D27CFD82002886900031749 /* fit_segment_lap_mesg_listener.hpp */,
-				9D27CFD92002886900031749 /* fit_developer_field_description_listener.hpp */,
-				9D27CFDA2002886900031749 /* fit_exd_screen_configuration_mesg_listener.hpp */,
-				9D27CFDB2002886900031749 /* fit_exercise_title_mesg_listener.hpp */,
-				9D27CFDC2002886900031749 /* fit_training_file_mesg.hpp */,
-				9D27CFDD2002886900031749 /* fit_user_profile_mesg_listener.hpp */,
-				9D27CFDE2002886900031749 /* fit_software_mesg.hpp */,
-				9D27CFDF2002886900031749 /* fit_length_mesg_listener.hpp */,
-				9D27CFE02002886900031749 /* fit_accumulator.hpp */,
-				9D27CFE12002886900031749 /* fit_accelerometer_data_mesg_listener.hpp */,
-				9D27CFE22002886900031749 /* fit_dive_gas_mesg_listener.hpp */,
-				9D27CFE32002886900031749 /* fit_segment_file_mesg.hpp */,
-				9D27CFE42002886900031749 /* fit_course_mesg.hpp */,
-				9D27CFE52002886900031749 /* fit_event_mesg_listener.hpp */,
-				9D27CFE62002886900031749 /* fit_exd_screen_configuration_mesg.hpp */,
-				9D27CFE72002886900031749 /* fit_mesg.hpp */,
-				9D27CFE82002886900031749 /* fit_video_frame_mesg_listener.hpp */,
-				9D27CFE92002886900031749 /* fit_connectivity_mesg.hpp */,
-				9D27CFEA2002886900031749 /* fit_magnetometer_data_mesg_listener.hpp */,
-				9D27CFEB2002886900031749 /* fit_ohr_settings_mesg_listener.hpp */,
-				9D27CFEC2002886900031749 /* fit_gps_metadata_mesg_listener.hpp */,
-				9D27CFED2002886900031749 /* fit_power_zone_mesg.hpp */,
-				9D27CFEE2002886900031749 /* fit_buffered_record_mesg_broadcaster.hpp */,
-				9D27CFEF2002886900031749 /* fit_stress_level_mesg_listener.hpp */,
-				9D27CFF02002886900031749 /* fit_hrm_profile_mesg_listener.hpp */,
-				9D27CFF12002886900031749 /* fit_hr_mesg.hpp */,
-				9D27CFF22002886900031749 /* fit_mesg_capabilities_mesg_listener.hpp */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 		9D27D21020029F5600031749 /* Test */ = {
@@ -635,6 +614,7 @@
 		9D27D2392002A60B00031749 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9D27D2462002B17A00031749 /* Models */,
 				9D27D23A2002A61A00031749 /* FitReader.h */,
 				9D27D23B2002A61A00031749 /* FitReader.mm */,
 			);
@@ -648,6 +628,494 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9D27D2462002B17A00031749 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D27D2472002B18900031749 /* FitRecord.h */,
+				9D27D2482002B18900031749 /* FitRecord.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9D27D2542002CB2400031749 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9D27D2552002CB2400031749 /* usr */,
+				9D27D32B2002CB2400031749 /* libFitSdkCppiOS.a */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		9D27D2552002CB2400031749 /* usr */ = {
+			isa = PBXGroup;
+			children = (
+				9D27D2562002CB2400031749 /* local */,
+			);
+			path = usr;
+			sourceTree = "<group>";
+		};
+		9D27D2562002CB2400031749 /* local */ = {
+			isa = PBXGroup;
+			children = (
+				9D27D2572002CB2400031749 /* include */,
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
+		9D27D2572002CB2400031749 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				9D27D2582002CB2400031749 /* fit_power_zone_mesg_listener.hpp */,
+				9D27D2592002CB2400031749 /* fit_segment_point_mesg_listener.hpp */,
+				9D27D25A2002CB2400031749 /* fit_monitoring_info_mesg_listener.hpp */,
+				9D27D25B2002CB2400031749 /* fit_workout_step_mesg_listener.hpp */,
+				9D27D25C2002CB2400031749 /* fit_dive_gas_mesg.hpp */,
+				9D27D25D2002CB2400031749 /* fit_bike_profile_mesg.hpp */,
+				9D27D25E2002CB2400031749 /* fit_obdii_data_mesg.hpp */,
+				9D27D25F2002CB2400031749 /* fit_hrv_mesg.hpp */,
+				9D27D2602002CB2400031749 /* fit_sdm_profile_mesg.hpp */,
+				9D27D2612002CB2400031749 /* fit_session_mesg.hpp */,
+				9D27D2622002CB2400031749 /* fit_ant_rx_mesg_listener.hpp */,
+				9D27D2632002CB2400031749 /* fit_camera_event_mesg_listener.hpp */,
+				9D27D2642002CB2400031749 /* fit_ant_tx_mesg.hpp */,
+				9D27D2652002CB2400031749 /* fit_mesg_broadcast_plugin.hpp */,
+				9D27D2662002CB2400031749 /* fit_weather_conditions_mesg.hpp */,
+				9D27D2672002CB2400031749 /* fit_segment_point_mesg.hpp */,
+				9D27D2682002CB2400031749 /* fit_developer_data_id_mesg.hpp */,
+				9D27D2692002CB2400031749 /* fit_software_mesg_listener.hpp */,
+				9D27D26A2002CB2400031749 /* fit_watchface_settings_mesg_listener.hpp */,
+				9D27D26B2002CB2400031749 /* fit_monitoring_info_mesg.hpp */,
+				9D27D26C2002CB2400031749 /* fit_barometer_data_mesg.hpp */,
+				9D27D26D2002CB2400031749 /* fit_field_capabilities_mesg.hpp */,
+				9D27D26E2002CB2400031749 /* fit_accumulated_field.hpp */,
+				9D27D26F2002CB2400031749 /* fit_cadence_zone_mesg_listener.hpp */,
+				9D27D2702002CB2400031749 /* fit_unicode.hpp */,
+				9D27D2712002CB2400031749 /* fit_slave_device_mesg_listener.hpp */,
+				9D27D2722002CB2400031749 /* fit_ant_channel_id_mesg.hpp */,
+				9D27D2732002CB2400031749 /* fit_file_id_mesg.hpp */,
+				9D27D2742002CB2400031749 /* fit_record_mesg_listener.hpp */,
+				9D27D2752002CB2400031749 /* fit_segment_leaderboard_entry_mesg.hpp */,
+				9D27D2762002CB2400031749 /* fit_video_clip_mesg_listener.hpp */,
+				9D27D2772002CB2400031749 /* fit_file_creator_mesg_listener.hpp */,
+				9D27D2782002CB2400031749 /* fit_exd_data_field_configuration_mesg_listener.hpp */,
+				9D27D2792002CB2400031749 /* fit_ant_rx_mesg.hpp */,
+				9D27D27A2002CB2400031749 /* fit_field_description_mesg.hpp */,
+				9D27D27B2002CB2400031749 /* fit_schedule_mesg.hpp */,
+				9D27D27C2002CB2400031749 /* fit_zones_target_mesg_listener.hpp */,
+				9D27D27D2002CB2400031749 /* fit_video_clip_mesg.hpp */,
+				9D27D27E2002CB2400031749 /* fit_device_settings_mesg_listener.hpp */,
+				9D27D27F2002CB2400031749 /* FitMesg.h */,
+				9D27D2802002CB2400031749 /* fit_accelerometer_data_mesg.hpp */,
+				9D27D2812002CB2400031749 /* fit_met_zone_mesg.hpp */,
+				9D27D2822002CB2400031749 /* fit_hrm_profile_mesg.hpp */,
+				9D27D2832002CB2400031749 /* fit_speed_zone_mesg_listener.hpp */,
+				9D27D2842002CB2400031749 /* fit_weather_alert_mesg_listener.hpp */,
+				9D27D2852002CB2400031749 /* fit_goal_mesg_listener.hpp */,
+				9D27D2862002CB2400031749 /* fit_factory.hpp */,
+				9D27D2872002CB2400031749 /* fit_memo_glob_mesg.hpp */,
+				9D27D2882002CB2400031749 /* FitMesgDefinition.h */,
+				9D27D2892002CB2400031749 /* fit_cadence_zone_mesg.hpp */,
+				9D27D28A2002CB2400031749 /* fit_buffered_record_mesg.hpp */,
+				9D27D28B2002CB2400031749 /* fit_workout_mesg_listener.hpp */,
+				9D27D28C2002CB2400031749 /* fit_gps_metadata_mesg.hpp */,
+				9D27D28D2002CB2400031749 /* fit_three_d_sensor_calibration_mesg.hpp */,
+				9D27D28E2002CB2400031749 /* fit_video_title_mesg.hpp */,
+				9D27D28F2002CB2400031749 /* fit_three_d_sensor_calibration_mesg_listener.hpp */,
+				9D27D2902002CB2400031749 /* fit_buffered_record_mesg_listener.hpp */,
+				9D27D2912002CB2400031749 /* fit_activity_mesg_listener.hpp */,
+				9D27D2922002CB2400031749 /* fit_runtime_exception.hpp */,
+				9D27D2932002CB2400031749 /* FitField.h */,
+				9D27D2942002CB2400031749 /* fit_record_mesg.hpp */,
+				9D27D2952002CB2400031749 /* fit_aviation_attitude_mesg_listener.hpp */,
+				9D27D2962002CB2400031749 /* fit_user_profile_mesg.hpp */,
+				9D27D2972002CB2400031749 /* fit_monitoring_mesg.hpp */,
+				9D27D2982002CB2400031749 /* fit_session_mesg_listener.hpp */,
+				9D27D2992002CB2400031749 /* fit_schedule_mesg_listener.hpp */,
+				9D27D29A2002CB2400031749 /* fit_hr_zone_mesg.hpp */,
+				9D27D29B2002CB2400031749 /* fit_developer_field_definition.hpp */,
+				9D27D29C2002CB2400031749 /* fit_mesg_broadcaster.hpp */,
+				9D27D29D2002CB2400031749 /* FitDeveloperField.h */,
+				9D27D29E2002CB2400031749 /* fit_mesg_capabilities_mesg.hpp */,
+				9D27D29F2002CB2400031749 /* fit_device_info_mesg_listener.hpp */,
+				9D27D2A02002CB2400031749 /* fit_field_base.hpp */,
+				9D27D2A12002CB2400031749 /* fit_mesg_with_event_broadcaster.hpp */,
+				9D27D2A22002CB2400031749 /* fit_length_mesg.hpp */,
+				9D27D2A32002CB2400031749 /* fit_workout_step_mesg.hpp */,
+				9D27D2A42002CB2400031749 /* fit_course_point_mesg.hpp */,
+				9D27D2A52002CB2400031749 /* fit_workout_mesg.hpp */,
+				9D27D2A62002CB2400031749 /* fit_activity_mesg.hpp */,
+				9D27D2A72002CB2400031749 /* fit_video_frame_mesg.hpp */,
+				9D27D2A82002CB2400031749 /* fit_bike_profile_mesg_listener.hpp */,
+				9D27D2A92002CB2400031749 /* fit_exd_data_field_configuration_mesg.hpp */,
+				9D27D2AA2002CB2400031749 /* fit_video_mesg.hpp */,
+				9D27D2AB2002CB2400031749 /* fit_sport_mesg.hpp */,
+				9D27D2AC2002CB2400031749 /* fit_sdm_profile_mesg_listener.hpp */,
+				9D27D2AD2002CB2400031749 /* fit_dive_settings_mesg.hpp */,
+				9D27D2AE2002CB2400031749 /* fit_gyroscope_data_mesg_listener.hpp */,
+				9D27D2AF2002CB2400031749 /* fit_segment_leaderboard_entry_mesg_listener.hpp */,
+				9D27D2B02002CB2400031749 /* fit_timestamp_correlation_mesg_listener.hpp */,
+				9D27D2B12002CB2400031749 /* fit_segment_id_mesg_listener.hpp */,
+				9D27D2B22002CB2400031749 /* fit_camera_event_mesg.hpp */,
+				9D27D2B32002CB2400031749 /* fit_totals_mesg.hpp */,
+				9D27D2B42002CB2400031749 /* fit_file_capabilities_mesg_listener.hpp */,
+				9D27D2B52002CB2400031749 /* fit_magnetometer_data_mesg.hpp */,
+				9D27D2B62002CB2400031749 /* fit_mesg_with_event.hpp */,
+				9D27D2B72002CB2400031749 /* fit_monitoring_mesg_listener.hpp */,
+				9D27D2B82002CB2400031749 /* fit_nmea_sentence_mesg.hpp */,
+				9D27D2B92002CB2400031749 /* fit_crc.hpp */,
+				9D27D2BA2002CB2400031749 /* fit_video_description_mesg_listener.hpp */,
+				9D27D2BB2002CB2400031749 /* fit_event_mesg.hpp */,
+				9D27D2BC2002CB2400031749 /* fit.hpp */,
+				9D27D2BD2002CB2400031749 /* fit_ant_tx_mesg_listener.hpp */,
+				9D27D2BE2002CB2400031749 /* fit_exercise_title_mesg.hpp */,
+				9D27D2BF2002CB2400031749 /* fit_workout_session_mesg_listener.hpp */,
+				9D27D2C02002CB2400031749 /* fit_barometer_data_mesg_listener.hpp */,
+				9D27D2C12002CB2400031749 /* fit_lap_mesg_listener.hpp */,
+				9D27D2C22002CB2400031749 /* fit_one_d_sensor_calibration_mesg.hpp */,
+				9D27D2C32002CB2400031749 /* fit_dive_alarm_mesg.hpp */,
+				9D27D2C42002CB2400031749 /* fit_file_capabilities_mesg.hpp */,
+				9D27D2C52002CB2400031749 /* fit_nmea_sentence_mesg_listener.hpp */,
+				9D27D2C62002CB2400031749 /* fit_ant_channel_id_mesg_listener.hpp */,
+				9D27D2C72002CB2400031749 /* fit_field.hpp */,
+				9D27D2C82002CB2400031749 /* fit_mesg_with_event_listener.hpp */,
+				9D27D2C92002CB2400031749 /* fit_goal_mesg.hpp */,
+				9D27D2CA2002CB2400031749 /* fit_workout_session_mesg.hpp */,
+				9D27D2CB2002CB2400031749 /* fit_zones_target_mesg.hpp */,
+				9D27D2CC2002CB2400031749 /* fit_field_description_mesg_listener.hpp */,
+				9D27D2CD2002CB2400031749 /* fit_profile.hpp */,
+				9D27D2CE2002CB2400031749 /* fit_dive_summary_mesg.hpp */,
+				9D27D2CF2002CB2400031749 /* fit_dive_settings_mesg_listener.hpp */,
+				9D27D2D02002CB2400031749 /* fit_hrv_mesg_listener.hpp */,
+				9D27D2D12002CB2400031749 /* fit_met_zone_mesg_listener.hpp */,
+				9D27D2D22002CB2400031749 /* fit_capabilities_mesg.hpp */,
+				9D27D2D32002CB2400031749 /* fit_aviation_attitude_mesg.hpp */,
+				9D27D2D42002CB2400031749 /* fit_capabilities_mesg_listener.hpp */,
+				9D27D2D52002CB2400031749 /* fit_file_id_mesg_listener.hpp */,
+				9D27D2D62002CB2400031749 /* fit_exd_data_concept_configuration_mesg_listener.hpp */,
+				9D27D2D72002CB2400031749 /* fit_speed_zone_mesg.hpp */,
+				9D27D2D82002CB2400031749 /* fit_watchface_settings_mesg.hpp */,
+				9D27D2D92002CB2400031749 /* fit_pad_mesg_listener.hpp */,
+				9D27D2DA2002CB2400031749 /* fit_obdii_data_mesg_listener.hpp */,
+				9D27D2DB2002CB2400031749 /* fit_device_settings_mesg.hpp */,
+				9D27D2DC2002CB2400031749 /* fit_totals_mesg_listener.hpp */,
+				9D27D2DD2002CB2400031749 /* fit_connectivity_mesg_listener.hpp */,
+				9D27D2DE2002CB2400031749 /* fit_mesg_definition.hpp */,
+				9D27D2DF2002CB2400031749 /* fit_video_title_mesg_listener.hpp */,
+				9D27D2E02002CB2400031749 /* FitDecode.h */,
+				9D27D2E12002CB2400031749 /* fit_segment_lap_mesg.hpp */,
+				9D27D2E22002CB2400031749 /* fit_training_file_mesg_listener.hpp */,
+				9D27D2E32002CB2400031749 /* fit_file_creator_mesg.hpp */,
+				9D27D2E42002CB2400031749 /* fit_blood_pressure_mesg.hpp */,
+				9D27D2E52002CB2400031749 /* fit_mesg_listener.hpp */,
+				9D27D2E62002CB2400031749 /* fit_encode.hpp */,
+				9D27D2E72002CB2400031749 /* fit_device_info_mesg.hpp */,
+				9D27D2E82002CB2400031749 /* fit_one_d_sensor_calibration_mesg_listener.hpp */,
+				9D27D2E92002CB2400031749 /* fit_mesg_definition_listener.hpp */,
+				9D27D2EA2002CB2400031749 /* fit_weather_conditions_mesg_listener.hpp */,
+				9D27D2EB2002CB2400031749 /* fit_date_time.hpp */,
+				9D27D2EC2002CB2400031749 /* fit_field_definition.hpp */,
+				9D27D2ED2002CB2400031749 /* fit_field_capabilities_mesg_listener.hpp */,
+				9D27D2EE2002CB2400031749 /* fit_developer_field_description.hpp */,
+				9D27D2EF2002CB2400031749 /* fit_course_point_mesg_listener.hpp */,
+				9D27D2F02002CB2400031749 /* FitEncode.h */,
+				9D27D2F12002CB2400031749 /* fit_hr_mesg_listener.hpp */,
+				9D27D2F22002CB2400031749 /* fit_slave_device_mesg.hpp */,
+				9D27D2F32002CB2400031749 /* fit_dive_alarm_mesg_listener.hpp */,
+				9D27D2F42002CB2400031749 /* fit_hr_zone_mesg_listener.hpp */,
+				9D27D2F52002CB2400031749 /* fit_weight_scale_mesg.hpp */,
+				9D27D2F62002CB2400031749 /* fit_pad_mesg.hpp */,
+				9D27D2F72002CB2400031749 /* fit_buffer_encode.hpp */,
+				9D27D2F82002CB2400031749 /* fit_video_description_mesg.hpp */,
+				9D27D2F92002CB2400031749 /* fit_developer_data_id_mesg_listener.hpp */,
+				9D27D2FA2002CB2400031749 /* fit_timestamp_correlation_mesg.hpp */,
+				9D27D2FB2002CB2400031749 /* fit_weather_alert_mesg.hpp */,
+				9D27D2FC2002CB2400031749 /* fit_exd_data_concept_configuration_mesg.hpp */,
+				9D27D2FD2002CB2400031749 /* fit_buffered_mesg_broadcaster.hpp */,
+				9D27D2FE2002CB2400031749 /* fit_sport_mesg_listener.hpp */,
+				9D27D2FF2002CB2400031749 /* fit_stress_level_mesg.hpp */,
+				9D27D3002002CB2400031749 /* fit_dive_summary_mesg_listener.hpp */,
+				9D27D3012002CB2400031749 /* fit_video_mesg_listener.hpp */,
+				9D27D3022002CB2400031749 /* fit_developer_field.hpp */,
+				9D27D3032002CB2400031749 /* fit_weight_scale_mesg_listener.hpp */,
+				9D27D3042002CB2400031749 /* FitFieldDefinition.h */,
+				9D27D3052002CB2400031749 /* fit_course_mesg_listener.hpp */,
+				9D27D3062002CB2400031749 /* fit_config.hpp */,
+				9D27D3072002CB2400031749 /* fit_gyroscope_data_mesg.hpp */,
+				9D27D3082002CB2400031749 /* fit_lap_mesg.hpp */,
+				9D27D3092002CB2400031749 /* fit_blood_pressure_mesg_listener.hpp */,
+				9D27D30A2002CB2400031749 /* fit_ohr_settings_mesg.hpp */,
+				9D27D30B2002CB2400031749 /* fit_segment_id_mesg.hpp */,
+				9D27D30C2002CB2400031749 /* fit_decode.hpp */,
+				9D27D30D2002CB2400031749 /* fit_protocol_validator.hpp */,
+				9D27D30E2002CB2400031749 /* fit_memo_glob_mesg_listener.hpp */,
+				9D27D30F2002CB2400031749 /* fit_segment_file_mesg_listener.hpp */,
+				9D27D3102002CB2400031749 /* fit_segment_lap_mesg_listener.hpp */,
+				9D27D3112002CB2400031749 /* fit_developer_field_description_listener.hpp */,
+				9D27D3122002CB2400031749 /* fit_exd_screen_configuration_mesg_listener.hpp */,
+				9D27D3132002CB2400031749 /* fit_exercise_title_mesg_listener.hpp */,
+				9D27D3142002CB2400031749 /* fit_training_file_mesg.hpp */,
+				9D27D3152002CB2400031749 /* fit_user_profile_mesg_listener.hpp */,
+				9D27D3162002CB2400031749 /* fit_software_mesg.hpp */,
+				9D27D3172002CB2400031749 /* fit_length_mesg_listener.hpp */,
+				9D27D3182002CB2400031749 /* fit_accumulator.hpp */,
+				9D27D3192002CB2400031749 /* fit_accelerometer_data_mesg_listener.hpp */,
+				9D27D31A2002CB2400031749 /* fit_dive_gas_mesg_listener.hpp */,
+				9D27D31B2002CB2400031749 /* fit_segment_file_mesg.hpp */,
+				9D27D31C2002CB2400031749 /* fit_course_mesg.hpp */,
+				9D27D31D2002CB2400031749 /* fit_event_mesg_listener.hpp */,
+				9D27D31E2002CB2400031749 /* fit_exd_screen_configuration_mesg.hpp */,
+				9D27D31F2002CB2400031749 /* fit_mesg.hpp */,
+				9D27D3202002CB2400031749 /* fit_video_frame_mesg_listener.hpp */,
+				9D27D3212002CB2400031749 /* fit_connectivity_mesg.hpp */,
+				9D27D3222002CB2400031749 /* fit_magnetometer_data_mesg_listener.hpp */,
+				9D27D3232002CB2400031749 /* fit_ohr_settings_mesg_listener.hpp */,
+				9D27D3242002CB2400031749 /* fit_gps_metadata_mesg_listener.hpp */,
+				9D27D3252002CB2400031749 /* fit_power_zone_mesg.hpp */,
+				9D27D3262002CB2400031749 /* fit_buffered_record_mesg_broadcaster.hpp */,
+				9D27D3272002CB2400031749 /* fit_stress_level_mesg_listener.hpp */,
+				9D27D3282002CB2400031749 /* fit_hrm_profile_mesg_listener.hpp */,
+				9D27D3292002CB2400031749 /* fit_hr_mesg.hpp */,
+				9D27D32A2002CB2400031749 /* fit_mesg_capabilities_mesg_listener.hpp */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		9D27D32C2002CB2400031749 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				9D27D32D2002CB2400031749 /* usr */,
+				9D27D3FC2002CB2500031749 /* libFitSdkCpp.a */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		9D27D32D2002CB2400031749 /* usr */ = {
+			isa = PBXGroup;
+			children = (
+				9D27D32E2002CB2400031749 /* local */,
+			);
+			path = usr;
+			sourceTree = "<group>";
+		};
+		9D27D32E2002CB2400031749 /* local */ = {
+			isa = PBXGroup;
+			children = (
+				9D27D32F2002CB2400031749 /* include */,
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
+		9D27D32F2002CB2400031749 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				9D27D3302002CB2400031749 /* fit_power_zone_mesg_listener.hpp */,
+				9D27D3312002CB2400031749 /* fit_segment_point_mesg_listener.hpp */,
+				9D27D3322002CB2400031749 /* fit_monitoring_info_mesg_listener.hpp */,
+				9D27D3332002CB2400031749 /* fit_workout_step_mesg_listener.hpp */,
+				9D27D3342002CB2400031749 /* fit_dive_gas_mesg.hpp */,
+				9D27D3352002CB2400031749 /* fit_bike_profile_mesg.hpp */,
+				9D27D3362002CB2400031749 /* fit_obdii_data_mesg.hpp */,
+				9D27D3372002CB2400031749 /* fit_hrv_mesg.hpp */,
+				9D27D3382002CB2400031749 /* fit_sdm_profile_mesg.hpp */,
+				9D27D3392002CB2400031749 /* fit_session_mesg.hpp */,
+				9D27D33A2002CB2400031749 /* fit_ant_rx_mesg_listener.hpp */,
+				9D27D33B2002CB2400031749 /* fit_camera_event_mesg_listener.hpp */,
+				9D27D33C2002CB2400031749 /* fit_ant_tx_mesg.hpp */,
+				9D27D33D2002CB2400031749 /* fit_mesg_broadcast_plugin.hpp */,
+				9D27D33E2002CB2400031749 /* fit_weather_conditions_mesg.hpp */,
+				9D27D33F2002CB2400031749 /* fit_segment_point_mesg.hpp */,
+				9D27D3402002CB2400031749 /* fit_developer_data_id_mesg.hpp */,
+				9D27D3412002CB2400031749 /* fit_software_mesg_listener.hpp */,
+				9D27D3422002CB2400031749 /* fit_watchface_settings_mesg_listener.hpp */,
+				9D27D3432002CB2400031749 /* fit_monitoring_info_mesg.hpp */,
+				9D27D3442002CB2400031749 /* fit_barometer_data_mesg.hpp */,
+				9D27D3452002CB2400031749 /* fit_field_capabilities_mesg.hpp */,
+				9D27D3462002CB2400031749 /* fit_accumulated_field.hpp */,
+				9D27D3472002CB2400031749 /* fit_cadence_zone_mesg_listener.hpp */,
+				9D27D3482002CB2400031749 /* fit_unicode.hpp */,
+				9D27D3492002CB2400031749 /* fit_slave_device_mesg_listener.hpp */,
+				9D27D34A2002CB2400031749 /* fit_ant_channel_id_mesg.hpp */,
+				9D27D34B2002CB2400031749 /* fit_file_id_mesg.hpp */,
+				9D27D34C2002CB2400031749 /* fit_record_mesg_listener.hpp */,
+				9D27D34D2002CB2400031749 /* fit_segment_leaderboard_entry_mesg.hpp */,
+				9D27D34E2002CB2400031749 /* fit_video_clip_mesg_listener.hpp */,
+				9D27D34F2002CB2400031749 /* fit_file_creator_mesg_listener.hpp */,
+				9D27D3502002CB2400031749 /* fit_exd_data_field_configuration_mesg_listener.hpp */,
+				9D27D3512002CB2400031749 /* fit_ant_rx_mesg.hpp */,
+				9D27D3522002CB2400031749 /* fit_field_description_mesg.hpp */,
+				9D27D3532002CB2400031749 /* fit_schedule_mesg.hpp */,
+				9D27D3542002CB2400031749 /* fit_zones_target_mesg_listener.hpp */,
+				9D27D3552002CB2400031749 /* fit_video_clip_mesg.hpp */,
+				9D27D3562002CB2400031749 /* fit_device_settings_mesg_listener.hpp */,
+				9D27D3572002CB2400031749 /* fit_accelerometer_data_mesg.hpp */,
+				9D27D3582002CB2400031749 /* fit_met_zone_mesg.hpp */,
+				9D27D3592002CB2400031749 /* fit_hrm_profile_mesg.hpp */,
+				9D27D35A2002CB2400031749 /* fit_speed_zone_mesg_listener.hpp */,
+				9D27D35B2002CB2400031749 /* fit_weather_alert_mesg_listener.hpp */,
+				9D27D35C2002CB2400031749 /* fit_goal_mesg_listener.hpp */,
+				9D27D35D2002CB2400031749 /* fit_factory.hpp */,
+				9D27D35E2002CB2400031749 /* fit_memo_glob_mesg.hpp */,
+				9D27D35F2002CB2400031749 /* fit_cadence_zone_mesg.hpp */,
+				9D27D3602002CB2400031749 /* fit_buffered_record_mesg.hpp */,
+				9D27D3612002CB2400031749 /* fit_workout_mesg_listener.hpp */,
+				9D27D3622002CB2400031749 /* fit_gps_metadata_mesg.hpp */,
+				9D27D3632002CB2400031749 /* fit_three_d_sensor_calibration_mesg.hpp */,
+				9D27D3642002CB2400031749 /* fit_video_title_mesg.hpp */,
+				9D27D3652002CB2400031749 /* fit_three_d_sensor_calibration_mesg_listener.hpp */,
+				9D27D3662002CB2400031749 /* fit_buffered_record_mesg_listener.hpp */,
+				9D27D3672002CB2400031749 /* fit_activity_mesg_listener.hpp */,
+				9D27D3682002CB2400031749 /* fit_runtime_exception.hpp */,
+				9D27D3692002CB2400031749 /* fit_record_mesg.hpp */,
+				9D27D36A2002CB2400031749 /* fit_aviation_attitude_mesg_listener.hpp */,
+				9D27D36B2002CB2400031749 /* fit_user_profile_mesg.hpp */,
+				9D27D36C2002CB2400031749 /* fit_monitoring_mesg.hpp */,
+				9D27D36D2002CB2400031749 /* fit_session_mesg_listener.hpp */,
+				9D27D36E2002CB2400031749 /* fit_schedule_mesg_listener.hpp */,
+				9D27D36F2002CB2400031749 /* fit_hr_zone_mesg.hpp */,
+				9D27D3702002CB2400031749 /* fit_developer_field_definition.hpp */,
+				9D27D3712002CB2400031749 /* fit_mesg_broadcaster.hpp */,
+				9D27D3722002CB2400031749 /* fit_mesg_capabilities_mesg.hpp */,
+				9D27D3732002CB2400031749 /* fit_device_info_mesg_listener.hpp */,
+				9D27D3742002CB2400031749 /* fit_field_base.hpp */,
+				9D27D3752002CB2400031749 /* fit_mesg_with_event_broadcaster.hpp */,
+				9D27D3762002CB2400031749 /* fit_length_mesg.hpp */,
+				9D27D3772002CB2400031749 /* fit_workout_step_mesg.hpp */,
+				9D27D3782002CB2400031749 /* fit_course_point_mesg.hpp */,
+				9D27D3792002CB2400031749 /* fit_workout_mesg.hpp */,
+				9D27D37A2002CB2400031749 /* fit_activity_mesg.hpp */,
+				9D27D37B2002CB2400031749 /* fit_video_frame_mesg.hpp */,
+				9D27D37C2002CB2400031749 /* fit_bike_profile_mesg_listener.hpp */,
+				9D27D37D2002CB2400031749 /* fit_exd_data_field_configuration_mesg.hpp */,
+				9D27D37E2002CB2400031749 /* fit_video_mesg.hpp */,
+				9D27D37F2002CB2400031749 /* fit_sport_mesg.hpp */,
+				9D27D3802002CB2400031749 /* fit_sdm_profile_mesg_listener.hpp */,
+				9D27D3812002CB2400031749 /* fit_dive_settings_mesg.hpp */,
+				9D27D3822002CB2400031749 /* fit_gyroscope_data_mesg_listener.hpp */,
+				9D27D3832002CB2400031749 /* fit_segment_leaderboard_entry_mesg_listener.hpp */,
+				9D27D3842002CB2400031749 /* fit_timestamp_correlation_mesg_listener.hpp */,
+				9D27D3852002CB2400031749 /* fit_segment_id_mesg_listener.hpp */,
+				9D27D3862002CB2400031749 /* fit_camera_event_mesg.hpp */,
+				9D27D3872002CB2400031749 /* fit_totals_mesg.hpp */,
+				9D27D3882002CB2400031749 /* fit_file_capabilities_mesg_listener.hpp */,
+				9D27D3892002CB2400031749 /* fit_magnetometer_data_mesg.hpp */,
+				9D27D38A2002CB2400031749 /* fit_mesg_with_event.hpp */,
+				9D27D38B2002CB2400031749 /* fit_monitoring_mesg_listener.hpp */,
+				9D27D38C2002CB2400031749 /* fit_nmea_sentence_mesg.hpp */,
+				9D27D38D2002CB2400031749 /* fit_crc.hpp */,
+				9D27D38E2002CB2400031749 /* fit_video_description_mesg_listener.hpp */,
+				9D27D38F2002CB2400031749 /* fit_event_mesg.hpp */,
+				9D27D3902002CB2400031749 /* fit.hpp */,
+				9D27D3912002CB2400031749 /* fit_ant_tx_mesg_listener.hpp */,
+				9D27D3922002CB2400031749 /* fit_exercise_title_mesg.hpp */,
+				9D27D3932002CB2400031749 /* fit_workout_session_mesg_listener.hpp */,
+				9D27D3942002CB2400031749 /* fit_barometer_data_mesg_listener.hpp */,
+				9D27D3952002CB2400031749 /* fit_lap_mesg_listener.hpp */,
+				9D27D3962002CB2400031749 /* fit_one_d_sensor_calibration_mesg.hpp */,
+				9D27D3972002CB2400031749 /* fit_dive_alarm_mesg.hpp */,
+				9D27D3982002CB2400031749 /* fit_file_capabilities_mesg.hpp */,
+				9D27D3992002CB2400031749 /* fit_nmea_sentence_mesg_listener.hpp */,
+				9D27D39A2002CB2400031749 /* fit_ant_channel_id_mesg_listener.hpp */,
+				9D27D39B2002CB2400031749 /* fit_field.hpp */,
+				9D27D39C2002CB2400031749 /* fit_mesg_with_event_listener.hpp */,
+				9D27D39D2002CB2400031749 /* fit_goal_mesg.hpp */,
+				9D27D39E2002CB2400031749 /* fit_workout_session_mesg.hpp */,
+				9D27D39F2002CB2400031749 /* fit_zones_target_mesg.hpp */,
+				9D27D3A02002CB2400031749 /* fit_field_description_mesg_listener.hpp */,
+				9D27D3A12002CB2400031749 /* fit_profile.hpp */,
+				9D27D3A22002CB2400031749 /* fit_dive_summary_mesg.hpp */,
+				9D27D3A32002CB2400031749 /* fit_dive_settings_mesg_listener.hpp */,
+				9D27D3A42002CB2400031749 /* fit_hrv_mesg_listener.hpp */,
+				9D27D3A52002CB2400031749 /* fit_met_zone_mesg_listener.hpp */,
+				9D27D3A62002CB2400031749 /* fit_capabilities_mesg.hpp */,
+				9D27D3A72002CB2400031749 /* fit_aviation_attitude_mesg.hpp */,
+				9D27D3A82002CB2400031749 /* fit_capabilities_mesg_listener.hpp */,
+				9D27D3A92002CB2400031749 /* fit_file_id_mesg_listener.hpp */,
+				9D27D3AA2002CB2400031749 /* fit_exd_data_concept_configuration_mesg_listener.hpp */,
+				9D27D3AB2002CB2400031749 /* fit_speed_zone_mesg.hpp */,
+				9D27D3AC2002CB2400031749 /* fit_watchface_settings_mesg.hpp */,
+				9D27D3AD2002CB2400031749 /* fit_pad_mesg_listener.hpp */,
+				9D27D3AE2002CB2400031749 /* fit_obdii_data_mesg_listener.hpp */,
+				9D27D3AF2002CB2400031749 /* fit_device_settings_mesg.hpp */,
+				9D27D3B02002CB2400031749 /* fit_totals_mesg_listener.hpp */,
+				9D27D3B12002CB2400031749 /* fit_connectivity_mesg_listener.hpp */,
+				9D27D3B22002CB2400031749 /* fit_mesg_definition.hpp */,
+				9D27D3B32002CB2400031749 /* fit_video_title_mesg_listener.hpp */,
+				9D27D3B42002CB2400031749 /* fit_segment_lap_mesg.hpp */,
+				9D27D3B52002CB2400031749 /* fit_training_file_mesg_listener.hpp */,
+				9D27D3B62002CB2400031749 /* fit_file_creator_mesg.hpp */,
+				9D27D3B72002CB2400031749 /* fit_blood_pressure_mesg.hpp */,
+				9D27D3B82002CB2400031749 /* fit_mesg_listener.hpp */,
+				9D27D3B92002CB2400031749 /* fit_encode.hpp */,
+				9D27D3BA2002CB2400031749 /* fit_device_info_mesg.hpp */,
+				9D27D3BB2002CB2400031749 /* fit_one_d_sensor_calibration_mesg_listener.hpp */,
+				9D27D3BC2002CB2400031749 /* fit_mesg_definition_listener.hpp */,
+				9D27D3BD2002CB2400031749 /* fit_weather_conditions_mesg_listener.hpp */,
+				9D27D3BE2002CB2400031749 /* fit_date_time.hpp */,
+				9D27D3BF2002CB2400031749 /* fit_field_definition.hpp */,
+				9D27D3C02002CB2400031749 /* fit_field_capabilities_mesg_listener.hpp */,
+				9D27D3C12002CB2400031749 /* fit_developer_field_description.hpp */,
+				9D27D3C22002CB2400031749 /* fit_course_point_mesg_listener.hpp */,
+				9D27D3C32002CB2400031749 /* fit_hr_mesg_listener.hpp */,
+				9D27D3C42002CB2400031749 /* fit_slave_device_mesg.hpp */,
+				9D27D3C52002CB2400031749 /* fit_dive_alarm_mesg_listener.hpp */,
+				9D27D3C62002CB2400031749 /* fit_hr_zone_mesg_listener.hpp */,
+				9D27D3C72002CB2400031749 /* fit_weight_scale_mesg.hpp */,
+				9D27D3C82002CB2400031749 /* fit_pad_mesg.hpp */,
+				9D27D3C92002CB2400031749 /* fit_buffer_encode.hpp */,
+				9D27D3CA2002CB2400031749 /* fit_video_description_mesg.hpp */,
+				9D27D3CB2002CB2400031749 /* fit_developer_data_id_mesg_listener.hpp */,
+				9D27D3CC2002CB2400031749 /* fit_timestamp_correlation_mesg.hpp */,
+				9D27D3CD2002CB2400031749 /* fit_weather_alert_mesg.hpp */,
+				9D27D3CE2002CB2400031749 /* fit_exd_data_concept_configuration_mesg.hpp */,
+				9D27D3CF2002CB2400031749 /* fit_buffered_mesg_broadcaster.hpp */,
+				9D27D3D02002CB2500031749 /* fit_sport_mesg_listener.hpp */,
+				9D27D3D12002CB2500031749 /* fit_stress_level_mesg.hpp */,
+				9D27D3D22002CB2500031749 /* fit_dive_summary_mesg_listener.hpp */,
+				9D27D3D32002CB2500031749 /* fit_video_mesg_listener.hpp */,
+				9D27D3D42002CB2500031749 /* fit_developer_field.hpp */,
+				9D27D3D52002CB2500031749 /* fit_weight_scale_mesg_listener.hpp */,
+				9D27D3D62002CB2500031749 /* fit_course_mesg_listener.hpp */,
+				9D27D3D72002CB2500031749 /* fit_config.hpp */,
+				9D27D3D82002CB2500031749 /* fit_gyroscope_data_mesg.hpp */,
+				9D27D3D92002CB2500031749 /* fit_lap_mesg.hpp */,
+				9D27D3DA2002CB2500031749 /* fit_blood_pressure_mesg_listener.hpp */,
+				9D27D3DB2002CB2500031749 /* fit_ohr_settings_mesg.hpp */,
+				9D27D3DC2002CB2500031749 /* fit_segment_id_mesg.hpp */,
+				9D27D3DD2002CB2500031749 /* fit_decode.hpp */,
+				9D27D3DE2002CB2500031749 /* fit_protocol_validator.hpp */,
+				9D27D3DF2002CB2500031749 /* fit_memo_glob_mesg_listener.hpp */,
+				9D27D3E02002CB2500031749 /* fit_segment_file_mesg_listener.hpp */,
+				9D27D3E12002CB2500031749 /* fit_segment_lap_mesg_listener.hpp */,
+				9D27D3E22002CB2500031749 /* fit_developer_field_description_listener.hpp */,
+				9D27D3E32002CB2500031749 /* fit_exd_screen_configuration_mesg_listener.hpp */,
+				9D27D3E42002CB2500031749 /* fit_exercise_title_mesg_listener.hpp */,
+				9D27D3E52002CB2500031749 /* fit_training_file_mesg.hpp */,
+				9D27D3E62002CB2500031749 /* fit_user_profile_mesg_listener.hpp */,
+				9D27D3E72002CB2500031749 /* fit_software_mesg.hpp */,
+				9D27D3E82002CB2500031749 /* fit_length_mesg_listener.hpp */,
+				9D27D3E92002CB2500031749 /* fit_accumulator.hpp */,
+				9D27D3EA2002CB2500031749 /* fit_accelerometer_data_mesg_listener.hpp */,
+				9D27D3EB2002CB2500031749 /* fit_dive_gas_mesg_listener.hpp */,
+				9D27D3EC2002CB2500031749 /* fit_segment_file_mesg.hpp */,
+				9D27D3ED2002CB2500031749 /* fit_course_mesg.hpp */,
+				9D27D3EE2002CB2500031749 /* fit_event_mesg_listener.hpp */,
+				9D27D3EF2002CB2500031749 /* fit_exd_screen_configuration_mesg.hpp */,
+				9D27D3F02002CB2500031749 /* fit_mesg.hpp */,
+				9D27D3F12002CB2500031749 /* fit_video_frame_mesg_listener.hpp */,
+				9D27D3F22002CB2500031749 /* fit_connectivity_mesg.hpp */,
+				9D27D3F32002CB2500031749 /* fit_magnetometer_data_mesg_listener.hpp */,
+				9D27D3F42002CB2500031749 /* fit_ohr_settings_mesg_listener.hpp */,
+				9D27D3F52002CB2500031749 /* fit_gps_metadata_mesg_listener.hpp */,
+				9D27D3F62002CB2500031749 /* fit_power_zone_mesg.hpp */,
+				9D27D3F72002CB2500031749 /* fit_buffered_record_mesg_broadcaster.hpp */,
+				9D27D3F82002CB2500031749 /* fit_stress_level_mesg_listener.hpp */,
+				9D27D3F92002CB2500031749 /* fit_hrm_profile_mesg_listener.hpp */,
+				9D27D3FA2002CB2500031749 /* fit_hr_mesg.hpp */,
+				9D27D3FB2002CB2500031749 /* fit_mesg_capabilities_mesg_listener.hpp */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -656,6 +1124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D27D1CF2002905600031749 /* Fit.h in Headers */,
+				9D27D24C2002B22300031749 /* FitRecord.h in Headers */,
 				9D27D23F2002A65200031749 /* FitReader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -665,6 +1134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D27D1D02002905700031749 /* Fit.h in Headers */,
+				9D27D24D2002B22300031749 /* FitRecord.h in Headers */,
 				9D27D2402002A65300031749 /* FitReader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -837,6 +1307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D27D24A2002B21D00031749 /* FitRecord.m in Sources */,
 				9D27D23D2002A64A00031749 /* FitReader.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -845,6 +1316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D27D24B2002B22000031749 /* FitRecord.m in Sources */,
 				9D27D23E2002A64B00031749 /* FitReader.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -993,13 +1465,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Fit/FitSDK/usr/local/include";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Fit/FitSDK/iOS/usr/local/include";
 				INFOPLIST_FILE = Fit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Fit/FitSDK",
+					"$(PROJECT_DIR)/Fit/FitSDK/iOS",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "be.fousa.$(PROJECT_NAME)";
@@ -1018,13 +1492,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Fit/FitSDK/usr/local/include";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Fit/FitSDK/iOS/usr/local/include";
 				INFOPLIST_FILE = Fit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Fit/FitSDK",
+					"$(PROJECT_DIR)/Fit/FitSDK/iOS",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "be.fousa.$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
@@ -1044,10 +1520,16 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Fit/FitSDK/macOS/usr/local/include";
 				INFOPLIST_FILE = Fit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Fit/FitSDK",
+					"$(PROJECT_DIR)/Fit/FitSDK/macOS",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "be.fousa.$(PROJECT_NAME)";
 				SDKROOT = macosx;
@@ -1067,10 +1549,16 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Fit/FitSDK/macOS/usr/local/include";
 				INFOPLIST_FILE = Fit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Fit/FitSDK",
+					"$(PROJECT_DIR)/Fit/FitSDK/macOS",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = "be.fousa.$(PROJECT_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;

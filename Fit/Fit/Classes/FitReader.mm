@@ -7,14 +7,23 @@
 //
 
 #import "FitReader.h"
+#import "FitRecord.h"
 
-#import "FitDecode.h"
+#include <fstream>
+#include <iostream>
+#include <iosfwd>
+
+#include "fit_decode.hpp"
 #include "fit_mesg_broadcaster.hpp"
+#include "fit_developer_field_description.hpp"
 
+#include <list>
 #include "fit_record_mesg_listener.hpp"
 
 class RecordListener: fit::RecordMesgListener {
 public:
+    std::list<fit::RecordMesg> records;
+    
     void PrintValues(const fit::FieldBase& field)
     {
         for (FIT_UINT8 j=0; j< (FIT_UINT8)field.GetNumValues(); j++)
@@ -52,28 +61,30 @@ public:
     
     void OnMesg(fit::RecordMesg& mesg)
     {
-        NSLog(@"👀 Number of fields found %i", mesg.GetNumFields());
+        records.push_back(mesg);
         
-        for (FIT_UINT16 i = 0; i < (FIT_UINT16)mesg.GetNumFields(); i++)
-        {
-            fit::Field* field = mesg.GetFieldByIndex(i);
-            NSLog(@"   Field %d (%s) has %d value(s)", i, field->GetName().c_str(), field->GetNumValues());
-
-            PrintValues(*field);
-        }
-
-        for (auto devField : mesg.GetDeveloperFields())
-        {
-            NSLog(@"Developer Field(%s) has %d value(s)", devField.GetName().c_str(), devField.GetNumValues());
-            PrintValues(devField);
-        }
+//        NSLog(@"👀 Number of fields found %i", mesg.GetNumFields());
+        
+//        for (FIT_UINT16 i = 0; i < (FIT_UINT16)mesg.GetNumFields(); i++)
+//        {
+//            fit::Field* field = mesg.GetFieldByIndex(i);
+//            NSLog(@"   Field %d (%s) has %d value(s)", i, field->GetName().c_str(), field->GetNumValues());
+//
+//            PrintValues(*field);
+//        }
+//
+//        for (auto devField : mesg.GetDeveloperFields())
+//        {
+//            NSLog(@"Developer Field(%s) has %d value(s)", devField.GetName().c_str(), devField.GetNumValues());
+//            PrintValues(devField);
+//        }
     }
 };
 
 @interface FitReader ()
 
 @property (nonatomic, strong) NSString *path;
-@property (nonatomic, strong) FitDecode *decode;
+@property (nonatomic, strong) NSMutableArray<FitRecord *> *records;
 
 @end
 
@@ -88,30 +99,71 @@ public:
 }
 
 - (void)read {
-    NSLog(@"📦 Start reading file");
-    FILE *file;
-    if ((file = fopen([self.path UTF8String], "rb")) == NULL) {
+    
+    FILE *somefile;
+    if ((somefile = fopen([self.path UTF8String], "rb")) == NULL) {
         NSLog(@"🔥 Error opening file");
     }
+    
+    self.records = [NSMutableArray new];
 
-    @try {
-        NSLog(@"📦 Start decoding file");
-        self.decode = [[FitDecode alloc] init];
+    fit::Decode decode;
+    std::fstream file;
+    RecordListener listener;
+    
+        NSLog(@"📦 Start opening file");
+        file.open([self.path UTF8String], std::ios::in | std::ios::binary);
+        if (!file.is_open()) { NSLog(@"🔥 Error opening file"); }
+    
+        NSLog(@"📦 Checking for FIT");
+        if (!decode.IsFIT(file)) { NSLog(@"🔥 FIT check failed"); }
+        
+        NSLog(@"📦 Checking for integrity");
+        if (!decode.CheckIntegrity(file)) { NSLog(@"🔥 Integrity check failed"); }
+        
+        
+        
+        
+        
+        // self.decode = [[FitDecode alloc] init];
 
         // Setup the listeners.
-        RecordListener listener;
         fit::MesgBroadcaster broadcaster = fit::MesgBroadcaster();
         broadcaster.AddListener((fit::RecordMesgListener &)listener);
+        NSLog(@"📦 Start listening file");
+    
+
+    @try {
+//        decode.Read(file, &listener);
+        decode.Read(file, broadcaster);
+//        decode.Read(file, broadcaster, listener);
         
-        [self.decode IsFit:file];
-        [self.decode CheckIntegrity:file];
-        [self.decode Read:file withListener:&broadcaster andDefListener:NULL];
-        fclose(file);
+//        [self.decode IsFit:file];
+//        [self.decode CheckIntegrity:file];
+//        [self.decode Read:file withListener:&broadcaster andDefListener:NULL];
+//        fclose(file);
     }
     @catch (NSException *exception) {
         NSLog(@"🔥 Error decoding file %@", [exception reason]);
     }
     @finally {
+        std::list<fit::RecordMesg> rawRecords = listener.records;
+        
+        double conversion = 180.0 / pow(2, 31);
+        for (fit::RecordMesg rawRecord : rawRecords) {
+            FitRecord *record = [FitRecord new];
+            
+            ::fit::int32_t rawLatitude = rawRecord.GetPositionLat();
+            double convertedLatitude = rawLatitude * conversion;
+            
+            ::fit::int32_t rawLongitude = rawRecord.GetPositionLong();
+            double convertedLongitude = rawLongitude * conversion;
+            
+            record.coordindate = CLLocationCoordinate2DMake(convertedLatitude, convertedLongitude);
+            [self.records addObject:record];
+        }
+        
+        NSLog(@"📦 Record count %lu", (unsigned long)[self.records count]);
         NSLog(@"📦 Finished decoding file");
     }
 }

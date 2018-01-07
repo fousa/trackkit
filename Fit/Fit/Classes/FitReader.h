@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class FitRecord;
+
 @interface FitReader : NSObject
+
+@property (nonatomic, strong, readonly) NSMutableArray<FitRecord *> *records;
 
 - (instancetype)initWithPath:(NSString *)path;
 - (void)read;
