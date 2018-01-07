@@ -21,6 +21,12 @@
   },
   "requires_arc": true,
   "source_files": "Sources/Classes/**/*",
+  "ios": {
+    "vendored_frameworks": "Sources/Vendor/iOS/Fit.framework"
+  },
+  "osx": {
+    "vendored_frameworks": "Sources/Vendor/macOS/Fit.framework"
+  },
   "dependencies": {
     "AEXML": [
       "~> 4.2"

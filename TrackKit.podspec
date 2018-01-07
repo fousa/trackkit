@@ -23,6 +23,10 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'Sources/Classes/**/*'
 
+  # Add the Fit framework.
+  s.ios.vendored_framework = 'Sources/Vendor/iOS/Fit.framework'
+  s.osx.vendored_framework = 'Sources/Vendor/macOS/Fit.framework'
+
   # Dependencies
   s.dependency 'AEXML', '~> 4.2'
 end
