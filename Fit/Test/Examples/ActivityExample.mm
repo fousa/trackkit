@@ -21,7 +21,9 @@
 - (instancetype)initWithFilename:(NSString *)filename {
     if (self = [super init]) {
         NSString *filepath = [[NSBundle mainBundle] pathForResource:filename ofType:@"fit"];
-        self.reader = [[FitReader alloc] initWithPath:filepath];
+        NSData * data = [NSData dataWithContentsOfFile:filepath];
+        
+        self.reader = [[FitReader alloc] initWithData:data];
     }
     return self;
 }

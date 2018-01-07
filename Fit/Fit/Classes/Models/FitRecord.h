@@ -11,6 +11,6 @@
 
 @interface FitRecord : NSObject
 
-@property (nonatomic, assign) CLLocationCoordinate2D coordindate;
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 
 @end

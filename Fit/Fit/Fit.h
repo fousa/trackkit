@@ -15,3 +15,4 @@ FOUNDATION_EXPORT double Fit_VersionNumber;
 FOUNDATION_EXPORT const unsigned char Fit_VersionString[];
 
 #import "FitReader.h"
+#import "FitRecord.h"

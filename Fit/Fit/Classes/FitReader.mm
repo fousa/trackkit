@@ -84,64 +84,55 @@ public:
 @interface FitReader ()
 
 @property (nonatomic, strong) NSString *path;
+@property (nonatomic, strong) NSData *data;
 @property (nonatomic, strong) NSMutableArray<FitRecord *> *records;
 
 @end
 
 @implementation FitReader
 
-- (instancetype)initWithPath:(NSString *)path {
+- (instancetype)initWithData:(NSData *)data {
     if (self = [super init]) {
-        self.path = path;
-        NSLog(@"📦 Opening file at path %@", self.path);
+        self.data = data;
+        NSLog(@"📦 Opening file from data");
     }
     return self;
 }
 
 - (void)read {
-    
-    FILE *somefile;
-    if ((somefile = fopen([self.path UTF8String], "rb")) == NULL) {
-        NSLog(@"🔥 Error opening file");
-    }
-    
     self.records = [NSMutableArray new];
 
     fit::Decode decode;
     std::fstream file;
     RecordListener listener;
     
-        NSLog(@"📦 Start opening file");
-        file.open([self.path UTF8String], std::ios::in | std::ios::binary);
-        if (!file.is_open()) { NSLog(@"🔥 Error opening file"); }
-    
-        NSLog(@"📦 Checking for FIT");
-        if (!decode.IsFIT(file)) { NSLog(@"🔥 FIT check failed"); }
-        
-        NSLog(@"📦 Checking for integrity");
-        if (!decode.CheckIntegrity(file)) { NSLog(@"🔥 Integrity check failed"); }
-        
-        
-        
-        
-        
-        // self.decode = [[FitDecode alloc] init];
+    NSLog(@"📦 Start opening file");
 
-        // Setup the listeners.
-        fit::MesgBroadcaster broadcaster = fit::MesgBroadcaster();
-        broadcaster.AddListener((fit::RecordMesgListener &)listener);
-        NSLog(@"📦 Start listening file");
+    NSString *filename = [NSString stringWithFormat:@"%@.%@", [[NSProcessInfo processInfo] globallyUniqueString], @"fit"];
+    NSURL *fileURL = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent:filename]];
     
+    self.path = [fileURL path];
+    NSError *error = nil;
+    BOOL success = [self.data writeToURL:fileURL options:NULL error:&error];
+    NSLog(@"Exists? %i, %i", success, [[NSFileManager defaultManager] fileExistsAtPath:[fileURL absoluteString]]);
+    
+    
+    file.open([self.path UTF8String], std::ios::in | std::ios::binary);
+    if (!file.is_open()) { NSLog(@"🔥 Error opening file"); }
 
+    NSLog(@"📦 Checking for FIT");
+    if (!decode.IsFIT(file)) { NSLog(@"🔥 FIT check failed"); }
+    
+    NSLog(@"📦 Checking for integrity");
+    if (!decode.CheckIntegrity(file)) { NSLog(@"🔥 Integrity check failed"); }
+
+    // Setup the listeners.
+    fit::MesgBroadcaster broadcaster = fit::MesgBroadcaster();
+    broadcaster.AddListener((fit::RecordMesgListener &)listener);
+    NSLog(@"📦 Start listening file");
+    
     @try {
-//        decode.Read(file, &listener);
         decode.Read(file, broadcaster);
-//        decode.Read(file, broadcaster, listener);
-        
-//        [self.decode IsFit:file];
-//        [self.decode CheckIntegrity:file];
-//        [self.decode Read:file withListener:&broadcaster andDefListener:NULL];
-//        fclose(file);
     }
     @catch (NSException *exception) {
         NSLog(@"🔥 Error decoding file %@", [exception reason]);
@@ -159,7 +150,7 @@ public:
             ::fit::int32_t rawLongitude = rawRecord.GetPositionLong();
             double convertedLongitude = rawLongitude * conversion;
             
-            record.coordindate = CLLocationCoordinate2DMake(convertedLatitude, convertedLongitude);
+            record.coordinate = CLLocationCoordinate2DMake(convertedLatitude, convertedLongitude);
             [self.records addObject:record];
         }
         

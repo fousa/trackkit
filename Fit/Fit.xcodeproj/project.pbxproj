@@ -37,8 +37,8 @@
 		9D27D2422002A79700031749 /* Fit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D27D1BA20028F7D00031749 /* Fit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D27D24A2002B21D00031749 /* FitRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D27D2482002B18900031749 /* FitRecord.m */; };
 		9D27D24B2002B22000031749 /* FitRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D27D2482002B18900031749 /* FitRecord.m */; };
-		9D27D24C2002B22300031749 /* FitRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27D2472002B18900031749 /* FitRecord.h */; };
-		9D27D24D2002B22300031749 /* FitRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27D2472002B18900031749 /* FitRecord.h */; };
+		9D27D24C2002B22300031749 /* FitRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27D2472002B18900031749 /* FitRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D27D24D2002B22300031749 /* FitRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27D2472002B18900031749 /* FitRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D27D3FD2002CB2F00031749 /* libFitSdkCppiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D27D32B2002CB2400031749 /* libFitSdkCppiOS.a */; };
 		9D27D3FE2002CB3300031749 /* libFitSdkCpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D27D3FC2002CB2500031749 /* libFitSdkCpp.a */; };
 /* End PBXBuildFile section */
