@@ -169,6 +169,7 @@
 		6297A9A31C98C37700686120 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				9D27D20920029DF400031749 /* FIT */,
 				62BB32D31D9C29B600310CF9 /* GPX */,
 				04206A031E1653AE00B428C2 /* LOC */,
 				046664D01EE09DD0009701B1 /* NMEA */,
@@ -198,6 +199,13 @@
 				62BB32DB1D9DB45D00310CF9 /* TCXParserSpecs.swift */,
 			);
 			path = TCX;
+			sourceTree = "<group>";
+		};
+		9D27D20920029DF400031749 /* FIT */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FIT;
 			sourceTree = "<group>";
 		};
 		9DFB69BE1FDD47D20010D5DE /* TRACK */ = {

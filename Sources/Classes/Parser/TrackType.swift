@@ -32,6 +32,9 @@ public enum TrackType: String {
     /// A TCX formatted track.
     case tcx
     
+    /// A FIT formatted track.
+    case fit
+    
     /// A custom json formatted track.
     case track
 
@@ -63,6 +66,8 @@ public enum TrackType: String {
         case .tcx:
             let document = try parseXML(data: data)
             return try File(tcx: document.root)
+        case .fit:
+            return try File(fit: data)
         case .track:
             return try File(track: data)
         }
