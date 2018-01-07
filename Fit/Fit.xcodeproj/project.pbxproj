@@ -23,10 +23,6 @@
 /* Begin PBXBuildFile section */
 		9D27D1CF2002905600031749 /* Fit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27CD392002639300031749 /* Fit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D27D1D02002905700031749 /* Fit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27CD392002639300031749 /* Fit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D27D1D32002907000031749 /* SomeClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27D1D12002907000031749 /* SomeClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D27D1D42002907000031749 /* SomeClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27D1D12002907000031749 /* SomeClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9D27D1D52002907000031749 /* SomeClass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D27D1D22002907000031749 /* SomeClass.mm */; };
-		9D27D1D62002907000031749 /* SomeClass.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D27D1D22002907000031749 /* SomeClass.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -245,8 +241,6 @@
 		9D27CFF32002886900031749 /* libFitSdkCppiOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFitSdkCppiOS.a; sourceTree = "<group>"; };
 		9D27D1BA20028F7D00031749 /* Fit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D27D1C720028F9800031749 /* Fit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D27D1D12002907000031749 /* SomeClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomeClass.h; sourceTree = "<group>"; };
-		9D27D1D22002907000031749 /* SomeClass.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SomeClass.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,8 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				9D27CD392002639300031749 /* Fit.h */,
-				9D27D1D12002907000031749 /* SomeClass.h */,
-				9D27D1D22002907000031749 /* SomeClass.mm */,
 				9D27CF1C2002886900031749 /* FitSDK */,
 			);
 			path = Fit;
@@ -546,7 +538,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D27D1CF2002905600031749 /* Fit.h in Headers */,
-				9D27D1D32002907000031749 /* SomeClass.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +546,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D27D1D02002905700031749 /* Fit.h in Headers */,
-				9D27D1D42002907000031749 /* SomeClass.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,7 +696,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D27D1D52002907000031749 /* SomeClass.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,7 +703,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D27D1D62002907000031749 /* SomeClass.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

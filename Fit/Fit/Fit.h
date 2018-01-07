@@ -14,4 +14,3 @@ FOUNDATION_EXPORT double Fit_VersionNumber;
 //! Project version string for Fit.
 FOUNDATION_EXPORT const unsigned char Fit_VersionString[];
 
-#import "SomeClass.h"

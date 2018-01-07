@@ -28,8 +28,6 @@ public struct TrackParser {
      - Throws: `ParseError.invalidData` if the data object is empty.
      */
     public init(data: Data?, type: TrackType) throws {
-        _ = SomeClass()
-        
         guard let data = data else {
             throw TrackParseError.invalidData
         }
