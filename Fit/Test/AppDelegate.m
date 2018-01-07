@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ActivityExample.h"
 
 @interface AppDelegate ()
 
@@ -15,6 +16,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    ActivityExample *example = [[ActivityExample alloc] initWithFilename:@"Bike Activity"];
+    [example read];
+    
     return YES;
 }
 
