@@ -17,6 +17,7 @@ extension File {
         self.init(type: .fit, version: version)
         
         activities = file.activities.flatMap { Activity(fit: $0) }
+        courses = file.courses.flatMap { Course(fit: $0) }
     }
     
 }
