@@ -16,14 +16,14 @@
     if (self = [super init]) {
         NSMutableArray *laps = [NSMutableArray array];
         FIT_DATE_TIME previousTimestamp = 0;
-        for (fit::LapMesg rawLap : rawLaps) {
+        for (auto&& rawLap : rawLaps) {
             FIT_DATE_TIME lapTimestamp = rawLap.GetTimestamp();
             
             std::list<fit::RecordMesg> records;
             for (fit::RecordMesg record : rawRecords) {
                 FIT_DATE_TIME timestamp = record.GetTimestamp();
                 if (timestamp > previousTimestamp && timestamp <= lapTimestamp) {
-                    records.push_front(record);
+                    records.push_back(record);
                 }
             }
             

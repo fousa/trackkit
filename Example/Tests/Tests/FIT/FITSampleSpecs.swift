@@ -79,7 +79,7 @@ class FITSampleSpecs: QuickSpec {
                 context("points") {
                     var point: Point!
                     beforeEach {
-                        point = file.activities?.first?.laps?.last?.points?.first!
+                        point = file.activities?.first?.laps?.last?.points?.last!
                     }
                     
                     it("should have a track point time") {

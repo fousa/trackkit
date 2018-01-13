@@ -16,7 +16,7 @@
                     records:(std::list<fit::RecordMesg>)records {
     if (self = [super init]) {
         NSMutableArray *points = [NSMutableArray new];
-        for (fit::RecordMesg record : records) {
+        for (auto&& record : records) {
             if (FITPoint *point = [[FITPoint alloc] initWithRecord:record]) {
                 [points addObject:point];
             }

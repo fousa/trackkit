@@ -66,7 +66,6 @@
     broadcaster.AddListener((fit::RecordMesgListener &)listener);
     broadcaster.AddListener((fit::LapMesgListener &)listener);
     @try {
-        NSLog(@"📦 Start listening file");
         decode.Read(file, broadcaster);
     }
     @catch (NSException *exception) {
