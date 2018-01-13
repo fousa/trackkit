@@ -22,7 +22,7 @@ class FITGarminBikeRideSpecs: QuickSpec {
                 }
                 
                 it("should not have routes") {
-                    expect(file.courses).to(beNil())
+                    expect(file.courses?.count) == 0
                 }
                 
                 it("should have one activity") {
