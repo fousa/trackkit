@@ -32,8 +32,6 @@
         self.averageHeartRate = [FitParser parseInteger:lap.GetAvgHeartRate() isValid:lap.IsAvgHeartRateValid()];
         self.maximumHeartRate = [FitParser parseInteger:lap.GetMaxHeartRate() isValid:lap.IsMaxHeartRateValid()];
         self.averageCadence = [FitParser parseInteger:lap.GetAvgCadence() isValid:lap.IsAvgCadenceValid()];
-        
-        NSLog(@"➡️ Lap with %lu", (unsigned long)self.points.count);
     }
     return self;
 }

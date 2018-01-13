@@ -25,15 +25,6 @@
         self.elevation = [FitParser parseFloat:record.GetAltitude() isValid:record.IsAltitudeValid()];
         self.cadence = [FitParser parseInteger:record.GetCadence() isValid:record.IsCadenceValid()];
         self.heartrate = [FitParser parseInteger:record.GetHeartRate() isValid:record.IsHeartRateValid()];
-        
-        NSLog(@"➡️➡️➡️ Record %fl / %fl / %@ / %@l / %@ / %@ / %@",
-              self.coordinate.latitude,
-              self.coordinate.longitude,
-              self.time,
-              self.distance,
-              self.elevation,
-              self.cadence,
-              self.heartrate);
     }
     return self;
 }
