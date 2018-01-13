@@ -15,13 +15,13 @@ extension Lap {
         self.init()
         
         startTime = lap?.startTime
-        totalTime = lap?.totalTime.doubleValue
-        totalDistance = lap?.totalDistance.doubleValue
-        maximumSpeed = lap?.maximumSpeed.doubleValue
-        calories = lap?.totalCalories.intValue
-        averageHeartRate = lap?.averageHeartRate.intValue
-        maximumHeartRate = lap?.maximumHeartRate.intValue
-        cadence = lap?.averageCadence.intValue
+        totalTime = lap?.totalTime?.doubleValue
+        totalDistance = lap?.totalDistance?.doubleValue
+        maximumSpeed = lap?.maximumSpeed?.doubleValue
+        calories = lap?.totalCalories?.intValue
+        averageHeartRate = lap?.averageHeartRate?.intValue
+        maximumHeartRate = lap?.maximumHeartRate?.intValue
+        cadence = lap?.averageCadence?.intValue
         points = lap?.points.flatMap { Point(fit: $0) }
     }
     

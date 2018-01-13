@@ -10,14 +10,14 @@
 
 @interface FITLap : NSObject
 
-@property (nonatomic, strong) NSDate *startTime;
-@property (nonatomic, strong) NSNumber *totalTime;
-@property (nonatomic, strong) NSNumber *totalDistance;
-@property (nonatomic, strong) NSNumber *maximumSpeed;
-@property (nonatomic, strong) NSNumber *totalCalories;
-@property (nonatomic, strong) NSNumber *averageHeartRate;
-@property (nonatomic, strong) NSNumber *maximumHeartRate;
-@property (nonatomic, strong) NSNumber *averageCadence;
-@property (nonatomic, strong) NSArray<FITPoint *> *points;
+@property (nonatomic, strong, nullable) NSDate *startTime;
+@property (nonatomic, strong, nullable) NSNumber *totalTime;
+@property (nonatomic, strong, nullable) NSNumber *totalDistance;
+@property (nonatomic, strong, nullable) NSNumber *maximumSpeed;
+@property (nonatomic, strong, nullable) NSNumber *totalCalories;
+@property (nonatomic, strong, nullable) NSNumber *averageHeartRate;
+@property (nonatomic, strong, nullable) NSNumber *maximumHeartRate;
+@property (nonatomic, strong, nullable) NSNumber *averageCadence;
+@property (nonatomic, strong, nonnull) NSArray<FITPoint *> *points;
 
 @end

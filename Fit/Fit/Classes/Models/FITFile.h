@@ -12,6 +12,6 @@
 
 @interface FITFile : NSObject
 
-@property (nonatomic, strong) NSArray<FITActivity *> *activities;
+@property (nonatomic, strong, nonnull) NSArray<FITActivity *> *activities;
 
 @end

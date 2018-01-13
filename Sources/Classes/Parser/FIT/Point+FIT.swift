@@ -15,10 +15,10 @@ extension Point {
         self.init()
         
         coordinate = point?.coordinate
-        elevation = point?.elevation.doubleValue
-        distance = point?.distance.doubleValue
-        cadence = point?.cadence.intValue
-        heartRate = point?.heartrate.intValue
+        elevation = point?.elevation?.doubleValue
+        distance = point?.distance?.doubleValue
+        cadence = point?.cadence?.intValue
+        heartRate = point?.heartrate?.intValue
         time = point?.time
     }
     

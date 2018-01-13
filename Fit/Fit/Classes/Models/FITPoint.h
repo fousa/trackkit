@@ -12,10 +12,10 @@
 @interface FITPoint : NSObject
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
-@property (nonatomic, strong) NSNumber *elevation;
-@property (nonatomic, strong) NSNumber *distance;
-@property (nonatomic, strong) NSNumber *heartrate;
-@property (nonatomic, strong) NSNumber *cadence;
-@property (nonatomic, strong) NSDate *time;
+@property (nonatomic, strong, nullable) NSNumber *elevation;
+@property (nonatomic, strong, nullable) NSNumber *distance;
+@property (nonatomic, strong, nullable) NSNumber *heartrate;
+@property (nonatomic, strong, nullable) NSNumber *cadence;
+@property (nonatomic, strong, nullable) NSDate *time;
 
 @end

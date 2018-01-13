@@ -12,6 +12,6 @@
 
 @interface FITActivity : NSObject
 
-@property (nonatomic, strong) NSArray<FITLap *> *laps;
+@property (nonatomic, strong, nullable) NSArray<FITLap *> *laps;
 
 @end
