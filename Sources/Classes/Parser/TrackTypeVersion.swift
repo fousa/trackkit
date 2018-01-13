@@ -91,7 +91,7 @@ public enum TrackTypeVersion {
         case .tcx:
             supportedVersions = ["http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2"]
         case .fit:
-            supportedVersions = ["1.0"]
+            supportedVersions = ["2.2"]
         case .track:
             supportedVersions = ["1.0"]
         }

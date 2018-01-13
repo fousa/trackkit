@@ -13,7 +13,7 @@ extension File {
     
     convenience init(fit file: FITFile) throws {
         // Fetch the type version.
-        let version = try TrackTypeVersion(type: .fit, version: "1.0")
+        let version = try TrackTypeVersion(type: .fit, version: "2.2")
         self.init(type: .fit, version: version)
         
         activities = file.activities.flatMap { Activity(fit: $0) }
