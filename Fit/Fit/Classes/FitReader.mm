@@ -65,8 +65,9 @@ BOOL const kEnableLogging = NO;
     Listener listener;
     fit::MesgBroadcaster broadcaster = fit::MesgBroadcaster();
     broadcaster.AddListener((fit::ActivityMesgListener &)listener);
-    broadcaster.AddListener((fit::RecordMesgListener &)listener);
     broadcaster.AddListener((fit::LapMesgListener &)listener);
+    broadcaster.AddListener((fit::RecordMesgListener &)listener);
+    broadcaster.AddListener((fit::SegmentPointMesgListener &)listener);
     @try {
         decode.Read(file, broadcaster);
     }
@@ -76,7 +77,8 @@ BOOL const kEnableLogging = NO;
     @finally {
         self.file = [[FITFile alloc] initWithActivities:listener.activities
                                                 records:listener.records
-                                                   laps:listener.laps];
+                                                   laps:listener.laps
+                                          segmentPoints:listener.segmentPoints];
     }
 }
 

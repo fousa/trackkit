@@ -33,14 +33,12 @@
             
             previousTimestamp = lapTimestamp;
         }
-        
-        if ([laps count] > 0) {
-            self.laps = laps;
-        }
-        
+        self.laps = laps;
         if (kEnableLogging) {
             NSLog(@"-----> Activity with %lu laps", (unsigned long)self.laps.count);
         }
+        
+        if (self.laps.count == 0) { return nil; }
     }
     return self;
 }

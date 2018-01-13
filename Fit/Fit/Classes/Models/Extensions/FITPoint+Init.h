@@ -11,9 +11,11 @@
 #import "FitPoint.h"
 
 #include "fit_record_mesg.hpp"
+#include "fit_segment_point_mesg.hpp"
 
 @interface FITPoint (Init)
 
 - (instancetype)initWithRecord:(fit::RecordMesg)record;
+- (instancetype)initWithSegmentPoint:(fit::SegmentPointMesg)segmentPoint;
 
 @end

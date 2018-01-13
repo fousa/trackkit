@@ -15,6 +15,8 @@
 
 @implementation FITPoint (Init)
 
+#pragma mark - Init
+
 - (instancetype)initWithRecord:(fit::RecordMesg)record {
     if (self = [super init]) {
         [self parseCoordinateForRecord:record];
@@ -29,11 +31,35 @@
     return self;
 }
 
+- (instancetype)initWithSegmentPoint:(fit::SegmentPointMesg)segmentPoint {
+    if (self = [super init]) {
+        [self parseCoordinateForSegmentPoint:segmentPoint];
+        if (!CLLocationCoordinate2DIsValid(self.coordinate)) { return nil; }
+        
+        self.distance = [FitParser parseFloat:segmentPoint.GetDistance() isValid:segmentPoint.IsDistanceValid()];
+        self.elevation = [FitParser parseFloat:segmentPoint.GetAltitude() isValid:segmentPoint.IsAltitudeValid()];
+    }
+    return self;
+}
+
+#pragma mark - Parsing
+
 - (void)parseCoordinateForRecord:(fit::RecordMesg)record {
     if (record.IsPositionLatValid() && record.IsPositionLongValid()) {
         double conversion = 180.0 / pow(2, 31);
         double latitude = record.GetPositionLat() * conversion;
         double longitude = record.GetPositionLong() * conversion;
+        self.coordinate = CLLocationCoordinate2DMake(latitude, longitude);
+    } else {
+        self.coordinate = kCLLocationCoordinate2DInvalid;
+    }
+}
+
+- (void)parseCoordinateForSegmentPoint:(fit::SegmentPointMesg)segmentPoint {
+    if (segmentPoint.IsPositionLatValid() && segmentPoint.IsPositionLongValid()) {
+        double conversion = 180.0 / pow(2, 31);
+        double latitude = segmentPoint.GetPositionLat() * conversion;
+        double longitude = segmentPoint.GetPositionLong() * conversion;
         self.coordinate = CLLocationCoordinate2DMake(latitude, longitude);
     } else {
         self.coordinate = kCLLocationCoordinate2DInvalid;

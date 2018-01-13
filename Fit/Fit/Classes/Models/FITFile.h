@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 
 #import "FITActivity.h"
+#import "FITCourse.h"
 
 @interface FITFile : NSObject
 
 @property (nonatomic, strong, nonnull) NSArray<FITActivity *> *activities;
+@property (nonatomic, strong, nonnull) NSArray<FITCourse *> *courses;
 
 @end

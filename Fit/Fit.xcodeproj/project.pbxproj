@@ -56,6 +56,14 @@
 		9D8F1855200A4E45004CDECE /* FITFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D8F1852200A4E45004CDECE /* FITFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D8F1856200A4E45004CDECE /* FITFile.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F1853200A4E45004CDECE /* FITFile.mm */; };
 		9D8F1857200A4E45004CDECE /* FITFile.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F1853200A4E45004CDECE /* FITFile.mm */; };
+		9D96973D200AC81C00C0061C /* FITCourse.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D96973B200AC81C00C0061C /* FITCourse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D96973E200AC81C00C0061C /* FITCourse.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D96973B200AC81C00C0061C /* FITCourse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D96973F200AC81C00C0061C /* FITCourse.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D96973C200AC81C00C0061C /* FITCourse.mm */; };
+		9D969740200AC81C00C0061C /* FITCourse.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D96973C200AC81C00C0061C /* FITCourse.mm */; };
+		9D969743200AC85B00C0061C /* FITCourse+Init.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D969741200AC85B00C0061C /* FITCourse+Init.h */; };
+		9D969744200AC85B00C0061C /* FITCourse+Init.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D969741200AC85B00C0061C /* FITCourse+Init.h */; };
+		9D969745200AC85B00C0061C /* FITCourse+Init.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D969742200AC85B00C0061C /* FITCourse+Init.mm */; };
+		9D969746200AC85B00C0061C /* FITCourse+Init.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D969742200AC85B00C0061C /* FITCourse+Init.mm */; };
 		9DC55143200A536E007719FF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC55142200A536E007719FF /* CoreLocation.framework */; };
 		9DC55145200A5379007719FF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC55144200A5379007719FF /* CoreLocation.framework */; };
 		9DC55147200A5AD0007719FF /* 73CB0450.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9DC55146200A5AD0007719FF /* 73CB0450.fit */; };
@@ -548,6 +556,10 @@
 		9D8F184F200A4DC3004CDECE /* Listener.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Listener.cpp; sourceTree = "<group>"; };
 		9D8F1852200A4E45004CDECE /* FITFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FITFile.h; sourceTree = "<group>"; };
 		9D8F1853200A4E45004CDECE /* FITFile.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FITFile.mm; sourceTree = "<group>"; };
+		9D96973B200AC81C00C0061C /* FITCourse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FITCourse.h; sourceTree = "<group>"; };
+		9D96973C200AC81C00C0061C /* FITCourse.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FITCourse.mm; sourceTree = "<group>"; };
+		9D969741200AC85B00C0061C /* FITCourse+Init.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FITCourse+Init.h"; sourceTree = "<group>"; };
+		9D969742200AC85B00C0061C /* FITCourse+Init.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "FITCourse+Init.mm"; sourceTree = "<group>"; };
 		9DC55142200A536E007719FF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9DC55144200A5379007719FF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		9DC55146200A5AD0007719FF /* 73CB0450.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = 73CB0450.fit; sourceTree = "<group>"; };
@@ -702,6 +714,8 @@
 				9DC55155200A7120007719FF /* Extensions */,
 				9D8F183D200A49A8004CDECE /* FITActivity.h */,
 				9D8F183E200A49A8004CDECE /* FITActivity.mm */,
+				9D96973B200AC81C00C0061C /* FITCourse.h */,
+				9D96973C200AC81C00C0061C /* FITCourse.mm */,
 				9D8F1852200A4E45004CDECE /* FITFile.h */,
 				9D8F1853200A4E45004CDECE /* FITFile.mm */,
 				9D8F1843200A4A72004CDECE /* FITLap.h */,
@@ -1196,6 +1210,8 @@
 			children = (
 				9DC5515C200A71ED007719FF /* FITActivity+Init.h */,
 				9DC5515D200A71ED007719FF /* FITActivity+Init.mm */,
+				9D969741200AC85B00C0061C /* FITCourse+Init.h */,
+				9D969742200AC85B00C0061C /* FITCourse+Init.mm */,
 				9DC55162200A723A007719FF /* FITFile+Init.h */,
 				9DC55163200A723A007719FF /* FITFile+Init.mm */,
 				9DC5514F200A7056007719FF /* FITLap+Init.h */,
@@ -1214,7 +1230,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D27D1CF2002905600031749 /* Fit.h in Headers */,
+				9D96973D200AC81C00C0061C /* FITCourse.h in Headers */,
 				9D8F184B200A4A90004CDECE /* FITPoint.h in Headers */,
+				9D969743200AC85B00C0061C /* FITCourse+Init.h in Headers */,
 				9DC55158200A7139007719FF /* FITPoint+Init.h in Headers */,
 				9DC55151200A7056007719FF /* FITLap+Init.h in Headers */,
 				9DC5514B200A6462007719FF /* FitParser.h in Headers */,
@@ -1232,7 +1250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D27D1D02002905700031749 /* Fit.h in Headers */,
+				9D96973E200AC81C00C0061C /* FITCourse.h in Headers */,
 				9D8F184C200A4A90004CDECE /* FITPoint.h in Headers */,
+				9D969744200AC85B00C0061C /* FITCourse+Init.h in Headers */,
 				9DC55159200A7139007719FF /* FITPoint+Init.h in Headers */,
 				9DC55152200A7056007719FF /* FITLap+Init.h in Headers */,
 				9DC5514C200A6462007719FF /* FitParser.h in Headers */,
@@ -1425,6 +1445,8 @@
 				9D8F1850200A4DC3004CDECE /* Listener.cpp in Sources */,
 				9D8F1856200A4E45004CDECE /* FITFile.mm in Sources */,
 				9DC5514D200A6462007719FF /* FitParser.mm in Sources */,
+				9D969745200AC85B00C0061C /* FITCourse+Init.mm in Sources */,
+				9D96973F200AC81C00C0061C /* FITCourse.mm in Sources */,
 				9DC55153200A7056007719FF /* FITLap+Init.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1443,6 +1465,8 @@
 				9D8F1851200A4DC3004CDECE /* Listener.cpp in Sources */,
 				9D8F1857200A4E45004CDECE /* FITFile.mm in Sources */,
 				9DC5514E200A6462007719FF /* FitParser.mm in Sources */,
+				9D969746200AC85B00C0061C /* FITCourse+Init.mm in Sources */,
+				9D969740200AC81C00C0061C /* FITCourse.mm in Sources */,
 				9DC55154200A7056007719FF /* FITLap+Init.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

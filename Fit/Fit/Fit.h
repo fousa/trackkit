@@ -18,5 +18,6 @@ FOUNDATION_EXPORT const unsigned char Fit_VersionString[];
 
 #import "FITFile.h"
 #import "FITActivity.h"
+#import "FITCourse.h"
 #import "FITLap.h"
 #import "FITPoint.h"
