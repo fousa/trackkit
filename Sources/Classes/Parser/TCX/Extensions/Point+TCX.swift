@@ -18,7 +18,7 @@ extension Point: Tcxable {
         guard
             let latitude = element["Position"]["LatitudeDegrees"].optionalDouble,
             let longitude = element["Position"]["LongitudeDegrees"].optionalDouble else {
-                return nil
+            return nil
         }
         self.init()
 
