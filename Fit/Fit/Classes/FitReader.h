@@ -10,6 +10,8 @@
 
 #import "FITFile.h"
 
+extern BOOL const kEnableLogging;
+
 @interface FitReader : NSObject
 
 @property (nonatomic, strong, readonly) FITFile *file;

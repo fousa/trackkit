@@ -20,6 +20,8 @@
 
 #include "Listener.cpp"
 
+BOOL const kEnableLogging = NO;
+
 @interface FitReader ()
 
 @property (nonatomic, strong) NSString *path;

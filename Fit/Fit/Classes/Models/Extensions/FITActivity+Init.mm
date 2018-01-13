@@ -6,6 +6,7 @@
 //  Copyright © 2018 Jelle Vandebeeck. All rights reserved.
 //
 
+#import "FitReader.h"
 #import "FITActivity+Init.h"
 #import "FITLap+Init.h"
 
@@ -35,6 +36,10 @@
         
         if ([laps count] > 0) {
             self.laps = laps;
+        }
+        
+        if (kEnableLogging) {
+            NSLog(@"-----> Activity with %lu laps", (unsigned long)self.laps.count);
         }
     }
     return self;

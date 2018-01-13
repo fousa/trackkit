@@ -6,6 +6,7 @@
 //  Copyright © 2018 Jelle Vandebeeck. All rights reserved.
 //
 
+#import "FitReader.h"
 #import "FitParser.h"
 #import "FITLap+Init.h"
 #import "FITPoint+Init.h"
@@ -32,6 +33,10 @@
         self.averageHeartRate = [FitParser parseInteger:lap.GetAvgHeartRate() isValid:lap.IsAvgHeartRateValid()];
         self.maximumHeartRate = [FitParser parseInteger:lap.GetMaxHeartRate() isValid:lap.IsMaxHeartRateValid()];
         self.averageCadence = [FitParser parseInteger:lap.GetAvgCadence() isValid:lap.IsAvgCadenceValid()];
+        
+        if (kEnableLogging) {
+            NSLog(@"-> Lap with %lu points", (unsigned long)self.points.count);
+        }
     }
     return self;
 }
