@@ -1,5 +1,5 @@
 //
-//  FITGarminRunSpecs.swift
+//  FITSampleSpecs.swift
 //  Tests
 //
 //  Created by Jelle Vandebeeck on 13/01/2018.
@@ -10,13 +10,13 @@ import Quick
 import Nimble
 import TrackKit
 
-class FITGarminRunSpecs: QuickSpec {
+class FITSampleSpecs: QuickSpec {
     override func spec() {
         describe("FIT") {
-            context("Garmin Run") {
+            context("Sample") {
                 var file: File!
                 beforeEach {
-                    let url = Bundle(for: FITGarminRunSpecs.self).url(forResource: "Garmin Run", withExtension: "fit")!
+                    let url = Bundle(for: FITSampleSpecs.self).url(forResource: "Sample", withExtension: "fit")!
                     let data = try! Data(contentsOf: url)
                     file = try! TrackParser(data: data, type: .fit).parse()
                 }
@@ -40,39 +40,39 @@ class FITGarminRunSpecs: QuickSpec {
                     }
                     
                     it("should have a lap start time") {
-                        expect(activity.laps?.first?.startTime?.description) == "2016-11-14 19:12:29 +0000"
+                        expect(activity.laps?.first?.startTime?.description) == "2015-01-20 14:03:36 +0000"
                     }
                     
                     it("should have a lap total time") {
-                        expect(activity.laps?.first?.totalTime).to(beCloseTo(57.9800, within: 0.0001))
+                        expect(activity.laps?.first?.totalTime).to(beCloseTo(25.1270, within: 0.0001))
                     }
                     
                     it("should have a lap total distance") {
-                        expect(activity.laps?.first?.totalDistance).to(beCloseTo(165.78, within: 0.0001))
+                        expect(activity.laps?.first?.totalDistance).to(beCloseTo(65.73, within: 0.0001))
                     }
                     
                     it("should have a lap maximum speed") {
-                        expect(activity.laps?.first?.maximumSpeed).to(beCloseTo(2.92, within: 0.0001))
+                        expect(activity.laps?.first?.maximumSpeed).to(beCloseTo(2.6410, within: 0.0001))
                     }
                     
                     it("should have a lap calories") {
-                        expect(activity.laps?.first?.calories) == 12
+                        expect(activity.laps?.first?.calories) == 4
                     }
                     
                     it("should have a lap average heart rate") {
-                        expect(activity.laps?.first?.averageHeartRate) == 163
+                        expect(activity.laps?.first?.averageHeartRate).to(beNil())
                     }
                     
                     it("should have a lap maximum heart rate") {
-                        expect(activity.laps?.first?.maximumHeartRate) == 167
+                        expect(activity.laps?.first?.maximumHeartRate).to(beNil())
                     }
                     
                     it("should have a lap cadence") {
-                        expect(activity.laps?.first?.cadence) == 80
+                        expect(activity.laps?.first?.cadence) == 81
                     }
                     
                     it("should have some points") {
-                        expect(activity.laps?.first?.points?.count) == 9
+                        expect(activity.laps?.first?.points?.count) == 3
                     }
                 }
                 
@@ -83,31 +83,33 @@ class FITGarminRunSpecs: QuickSpec {
                     }
                     
                     it("should have a track point time") {
-                        expect(point.time?.description) == "2016-11-14 19:13:26 +0000"
+                        expect(point.time?.description) == "2015-01-20 14:04:00 +0000"
                     }
                     
                     it("should have a coordinate") {
-                        expect(point.coordinate?.latitude).to(beCloseTo(51.1669, within: 0.0001))
-                        expect(point.coordinate?.longitude).to(beCloseTo(4.4525, within: 0.0001))
+                        expect(point.coordinate?.latitude).to(beCloseTo(25.0628, within: 0.0001))
+                        expect(point.coordinate?.longitude).to(beCloseTo(121.6324, within: 0.0001))
                     }
                     
                     it("should have a altitude in meters") {
-                        expect(point.elevation).to(beCloseTo(14.8000, within: 0.0001))
+                        expect(point.elevation).to(beCloseTo(22.4, within: 0.0001))
                     }
                     
                     it("should have a distance in meters") {
-                        expect(point.distance).to(beCloseTo(10434.5801, within: 0.0001))
+                        expect(point.distance).to(beCloseTo(5065.73, within: 0.0001))
                     }
                     
                     it("should have a cadence") {
-                        expect(point.cadence) == 82
+                        expect(point.cadence) == 80
                     }
                     
                     it("should have a heart rate") {
-                        expect(point.heartRate) == 166
+                        expect(point.heartRate).to(beNil())
                     }
                 }
             }
         }
     }
 }
+
+
