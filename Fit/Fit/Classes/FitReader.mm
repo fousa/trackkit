@@ -6,12 +6,14 @@
 //  Copyright © 2018 Jelle Vandebeeck. All rights reserved.
 //
 
-#import "FitReader.h"
-#import "FITActivity.h"
-
 #include <fstream>
 #include <iostream>
 #include <iosfwd>
+
+#import "FitReader.h"
+#import "FITActivity.h"
+#import "FITFile.h"
+#import "FITFile+Init.h"
 
 #include "fit_decode.hpp"
 #include "fit_mesg_broadcaster.hpp"
@@ -74,22 +76,6 @@
         self.file = [[FITFile alloc] initWithActivities:listener.activities
                                                 records:listener.records
                                                    laps:listener.laps];
-//        double conversion = 180.0 / pow(2, 31);
-//        for (fit::RecordMesg rawRecord : rawRecords) {
-//            FitRecord *record = [FitRecord new];
-//
-//            ::fit::int32_t rawLatitude = rawRecord.GetPositionLat();
-//            double convertedLatitude = rawLatitude * conversion;
-//
-//            ::fit::int32_t rawLongitude = rawRecord.GetPositionLong();
-//            double convertedLongitude = rawLongitude * conversion;
-//
-//            record.coordinate = CLLocationCoordinate2DMake(convertedLatitude, convertedLongitude);
-//            [self.records addObject:record];
-//        }
-        
-//        NSLog(@"📦 Record count %lu", (unsigned long)[self.records count]);
-//        NSLog(@"📦 Finished decoding file");
     }
 }
 

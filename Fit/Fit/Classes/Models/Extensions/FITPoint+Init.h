@@ -1,5 +1,5 @@
 //
-//  FITActivity.h
+//  FITPoint+Init.h
 //  Fit
 //
 //  Created by Jelle Vandebeeck on 13/01/2018.
@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import "FITLap.h"
+#import "FitPoint.h"
 
-@interface FITActivity : NSObject
+#include "fit_record_mesg.hpp"
 
-@property (nonatomic, strong) NSArray<FITLap *> *laps;
+@interface FITPoint (Init)
+
+- (instancetype)initWithRecord:(fit::RecordMesg)record;
 
 @end

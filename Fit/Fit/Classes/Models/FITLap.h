@@ -6,25 +6,18 @@
 //  Copyright © 2018 Jelle Vandebeeck. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #import "FITPoint.h"
-
-#include "fit_lap_mesg.hpp"
 
 @interface FITLap : NSObject
 
-@property (nonatomic, strong, readonly) NSDate *startTime;
-@property (nonatomic, strong, readonly) NSNumber *totalTime;
-@property (nonatomic, strong, readonly) NSNumber *totalDistance;
-@property (nonatomic, strong, readonly) NSNumber *maximumSpeed;
-@property (nonatomic, strong, readonly) NSNumber *totalCalories;
-@property (nonatomic, strong, readonly) NSNumber *averageHeartRate;
-@property (nonatomic, strong, readonly) NSNumber *maximumHeartRate;
-@property (nonatomic, strong, readonly) NSNumber *averageCadence;
-@property (nonatomic, strong, readonly) NSArray<FITPoint *> *points;
-
-- (instancetype)initFromLap:(fit::LapMesg)lap
-                    records:(std::list<fit::RecordMesg>)records;
+@property (nonatomic, strong) NSDate *startTime;
+@property (nonatomic, strong) NSNumber *totalTime;
+@property (nonatomic, strong) NSNumber *totalDistance;
+@property (nonatomic, strong) NSNumber *maximumSpeed;
+@property (nonatomic, strong) NSNumber *totalCalories;
+@property (nonatomic, strong) NSNumber *averageHeartRate;
+@property (nonatomic, strong) NSNumber *maximumHeartRate;
+@property (nonatomic, strong) NSNumber *averageCadence;
+@property (nonatomic, strong) NSArray<FITPoint *> *points;
 
 @end

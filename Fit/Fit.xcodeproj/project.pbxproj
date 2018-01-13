@@ -63,6 +63,22 @@
 		9DC5514C200A6462007719FF /* FitParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DC55149200A6462007719FF /* FitParser.h */; };
 		9DC5514D200A6462007719FF /* FitParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5514A200A6462007719FF /* FitParser.mm */; };
 		9DC5514E200A6462007719FF /* FitParser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5514A200A6462007719FF /* FitParser.mm */; };
+		9DC55151200A7056007719FF /* FITLap+Init.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DC5514F200A7056007719FF /* FITLap+Init.h */; };
+		9DC55152200A7056007719FF /* FITLap+Init.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DC5514F200A7056007719FF /* FITLap+Init.h */; };
+		9DC55153200A7056007719FF /* FITLap+Init.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DC55150200A7056007719FF /* FITLap+Init.mm */; };
+		9DC55154200A7056007719FF /* FITLap+Init.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DC55150200A7056007719FF /* FITLap+Init.mm */; };
+		9DC55158200A7139007719FF /* FITPoint+Init.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DC55156200A7139007719FF /* FITPoint+Init.h */; };
+		9DC55159200A7139007719FF /* FITPoint+Init.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DC55156200A7139007719FF /* FITPoint+Init.h */; };
+		9DC5515A200A7139007719FF /* FITPoint+Init.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DC55157200A7139007719FF /* FITPoint+Init.mm */; };
+		9DC5515B200A7139007719FF /* FITPoint+Init.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DC55157200A7139007719FF /* FITPoint+Init.mm */; };
+		9DC5515E200A71ED007719FF /* FITActivity+Init.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DC5515C200A71ED007719FF /* FITActivity+Init.h */; };
+		9DC5515F200A71ED007719FF /* FITActivity+Init.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DC5515C200A71ED007719FF /* FITActivity+Init.h */; };
+		9DC55160200A71ED007719FF /* FITActivity+Init.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5515D200A71ED007719FF /* FITActivity+Init.mm */; };
+		9DC55161200A71ED007719FF /* FITActivity+Init.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5515D200A71ED007719FF /* FITActivity+Init.mm */; };
+		9DC55164200A723A007719FF /* FITFile+Init.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DC55162200A723A007719FF /* FITFile+Init.h */; };
+		9DC55165200A723A007719FF /* FITFile+Init.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DC55162200A723A007719FF /* FITFile+Init.h */; };
+		9DC55166200A723A007719FF /* FITFile+Init.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DC55163200A723A007719FF /* FITFile+Init.mm */; };
+		9DC55167200A723A007719FF /* FITFile+Init.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9DC55163200A723A007719FF /* FITFile+Init.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -537,6 +553,14 @@
 		9DC55146200A5AD0007719FF /* 73CB0450.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = 73CB0450.fit; sourceTree = "<group>"; };
 		9DC55149200A6462007719FF /* FitParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitParser.h; sourceTree = "<group>"; };
 		9DC5514A200A6462007719FF /* FitParser.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FitParser.mm; sourceTree = "<group>"; };
+		9DC5514F200A7056007719FF /* FITLap+Init.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FITLap+Init.h"; sourceTree = "<group>"; };
+		9DC55150200A7056007719FF /* FITLap+Init.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "FITLap+Init.mm"; sourceTree = "<group>"; };
+		9DC55156200A7139007719FF /* FITPoint+Init.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FITPoint+Init.h"; sourceTree = "<group>"; };
+		9DC55157200A7139007719FF /* FITPoint+Init.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "FITPoint+Init.mm"; sourceTree = "<group>"; };
+		9DC5515C200A71ED007719FF /* FITActivity+Init.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FITActivity+Init.h"; sourceTree = "<group>"; };
+		9DC5515D200A71ED007719FF /* FITActivity+Init.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "FITActivity+Init.mm"; sourceTree = "<group>"; };
+		9DC55162200A723A007719FF /* FITFile+Init.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FITFile+Init.h"; sourceTree = "<group>"; };
+		9DC55163200A723A007719FF /* FITFile+Init.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "FITFile+Init.mm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -675,6 +699,7 @@
 		9D27D2462002B17A00031749 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9DC55155200A7120007719FF /* Extensions */,
 				9D8F183D200A49A8004CDECE /* FITActivity.h */,
 				9D8F183E200A49A8004CDECE /* FITActivity.mm */,
 				9D8F1852200A4E45004CDECE /* FITFile.h */,
@@ -1166,6 +1191,21 @@
 			path = include;
 			sourceTree = "<group>";
 		};
+		9DC55155200A7120007719FF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DC5515C200A71ED007719FF /* FITActivity+Init.h */,
+				9DC5515D200A71ED007719FF /* FITActivity+Init.mm */,
+				9DC55162200A723A007719FF /* FITFile+Init.h */,
+				9DC55163200A723A007719FF /* FITFile+Init.mm */,
+				9DC5514F200A7056007719FF /* FITLap+Init.h */,
+				9DC55150200A7056007719FF /* FITLap+Init.mm */,
+				9DC55156200A7139007719FF /* FITPoint+Init.h */,
+				9DC55157200A7139007719FF /* FITPoint+Init.mm */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1175,8 +1215,12 @@
 			files = (
 				9D27D1CF2002905600031749 /* Fit.h in Headers */,
 				9D8F184B200A4A90004CDECE /* FITPoint.h in Headers */,
+				9DC55158200A7139007719FF /* FITPoint+Init.h in Headers */,
+				9DC55151200A7056007719FF /* FITLap+Init.h in Headers */,
 				9DC5514B200A6462007719FF /* FitParser.h in Headers */,
+				9DC5515E200A71ED007719FF /* FITActivity+Init.h in Headers */,
 				9D8F1854200A4E45004CDECE /* FITFile.h in Headers */,
+				9DC55164200A723A007719FF /* FITFile+Init.h in Headers */,
 				9D27D23F2002A65200031749 /* FitReader.h in Headers */,
 				9D8F183F200A49A8004CDECE /* FITActivity.h in Headers */,
 				9D8F1845200A4A72004CDECE /* FITLap.h in Headers */,
@@ -1189,8 +1233,12 @@
 			files = (
 				9D27D1D02002905700031749 /* Fit.h in Headers */,
 				9D8F184C200A4A90004CDECE /* FITPoint.h in Headers */,
+				9DC55159200A7139007719FF /* FITPoint+Init.h in Headers */,
+				9DC55152200A7056007719FF /* FITLap+Init.h in Headers */,
 				9DC5514C200A6462007719FF /* FitParser.h in Headers */,
+				9DC5515F200A71ED007719FF /* FITActivity+Init.h in Headers */,
 				9D8F1855200A4E45004CDECE /* FITFile.h in Headers */,
+				9DC55165200A723A007719FF /* FITFile+Init.h in Headers */,
 				9D27D2402002A65300031749 /* FitReader.h in Headers */,
 				9D8F1840200A49A8004CDECE /* FITActivity.h in Headers */,
 				9D8F1846200A4A72004CDECE /* FITLap.h in Headers */,
@@ -1367,13 +1415,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DC55160200A71ED007719FF /* FITActivity+Init.mm in Sources */,
 				9D8F1841200A49A8004CDECE /* FITActivity.mm in Sources */,
 				9D8F184D200A4A90004CDECE /* FITPoint.mm in Sources */,
+				9DC5515A200A7139007719FF /* FITPoint+Init.mm in Sources */,
+				9DC55166200A723A007719FF /* FITFile+Init.mm in Sources */,
 				9D27D23D2002A64A00031749 /* FitReader.mm in Sources */,
 				9D8F1847200A4A72004CDECE /* FITLap.mm in Sources */,
 				9D8F1850200A4DC3004CDECE /* Listener.cpp in Sources */,
 				9D8F1856200A4E45004CDECE /* FITFile.mm in Sources */,
 				9DC5514D200A6462007719FF /* FitParser.mm in Sources */,
+				9DC55153200A7056007719FF /* FITLap+Init.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1381,13 +1433,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DC55161200A71ED007719FF /* FITActivity+Init.mm in Sources */,
 				9D8F1842200A49A8004CDECE /* FITActivity.mm in Sources */,
 				9D8F184E200A4A90004CDECE /* FITPoint.mm in Sources */,
+				9DC5515B200A7139007719FF /* FITPoint+Init.mm in Sources */,
+				9DC55167200A723A007719FF /* FITFile+Init.mm in Sources */,
 				9D27D23E2002A64B00031749 /* FitReader.mm in Sources */,
 				9D8F1848200A4A72004CDECE /* FITLap.mm in Sources */,
 				9D8F1851200A4DC3004CDECE /* Listener.cpp in Sources */,
 				9D8F1857200A4E45004CDECE /* FITFile.mm in Sources */,
 				9DC5514E200A6462007719FF /* FitParser.mm in Sources */,
+				9DC55154200A7056007719FF /* FITLap+Init.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,19 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
-#include <list>
-
-#include "fit_record_mesg.hpp"
 
 @interface FITPoint : NSObject
 
-@property (nonatomic, assign, readonly) CLLocationCoordinate2D coordinate;
-@property (nonatomic, strong, readonly) NSNumber *elevation;
-@property (nonatomic, strong, readonly) NSNumber *distance;
-@property (nonatomic, strong, readonly) NSNumber *heartrate;
-@property (nonatomic, strong, readonly) NSNumber *cadence;
-@property (nonatomic, strong, readonly) NSDate *time;
-
-- (instancetype)initWithRecord:(fit::RecordMesg)record;
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
+@property (nonatomic, strong) NSNumber *elevation;
+@property (nonatomic, strong) NSNumber *distance;
+@property (nonatomic, strong) NSNumber *heartrate;
+@property (nonatomic, strong) NSNumber *cadence;
+@property (nonatomic, strong) NSDate *time;
 
 @end
