@@ -36,50 +36,50 @@ class FITMultiSportSpecs: QuickSpec {
                     }
                     
                     it("should have some laps") {
-                        expect(activity.laps?.count) == 1
+                        expect(activity.laps?.count) == 20
                     }
                     
                     it("should have a lap start time") {
-                        expect(activity.laps?.first?.startTime?.description) == "2014-04-06 16:38:44 +0000"
+                        expect(activity.laps?.last?.startTime?.description) == "2014-04-06 16:38:44 +0000"
                     }
                     
                     it("should have a lap total time") {
-                        expect(activity.laps?.first?.totalTime).to(beCloseTo(392.961, within: 0.0001))
+                        expect(activity.laps?.last?.totalTime).to(beCloseTo(392.961, within: 0.0001))
                     }
                     
                     it("should have a lap total distance") {
-                        expect(activity.laps?.first?.totalDistance).to(beCloseTo(1601.8, within: 0.01))
+                        expect(activity.laps?.last?.totalDistance).to(beCloseTo(1601.8, within: 0.01))
                     }
                     
                     it("should have a lap maximum speed") {
-                        expect(activity.laps?.first?.maximumSpeed).to(beCloseTo(4.908, within: 0.001))
+                        expect(activity.laps?.last?.maximumSpeed).to(beCloseTo(4.908, within: 0.001))
                     }
                     
                     it("should have a lap calories") {
-                        expect(activity.laps?.first?.calories) == 12
+                        expect(activity.laps?.last?.calories) == 12
                     }
                     
                     it("should have a lap average heart rate") {
-                        expect(activity.laps?.first?.averageHeartRate) == 129
+                        expect(activity.laps?.last?.averageHeartRate) == 129
                     }
                     
                     it("should have a lap maximum heart rate") {
-                        expect(activity.laps?.first?.maximumHeartRate) == 139
+                        expect(activity.laps?.last?.maximumHeartRate) == 139
                     }
                     
                     it("should have a lap cadence") {
-                        expect(activity.laps?.first?.cadence).to(beNil())
+                        expect(activity.laps?.last?.cadence).to(beNil())
                     }
                     
                     it("should have some points") {
-                        expect(activity.laps?.first?.points?.count) == 393
+                        expect(activity.laps?.last?.points?.count) == 393
                     }
                 }
                 
                 context("points") {
                     var point: Point!
                     beforeEach {
-                        point = file.activities?.first?.laps?.first?.points?.first!
+                        point = file.activities?.first?.laps?.last?.points?.first!
                     }
                     
                     it("should have a track point time") {

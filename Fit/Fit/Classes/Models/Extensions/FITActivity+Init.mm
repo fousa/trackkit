@@ -12,10 +12,11 @@
 @implementation FITActivity (Init)
 
 - (instancetype)initWithRecords:(std::list<fit::RecordMesg>)rawRecords
-                           laps:(std::list<fit::LapMesg>)laps {
+                           laps:(std::list<fit::LapMesg>)rawLaps {
     if (self = [super init]) {
+        NSMutableArray *laps = [NSMutableArray array];
         FIT_DATE_TIME previousTimestamp = 0;
-        for (fit::LapMesg rawLap : laps) {
+        for (fit::LapMesg rawLap : rawLaps) {
             FIT_DATE_TIME lapTimestamp = rawLap.GetTimestamp();
             
             std::list<fit::RecordMesg> records;
@@ -27,9 +28,13 @@
             }
             
             FITLap *lap = [[FITLap alloc] initFromLap:rawLap records:records];
-            self.laps = [NSArray arrayWithObject:lap];
+            [laps addObject:lap];
             
             previousTimestamp = lapTimestamp;
+        }
+        
+        if ([laps count] > 0) {
+            self.laps = laps;
         }
     }
     return self;

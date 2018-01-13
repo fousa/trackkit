@@ -224,11 +224,11 @@
 			isa = PBXGroup;
 			children = (
 				9D969724200AA2EE00C0061C /* Files */,
-				9D8F1832200A45E2004CDECE /* FITGarminRunSpecs.swift */,
 				9D96972F200AA7E400C0061C /* FITGarminBikeRideSpecs.swift */,
-				9D969731200AA94D00C0061C /* FITSampleSpecs.swift */,
+				9D8F1832200A45E2004CDECE /* FITGarminRunSpecs.swift */,
 				9D969733200AAC0200C0061C /* FITMultiActivitiesSpecs.swift */,
 				9D969735200AAC2300C0061C /* FITMultiSportSpecs.swift */,
+				9D969731200AA94D00C0061C /* FITSampleSpecs.swift */,
 			);
 			path = FIT;
 			sourceTree = "<group>";
@@ -236,8 +236,8 @@
 		9D969724200AA2EE00C0061C /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				9D969725200AA2FB00C0061C /* Garmin Run.fit */,
 				9D96972D200AA7C600C0061C /* Garmin Bike Ride.fit */,
+				9D969725200AA2FB00C0061C /* Garmin Run.fit */,
 				9D969727200AA78C00C0061C /* Multi Activities.fit */,
 				9D969728200AA78C00C0061C /* Multi Sport.fit */,
 				9D969729200AA78C00C0061C /* Sample.fit */,
