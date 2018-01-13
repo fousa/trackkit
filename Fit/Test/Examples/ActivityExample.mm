@@ -30,7 +30,7 @@
 
 - (void)read {
     [self.reader read];
-    NSLog(@"🔥 Found %lu records", (unsigned long)[self.reader.records count]);
+    NSLog(@"🔥 Found %lu activities", (unsigned long)[self.reader.file.activities count]);
 }
 
 @end

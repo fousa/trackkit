@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FitRecord.h"
+
+#import "FITFile.h"
 
 @interface FitReader : NSObject
 
-@property (nonatomic, strong, readonly) NSMutableArray<FitRecord *> *records;
+@property (nonatomic, strong, readonly) FITFile *file;
 
 - (instancetype)initWithData:(NSData *)data;
 - (void)read;
