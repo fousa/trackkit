@@ -11,7 +11,7 @@ extension File {
     
     // MARK: - Init
     
-    convenience init(fit data: Data) throws {
+    convenience init(fit file: FITFile) throws {
         // Fetch the type version.
         let version = try TrackTypeVersion(type: .fit, version: "1.0")
         self.init(type: .fit, version: version)

@@ -5,6 +5,7 @@
 //
 
 import AEXML
+import Fit
 
 private extension String {
     #if swift(>=4.0)
@@ -67,10 +68,20 @@ public enum TrackType: String {
             let document = try parseXML(data: data)
             return try File(tcx: document.root)
         case .fit:
-            return try File(fit: data)
+            let file = try parseFIT(data: data)
+            return try File(fit: file)
         case .track:
             return try File(track: data)
         }
+    }
+    
+    private func parseFIT(data: Data) throws -> FITFile {
+        let reader = FitReader(data: data)
+        reader?.read()
+        guard let file = reader?.file else {
+            throw TrackParseError.invalidFormat
+        }
+        return file
     }
 
     private func parseXML(data: Data) throws -> AEXMLDocument {
