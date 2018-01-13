@@ -36,6 +36,7 @@
         [self parseCoordinateForSegmentPoint:segmentPoint];
         if (!CLLocationCoordinate2DIsValid(self.coordinate)) { return nil; }
         
+        self.time = [FitParser parseTimestamp:segmentPoint.GetLeaderTime(0) isValid:segmentPoint.IsLeaderTimeValid(0)];
         self.distance = [FitParser parseFloat:segmentPoint.GetDistance() isValid:segmentPoint.IsDistanceValid()];
         self.elevation = [FitParser parseFloat:segmentPoint.GetAltitude() isValid:segmentPoint.IsAltitudeValid()];
     }

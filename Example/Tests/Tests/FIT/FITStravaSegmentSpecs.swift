@@ -39,6 +39,10 @@ class FITStravaSegmentSpecs: QuickSpec {
                         expect(file.courses?.first?.points?.count) == 297
                     }
                     
+                    it("should have a track point time") {
+                        expect(point.time?.description) == "1989-12-31 00:03:49 +0000"
+                    }
+                    
                     it("should have a coordinate") {
                         expect(point.coordinate?.latitude).to(beCloseTo(51.2264, within: 0.0001))
                         expect(point.coordinate?.longitude).to(beCloseTo(4.4002, within: 0.0001))

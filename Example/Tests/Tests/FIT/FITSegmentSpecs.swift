@@ -39,6 +39,10 @@ class FITSegmentSpecs: QuickSpec {
                         expect(file.courses?.first?.points?.count) == 120
                     }
                     
+                    it("should have a track point time") {
+                        expect(point.time?.description) == "1989-12-31 00:01:42 +0000"
+                    }
+                    
                     it("should have a coordinate") {
                         expect(point.coordinate?.latitude).to(beCloseTo(51.1925, within: 0.0001))
                         expect(point.coordinate?.longitude).to(beCloseTo(4.4082, within: 0.0001))
