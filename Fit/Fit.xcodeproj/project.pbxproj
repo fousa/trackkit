@@ -1615,6 +1615,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/Fit/FitSDK/iOS/usr/local/include";
 				INFOPLIST_FILE = Fit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1642,6 +1643,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/Fit/FitSDK/iOS/usr/local/include";
 				INFOPLIST_FILE = Fit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1720,6 +1722,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 743AM63YFU;
+				ENABLE_BITCODE = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1729,6 +1732,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 743AM63YFU;
+				ENABLE_BITCODE = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
