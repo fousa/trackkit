@@ -20,14 +20,20 @@ public enum Sport: String {
 
 /// This is an activity as defined in the TCX file.
 ///
-/// - important: Supported format: TCX
+/// - important: Supported format: TCX, FIT
 public final class Activity {
     /// The id if the activity.
+    ///
+    /// - important: Supported format: TCX
     public var identifier: String?
 
     /// Type of sport performed.
+    ///
+    /// - important: Supported format: TCX
     public var sport: Sport?
 
     /// The number of laps an activity includes.
+    ///
+    /// - important: Supported format: TCX, FIT
     public var laps: [Lap]?
 }

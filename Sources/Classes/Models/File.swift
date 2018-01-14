@@ -14,6 +14,8 @@ public final class File {
     /// - gpx: A GPX formatted track.
     /// - loc: A LOC formatted track.
     /// - tcx: A TCX formatted track.
+    /// - nmea: A NMEA formatted track.
+    /// - fit: A FIT formatted track.
     public let type: TrackType
 
     /// Returns the version of the file type.
@@ -95,12 +97,12 @@ public final class File {
 
     /// A list of courses.
     ///
-    /// - important: Supported format: TCX
+    /// - important: Supported format: TCX, FIT
     public var courses: [Course]?
 
     /// A list of courses.
     ///
-    /// - important: Supported format: TCX
+    /// - important: Supported format: TCX, FIT
     public var activities: [Activity]?
 
     /// A list of points.
@@ -112,7 +114,6 @@ public final class File {
     ///
     /// - important: Supported format: TRACK
     public var locations: [Point]?
-    
 
     // MARK: - Init
 

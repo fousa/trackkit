@@ -82,23 +82,23 @@ public enum RecordType: String {
 public final class Point: Codable {
     /// The coordinate of the point.
     ///
-    /// - important: Supported format: GPX, TCX, LOC
+    /// - important: Supported format: GPX, TCX, LOC, FIT
     public var coordinate: CLLocationCoordinate2D?
 
     /// Elevation (in meters) of the point.
     ///
-    /// - important: Supported format: GPX, TCX, NMEA
+    /// - important: Supported format: GPX, TCX, NMEA, FIT
     public var elevation: Double?
 
     /// Distance (in meters) of the point.
     ///
-    /// - important: Supported format: GPX, TCX
+    /// - important: Supported format: GPX, TCX, FIT
     public var distance: Double?
 
     /// Creation/modification timestamp for element. Date and time in are in Univeral
     /// Coordinated Time (UTC), not local time.
     ///
-    /// - important: Supported format: GPX, TCX, NMEA
+    /// - important: Supported format: GPX, TCX, NMEA, FIT
     public var time: Date?
 
     /// Magnetic variation.
@@ -230,12 +230,12 @@ public final class Point: Codable {
 
     /// Heartrate at this point.
     ///
-    /// - important: Supported format: TCX, GPX
+    /// - important: Supported format: TCX, GPX, FIT
     public var heartRate: Int?
 
     /// Cadence at this point.
     ///
-    /// - important: Supported format: TCX, GPX
+    /// - important: Supported format: TCX, GPX, FIT
     public var cadence: Int?
 
     /// Air temperature at this point.
