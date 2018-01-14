@@ -21,7 +21,7 @@
 		048429DC1EE57AC00079488F /* NMEAGPRMCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048429DB1EE57AC00079488F /* NMEAGPRMCSpec.swift */; };
 		048429DE1EE58C950079488F /* NMEAGPGLLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048429DD1EE58C950079488F /* NMEAGPGLLSpec.swift */; };
 		048429E01EE681F70079488F /* NMEAGPWPLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048429DF1EE681F70079488F /* NMEAGPWPLSpec.swift */; };
-		587850AD6143220172BE544A /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A132C282698390E84D675EC /* Pods_Tests.framework */; };
+		57CB427F3D1D0F85BCA64C6D /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984006F70FD90E9F93A1BE3D /* Pods_Tests.framework */; };
 		607FACEC1AFB9204008FA782 /* GPXCommonSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* GPXCommonSpecs.swift */; };
 		6297A9A21C98C36D00686120 /* GPXWaypointSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A11C98C36D00686120 /* GPXWaypointSpecs.swift */; };
 		6297A9A51C98C4D500686120 /* GPXRouteSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A41C98C4D500686120 /* GPXRouteSpecs.swift */; };
@@ -30,6 +30,24 @@
 		62BB32D91D9DAEE100310CF9 /* TrackTypeSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB32D81D9DAEE100310CF9 /* TrackTypeSpecs.swift */; };
 		62BB32DC1D9DB45D00310CF9 /* TCXParserSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB32DB1D9DB45D00310CF9 /* TCXParserSpecs.swift */; };
 		62BB32DE1D9E353100310CF9 /* TCXCommonSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB32DD1D9E353100310CF9 /* TCXCommonSpecs.swift */; };
+		9D8F1833200A45E2004CDECE /* FITGarminRunSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F1832200A45E2004CDECE /* FITGarminRunSpecs.swift */; };
+		9D969726200AA2FB00C0061C /* Garmin Run.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969725200AA2FB00C0061C /* Garmin Run.fit */; };
+		9D96972A200AA78D00C0061C /* Multi Activities.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969727200AA78C00C0061C /* Multi Activities.fit */; };
+		9D96972B200AA78D00C0061C /* Multi Sport.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969728200AA78C00C0061C /* Multi Sport.fit */; };
+		9D96972C200AA78D00C0061C /* Sample.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969729200AA78C00C0061C /* Sample.fit */; };
+		9D96972E200AA7C600C0061C /* Garmin Bike Ride.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D96972D200AA7C600C0061C /* Garmin Bike Ride.fit */; };
+		9D969730200AA7E400C0061C /* FITGarminBikeRideSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96972F200AA7E400C0061C /* FITGarminBikeRideSpecs.swift */; };
+		9D969732200AA94D00C0061C /* FITSampleSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D969731200AA94D00C0061C /* FITSampleSpecs.swift */; };
+		9D969734200AAC0200C0061C /* FITMultiActivitiesSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D969733200AAC0200C0061C /* FITMultiActivitiesSpecs.swift */; };
+		9D969736200AAC2300C0061C /* FITMultiSportSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D969735200AAC2300C0061C /* FITMultiSportSpecs.swift */; };
+		9D969748200ACB5800C0061C /* Strava Segment.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969747200ACB5800C0061C /* Strava Segment.fit */; };
+		9D96974A200ACB6F00C0061C /* FITStravaSegmentSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D969749200ACB6F00C0061C /* FITStravaSegmentSpecs.swift */; };
+		9D96974E200ACD5F00C0061C /* Segment.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D96974D200ACD5F00C0061C /* Segment.fit */; };
+		9D969750200ACD6B00C0061C /* FITSegmentSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96974F200ACD6B00C0061C /* FITSegmentSpecs.swift */; };
+		9D969754200B55D200C0061C /* Lilo.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969753200B55D200C0061C /* Lilo.fit */; };
+		9D969756200B564200C0061C /* FITLiloSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D969755200B564200C0061C /* FITLiloSpecs.swift */; };
+		9D96975A200B597E00C0061C /* Course.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969759200B597D00C0061C /* Course.fit */; };
+		9D96975C200B5EF000C0061C /* FITCourseSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96975B200B5EF000C0061C /* FITCourseSpecs.swift */; };
 		9DFB69C41FDD47D20010D5DE /* TRACKParserSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFB69BF1FDD47D20010D5DE /* TRACKParserSpecs.swift */; };
 		9DFB69C81FDD47D20010D5DE /* TRACKTrackSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFB69C31FDD47D20010D5DE /* TRACKTrackSpecs.swift */; };
 /* End PBXBuildFile section */
@@ -49,9 +67,6 @@
 		048429DB1EE57AC00079488F /* NMEAGPRMCSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMEAGPRMCSpec.swift; sourceTree = "<group>"; };
 		048429DD1EE58C950079488F /* NMEAGPGLLSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMEAGPGLLSpec.swift; sourceTree = "<group>"; };
 		048429DF1EE681F70079488F /* NMEAGPWPLSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMEAGPWPLSpec.swift; sourceTree = "<group>"; };
-		0CAC83A93CB924B5791F0A9F /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		195DC69CEC13724CA3568D75 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2A132C282698390E84D675EC /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACE51AFB9204008FA782 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* GPXCommonSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXCommonSpecs.swift; sourceTree = "<group>"; };
@@ -62,8 +77,29 @@
 		62BB32D81D9DAEE100310CF9 /* TrackTypeSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTypeSpecs.swift; sourceTree = "<group>"; };
 		62BB32DB1D9DB45D00310CF9 /* TCXParserSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCXParserSpecs.swift; sourceTree = "<group>"; };
 		62BB32DD1D9E353100310CF9 /* TCXCommonSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCXCommonSpecs.swift; sourceTree = "<group>"; };
+		665F56686FD17F949265EFBE /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		984006F70FD90E9F93A1BE3D /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D8F1832200A45E2004CDECE /* FITGarminRunSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITGarminRunSpecs.swift; sourceTree = "<group>"; };
+		9D969725200AA2FB00C0061C /* Garmin Run.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Garmin Run.fit"; sourceTree = "<group>"; };
+		9D969727200AA78C00C0061C /* Multi Activities.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Multi Activities.fit"; sourceTree = "<group>"; };
+		9D969728200AA78C00C0061C /* Multi Sport.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Multi Sport.fit"; sourceTree = "<group>"; };
+		9D969729200AA78C00C0061C /* Sample.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sample.fit; sourceTree = "<group>"; };
+		9D96972D200AA7C600C0061C /* Garmin Bike Ride.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Garmin Bike Ride.fit"; sourceTree = "<group>"; };
+		9D96972F200AA7E400C0061C /* FITGarminBikeRideSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITGarminBikeRideSpecs.swift; sourceTree = "<group>"; };
+		9D969731200AA94D00C0061C /* FITSampleSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITSampleSpecs.swift; sourceTree = "<group>"; };
+		9D969733200AAC0200C0061C /* FITMultiActivitiesSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITMultiActivitiesSpecs.swift; sourceTree = "<group>"; };
+		9D969735200AAC2300C0061C /* FITMultiSportSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITMultiSportSpecs.swift; sourceTree = "<group>"; };
+		9D969747200ACB5800C0061C /* Strava Segment.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Strava Segment.fit"; sourceTree = "<group>"; };
+		9D969749200ACB6F00C0061C /* FITStravaSegmentSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITStravaSegmentSpecs.swift; sourceTree = "<group>"; };
+		9D96974D200ACD5F00C0061C /* Segment.fit */ = {isa = PBXFileReference; lastKnownFileType = file; name = Segment.fit; path = "../../../../../Fit/Test/Supporting Files/Files/Segment.fit"; sourceTree = "<group>"; };
+		9D96974F200ACD6B00C0061C /* FITSegmentSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITSegmentSpecs.swift; sourceTree = "<group>"; };
+		9D969753200B55D200C0061C /* Lilo.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lilo.fit; sourceTree = "<group>"; };
+		9D969755200B564200C0061C /* FITLiloSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITLiloSpecs.swift; sourceTree = "<group>"; };
+		9D969759200B597D00C0061C /* Course.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = Course.fit; sourceTree = "<group>"; };
+		9D96975B200B5EF000C0061C /* FITCourseSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITCourseSpecs.swift; sourceTree = "<group>"; };
 		9DFB69BF1FDD47D20010D5DE /* TRACKParserSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRACKParserSpecs.swift; sourceTree = "<group>"; };
 		9DFB69C31FDD47D20010D5DE /* TRACKTrackSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRACKTrackSpecs.swift; sourceTree = "<group>"; };
+		C4C8C01305652FF95E8FF758 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				587850AD6143220172BE544A /* Pods_Tests.framework in Frameworks */,
+				57CB427F3D1D0F85BCA64C6D /* Pods_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,10 +158,10 @@
 			path = NMEA;
 			sourceTree = "<group>";
 		};
-		2EA3EDBF0BB067FF85406369 /* Frameworks */ = {
+		1CA71EAB14E6DF3E0D0295DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2A132C282698390E84D675EC /* Pods_Tests.framework */,
+				984006F70FD90E9F93A1BE3D /* Pods_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,9 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				607FACE81AFB9204008FA782 /* Tests */,
-				2EA3EDBF0BB067FF85406369 /* Frameworks */,
-				60AB0DD91E2DCEC8E00A50FF /* Pods */,
 				607FACD11AFB9204008FA782 /* Products */,
+				A359B82BC7B57415AD192386 /* Pods */,
+				1CA71EAB14E6DF3E0D0295DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,18 +201,10 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		60AB0DD91E2DCEC8E00A50FF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				195DC69CEC13724CA3568D75 /* Pods-Tests.debug.xcconfig */,
-				0CAC83A93CB924B5791F0A9F /* Pods-Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		6297A9A31C98C37700686120 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				9D27D20920029DF400031749 /* FIT */,
 				62BB32D31D9C29B600310CF9 /* GPX */,
 				04206A031E1653AE00B428C2 /* LOC */,
 				046664D01EE09DD0009701B1 /* NMEA */,
@@ -208,6 +236,39 @@
 			path = TCX;
 			sourceTree = "<group>";
 		};
+		9D27D20920029DF400031749 /* FIT */ = {
+			isa = PBXGroup;
+			children = (
+				9D969724200AA2EE00C0061C /* Files */,
+				9D96972F200AA7E400C0061C /* FITGarminBikeRideSpecs.swift */,
+				9D8F1832200A45E2004CDECE /* FITGarminRunSpecs.swift */,
+				9D969733200AAC0200C0061C /* FITMultiActivitiesSpecs.swift */,
+				9D969735200AAC2300C0061C /* FITMultiSportSpecs.swift */,
+				9D969731200AA94D00C0061C /* FITSampleSpecs.swift */,
+				9D96974F200ACD6B00C0061C /* FITSegmentSpecs.swift */,
+				9D969749200ACB6F00C0061C /* FITStravaSegmentSpecs.swift */,
+				9D969755200B564200C0061C /* FITLiloSpecs.swift */,
+				9D96975B200B5EF000C0061C /* FITCourseSpecs.swift */,
+			);
+			path = FIT;
+			sourceTree = "<group>";
+		};
+		9D969724200AA2EE00C0061C /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D969759200B597D00C0061C /* Course.fit */,
+				9D96972D200AA7C600C0061C /* Garmin Bike Ride.fit */,
+				9D969725200AA2FB00C0061C /* Garmin Run.fit */,
+				9D969753200B55D200C0061C /* Lilo.fit */,
+				9D969727200AA78C00C0061C /* Multi Activities.fit */,
+				9D969728200AA78C00C0061C /* Multi Sport.fit */,
+				9D969729200AA78C00C0061C /* Sample.fit */,
+				9D96974D200ACD5F00C0061C /* Segment.fit */,
+				9D969747200ACB5800C0061C /* Strava Segment.fit */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		9DFB69BE1FDD47D20010D5DE /* TRACK */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +278,15 @@
 			path = TRACK;
 			sourceTree = "<group>";
 		};
+		A359B82BC7B57415AD192386 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4C8C01305652FF95E8FF758 /* Pods-Tests.debug.xcconfig */,
+				665F56686FD17F949265EFBE /* Pods-Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,12 +294,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
-				3BDF7780418CE3D7FE0C88BA /* [CP] Check Pods Manifest.lock */,
+				6A773AB3AE8545ED323483AC /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				2BBA4562C3DF0F27442C7A4C /* [CP] Embed Pods Frameworks */,
-				8889ADFA29EFA2EF3F4A907F /* [CP] Copy Pods Resources */,
+				D8AF8D2BA2F4052277F9E66A /* [CP] Embed Pods Frameworks */,
+				A542C63400091AD2B1D3B07B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,37 +350,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D969726200AA2FB00C0061C /* Garmin Run.fit in Resources */,
+				9D96972C200AA78D00C0061C /* Sample.fit in Resources */,
+				9D969754200B55D200C0061C /* Lilo.fit in Resources */,
+				9D96972A200AA78D00C0061C /* Multi Activities.fit in Resources */,
+				9D96974E200ACD5F00C0061C /* Segment.fit in Resources */,
+				9D969748200ACB5800C0061C /* Strava Segment.fit in Resources */,
+				9D96975A200B597E00C0061C /* Course.fit in Resources */,
+				9D96972E200AA7C600C0061C /* Garmin Bike Ride.fit in Resources */,
+				9D96972B200AA78D00C0061C /* Multi Sport.fit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2BBA4562C3DF0F27442C7A4C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AEXML/AEXML.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-				"${BUILT_PRODUCTS_DIR}/TrackKit/TrackKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AEXML.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TrackKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3BDF7780418CE3D7FE0C88BA /* [CP] Check Pods Manifest.lock */ = {
+		6A773AB3AE8545ED323483AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -328,7 +383,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8889ADFA29EFA2EF3F4A907F /* [CP] Copy Pods Resources */ = {
+		A542C63400091AD2B1D3B07B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,6 +398,32 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D8AF8D2BA2F4052277F9E66A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AEXML/AEXML.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${PODS_ROOT}/../../Sources/Vendor/iOS/Fit.framework",
+				"${BUILT_PRODUCTS_DIR}/TrackKit/TrackKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AEXML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TrackKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -355,6 +436,7 @@
 				042B2F7A1DA18E51003B5E7D /* TCXCourseSpecs.swift in Sources */,
 				048429DE1EE58C950079488F /* NMEAGPGLLSpec.swift in Sources */,
 				046664D21EE09DE7009701B1 /* NMEAParserSpec.swift in Sources */,
+				9D969736200AAC2300C0061C /* FITMultiSportSpecs.swift in Sources */,
 				04206A1B1E1668CD00B428C2 /* GPXLegacyRouteSpecs.swift in Sources */,
 				62BB32D91D9DAEE100310CF9 /* TrackTypeSpecs.swift in Sources */,
 				6297A9A21C98C36D00686120 /* GPXWaypointSpecs.swift in Sources */,
@@ -362,17 +444,25 @@
 				62BB32DE1D9E353100310CF9 /* TCXCommonSpecs.swift in Sources */,
 				62BB32DC1D9DB45D00310CF9 /* TCXParserSpecs.swift in Sources */,
 				048429E01EE681F70079488F /* NMEAGPWPLSpec.swift in Sources */,
+				9D969750200ACD6B00C0061C /* FITSegmentSpecs.swift in Sources */,
+				9D96975C200B5EF000C0061C /* FITCourseSpecs.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* GPXCommonSpecs.swift in Sources */,
 				6297A9C01C99611400686120 /* GPXParserSpecs.swift in Sources */,
+				9D8F1833200A45E2004CDECE /* FITGarminRunSpecs.swift in Sources */,
 				048429DC1EE57AC00079488F /* NMEAGPRMCSpec.swift in Sources */,
 				04206A191E1668CD00B428C2 /* GPXLegacyCommonSpecs.swift in Sources */,
 				04206A0A1E1657EF00B428C2 /* LOCWaypointSpecs.swift in Sources */,
 				6297A9A51C98C4D500686120 /* GPXRouteSpecs.swift in Sources */,
 				04206A1D1E1668CD00B428C2 /* GPXLegacyWaypointSpecs.swift in Sources */,
 				9DFB69C81FDD47D20010D5DE /* TRACKTrackSpecs.swift in Sources */,
+				9D969730200AA7E400C0061C /* FITGarminBikeRideSpecs.swift in Sources */,
 				04206A081E16560800B428C2 /* LOCCommonsSpecs.swift in Sources */,
+				9D969732200AA94D00C0061C /* FITSampleSpecs.swift in Sources */,
 				046664D61EE0BAE3009701B1 /* NMEAGPGGASpec.swift in Sources */,
+				9D969734200AAC0200C0061C /* FITMultiActivitiesSpecs.swift in Sources */,
+				9D96974A200ACB6F00C0061C /* FITStravaSegmentSpecs.swift in Sources */,
 				6297A9A71C98C69000686120 /* GPXTrackSpecs.swift in Sources */,
+				9D969756200B564200C0061C /* FITLiloSpecs.swift in Sources */,
 				04206A211E1670DD00B428C2 /* LOCParserSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,7 +571,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 195DC69CEC13724CA3568D75 /* Pods-Tests.debug.xcconfig */;
+			baseConfigurationReference = C4C8C01305652FF95E8FF758 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = 743AM63YFU;
@@ -500,7 +590,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CAC83A93CB924B5791F0A9F /* Pods-Tests.release.xcconfig */;
+			baseConfigurationReference = 665F56686FD17F949265EFBE /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = 743AM63YFU;

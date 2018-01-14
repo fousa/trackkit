@@ -40,6 +40,20 @@ class TrackTypeSpec: QuickSpec {
                     expect(type?.rawValue) == "tcx"
                 }
             }
+            
+            context("FIT") {
+                it("Should parse fit as fit type") {
+                    let type = TrackType(fileExtension: "fit")
+                    expect(type).toNot(beNil())
+                    expect(type?.rawValue) == "fit"
+                }
+                
+                it("Should parse FIT as fit type") {
+                    let type = TrackType(fileExtension: "FIT")
+                    expect(type).toNot(beNil())
+                    expect(type?.rawValue) == "fit"
+                }
+            }
 
             context("LOC") {
                 it("Should parse loc as loc type") {

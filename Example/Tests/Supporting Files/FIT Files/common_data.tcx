@@ -1,0 +1,15 @@
+<TrainingCenterDatabase xmlns='http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2'>
+<Author>
+<Name>Jelle Vandebeeck</Name>
+<Build>
+<Version>"
+<VersionMajor>1</VersionMajor>
+<VersionMinor>2</VersionMinor>
+<BuildMajor>3</BuildMajor>
+<BuildMinor>4</BuildMinor>
+</Version>
+</Build>
+<LangID>en</LangID>
+<PartNumber>000-00000-00</PartNumber>
+</Author>
+</TrainingCenterDatabase>

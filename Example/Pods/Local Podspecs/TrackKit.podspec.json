@@ -20,7 +20,19 @@
     "watchos": "2.0"
   },
   "requires_arc": true,
-  "source_files": "Sources/**/*",
+  "source_files": "Sources/Classes/**/*",
+  "ios": {
+    "vendored_frameworks": "Sources/Vendor/iOS/Fit.framework",
+    "user_target_xcconfig": {
+      "FRAMEWORK_SEARCH_PATHS": "'/Users/fousa/Projects/trackkit/Sources/Vendor/iOS'"
+    }
+  },
+  "osx": {
+    "vendored_frameworks": "Sources/Vendor/macOS/Fit.framework",
+    "user_target_xcconfig": {
+      "FRAMEWORK_SEARCH_PATHS": "'/Users/fousa/Projects/trackkit/Sources/Vendor/macOS'"
+    }
+  },
   "dependencies": {
     "AEXML": [
       "~> 4.2"

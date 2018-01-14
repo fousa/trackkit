@@ -21,7 +21,17 @@ Pod::Spec.new do |s|
 
   # Set source file requirements.
   s.requires_arc = true
-  s.source_files = 'Sources/**/*'
+  s.source_files = 'Sources/Classes/**/*'
+
+  # Add the Fit framework.
+  s.ios.vendored_framework = 'Sources/Vendor/iOS/Fit.framework'
+  s.ios.user_target_xcconfig = { 
+    'FRAMEWORK_SEARCH_PATHS' => "'#{File.join(File.dirname(__FILE__), 'Sources/Vendor/iOS')}'"
+  }
+  s.osx.vendored_framework = 'Sources/Vendor/macOS/Fit.framework'
+  s.osx.user_target_xcconfig = { 
+    'FRAMEWORK_SEARCH_PATHS' => "'#{File.join(File.dirname(__FILE__), 'Sources/Vendor/macOS')}'"
+  }
 
   # Dependencies
   s.dependency 'AEXML', '~> 4.2'
