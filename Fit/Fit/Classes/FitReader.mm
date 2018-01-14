@@ -64,6 +64,7 @@ BOOL const kEnableLogging = NO;
     // Setup the listeners.
     Listener listener;
     fit::MesgBroadcaster broadcaster = fit::MesgBroadcaster();
+    broadcaster.AddListener((fit::FileIdMesgListener &)listener);
     broadcaster.AddListener((fit::ActivityMesgListener &)listener);
     broadcaster.AddListener((fit::LapMesgListener &)listener);
     broadcaster.AddListener((fit::RecordMesgListener &)listener);
@@ -75,10 +76,11 @@ BOOL const kEnableLogging = NO;
         NSLog(@"🔥 Error decoding file %@", [exception reason]);
     }
     @finally {
-        self.file = [[FITFile alloc] initWithActivities:listener.activities
-                                                records:listener.records
-                                                   laps:listener.laps
-                                          segmentPoints:listener.segmentPoints];
+        self.file = [[FITFile alloc] initWithFileId:listener.fileId
+                                         activities:listener.activities
+                                            records:listener.records
+                                               laps:listener.laps
+                                      segmentPoints:listener.segmentPoints];
     }
 }
 

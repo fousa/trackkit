@@ -24,6 +24,24 @@
         
         self.points = points;
         if (kEnableLogging) {
+            NSLog(@"-----> Segment with %lu points", (unsigned long)self.points.count);
+        }
+    }
+    return self;
+}
+
+- (instancetype)initWithRecords:(std::list<fit::RecordMesg>)records {
+    if (self = [super init]) {
+        NSMutableArray *points = [NSMutableArray array];
+        for (auto&& record : records) {
+            if (FITPoint *point = [[FITPoint alloc] initWithRecord:record]) {
+                [points addObject:point];
+            }
+        }
+        if (points.count == 0) { return nil; }
+        
+        self.points = points;
+        if (kEnableLogging) {
             NSLog(@"-----> Course with %lu points", (unsigned long)self.points.count);
         }
     }

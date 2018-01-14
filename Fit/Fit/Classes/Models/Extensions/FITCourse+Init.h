@@ -12,10 +12,12 @@
 #import "FITCourse.h"
 
 #include "fit_segment_point_mesg.hpp"
+#include "fit_record_mesg.hpp"
 
 @interface FITCourse (Init)
 
 - (instancetype)initWithSegmentPoints:(std::list<fit::SegmentPointMesg>)segmentPoints;
+- (instancetype)initWithRecords:(std::list<fit::RecordMesg>)records;
 
 @end
 
