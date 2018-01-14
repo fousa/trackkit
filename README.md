@@ -34,6 +34,11 @@ TCX
 
 The `TCX` format that is supported is version **2** as described in the [schema documentation](http://www8.garmin.com/xmlschemas/TrainingCenterDatabasev2.xsd).
 
+FIT
+---
+
+The `FIT` format support is available throught the [Garmin FIT SDK](https://www.thisisant.com/resources/fit).
+
 TRACK
 -----
 
@@ -202,6 +207,14 @@ When the parsing fails an error will be thrown. There are currently **two** type
 - `invalidData` thrown when the data object is empty.
 - `invalidFormat` thrown when the data object can't be parsed.
 - `invalidVersion` thrown when the data object contains an incorrect version of the file.
+
+Updating the FIT framework
+--------------------------
+
+1. Make the changes to the `Fit/Fit.xcodeproj`.
+2. Build the `Fit macOS` scheme.
+3. Build the `Fit Universal iOS` scheme.
+4. Done.
 
 License
 =======
