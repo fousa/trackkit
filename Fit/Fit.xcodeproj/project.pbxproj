@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		9D27D2032002962F00031749 /* Fit iOS Universal */ = {
+		9D27D2032002962F00031749 /* Fit Universal iOS */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 9D27D2042002962F00031749 /* Build configuration list for PBXAggregateTarget "Fit iOS Universal" */;
+			buildConfigurationList = 9D27D2042002962F00031749 /* Build configuration list for PBXAggregateTarget "Fit Universal iOS" */;
 			buildPhases = (
 				9D27D2072002963400031749 /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = "Fit iOS Universal";
+			name = "Fit Universal iOS";
 			productName = "Fit iOS Universal";
 		};
 /* End PBXAggregateTarget section */
@@ -1365,8 +1365,8 @@
 			projectRoot = "";
 			targets = (
 				9D27D1B920028F7D00031749 /* Fit iOS */,
-				9D27D2032002962F00031749 /* Fit iOS Universal */,
 				9D27D1C620028F9800031749 /* Fit macOS */,
+				9D27D2032002962F00031749 /* Fit Universal iOS */,
 				9D27D20E20029F5600031749 /* Test */,
 			);
 		};
@@ -1789,7 +1789,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9D27D2042002962F00031749 /* Build configuration list for PBXAggregateTarget "Fit iOS Universal" */ = {
+		9D27D2042002962F00031749 /* Build configuration list for PBXAggregateTarget "Fit Universal iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9D27D2052002962F00031749 /* Debug */,

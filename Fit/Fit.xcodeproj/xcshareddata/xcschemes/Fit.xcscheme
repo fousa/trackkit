@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9D27D2032002962F00031749"
-               BuildableName = "Fit iOS Universal"
-               BlueprintName = "Fit iOS Universal"
+               BuildableName = "Fit Universal iOS"
+               BlueprintName = "Fit Universal iOS"
                ReferencedContainer = "container:Fit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9D27D2032002962F00031749"
-            BuildableName = "Fit iOS Universal"
-            BlueprintName = "Fit iOS Universal"
+            BuildableName = "Fit Universal iOS"
+            BlueprintName = "Fit Universal iOS"
             ReferencedContainer = "container:Fit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,8 +66,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9D27D2032002962F00031749"
-            BuildableName = "Fit iOS Universal"
-            BlueprintName = "Fit iOS Universal"
+            BuildableName = "Fit Universal iOS"
+            BlueprintName = "Fit Universal iOS"
             ReferencedContainer = "container:Fit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
