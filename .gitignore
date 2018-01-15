@@ -35,5 +35,3 @@ Example/test_output
 test_output
 .build
 xcov_report
-
-Fit.framework
