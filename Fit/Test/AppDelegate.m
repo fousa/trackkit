@@ -16,9 +16,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    ActivityExample *example = [[ActivityExample alloc] initWithFilename:@"Activity"];
-//    ActivityExample *example = [[ActivityExample alloc] initWithFilename:@"Segment"];
-    ActivityExample *example = [[ActivityExample alloc] initWithFilename:@"Route"];
+    ActivityExample *example = [[ActivityExample alloc] initWithFilename:@"Brad"];
     [example read];
     
     return YES;

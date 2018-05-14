@@ -34,6 +34,7 @@
 		9D27D2402002A65300031749 /* FitReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27D23A2002A61A00031749 /* FitReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D27D2412002A79700031749 /* Fit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D27D1BA20028F7D00031749 /* Fit.framework */; };
 		9D27D2422002A79700031749 /* Fit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D27D1BA20028F7D00031749 /* Fit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9D30E38F20AA253F0009F346 /* Brad.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D30E38E20AA253F0009F346 /* Brad.fit */; };
 		9D8F183C200A48FD004CDECE /* Activity.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D8F183B200A48FD004CDECE /* Activity.fit */; };
 		9D8F183F200A49A8004CDECE /* FITActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D8F183D200A49A8004CDECE /* FITActivity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D8F1840200A49A8004CDECE /* FITActivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D8F183D200A49A8004CDECE /* FITActivity.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -610,6 +611,7 @@
 		9D27D2312002A14600031749 /* ActivityExample.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ActivityExample.mm; sourceTree = "<group>"; };
 		9D27D23A2002A61A00031749 /* FitReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FitReader.h; sourceTree = "<group>"; };
 		9D27D23B2002A61A00031749 /* FitReader.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FitReader.mm; sourceTree = "<group>"; };
+		9D30E38E20AA253F0009F346 /* Brad.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = Brad.fit; sourceTree = "<group>"; };
 		9D8F183B200A48FD004CDECE /* Activity.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = Activity.fit; sourceTree = "<group>"; };
 		9D8F183D200A49A8004CDECE /* FITActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FITActivity.h; sourceTree = "<group>"; };
 		9D8F183E200A49A8004CDECE /* FITActivity.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FITActivity.mm; sourceTree = "<group>"; };
@@ -1204,8 +1206,8 @@
 		9D27D22720029F7100031749 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9D27D2282002A04900031749 /* Files */,
 				9D27D21F20029F5600031749 /* Info.plist */,
+				9D27D2282002A04900031749 /* Files */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -1216,6 +1218,7 @@
 				9DC55146200A5AD0007719FF /* 73CB0450.fit */,
 				9D8F183B200A48FD004CDECE /* Activity.fit */,
 				9D27D22D2002A0C700031749 /* Bike Activity.fit */,
+				9D30E38E20AA253F0009F346 /* Brad.fit */,
 				9D969757200B597000C0061C /* Route.fit */,
 				9D27D22B2002A0AB00031749 /* Segment.fit */,
 			);
@@ -1883,6 +1886,7 @@
 				9D969758200B597000C0061C /* Route.fit in Resources */,
 				9D8F183C200A48FD004CDECE /* Activity.fit in Resources */,
 				9DC55147200A5AD0007719FF /* 73CB0450.fit in Resources */,
+				9D30E38F20AA253F0009F346 /* Brad.fit in Resources */,
 				9D27D22C2002A0AB00031749 /* Segment.fit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
