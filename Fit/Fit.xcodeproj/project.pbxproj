@@ -2161,6 +2161,7 @@
 		9D27D1C020028F7D00031749 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = marker;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -2183,6 +2184,7 @@
 		9D27D1C120028F7D00031749 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -2203,6 +2205,7 @@
 		9D27D1CD20028F9800031749 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = marker;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2226,6 +2229,7 @@
 		9D27D1CE20028F9800031749 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -2248,6 +2252,7 @@
 		9D27D2052002962F00031749 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = marker;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 743AM63YFU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2257,6 +2262,7 @@
 		9D27D2062002962F00031749 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 743AM63YFU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
