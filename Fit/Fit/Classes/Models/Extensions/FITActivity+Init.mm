@@ -33,6 +33,14 @@
             
             previousTimestamp = lapTimestamp;
         }
+        
+        if (laps.count == 0) {
+            FITLap *lap = [[FITLap alloc] initFromRecords:rawRecords];
+            if (lap.points.count > 0) {
+                [laps addObject:lap];
+            }
+        }
+        
         self.laps = laps;
         if (kEnableLogging) {
             NSLog(@"-----> Activity with %lu laps", (unsigned long)self.laps.count);

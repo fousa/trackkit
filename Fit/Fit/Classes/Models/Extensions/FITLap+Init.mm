@@ -12,6 +12,25 @@
 #import "FITPoint+Init.h"
 
 @implementation FITLap (Init)
+    
+- (instancetype)initFromRecords:(std::list<fit::RecordMesg>)records {
+    if (self = [super init]) {
+        NSMutableArray *points = [NSMutableArray new];
+        for (auto&& record : records) {
+            if (FITPoint *point = [[FITPoint alloc] initWithRecord:record]) {
+                [points addObject:point];
+            }
+        }
+        if (points.count == 0) { return nil; }
+        
+        self.points = points;
+        
+        if (kEnableLogging) {
+            NSLog(@"-> Lap with %lu points", (unsigned long)self.points.count);
+        }
+    }
+    return self;
+}
 
 - (instancetype)initFromLap:(fit::LapMesg)lap
                     records:(std::list<fit::RecordMesg>)records {
