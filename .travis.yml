@@ -1,11 +1,12 @@
-osx_image: xcode8.2
+osx_image: xcode9.3
 language: objective-c
-rvm:
-  - 2.3.1
-
+cache:
+   - bundler
+   - cocoapods
 before_install:
   - gem install xcpretty -N --no-ri --no-rdoc
-  - gem install cocoapods -v '1.2.0' -N --no-ri --no-rdoc
+  - gem install cocoapods -v '1.5.0' -N --no-ri --no-rdoc
+  - pod install --project-directory=Example
 
 script:
   - set -o pipefail
