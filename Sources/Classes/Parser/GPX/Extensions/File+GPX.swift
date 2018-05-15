@@ -27,9 +27,9 @@ extension File {
         // Fetch the metadata from the metadata element.
         parseMetadata(from: metadata)
 
-        waypoints       <~ rootElement["wpt"].all?.flatMap { Point(gpx: $0, version: typeVersion) }
-        routes          <~ rootElement["rte"].all?.flatMap { Route(gpx: $0, version: typeVersion) }
-        tracks          <~ rootElement["trk"].all?.flatMap { Track(gpx: $0, version: typeVersion) }
+        waypoints       <~ rootElement["wpt"].all?.compactMap { Point(gpx: $0, version: typeVersion) }
+        routes          <~ rootElement["rte"].all?.compactMap { Route(gpx: $0, version: typeVersion) }
+        tracks          <~ rootElement["trk"].all?.compactMap { Track(gpx: $0, version: typeVersion) }
     }
 
     // MARK: - Parsing

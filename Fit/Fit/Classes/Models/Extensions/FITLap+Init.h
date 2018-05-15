@@ -16,6 +16,7 @@
 
 @interface FITLap (Init)
 
+- (instancetype)initFromRecords:(std::list<fit::RecordMesg>)records;
 - (instancetype)initFromLap:(fit::LapMesg)lap
                     records:(std::list<fit::RecordMesg>)records;
 

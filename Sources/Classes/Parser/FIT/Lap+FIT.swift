@@ -22,7 +22,7 @@ extension Lap {
         averageHeartRate = lap?.averageHeartRate?.intValue
         maximumHeartRate = lap?.maximumHeartRate?.intValue
         cadence = lap?.averageCadence?.intValue
-        points = lap?.points.flatMap { Point(fit: $0) }
+        points = lap?.points.compactMap { Point(fit: $0) }
     }
     
 }

@@ -34,5 +34,5 @@ Pod::Spec.new do |s|
   }
 
   # Dependencies
-  s.dependency 'AEXML', '~> 4.2'
+  s.dependency 'AEXML', '~> 4.3'
 end

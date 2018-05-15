@@ -16,8 +16,8 @@ extension File {
         let version = try TrackTypeVersion(type: .fit, version: "2.2")
         self.init(type: .fit, version: version)
         
-        activities = file.activities.flatMap { Activity(fit: $0) }
-        courses = file.courses.flatMap { Course(fit: $0) }
+        activities = file.activities.compactMap { Activity(fit: $0) }
+        courses = file.courses.compactMap { Course(fit: $0) }
     }
     
 }

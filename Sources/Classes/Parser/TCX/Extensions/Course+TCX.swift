@@ -16,7 +16,7 @@ extension Course: Tcxable {
 
         // When there are not route points, don't create the instance.
         var routePoints: [Point]? = nil
-        routePoints <~ element["Track"]["Trackpoint"].all?.flatMap { Point(tcx: $0) }
+        routePoints <~ element["Track"]["Trackpoint"].all?.compactMap { Point(tcx: $0) }
         if routePoints == nil {
             return nil
         }
