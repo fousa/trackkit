@@ -14,8 +14,8 @@ extension File {
         self.init(type: .tcx, version: version)
 
         applicationAuthor <~ Author(tcx: rootElement["Author"])
-        courses           <~ rootElement["Courses"]["Course"].all?.flatMap { Course(tcx: $0) }
-        activities        <~ rootElement["Activities"]["Activity"].all?.flatMap { Activity(tcx: $0) }
+        courses           <~ rootElement["Courses"]["Course"].all?.compactMap { Course(tcx: $0) }
+        activities        <~ rootElement["Activities"]["Activity"].all?.compactMap { Activity(tcx: $0) }
     }
 
 }

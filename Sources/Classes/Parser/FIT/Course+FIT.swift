@@ -14,7 +14,7 @@ extension Course {
     convenience init(fit course: FITCourse?) {
         self.init()
         
-        points = course?.points.flatMap { Point(fit: $0) }
+        points = course?.points.compactMap { Point(fit: $0) }
     }
     
 }

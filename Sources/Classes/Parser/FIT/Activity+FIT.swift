@@ -14,7 +14,7 @@ extension Activity {
     convenience init(fit activity: FITActivity?) {
         self.init()
         
-        laps = activity?.laps?.flatMap { Lap(fit: $0) }
+        laps = activity?.laps?.compactMap { Lap(fit: $0) }
     }
     
 }

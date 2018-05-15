@@ -31,7 +31,6 @@
 		62BB32DE1D9E353100310CF9 /* TCXCommonSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB32DD1D9E353100310CF9 /* TCXCommonSpecs.swift */; };
 		9D30E39120AA28910009F346 /* HealthFit.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D30E39020AA28910009F346 /* HealthFit.fit */; };
 		9D30E39320AB5D350009F346 /* FITHealthFitSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D30E39220AB5D350009F346 /* FITHealthFitSpecs.swift */; };
-		9D30E39520AB5E8E0009F346 /* HealthFit from Strava.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D30E39420AB5E8E0009F346 /* HealthFit from Strava.fit */; };
 		9D8F1833200A45E2004CDECE /* FITGarminRunSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F1832200A45E2004CDECE /* FITGarminRunSpecs.swift */; };
 		9D969726200AA2FB00C0061C /* Garmin Run.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969725200AA2FB00C0061C /* Garmin Run.fit */; };
 		9D96972A200AA78D00C0061C /* Multi Activities.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969727200AA78C00C0061C /* Multi Activities.fit */; };
@@ -50,7 +49,6 @@
 		9D969756200B564200C0061C /* FITLiloSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D969755200B564200C0061C /* FITLiloSpecs.swift */; };
 		9D96975A200B597E00C0061C /* Course.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969759200B597D00C0061C /* Course.fit */; };
 		9D96975C200B5EF000C0061C /* FITCourseSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96975B200B5EF000C0061C /* FITCourseSpecs.swift */; };
-		9DED6CC620AB6EBC00103F81 /* FITHealthFitStravaSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DED6CC520AB6EBC00103F81 /* FITHealthFitStravaSpecs.swift */; };
 		9DFB69C41FDD47D20010D5DE /* TRACKParserSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFB69BF1FDD47D20010D5DE /* TRACKParserSpecs.swift */; };
 		9DFB69C81FDD47D20010D5DE /* TRACKTrackSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFB69C31FDD47D20010D5DE /* TRACKTrackSpecs.swift */; };
 		B0272FA4AD586DE2B501C5C7 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD41B5D17996AB6F6EE74B74 /* Pods_Tests.framework */; };
@@ -83,7 +81,6 @@
 		62BB32DD1D9E353100310CF9 /* TCXCommonSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCXCommonSpecs.swift; sourceTree = "<group>"; };
 		9D30E39020AA28910009F346 /* HealthFit.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = HealthFit.fit; sourceTree = "<group>"; };
 		9D30E39220AB5D350009F346 /* FITHealthFitSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITHealthFitSpecs.swift; sourceTree = "<group>"; };
-		9D30E39420AB5E8E0009F346 /* HealthFit from Strava.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HealthFit from Strava.fit"; sourceTree = "<group>"; };
 		9D8F1832200A45E2004CDECE /* FITGarminRunSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITGarminRunSpecs.swift; sourceTree = "<group>"; };
 		9D969725200AA2FB00C0061C /* Garmin Run.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Garmin Run.fit"; sourceTree = "<group>"; };
 		9D969727200AA78C00C0061C /* Multi Activities.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Multi Activities.fit"; sourceTree = "<group>"; };
@@ -102,7 +99,6 @@
 		9D969755200B564200C0061C /* FITLiloSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITLiloSpecs.swift; sourceTree = "<group>"; };
 		9D969759200B597D00C0061C /* Course.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = Course.fit; sourceTree = "<group>"; };
 		9D96975B200B5EF000C0061C /* FITCourseSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITCourseSpecs.swift; sourceTree = "<group>"; };
-		9DED6CC520AB6EBC00103F81 /* FITHealthFitStravaSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITHealthFitStravaSpecs.swift; sourceTree = "<group>"; };
 		9DFB69BF1FDD47D20010D5DE /* TRACKParserSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRACKParserSpecs.swift; sourceTree = "<group>"; };
 		9DFB69C31FDD47D20010D5DE /* TRACKTrackSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRACKTrackSpecs.swift; sourceTree = "<group>"; };
 		BD41B5D17996AB6F6EE74B74 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,7 +245,6 @@
 				9D969731200AA94D00C0061C /* FITSampleSpecs.swift */,
 				9D96974F200ACD6B00C0061C /* FITSegmentSpecs.swift */,
 				9D969749200ACB6F00C0061C /* FITStravaSegmentSpecs.swift */,
-				9DED6CC520AB6EBC00103F81 /* FITHealthFitStravaSpecs.swift */,
 				9D969724200AA2EE00C0061C /* Files */,
 			);
 			path = FIT;
@@ -258,7 +253,6 @@
 		9D969724200AA2EE00C0061C /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				9D30E39420AB5E8E0009F346 /* HealthFit from Strava.fit */,
 				9D969759200B597D00C0061C /* Course.fit */,
 				9D96972D200AA7C600C0061C /* Garmin Bike Ride.fit */,
 				9D969725200AA2FB00C0061C /* Garmin Run.fit */,
@@ -329,7 +323,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACE41AFB9204008FA782 = {
@@ -363,7 +357,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D969726200AA2FB00C0061C /* Garmin Run.fit in Resources */,
-				9D30E39520AB5E8E0009F346 /* HealthFit from Strava.fit in Resources */,
 				9D96972C200AA78D00C0061C /* Sample.fit in Resources */,
 				9D969754200B55D200C0061C /* Lilo.fit in Resources */,
 				9D96972A200AA78D00C0061C /* Multi Activities.fit in Resources */,
@@ -470,7 +463,6 @@
 				6297A9A51C98C4D500686120 /* GPXRouteSpecs.swift in Sources */,
 				04206A1D1E1668CD00B428C2 /* GPXLegacyWaypointSpecs.swift in Sources */,
 				9DFB69C81FDD47D20010D5DE /* TRACKTrackSpecs.swift in Sources */,
-				9DED6CC620AB6EBC00103F81 /* FITHealthFitStravaSpecs.swift in Sources */,
 				9D969730200AA7E400C0061C /* FITGarminBikeRideSpecs.swift in Sources */,
 				04206A081E16560800B428C2 /* LOCCommonsSpecs.swift in Sources */,
 				9D969732200AA94D00C0061C /* FITSampleSpecs.swift in Sources */,
@@ -498,12 +490,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -551,12 +545,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
