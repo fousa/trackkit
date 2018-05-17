@@ -3,10 +3,14 @@ language: objective-c
 cache:
    - bundler
    - cocoapods
+
 before_install:
   - gem install xcpretty -N --no-ri --no-rdoc
   - gem install cocoapods -v '1.5.0' -N --no-ri --no-rdoc
   - pod install --project-directory=Example
+
+install:
+  - bundle install
 
 script:
   - set -o pipefail
