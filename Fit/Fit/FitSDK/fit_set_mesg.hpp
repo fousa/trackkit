@@ -15,39 +15,39 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#if !defined(FIT_BLOOD_PRESSURE_MESG_HPP)
-#define FIT_BLOOD_PRESSURE_MESG_HPP
+#if !defined(FIT_SET_MESG_HPP)
+#define FIT_SET_MESG_HPP
 
 #include "fit_mesg.hpp"
 
 namespace fit
 {
 
-class BloodPressureMesg : public Mesg
+class SetMesg : public Mesg
 {
 public:
     class FieldDefNum final
     {
     public:
-       static const FIT_UINT8 Timestamp = 253;
-       static const FIT_UINT8 SystolicPressure = 0;
-       static const FIT_UINT8 DiastolicPressure = 1;
-       static const FIT_UINT8 MeanArterialPressure = 2;
-       static const FIT_UINT8 Map3SampleMean = 3;
-       static const FIT_UINT8 MapMorningValues = 4;
-       static const FIT_UINT8 MapEveningValues = 5;
-       static const FIT_UINT8 HeartRate = 6;
-       static const FIT_UINT8 HeartRateType = 7;
-       static const FIT_UINT8 Status = 8;
-       static const FIT_UINT8 UserProfileIndex = 9;
+       static const FIT_UINT8 Timestamp = 254;
+       static const FIT_UINT8 Duration = 0;
+       static const FIT_UINT8 Repetitions = 3;
+       static const FIT_UINT8 Weight = 4;
+       static const FIT_UINT8 SetType = 5;
+       static const FIT_UINT8 StartTime = 6;
+       static const FIT_UINT8 Category = 7;
+       static const FIT_UINT8 CategorySubtype = 8;
+       static const FIT_UINT8 WeightDisplayUnit = 9;
+       static const FIT_UINT8 MessageIndex = 10;
+       static const FIT_UINT8 WktStepIndex = 11;
        static const FIT_UINT8 Invalid = FIT_FIELD_NUM_INVALID;
     };
 
-    BloodPressureMesg(void) : Mesg(Profile::MESG_BLOOD_PRESSURE)
+    SetMesg(void) : Mesg(Profile::MESG_SET)
     {
     }
 
-    BloodPressureMesg(const Mesg &mesg) : Mesg(mesg)
+    SetMesg(const Mesg &mesg) : Mesg(mesg)
     {
     }
 
@@ -57,7 +57,7 @@ public:
     ///////////////////////////////////////////////////////////////////////
     FIT_BOOL IsTimestampValid() const
     {
-        const Field* field = GetField(253);
+        const Field* field = GetField(254);
         if( FIT_NULL == field )
         {
             return FIT_FALSE;
@@ -68,27 +68,27 @@ public:
 
     ///////////////////////////////////////////////////////////////////////
     // Returns timestamp field
-    // Units: s
+    // Comment: Timestamp of the set
     ///////////////////////////////////////////////////////////////////////
     FIT_DATE_TIME GetTimestamp(void) const
     {
-        return GetFieldUINT32Value(253, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldUINT32Value(254, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
     // Set timestamp field
-    // Units: s
+    // Comment: Timestamp of the set
     ///////////////////////////////////////////////////////////////////////
     void SetTimestamp(FIT_DATE_TIME timestamp)
     {
-        SetFieldUINT32Value(253, timestamp, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldUINT32Value(254, timestamp, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of systolic_pressure field
+    // Checks the validity of duration field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsSystolicPressureValid() const
+    FIT_BOOL IsDurationValid() const
     {
         const Field* field = GetField(0);
         if( FIT_NULL == field )
@@ -100,94 +100,28 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns systolic_pressure field
-    // Units: mmHg
+    // Returns duration field
+    // Units: s
     ///////////////////////////////////////////////////////////////////////
-    FIT_UINT16 GetSystolicPressure(void) const
+    FIT_FLOAT32 GetDuration(void) const
     {
-        return GetFieldUINT16Value(0, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldFLOAT32Value(0, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set systolic_pressure field
-    // Units: mmHg
+    // Set duration field
+    // Units: s
     ///////////////////////////////////////////////////////////////////////
-    void SetSystolicPressure(FIT_UINT16 systolicPressure)
+    void SetDuration(FIT_FLOAT32 duration)
     {
-        SetFieldUINT16Value(0, systolicPressure, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldFLOAT32Value(0, duration, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of diastolic_pressure field
+    // Checks the validity of repetitions field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsDiastolicPressureValid() const
-    {
-        const Field* field = GetField(1);
-        if( FIT_NULL == field )
-        {
-            return FIT_FALSE;
-        }
-
-        return field->IsValueValid();
-    }
-
-    ///////////////////////////////////////////////////////////////////////
-    // Returns diastolic_pressure field
-    // Units: mmHg
-    ///////////////////////////////////////////////////////////////////////
-    FIT_UINT16 GetDiastolicPressure(void) const
-    {
-        return GetFieldUINT16Value(1, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
-    }
-
-    ///////////////////////////////////////////////////////////////////////
-    // Set diastolic_pressure field
-    // Units: mmHg
-    ///////////////////////////////////////////////////////////////////////
-    void SetDiastolicPressure(FIT_UINT16 diastolicPressure)
-    {
-        SetFieldUINT16Value(1, diastolicPressure, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
-    }
-
-    ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of mean_arterial_pressure field
-    // Returns FIT_TRUE if field is valid
-    ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsMeanArterialPressureValid() const
-    {
-        const Field* field = GetField(2);
-        if( FIT_NULL == field )
-        {
-            return FIT_FALSE;
-        }
-
-        return field->IsValueValid();
-    }
-
-    ///////////////////////////////////////////////////////////////////////
-    // Returns mean_arterial_pressure field
-    // Units: mmHg
-    ///////////////////////////////////////////////////////////////////////
-    FIT_UINT16 GetMeanArterialPressure(void) const
-    {
-        return GetFieldUINT16Value(2, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
-    }
-
-    ///////////////////////////////////////////////////////////////////////
-    // Set mean_arterial_pressure field
-    // Units: mmHg
-    ///////////////////////////////////////////////////////////////////////
-    void SetMeanArterialPressure(FIT_UINT16 meanArterialPressure)
-    {
-        SetFieldUINT16Value(2, meanArterialPressure, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
-    }
-
-    ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of map_3_sample_mean field
-    // Returns FIT_TRUE if field is valid
-    ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsMap3SampleMeanValid() const
+    FIT_BOOL IsRepetitionsValid() const
     {
         const Field* field = GetField(3);
         if( FIT_NULL == field )
@@ -199,28 +133,28 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns map_3_sample_mean field
-    // Units: mmHg
+    // Returns repetitions field
+    // Comment: # of repitions of the movement
     ///////////////////////////////////////////////////////////////////////
-    FIT_UINT16 GetMap3SampleMean(void) const
+    FIT_UINT16 GetRepetitions(void) const
     {
         return GetFieldUINT16Value(3, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set map_3_sample_mean field
-    // Units: mmHg
+    // Set repetitions field
+    // Comment: # of repitions of the movement
     ///////////////////////////////////////////////////////////////////////
-    void SetMap3SampleMean(FIT_UINT16 map3SampleMean)
+    void SetRepetitions(FIT_UINT16 repetitions)
     {
-        SetFieldUINT16Value(3, map3SampleMean, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldUINT16Value(3, repetitions, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of map_morning_values field
+    // Checks the validity of weight field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsMapMorningValuesValid() const
+    FIT_BOOL IsWeightValid() const
     {
         const Field* field = GetField(4);
         if( FIT_NULL == field )
@@ -232,28 +166,30 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns map_morning_values field
-    // Units: mmHg
+    // Returns weight field
+    // Units: kg
+    // Comment: Amount of weight applied for the set
     ///////////////////////////////////////////////////////////////////////
-    FIT_UINT16 GetMapMorningValues(void) const
+    FIT_FLOAT32 GetWeight(void) const
     {
-        return GetFieldUINT16Value(4, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldFLOAT32Value(4, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set map_morning_values field
-    // Units: mmHg
+    // Set weight field
+    // Units: kg
+    // Comment: Amount of weight applied for the set
     ///////////////////////////////////////////////////////////////////////
-    void SetMapMorningValues(FIT_UINT16 mapMorningValues)
+    void SetWeight(FIT_FLOAT32 weight)
     {
-        SetFieldUINT16Value(4, mapMorningValues, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldFLOAT32Value(4, weight, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of map_evening_values field
+    // Checks the validity of set_type field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsMapEveningValuesValid() const
+    FIT_BOOL IsSetTypeValid() const
     {
         const Field* field = GetField(5);
         if( FIT_NULL == field )
@@ -265,28 +201,26 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns map_evening_values field
-    // Units: mmHg
+    // Returns set_type field
     ///////////////////////////////////////////////////////////////////////
-    FIT_UINT16 GetMapEveningValues(void) const
+    FIT_SET_TYPE GetSetType(void) const
     {
-        return GetFieldUINT16Value(5, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldUINT8Value(5, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set map_evening_values field
-    // Units: mmHg
+    // Set set_type field
     ///////////////////////////////////////////////////////////////////////
-    void SetMapEveningValues(FIT_UINT16 mapEveningValues)
+    void SetSetType(FIT_SET_TYPE setType)
     {
-        SetFieldUINT16Value(5, mapEveningValues, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldUINT8Value(5, setType, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of heart_rate field
+    // Checks the validity of start_time field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsHeartRateValid() const
+    FIT_BOOL IsStartTimeValid() const
     {
         const Field* field = GetField(6);
         if( FIT_NULL == field )
@@ -298,28 +232,36 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns heart_rate field
-    // Units: bpm
+    // Returns start_time field
+    // Comment: Start time of the set
     ///////////////////////////////////////////////////////////////////////
-    FIT_UINT8 GetHeartRate(void) const
+    FIT_DATE_TIME GetStartTime(void) const
     {
-        return GetFieldUINT8Value(6, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldUINT32Value(6, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set heart_rate field
-    // Units: bpm
+    // Set start_time field
+    // Comment: Start time of the set
     ///////////////////////////////////////////////////////////////////////
-    void SetHeartRate(FIT_UINT8 heartRate)
+    void SetStartTime(FIT_DATE_TIME startTime)
     {
-        SetFieldUINT8Value(6, heartRate, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldUINT32Value(6, startTime, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of heart_rate_type field
+    // Returns number of category
+    ///////////////////////////////////////////////////////////////////////
+    FIT_UINT8 GetNumCategory(void) const
+    {
+        return GetFieldNumValues(7, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Checks the validity of category field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsHeartRateTypeValid() const
+    FIT_BOOL IsCategoryValid(FIT_UINT8 index) const
     {
         const Field* field = GetField(7);
         if( FIT_NULL == field )
@@ -327,30 +269,38 @@ public:
             return FIT_FALSE;
         }
 
-        return field->IsValueValid();
+        return field->IsValueValid(index);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns heart_rate_type field
+    // Returns category field
     ///////////////////////////////////////////////////////////////////////
-    FIT_HR_TYPE GetHeartRateType(void) const
+    FIT_EXERCISE_CATEGORY GetCategory(FIT_UINT8 index) const
     {
-        return GetFieldENUMValue(7, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldUINT16Value(7, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set heart_rate_type field
+    // Set category field
     ///////////////////////////////////////////////////////////////////////
-    void SetHeartRateType(FIT_HR_TYPE heartRateType)
+    void SetCategory(FIT_UINT8 index, FIT_EXERCISE_CATEGORY category)
     {
-        SetFieldENUMValue(7, heartRateType, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldUINT16Value(7, category, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of status field
+    // Returns number of category_subtype
+    ///////////////////////////////////////////////////////////////////////
+    FIT_UINT8 GetNumCategorySubtype(void) const
+    {
+        return GetFieldNumValues(8, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Checks the validity of category_subtype field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsStatusValid() const
+    FIT_BOOL IsCategorySubtypeValid(FIT_UINT8 index) const
     {
         const Field* field = GetField(8);
         if( FIT_NULL == field )
@@ -358,30 +308,32 @@ public:
             return FIT_FALSE;
         }
 
-        return field->IsValueValid();
+        return field->IsValueValid(index);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns status field
+    // Returns category_subtype field
+    // Comment: Based on the associated category, see [category]_exercise_names
     ///////////////////////////////////////////////////////////////////////
-    FIT_BP_STATUS GetStatus(void) const
+    FIT_UINT16 GetCategorySubtype(FIT_UINT8 index) const
     {
-        return GetFieldENUMValue(8, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldUINT16Value(8, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set status field
+    // Set category_subtype field
+    // Comment: Based on the associated category, see [category]_exercise_names
     ///////////////////////////////////////////////////////////////////////
-    void SetStatus(FIT_BP_STATUS status)
+    void SetCategorySubtype(FIT_UINT8 index, FIT_UINT16 categorySubtype)
     {
-        SetFieldENUMValue(8, status, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldUINT16Value(8, categorySubtype, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of user_profile_index field
+    // Checks the validity of weight_display_unit field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsUserProfileIndexValid() const
+    FIT_BOOL IsWeightDisplayUnitValid() const
     {
         const Field* field = GetField(9);
         if( FIT_NULL == field )
@@ -393,25 +345,85 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns user_profile_index field
-    // Comment: Associates this blood pressure message to a user.  This corresponds to the index of the user profile message in the blood pressure file.
+    // Returns weight_display_unit field
     ///////////////////////////////////////////////////////////////////////
-    FIT_MESSAGE_INDEX GetUserProfileIndex(void) const
+    FIT_FIT_BASE_UNIT GetWeightDisplayUnit(void) const
     {
         return GetFieldUINT16Value(9, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set user_profile_index field
-    // Comment: Associates this blood pressure message to a user.  This corresponds to the index of the user profile message in the blood pressure file.
+    // Set weight_display_unit field
     ///////////////////////////////////////////////////////////////////////
-    void SetUserProfileIndex(FIT_MESSAGE_INDEX userProfileIndex)
+    void SetWeightDisplayUnit(FIT_FIT_BASE_UNIT weightDisplayUnit)
     {
-        SetFieldUINT16Value(9, userProfileIndex, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldUINT16Value(9, weightDisplayUnit, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Checks the validity of message_index field
+    // Returns FIT_TRUE if field is valid
+    ///////////////////////////////////////////////////////////////////////
+    FIT_BOOL IsMessageIndexValid() const
+    {
+        const Field* field = GetField(10);
+        if( FIT_NULL == field )
+        {
+            return FIT_FALSE;
+        }
+
+        return field->IsValueValid();
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Returns message_index field
+    ///////////////////////////////////////////////////////////////////////
+    FIT_MESSAGE_INDEX GetMessageIndex(void) const
+    {
+        return GetFieldUINT16Value(10, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Set message_index field
+    ///////////////////////////////////////////////////////////////////////
+    void SetMessageIndex(FIT_MESSAGE_INDEX messageIndex)
+    {
+        SetFieldUINT16Value(10, messageIndex, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Checks the validity of wkt_step_index field
+    // Returns FIT_TRUE if field is valid
+    ///////////////////////////////////////////////////////////////////////
+    FIT_BOOL IsWktStepIndexValid() const
+    {
+        const Field* field = GetField(11);
+        if( FIT_NULL == field )
+        {
+            return FIT_FALSE;
+        }
+
+        return field->IsValueValid();
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Returns wkt_step_index field
+    ///////////////////////////////////////////////////////////////////////
+    FIT_MESSAGE_INDEX GetWktStepIndex(void) const
+    {
+        return GetFieldUINT16Value(11, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Set wkt_step_index field
+    ///////////////////////////////////////////////////////////////////////
+    void SetWktStepIndex(FIT_MESSAGE_INDEX wktStepIndex)
+    {
+        SetFieldUINT16Value(11, wktStepIndex, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
 };
 
 } // namespace fit
 
-#endif // !defined(FIT_BLOOD_PRESSURE_MESG_HPP)
+#endif // !defined(FIT_SET_MESG_HPP)

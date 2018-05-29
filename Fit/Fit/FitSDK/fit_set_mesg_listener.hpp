@@ -15,21 +15,21 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#if !defined(FIT_HRV_MESG_LISTENER_HPP)
-#define FIT_HRV_MESG_LISTENER_HPP
+#if !defined(FIT_SET_MESG_LISTENER_HPP)
+#define FIT_SET_MESG_LISTENER_HPP
 
-#include "fit_hrv_mesg.hpp"
+#include "fit_set_mesg.hpp"
 
 namespace fit
 {
 
-class HrvMesgListener
+class SetMesgListener
 {
 public:
-    virtual ~HrvMesgListener() {}
-    virtual void OnMesg(HrvMesg& mesg) = 0;
+    virtual ~SetMesgListener() {}
+    virtual void OnMesg(SetMesg& mesg) = 0;
 };
 
 } // namespace fit
 
-#endif // !defined(FIT_HRV_MESG_LISTENER_HPP)
+#endif // !defined(FIT_SET_MESG_LISTENER_HPP)
