@@ -89,10 +89,10 @@ extension ImprovedTrack {
                         totalCadence += cadence
                     }
                     if let temperature = point.temperature {
-                        if var totalTemperature = totalTemperature {
-                            totalTemperature += temperature
-                        } else {
+                        if totalTemperature == nil {
                             totalTemperature = temperature
+                        } else {
+                            totalTemperature! += temperature
                         }
                     }
                     if

@@ -52,5 +52,10 @@ extension ImprovedPoint {
         timestamp   <~ element["time"]
         name        <~ element["name"]
         description <~ element["desc"]
+        
+        let extensionsElement = element["extensions"]["gpxtpx:TrackPointExtension"]
+        temperature <~ extensionsElement["gpxtpx:atemp"]
+        heartRate   <~ extensionsElement["gpxtpx:hr"]
+        cadence     <~ extensionsElement["gpxtpx:cad"]
     }
 }

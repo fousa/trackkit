@@ -1,5 +1,5 @@
 //
-//  GPXLegacySpec.swift
+//  GPX10Spec.swift
 //  Tests
 //
 //  Created by Jelle Vandebeeck on 05/06/2018.
@@ -10,14 +10,14 @@ import Quick
 import Nimble
 import TrackKit
 
-class GPXLegacySpec: QuickSpec {
+class GPX10Spec: QuickSpec {
     override func spec() {
         fdescribe("GPX 1.0") {
-            context("waypoint") {
+            context("waypoints") {
                 var file: ImprovedFile!
                 var point: ImprovedPoint?
                 beforeEach {
-                    let url = Bundle(for: GPXLegacySpec.self).url(forResource: "GPX 1.0 Waypoint", withExtension: "gpx")!
+                    let url = Bundle(for: GPX10Spec.self).url(forResource: "GPX 1.0 Waypoint", withExtension: "gpx")!
                     file = try! ImprovedParser(fileURL: url).parse()
                     point = file.waypoints?.first
                 }
@@ -51,7 +51,7 @@ class GPXLegacySpec: QuickSpec {
             context("route") {
                 var file: ImprovedFile!
                 beforeEach {
-                    let url = Bundle(for: GPXLegacySpec.self).url(forResource: "GPX 1.0 Route", withExtension: "gpx")!
+                    let url = Bundle(for: GPX10Spec.self).url(forResource: "GPX 1.0 Route", withExtension: "gpx")!
                     file = try! ImprovedParser(fileURL: url).parse()
                 }
                 
@@ -75,7 +75,7 @@ class GPXLegacySpec: QuickSpec {
             context("route with meta") {
                 var file: ImprovedFile!
                 beforeEach {
-                    let url = Bundle(for: GPXLegacySpec.self).url(forResource: "GPX 1.0 Route with Meta",
+                    let url = Bundle(for: GPX10Spec.self).url(forResource: "GPX 1.0 Route with Meta",
                                                                   withExtension: "gpx")!
                     file = try! ImprovedParser(fileURL: url).parse()
                 }
@@ -88,7 +88,7 @@ class GPXLegacySpec: QuickSpec {
             context("track") {
                 var file: ImprovedFile!
                 beforeEach {
-                    let url = Bundle(for: GPXLegacySpec.self).url(forResource: "GPX 1.0 Track", withExtension: "gpx")!
+                    let url = Bundle(for: GPX10Spec.self).url(forResource: "GPX 1.0 Track", withExtension: "gpx")!
                     file = try! ImprovedParser(fileURL: url).parse()
                 }
                 
@@ -140,7 +140,7 @@ class GPXLegacySpec: QuickSpec {
             context("track with meta") {
                 var file: ImprovedFile!
                 beforeEach {
-                    let url = Bundle(for: GPXLegacySpec.self).url(forResource: "GPX 1.0 Track with Meta",
+                    let url = Bundle(for: GPX10Spec.self).url(forResource: "GPX 1.0 Track with Meta",
                                                                   withExtension: "gpx")!
                     file = try! ImprovedParser(fileURL: url).parse()
                 }

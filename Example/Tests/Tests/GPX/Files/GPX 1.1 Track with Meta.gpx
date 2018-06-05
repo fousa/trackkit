@@ -1,0 +1,60 @@
+<gpx version='1.1'>
+    <trk>
+        <trkseg>
+            <trkpt lat='41.2' lon='-71.3'>
+                <ele>100</ele>
+                <time>2016-03-10T10:00:00+02:00</time>
+                <extensions>
+                    <gpxtpx:TrackPointExtension>
+                        <gpxtpx:atemp>20</gpxtpx:atemp>
+                        <gpxtpx:cad>100</gpxtpx:cad>
+                        <gpxtpx:hr>130</gpxtpx:hr>
+                    </gpxtpx:TrackPointExtension>
+                </extensions>
+            </trkpt>
+            <trkpt lat='41.201' lon='-71.3'>
+                <ele>80</ele>
+                <time>2016-03-10T10:01:00+02:00</time>
+                <extensions>
+                    <gpxtpx:TrackPointExtension>
+                        <gpxtpx:atemp>25</gpxtpx:atemp>
+                        <gpxtpx:cad>120</gpxtpx:cad>
+                        <gpxtpx:hr>131</gpxtpx:hr>
+                    </gpxtpx:TrackPointExtension>
+                </extensions>
+            </trkpt>
+        </trkseg>
+        <trkseg>
+            <trkpt lat='41.202' lon='-71.3'>
+                <ele>140</ele>
+                <time>2016-03-10T10:04:00+02:00</time>
+                <extensions>
+                    <gpxtpx:TrackPointExtension>
+                        <gpxtpx:atemp>30</gpxtpx:atemp>
+                        <gpxtpx:cad>110</gpxtpx:cad>
+                        <gpxtpx:hr>132</gpxtpx:hr>
+                    </gpxtpx:TrackPointExtension>
+                </extensions>
+            </trkpt>
+        </trkseg>
+    </trk>
+    <trk>
+        <trkseg>
+            <trkpt lat='41.203' lon='-71.3'>
+                <ele>160</ele>
+                <time>2016-03-10T10:05:00+02:00</time>
+                <extensions>
+                    <gpxtpx:TrackPointExtension>
+                        <gpxtpx:atemp>25</gpxtpx:atemp>
+                        <gpxtpx:cad>90</gpxtpx:cad>
+                        <gpxtpx:hr>131</gpxtpx:hr>
+                    </gpxtpx:TrackPointExtension>
+                </extensions>
+            </trkpt>
+        </trkseg>
+    </trk>
+    <trk>
+        <trkseg></trkseg>
+    </trk>
+    <trk></trk>
+</gpx>

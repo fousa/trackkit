@@ -1,0 +1,19 @@
+<gpx version='1.1'>
+    <wpt lat='41.2' lon='-71.3'>
+        <ele>1001</ele>
+        <time>2016-03-10T10:05:12+02:00</time>
+        <name>A waypoint</name>
+        <desc>A description</desc>
+        <extensions>
+            <gpxtpx:TrackPointExtension>
+                <gpxtpx:atemp>24</gpxtpx:atemp>
+                <gpxtpx:cad>100</gpxtpx:cad>
+                <gpxtpx:hr>132</gpxtpx:hr>
+            </gpxtpx:TrackPointExtension>
+        </extensions>
+    </wpt>
+    <wpt lat='41.2' lon='-71.3'></wpt>
+    <wpt lat='41.2'></wpt>
+    <wpt lon='-71.3'></wpt>
+    <wpt></wpt>
+</gpx>
