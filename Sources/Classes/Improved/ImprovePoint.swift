@@ -35,6 +35,11 @@ public class ImprovedPoint {
     init(coordinate: CLLocationCoordinate2D) {
         self.coordinate = coordinate
     }
+    
+    /// Return the map point.
+    lazy var mapPoint: MKMapPoint = { [unowned self] in
+        return MKMapPointForCoordinate(coordinate)
+    }()
 }
 
 extension ImprovedPoint {

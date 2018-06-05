@@ -68,7 +68,7 @@ class GPX10Spec: QuickSpec {
                 }
                 
                 it("should have no height gained") {
-                    expect(file.route?.heighGained) == 0
+                    expect(file.route?.heighGained).to(beNil())
                 }
             }
             
@@ -105,7 +105,7 @@ class GPX10Spec: QuickSpec {
                 }
                 
                 it("should have no height gained") {
-                    expect(file.track?.heighGained) == 0
+                    expect(file.track?.heighGained).to(beNil())
                 }
                 
                 it("should have no duration") {

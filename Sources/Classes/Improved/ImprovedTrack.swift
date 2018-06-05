@@ -14,7 +14,7 @@ public class ImprovedTrack {
     /// The track's polyline to display on the map.
     public private(set) var polyline: MKPolyline
     /// The total distance of the track.
-    public private(set) var distance: CLLocationDistance?
+    public private(set) var distance: CLLocationDistance
     /// The total height gained during the track.
     public private(set) var heighGained: CLLocationDistance?
     /// The total duration of the track.
@@ -33,10 +33,11 @@ public class ImprovedTrack {
     public private(set) var averageTemperature: Int?
     
     /// Initialize a track with a points.
-    init(points: [ImprovedPoint]) {
+    init(points: [ImprovedPoint], distance: CLLocationDistance) {
         self.points = points
         var coordinates = points.compactMap { $0.coordinate }
         self.polyline = MKPolyline(coordinates: &coordinates, count: coordinates.count)
+        self.distance = distance
     }
 }
 
@@ -47,28 +48,29 @@ extension ImprovedTrack {
         
         var points: [ImprovedPoint] = []
         var distance: CLLocationDistance = 0.0
-        var heighGained: CLLocationDistance = 0.0
+        var heighGained: CLLocationDistance?
         var previousPoint: ImprovedPoint?
         var maximumSpeed: CLLocationSpeed = 0.0
         var maximumHeartRate: Int = 0
         var totalHeartRate: Int = 0
         var totalCadence: Int = 0
         var totalTemperature: Int?
+        
+        /// Iterate all the points.
         element["trk"].all?.forEach { track in
             track["trkseg"].all?.forEach { segment in
                 segment["trkpt"].all?.forEach { segmentPoint in
                     guard let point = ImprovedPoint(gpx: segmentPoint) else { return }
-                    let mapPoint = MKMapPointForCoordinate(point.coordinate)
+                    // When a previous Point is available we calculate some metadata.
                     if let previousPoint = previousPoint {
-                        let previousMapPoint = MKMapPointForCoordinate(previousPoint.coordinate)
-                        let pointDistance = MKMetersBetweenMapPoints(previousMapPoint, mapPoint)
+                        let pointDistance = MKMetersBetweenMapPoints(previousPoint.mapPoint, point.mapPoint)
                         distance += pointDistance
                         if
                             let previousElevation = previousPoint.elevation,
                             let elevation = point.elevation {
                             point.grade = Int((elevation - previousElevation) / pointDistance * 100.0)
                             if previousElevation < elevation {
-                                heighGained += elevation - previousElevation
+                                heighGained = (heighGained ?? 0.0) + elevation - previousElevation
                             }
                         }
                         
@@ -89,11 +91,7 @@ extension ImprovedTrack {
                         totalCadence += cadence
                     }
                     if let temperature = point.temperature {
-                        if totalTemperature == nil {
-                            totalTemperature = temperature
-                        } else {
-                            totalTemperature! += temperature
-                        }
+                        totalTemperature = (totalTemperature ?? 0) + temperature
                     }
                     if
                         let speed = point.speed,
@@ -107,11 +105,10 @@ extension ImprovedTrack {
         }
         guard points.count > 0 else { return nil }
 
-        self.init(points: points)
+        self.init(points: points, distance: distance)
         
         self.maximumHeartRate = maximumHeartRate
         self.maximumSpeed = maximumSpeed
-        self.distance = distance
         self.heighGained = heighGained
         if
             let startTime = points.first?.timestamp,

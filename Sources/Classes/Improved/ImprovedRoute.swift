@@ -14,15 +14,16 @@ public class ImprovedRoute {
     /// The track's polyline to display on the map.
     public private(set) var polyline: MKPolyline
     /// The total distance of the track.
-    public private(set) var distance: CLLocationDistance?
+    public private(set) var distance: CLLocationDistance
     /// The total height gained during the track.
     public private(set) var heighGained: CLLocationDistance?
     
     /// Initialize a track with a points.
-    init(points: [ImprovedPoint]) {
+    init(points: [ImprovedPoint], distance: CLLocationDistance) {
         self.points = points
         var coordinates = points.compactMap { $0.coordinate }
         self.polyline = MKPolyline(coordinates: &coordinates, count: coordinates.count)
+        self.distance = distance
     }
 }
 
@@ -32,32 +33,34 @@ extension ImprovedRoute {
         guard element.error == nil else { return nil }
         
         var points: [ImprovedPoint] = []
-        var distance: CLLocationDistance = 0.0
-        var heighGained: CLLocationDistance = 0.0
         var previousPoint: ImprovedPoint?
-        element["rte"].all?.forEach { track in
-            track["rtept"].all?.forEach { routePoint in
+        var distance: CLLocationDistance = 0.0
+        var heighGained: CLLocationDistance?
+        
+        /// Iterate all the points.
+        element["rte"].all?.forEach { route in
+            route["rtept"].all?.forEach { routePoint in
                 guard let point = ImprovedPoint(gpx: routePoint) else { return }
-                let mapPoint = MKMapPointForCoordinate(point.coordinate)
+                // When a previous Point is available we calculate some metadata.
                 if let previousPoint = previousPoint {
-                    let previousMapPoint = MKMapPointForCoordinate(previousPoint.coordinate)
-                    distance +=  MKMetersBetweenMapPoints(previousMapPoint, mapPoint)
+                    distance +=  MKMetersBetweenMapPoints(previousPoint.mapPoint, point.mapPoint)
                     if
                         let previousElevation = previousPoint.elevation,
                         let elevation = point.elevation,
                         previousElevation < elevation {
-                        heighGained += elevation - previousElevation
+                        heighGained = (heighGained ?? 0.0) + elevation - previousElevation
                     }
                 }
+                // Persist the point and save the previous one.
                 points.append(point)
                 previousPoint = point
             }
         }
+        
+        // When no points are found we return a nil point.
         guard points.count > 0 else { return nil }
+        self.init(points: points, distance: distance)
         
-        self.init(points: points)
-        
-        self.distance = distance
         self.heighGained = heighGained
     }
 }
