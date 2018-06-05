@@ -68,7 +68,9 @@ extension ImprovedTrack {
                         if
                             let previousElevation = previousPoint.elevation,
                             let elevation = point.elevation {
-                            point.grade = Int((elevation - previousElevation) / pointDistance * 100.0)
+                            if pointDistance > 0 {
+                                point.grade = Int((elevation - previousElevation) / pointDistance * 100.0)
+                            }
                             if previousElevation < elevation {
                                 heighGained = (heighGained ?? 0.0) + elevation - previousElevation
                             }

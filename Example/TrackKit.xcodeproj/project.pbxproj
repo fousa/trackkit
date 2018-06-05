@@ -21,6 +21,8 @@
 		62BB32D91D9DAEE100310CF9 /* FileTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB32D81D9DAEE100310CF9 /* FileTypeSpec.swift */; };
 		62BB32DC1D9DB45D00310CF9 /* TCXParserSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB32DB1D9DB45D00310CF9 /* TCXParserSpecs.swift */; };
 		62BB32DE1D9E353100310CF9 /* TCXCommonSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB32DD1D9E353100310CF9 /* TCXCommonSpecs.swift */; };
+		9D11DFB920C72339000A20EF /* GPXBenchmarkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D11DFB820C72339000A20EF /* GPXBenchmarkTest.swift */; };
+		9D11DFBB20C723EA000A20EF /* GPX Benchmark.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9D11DFBA20C723EA000A20EF /* GPX Benchmark.gpx */; };
 		9D30E39120AA28910009F346 /* HealthFit.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D30E39020AA28910009F346 /* HealthFit.fit */; };
 		9D30E39320AB5D350009F346 /* FITHealthFitSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D30E39220AB5D350009F346 /* FITHealthFitSpecs.swift */; };
 		9D57C93C20C714ED00566104 /* GPX11Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D57C93B20C714ED00566104 /* GPX11Spec.swift */; };
@@ -75,6 +77,8 @@
 		62BB32D81D9DAEE100310CF9 /* FileTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTypeSpec.swift; sourceTree = "<group>"; };
 		62BB32DB1D9DB45D00310CF9 /* TCXParserSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCXParserSpecs.swift; sourceTree = "<group>"; };
 		62BB32DD1D9E353100310CF9 /* TCXCommonSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCXCommonSpecs.swift; sourceTree = "<group>"; };
+		9D11DFB820C72339000A20EF /* GPXBenchmarkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXBenchmarkTest.swift; sourceTree = "<group>"; };
+		9D11DFBA20C723EA000A20EF /* GPX Benchmark.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "GPX Benchmark.gpx"; sourceTree = "<group>"; };
 		9D30E39020AA28910009F346 /* HealthFit.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = HealthFit.fit; sourceTree = "<group>"; };
 		9D30E39220AB5D350009F346 /* FITHealthFitSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITHealthFitSpecs.swift; sourceTree = "<group>"; };
 		9D57C93B20C714ED00566104 /* GPX11Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPX11Spec.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 			children = (
 				9DCED94B20C5FBB4004A713B /* GPX10Spec.swift */,
 				9D57C93B20C714ED00566104 /* GPX11Spec.swift */,
+				9D11DFB820C72339000A20EF /* GPXBenchmarkTest.swift */,
 				6297A9BF1C99611400686120 /* GPXParserSpecs.swift */,
 				9DCED94D20C5FBD5004A713B /* Files */,
 			);
@@ -267,6 +272,7 @@
 				9D57C93D20C7153300566104 /* GPX 1.1 Track with Meta.gpx */,
 				9D57C93E20C7153300566104 /* GPX 1.1 Track.gpx */,
 				9D57C94120C7153300566104 /* GPX 1.1 Waypoint.gpx */,
+				9D11DFBA20C723EA000A20EF /* GPX Benchmark.gpx */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -374,6 +380,7 @@
 				9D96975A200B597E00C0061C /* Course.fit in Resources */,
 				9D57C94420C7153300566104 /* GPX 1.1 Route.gpx in Resources */,
 				9D96972E200AA7C600C0061C /* Garmin Bike Ride.fit in Resources */,
+				9D11DFBB20C723EA000A20EF /* GPX Benchmark.gpx in Resources */,
 				9DCED94F20C5FBEF004A713B /* GPX 1.0 Waypoint.gpx in Resources */,
 				9D30E39120AA28910009F346 /* HealthFit.fit in Resources */,
 				9D96972B200AA78D00C0061C /* Multi Sport.fit in Resources */,
@@ -443,6 +450,7 @@
 				046664D21EE09DE7009701B1 /* NMEAParserSpec.swift in Sources */,
 				9D969736200AAC2300C0061C /* FITMultiSportSpecs.swift in Sources */,
 				62BB32D91D9DAEE100310CF9 /* FileTypeSpec.swift in Sources */,
+				9D11DFB920C72339000A20EF /* GPXBenchmarkTest.swift in Sources */,
 				9D57C93C20C714ED00566104 /* GPX11Spec.swift in Sources */,
 				042B2F881DA21F47003B5E7D /* TCXActivitySpecs.swift in Sources */,
 				9D30E39320AB5D350009F346 /* FITHealthFitSpecs.swift in Sources */,
