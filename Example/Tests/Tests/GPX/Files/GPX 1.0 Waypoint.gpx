@@ -1,0 +1,12 @@
+<gpx version='1.0'>
+    <wpt lat='41.2' lon='-71.3'>
+        <ele>1001</ele>
+        <time>2016-03-10T10:05:12+02:00</time>
+        <name>A waypoint</name>
+        <desc>A description</desc>
+    </wpt>
+    <wpt lat='41.2' lon='-71.3'></wpt>
+    <wpt lat='41.2'></wpt>
+    <wpt lon='-71.3'></wpt>
+    <wpt></wpt>
+</gpx>

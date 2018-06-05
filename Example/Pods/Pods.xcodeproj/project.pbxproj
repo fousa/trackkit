@@ -7,227 +7,233 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		000000000D40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000D30 /* Foundation.framework */; };
-		000000000D50 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000F0 /* Document.swift */; };
-		000000000D60 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000100 /* Element.swift */; };
-		000000000D70 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000110 /* Error.swift */; };
-		000000000D80 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000120 /* Options.swift */; };
-		000000000D90 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000130 /* Parser.swift */; };
-		000000000DF0 /* AEXML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000DD0 /* AEXML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000000E30 /* AEXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000E20 /* AEXML-dummy.m */; };
-		000000000EB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000D30 /* Foundation.framework */; };
-		000000000EC0 /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000140 /* AdapterProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000ED0 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000150 /* AssertionDispatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000EE0 /* AssertionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000160 /* AssertionRecorder.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000EF0 /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000170 /* NimbleEnvironment.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000F00 /* NimbleXCTestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000180 /* NimbleXCTestHandler.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000F10 /* NMBExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000190 /* NMBExpectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000F20 /* NMBObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001A0 /* NMBObjCMatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000F30 /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001B0 /* DSL+Wait.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000F40 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001C0 /* DSL.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000F50 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001D0 /* Expectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000F60 /* ExpectationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001E0 /* ExpectationMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000F70 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001F0 /* Expression.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000F80 /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000200 /* FailureMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000F90 /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000210 /* AllPass.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000FA0 /* AsyncMatcherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000220 /* AsyncMatcherWrapper.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000FB0 /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000230 /* BeAKindOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000FC0 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000240 /* BeAnInstanceOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000FD0 /* BeCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000250 /* BeCloseTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000FE0 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000260 /* BeEmpty.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000000FF0 /* BeginWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000270 /* BeginWith.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001000 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000280 /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001010 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000290 /* BeGreaterThanOrEqualTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001020 /* BeIdenticalTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002A0 /* BeIdenticalTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001030 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002B0 /* BeLessThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001040 /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002C0 /* BeLessThanOrEqual.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001050 /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002D0 /* BeLogical.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001060 /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002E0 /* BeNil.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001070 /* BeVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002F0 /* BeVoid.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001080 /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000300 /* Contain.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001090 /* ContainElementSatisfying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000310 /* ContainElementSatisfying.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		0000000010A0 /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000320 /* EndWith.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		0000000010B0 /* Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000330 /* Equal.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		0000000010C0 /* HaveCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000340 /* HaveCount.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		0000000010D0 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000350 /* Match.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		0000000010E0 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000360 /* MatcherFunc.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		0000000010F0 /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000370 /* MatcherProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001100 /* MatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000380 /* MatchError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001110 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000390 /* PostNotification.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001120 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003A0 /* Predicate.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001130 /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003B0 /* RaisesException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001140 /* SatisfyAllOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003C0 /* SatisfyAllOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001150 /* SatisfyAnyOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003D0 /* SatisfyAnyOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001160 /* ThrowAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003E0 /* ThrowAssertion.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001170 /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003F0 /* ThrowError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001180 /* ToSucceed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000400 /* ToSucceed.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001190 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000420 /* Async.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		0000000011A0 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000430 /* Errors.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		0000000011B0 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000440 /* Functional.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		0000000011C0 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000450 /* SourceLocation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		0000000011D0 /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000460 /* Stringers.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		0000000011E0 /* DSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000490 /* DSL.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		0000000011F0 /* NMBExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004B0 /* NMBExceptionCapture.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001200 /* NMBStringify.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004D0 /* NMBStringify.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001210 /* XCTestObservationCenter+Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004E0 /* XCTestObservationCenter+Register.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001220 /* CwlCatchException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004F0 /* CwlCatchException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001230 /* CwlCatchException.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000500 /* CwlCatchException.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001240 /* CwlMachBadInstructionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000520 /* CwlMachBadInstructionHandler.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001250 /* mach_excServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 000000000540 /* mach_excServer.c */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001260 /* CwlBadInstructionException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000560 /* CwlBadInstructionException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001270 /* CwlCatchBadInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000570 /* CwlCatchBadInstruction.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		000000001280 /* CwlDarwinDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000580 /* CwlDarwinDefinitions.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		0000000012A0 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000410 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0000000012B0 /* CurrentTestCaseTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000470 /* CurrentTestCaseTracker.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0000000012C0 /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000480 /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0000000012D0 /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000004A0 /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0000000012E0 /* NMBStringify.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000004C0 /* NMBStringify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0000000012F0 /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000510 /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000001300 /* CwlMachBadInstructionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000530 /* CwlMachBadInstructionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000001310 /* mach_excServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000550 /* mach_excServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000001320 /* CwlPreconditionTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000590 /* CwlPreconditionTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000001370 /* Nimble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000001360 /* Nimble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0000000013B0 /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000013A0 /* Nimble-dummy.m */; };
-		000000001430 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000D30 /* Foundation.framework */; };
-		000000001440 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005A0 /* Behavior.swift */; };
-		000000001450 /* Callsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005B0 /* Callsite.swift */; };
-		000000001460 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005C0 /* Configuration.swift */; };
-		000000001470 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005D0 /* DSL.swift */; };
-		000000001480 /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005E0 /* World+DSL.swift */; };
-		000000001490 /* ErrorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005F0 /* ErrorUtility.swift */; };
-		0000000014A0 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000600 /* Example.swift */; };
-		0000000014B0 /* ExampleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000610 /* ExampleGroup.swift */; };
-		0000000014C0 /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000620 /* ExampleMetadata.swift */; };
-		0000000014D0 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000630 /* Filter.swift */; };
-		0000000014E0 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000640 /* Closures.swift */; };
-		0000000014F0 /* ExampleHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000650 /* ExampleHooks.swift */; };
-		000000001500 /* HooksPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000660 /* HooksPhase.swift */; };
-		000000001510 /* SuiteHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000670 /* SuiteHooks.swift */; };
-		000000001520 /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000680 /* NSBundle+CurrentTestBundle.swift */; };
-		000000001530 /* NSString+C99ExtendedIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000690 /* NSString+C99ExtendedIdentifier.swift */; };
-		000000001540 /* QuickSelectedTestSuiteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000006A0 /* QuickSelectedTestSuiteBuilder.swift */; };
-		000000001550 /* QuickTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000006B0 /* QuickTestSuite.swift */; };
-		000000001560 /* URL+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000006C0 /* URL+FileName.swift */; };
-		000000001570 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000006D0 /* World.swift */; };
-		000000001580 /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000006F0 /* QuickConfiguration.m */; };
-		000000001590 /* QCKDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000710 /* QCKDSL.m */; };
-		0000000015A0 /* QuickSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000750 /* QuickSpec.m */; };
-		0000000015B0 /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000770 /* XCTestSuite+QuickTestSuiteBuilder.m */; };
-		0000000015C0 /* QuickSpecBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000790 /* QuickSpecBase.m */; };
-		0000000015E0 /* QuickConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000006E0 /* QuickConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0000000015F0 /* QCKDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000700 /* QCKDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000001600 /* World+DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000720 /* World+DSL.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		000000001610 /* Quick.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000730 /* Quick.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000001620 /* QuickSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000740 /* QuickSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000001630 /* World.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000760 /* World.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		000000001640 /* QuickSpecBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000780 /* QuickSpecBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		000000001690 /* Quick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000001680 /* Quick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0000000016D0 /* Quick-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000016C0 /* Quick-dummy.m */; };
-		000000001750 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000D30 /* Foundation.framework */; };
-		000000001760 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000007B0 /* Activity.swift */; };
-		000000001770 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000007C0 /* Author.swift */; };
-		000000001780 /* Bounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000007D0 /* Bounds.swift */; };
-		000000001790 /* CopyrightNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000007E0 /* CopyrightNotice.swift */; };
-		0000000017A0 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000007F0 /* Course.swift */; };
-		0000000017B0 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000800 /* File.swift */; };
-		0000000017C0 /* Lap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000810 /* Lap.swift */; };
-		0000000017D0 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000820 /* Link.swift */; };
-		0000000017E0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000830 /* Person.swift */; };
-		0000000017F0 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000840 /* Point.swift */; };
-		000000001800 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000850 /* Route.swift */; };
-		000000001810 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000860 /* Track.swift */; };
-		000000001820 /* TrackSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000870 /* TrackSegment.swift */; };
-		000000001830 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000880 /* Version.swift */; };
-		000000001840 /* AEXMLElement+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000008B0 /* AEXMLElement+Parsing.swift */; };
-		000000001850 /* Point+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000008C0 /* Point+Codable.swift */; };
-		000000001860 /* String+CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000008D0 /* String+CSV.swift */; };
-		000000001870 /* String+DateParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000008E0 /* String+DateParsing.swift */; };
-		000000001880 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000008F0 /* String+Range.swift */; };
-		000000001890 /* Activity+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000910 /* Activity+FIT.swift */; };
-		0000000018A0 /* Course+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000920 /* Course+FIT.swift */; };
-		0000000018B0 /* File+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000930 /* File+FIT.swift */; };
-		0000000018C0 /* Lap+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000940 /* Lap+FIT.swift */; };
-		0000000018D0 /* Point+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000950 /* Point+FIT.swift */; };
-		0000000018E0 /* Bounds+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000980 /* Bounds+GPX.swift */; };
-		0000000018F0 /* CopyrightNotice+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000990 /* CopyrightNotice+GPX.swift */; };
-		000000001900 /* File+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000009A0 /* File+GPX.swift */; };
-		000000001910 /* Link+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000009B0 /* Link+GPX.swift */; };
-		000000001920 /* Person+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000009C0 /* Person+GPX.swift */; };
-		000000001930 /* Point+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000009D0 /* Point+GPX.swift */; };
-		000000001940 /* Route+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000009E0 /* Route+GPX.swift */; };
-		000000001950 /* String+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000009F0 /* String+Parsing.swift */; };
-		000000001960 /* Track+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A00 /* Track+GPX.swift */; };
-		000000001970 /* TrackSegment+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A10 /* TrackSegment+GPX.swift */; };
-		000000001980 /* Gpxable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A20 /* Gpxable.swift */; };
-		000000001990 /* File+LOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A50 /* File+LOC.swift */; };
-		0000000019A0 /* Link+LOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A60 /* Link+LOC.swift */; };
-		0000000019B0 /* Point+LOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A70 /* Point+LOC.swift */; };
-		0000000019C0 /* Locable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A80 /* Locable.swift */; };
-		0000000019D0 /* File+NMEA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000AB0 /* File+NMEA.swift */; };
-		0000000019E0 /* Point+NMEA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000AC0 /* Point+NMEA.swift */; };
-		0000000019F0 /* String+NMEA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000AD0 /* String+NMEA.swift */; };
-		000000001A00 /* GPGGAParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000AF0 /* GPGGAParser.swift */; };
-		000000001A10 /* GPGLLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B00 /* GPGLLParser.swift */; };
-		000000001A20 /* GPRMCParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B10 /* GPRMCParser.swift */; };
-		000000001A30 /* GPWPLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B20 /* GPWPLParser.swift */; };
-		000000001A40 /* NMEAParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B30 /* NMEAParser.swift */; };
-		000000001A50 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B40 /* Operators.swift */; };
-		000000001A60 /* Activity+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B70 /* Activity+TCX.swift */; };
-		000000001A70 /* Author+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B80 /* Author+TCX.swift */; };
-		000000001A80 /* Course+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B90 /* Course+TCX.swift */; };
-		000000001A90 /* File+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000BA0 /* File+TCX.swift */; };
-		000000001AA0 /* Lap+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000BB0 /* Lap+TCX.swift */; };
-		000000001AB0 /* Point+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000BC0 /* Point+TCX.swift */; };
-		000000001AC0 /* Version+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000BD0 /* Version+TCX.swift */; };
-		000000001AD0 /* Tcxable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000BE0 /* Tcxable.swift */; };
-		000000001AE0 /* File+TRACK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C00 /* File+TRACK.swift */; };
-		000000001AF0 /* TrackParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C10 /* TrackParseError.swift */; };
-		000000001B00 /* TrackParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C20 /* TrackParser.swift */; };
-		000000001B10 /* TrackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C30 /* TrackType.swift */; };
-		000000001B20 /* TrackTypeVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C40 /* TrackTypeVersion.swift */; };
-		000000001B80 /* TrackKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000001B60 /* TrackKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000001BC0 /* TrackKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000001BB0 /* TrackKit-dummy.m */; };
-		000000001C40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000D30 /* Foundation.framework */; };
-		000000001CC0 /* Pods-Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000001CA0 /* Pods-Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		000000001D20 /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000001D10 /* Pods-Tests-dummy.m */; };
-		000000001D40 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001D30 /* XCTest.framework */; };
-		000000001E00 /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001DF0 /* AEXML.framework */; };
+		000000000DB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000DA0 /* Foundation.framework */; };
+		000000000DC0 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000000F0 /* Document.swift */; };
+		000000000DD0 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000100 /* Element.swift */; };
+		000000000DE0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000110 /* Error.swift */; };
+		000000000DF0 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000120 /* Options.swift */; };
+		000000000E00 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000130 /* Parser.swift */; };
+		000000000E60 /* AEXML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000E40 /* AEXML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000000EA0 /* AEXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000E90 /* AEXML-dummy.m */; };
+		000000000F20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000DA0 /* Foundation.framework */; };
+		000000000F30 /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000140 /* AdapterProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000000F40 /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000150 /* AssertionDispatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000000F50 /* AssertionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000160 /* AssertionRecorder.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000000F60 /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000170 /* NimbleEnvironment.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000000F70 /* NimbleXCTestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000180 /* NimbleXCTestHandler.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000000F80 /* NMBExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000190 /* NMBExpectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000000F90 /* NMBObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001A0 /* NMBObjCMatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000000FA0 /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001B0 /* DSL+Wait.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000000FB0 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001C0 /* DSL.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000000FC0 /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001D0 /* Expectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000000FD0 /* ExpectationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001E0 /* ExpectationMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000000FE0 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000001F0 /* Expression.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000000FF0 /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000200 /* FailureMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001000 /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000210 /* AllPass.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001010 /* AsyncMatcherWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000220 /* AsyncMatcherWrapper.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001020 /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000230 /* BeAKindOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001030 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000240 /* BeAnInstanceOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001040 /* BeCloseTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000250 /* BeCloseTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001050 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000260 /* BeEmpty.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001060 /* BeginWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000270 /* BeginWith.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001070 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000280 /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001080 /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000290 /* BeGreaterThanOrEqualTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001090 /* BeIdenticalTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002A0 /* BeIdenticalTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000010A0 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002B0 /* BeLessThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000010B0 /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002C0 /* BeLessThanOrEqual.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000010C0 /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002D0 /* BeLogical.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000010D0 /* BeNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002E0 /* BeNil.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000010E0 /* BeVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000002F0 /* BeVoid.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000010F0 /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000300 /* Contain.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001100 /* ContainElementSatisfying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000310 /* ContainElementSatisfying.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001110 /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000320 /* EndWith.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001120 /* Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000330 /* Equal.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001130 /* HaveCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000340 /* HaveCount.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001140 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000350 /* Match.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001150 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000360 /* MatcherFunc.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001160 /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000370 /* MatcherProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001170 /* MatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000380 /* MatchError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001180 /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000390 /* PostNotification.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001190 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003A0 /* Predicate.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000011A0 /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003B0 /* RaisesException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000011B0 /* SatisfyAllOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003C0 /* SatisfyAllOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000011C0 /* SatisfyAnyOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003D0 /* SatisfyAnyOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000011D0 /* ThrowAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003E0 /* ThrowAssertion.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000011E0 /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000003F0 /* ThrowError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000011F0 /* ToSucceed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000400 /* ToSucceed.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001200 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000420 /* Async.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001210 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000430 /* Errors.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001220 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000440 /* Functional.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001230 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000450 /* SourceLocation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001240 /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000460 /* Stringers.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001250 /* DSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000490 /* DSL.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001260 /* NMBExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004B0 /* NMBExceptionCapture.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001270 /* NMBStringify.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004D0 /* NMBStringify.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001280 /* XCTestObservationCenter+Register.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004E0 /* XCTestObservationCenter+Register.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001290 /* CwlCatchException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000004F0 /* CwlCatchException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000012A0 /* CwlCatchException.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000500 /* CwlCatchException.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000012B0 /* CwlMachBadInstructionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000520 /* CwlMachBadInstructionHandler.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000012C0 /* mach_excServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 000000000540 /* mach_excServer.c */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000012D0 /* CwlBadInstructionException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000560 /* CwlBadInstructionException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000012E0 /* CwlCatchBadInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000570 /* CwlCatchBadInstruction.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		0000000012F0 /* CwlDarwinDefinitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000580 /* CwlDarwinDefinitions.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		000000001310 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000410 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001320 /* CurrentTestCaseTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000470 /* CurrentTestCaseTracker.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		000000001330 /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000480 /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001340 /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000004A0 /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001350 /* NMBStringify.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000004C0 /* NMBStringify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001360 /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000510 /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001370 /* CwlMachBadInstructionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000530 /* CwlMachBadInstructionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001380 /* mach_excServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000550 /* mach_excServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001390 /* CwlPreconditionTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000590 /* CwlPreconditionTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0000000013E0 /* Nimble-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000013D0 /* Nimble-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001420 /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000001410 /* Nimble-dummy.m */; };
+		0000000014A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000DA0 /* Foundation.framework */; };
+		0000000014B0 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005A0 /* Behavior.swift */; };
+		0000000014C0 /* Callsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005B0 /* Callsite.swift */; };
+		0000000014D0 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005C0 /* Configuration.swift */; };
+		0000000014E0 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005D0 /* DSL.swift */; };
+		0000000014F0 /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005E0 /* World+DSL.swift */; };
+		000000001500 /* ErrorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000005F0 /* ErrorUtility.swift */; };
+		000000001510 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000600 /* Example.swift */; };
+		000000001520 /* ExampleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000610 /* ExampleGroup.swift */; };
+		000000001530 /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000620 /* ExampleMetadata.swift */; };
+		000000001540 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000630 /* Filter.swift */; };
+		000000001550 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000640 /* Closures.swift */; };
+		000000001560 /* ExampleHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000650 /* ExampleHooks.swift */; };
+		000000001570 /* HooksPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000660 /* HooksPhase.swift */; };
+		000000001580 /* SuiteHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000670 /* SuiteHooks.swift */; };
+		000000001590 /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000680 /* NSBundle+CurrentTestBundle.swift */; };
+		0000000015A0 /* NSString+C99ExtendedIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000690 /* NSString+C99ExtendedIdentifier.swift */; };
+		0000000015B0 /* QuickSelectedTestSuiteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000006A0 /* QuickSelectedTestSuiteBuilder.swift */; };
+		0000000015C0 /* QuickTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000006B0 /* QuickTestSuite.swift */; };
+		0000000015D0 /* URL+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000006C0 /* URL+FileName.swift */; };
+		0000000015E0 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000006D0 /* World.swift */; };
+		0000000015F0 /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0000000006F0 /* QuickConfiguration.m */; };
+		000000001600 /* QCKDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000710 /* QCKDSL.m */; };
+		000000001610 /* QuickSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000750 /* QuickSpec.m */; };
+		000000001620 /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000770 /* XCTestSuite+QuickTestSuiteBuilder.m */; };
+		000000001630 /* QuickSpecBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000000790 /* QuickSpecBase.m */; };
+		000000001650 /* QuickConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000006E0 /* QuickConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001660 /* QCKDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000700 /* QCKDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001670 /* World+DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000720 /* World+DSL.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000001680 /* Quick.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000730 /* Quick.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001690 /* QuickSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000740 /* QuickSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0000000016A0 /* World.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000760 /* World.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0000000016B0 /* QuickSpecBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000000780 /* QuickSpecBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000000001700 /* Quick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0000000016F0 /* Quick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001740 /* Quick-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000001730 /* Quick-dummy.m */; };
+		0000000017C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000DA0 /* Foundation.framework */; };
+		0000000017D0 /* ImprovedFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000007B0 /* ImprovedFile.swift */; };
+		0000000017E0 /* ImprovedFileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000007C0 /* ImprovedFileType.swift */; };
+		0000000017F0 /* ImprovedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000007D0 /* ImprovedParser.swift */; };
+		000000001800 /* ImprovedRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000007E0 /* ImprovedRoute.swift */; };
+		000000001810 /* ImprovedTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000007F0 /* ImprovedTrack.swift */; };
+		000000001820 /* ImprovePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000800 /* ImprovePoint.swift */; };
+		000000001830 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000820 /* Activity.swift */; };
+		000000001840 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000830 /* Author.swift */; };
+		000000001850 /* Bounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000840 /* Bounds.swift */; };
+		000000001860 /* CopyrightNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000850 /* CopyrightNotice.swift */; };
+		000000001870 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000860 /* Course.swift */; };
+		000000001880 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000870 /* File.swift */; };
+		000000001890 /* Lap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000880 /* Lap.swift */; };
+		0000000018A0 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000890 /* Link.swift */; };
+		0000000018B0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000008A0 /* Person.swift */; };
+		0000000018C0 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000008B0 /* Point.swift */; };
+		0000000018D0 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000008C0 /* Route.swift */; };
+		0000000018E0 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000008D0 /* Track.swift */; };
+		0000000018F0 /* TrackSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000008E0 /* TrackSegment.swift */; };
+		000000001900 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000008F0 /* Version.swift */; };
+		000000001910 /* AEXMLElement+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000920 /* AEXMLElement+Parsing.swift */; };
+		000000001920 /* Point+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000930 /* Point+Codable.swift */; };
+		000000001930 /* String+CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000940 /* String+CSV.swift */; };
+		000000001940 /* String+DateParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000950 /* String+DateParsing.swift */; };
+		000000001950 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000960 /* String+Range.swift */; };
+		000000001960 /* Activity+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000980 /* Activity+FIT.swift */; };
+		000000001970 /* Course+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000990 /* Course+FIT.swift */; };
+		000000001980 /* File+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000009A0 /* File+FIT.swift */; };
+		000000001990 /* Lap+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000009B0 /* Lap+FIT.swift */; };
+		0000000019A0 /* Point+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000009C0 /* Point+FIT.swift */; };
+		0000000019B0 /* Bounds+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0000000009F0 /* Bounds+GPX.swift */; };
+		0000000019C0 /* CopyrightNotice+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A00 /* CopyrightNotice+GPX.swift */; };
+		0000000019D0 /* File+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A10 /* File+GPX.swift */; };
+		0000000019E0 /* Link+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A20 /* Link+GPX.swift */; };
+		0000000019F0 /* Person+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A30 /* Person+GPX.swift */; };
+		000000001A00 /* Point+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A40 /* Point+GPX.swift */; };
+		000000001A10 /* Route+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A50 /* Route+GPX.swift */; };
+		000000001A20 /* String+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A60 /* String+Parsing.swift */; };
+		000000001A30 /* Track+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A70 /* Track+GPX.swift */; };
+		000000001A40 /* TrackSegment+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A80 /* TrackSegment+GPX.swift */; };
+		000000001A50 /* Gpxable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000A90 /* Gpxable.swift */; };
+		000000001A60 /* File+LOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000AC0 /* File+LOC.swift */; };
+		000000001A70 /* Link+LOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000AD0 /* Link+LOC.swift */; };
+		000000001A80 /* Point+LOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000AE0 /* Point+LOC.swift */; };
+		000000001A90 /* Locable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000AF0 /* Locable.swift */; };
+		000000001AA0 /* File+NMEA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B20 /* File+NMEA.swift */; };
+		000000001AB0 /* Point+NMEA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B30 /* Point+NMEA.swift */; };
+		000000001AC0 /* String+NMEA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B40 /* String+NMEA.swift */; };
+		000000001AD0 /* GPGGAParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B60 /* GPGGAParser.swift */; };
+		000000001AE0 /* GPGLLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B70 /* GPGLLParser.swift */; };
+		000000001AF0 /* GPRMCParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B80 /* GPRMCParser.swift */; };
+		000000001B00 /* GPWPLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000B90 /* GPWPLParser.swift */; };
+		000000001B10 /* NMEAParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000BA0 /* NMEAParser.swift */; };
+		000000001B20 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000BB0 /* Operators.swift */; };
+		000000001B30 /* Activity+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000BE0 /* Activity+TCX.swift */; };
+		000000001B40 /* Author+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000BF0 /* Author+TCX.swift */; };
+		000000001B50 /* Course+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C00 /* Course+TCX.swift */; };
+		000000001B60 /* File+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C10 /* File+TCX.swift */; };
+		000000001B70 /* Lap+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C20 /* Lap+TCX.swift */; };
+		000000001B80 /* Point+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C30 /* Point+TCX.swift */; };
+		000000001B90 /* Version+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C40 /* Version+TCX.swift */; };
+		000000001BA0 /* Tcxable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C50 /* Tcxable.swift */; };
+		000000001BB0 /* File+TRACK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C70 /* File+TRACK.swift */; };
+		000000001BC0 /* TrackParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C80 /* TrackParseError.swift */; };
+		000000001BD0 /* TrackParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000C90 /* TrackParser.swift */; };
+		000000001BE0 /* TrackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000CA0 /* TrackType.swift */; };
+		000000001BF0 /* TrackTypeVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000CB0 /* TrackTypeVersion.swift */; };
+		000000001C50 /* TrackKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000001C30 /* TrackKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001C90 /* TrackKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000001C80 /* TrackKit-dummy.m */; };
+		000000001D10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000DA0 /* Foundation.framework */; };
+		000000001D90 /* Pods-Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 000000001D70 /* Pods-Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000000001DF0 /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 000000001DE0 /* Pods-Tests-dummy.m */; };
+		000000001E10 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001E00 /* XCTest.framework */; };
+		000000001ED0 /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000001EC0 /* AEXML.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		000000001D50 /* PBXContainerItemProxy */ = {
+		000000001E20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 000000000CB0;
+			remoteGlobalIDString = 000000000D20;
 			remoteInfo = AEXML;
 		};
-		000000001D70 /* PBXContainerItemProxy */ = {
+		000000001E40 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 000000000E40;
+			remoteGlobalIDString = 000000000EB0;
 			remoteInfo = Nimble;
 		};
-		000000001D90 /* PBXContainerItemProxy */ = {
+		000000001E60 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0000000013C0;
+			remoteGlobalIDString = 000000001430;
 			remoteInfo = Quick;
 		};
-		000000001DB0 /* PBXContainerItemProxy */ = {
+		000000001E80 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0000000016E0;
+			remoteGlobalIDString = 000000001750;
 			remoteInfo = TrackKit;
 		};
-		000000001DD0 /* PBXContainerItemProxy */ = {
+		000000001EA0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 000000000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 000000000CB0;
+			remoteGlobalIDString = 000000000D20;
 			remoteInfo = AEXML;
 		};
 /* End PBXContainerItemProxy section */
@@ -341,155 +347,161 @@
 		000000000770 /* XCTestSuite+QuickTestSuiteBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestSuite+QuickTestSuiteBuilder.m"; path = "Sources/QuickObjectiveC/XCTestSuite+QuickTestSuiteBuilder.m"; sourceTree = "<group>"; };
 		000000000780 /* QuickSpecBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpecBase.h; path = Sources/QuickSpecBase/include/QuickSpecBase.h; sourceTree = "<group>"; };
 		000000000790 /* QuickSpecBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpecBase.m; path = Sources/QuickSpecBase/QuickSpecBase.m; sourceTree = "<group>"; };
-		0000000007B0 /* Activity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		0000000007C0 /* Author.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
-		0000000007D0 /* Bounds.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Bounds.swift; sourceTree = "<group>"; };
-		0000000007E0 /* CopyrightNotice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CopyrightNotice.swift; sourceTree = "<group>"; };
-		0000000007F0 /* Course.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
-		000000000800 /* File.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		000000000810 /* Lap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Lap.swift; sourceTree = "<group>"; };
-		000000000820 /* Link.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
-		000000000830 /* Person.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		000000000840 /* Point.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
-		000000000850 /* Route.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
-		000000000860 /* Track.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
-		000000000870 /* TrackSegment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackSegment.swift; sourceTree = "<group>"; };
-		000000000880 /* Version.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
-		0000000008B0 /* AEXMLElement+Parsing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "AEXMLElement+Parsing.swift"; sourceTree = "<group>"; };
-		0000000008C0 /* Point+Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Point+Codable.swift"; sourceTree = "<group>"; };
-		0000000008D0 /* String+CSV.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+CSV.swift"; sourceTree = "<group>"; };
-		0000000008E0 /* String+DateParsing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+DateParsing.swift"; sourceTree = "<group>"; };
-		0000000008F0 /* String+Range.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Range.swift"; sourceTree = "<group>"; };
-		000000000910 /* Activity+FIT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Activity+FIT.swift"; sourceTree = "<group>"; };
-		000000000920 /* Course+FIT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Course+FIT.swift"; sourceTree = "<group>"; };
-		000000000930 /* File+FIT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "File+FIT.swift"; sourceTree = "<group>"; };
-		000000000940 /* Lap+FIT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Lap+FIT.swift"; sourceTree = "<group>"; };
-		000000000950 /* Point+FIT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Point+FIT.swift"; sourceTree = "<group>"; };
-		000000000980 /* Bounds+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bounds+GPX.swift"; sourceTree = "<group>"; };
-		000000000990 /* CopyrightNotice+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CopyrightNotice+GPX.swift"; sourceTree = "<group>"; };
-		0000000009A0 /* File+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "File+GPX.swift"; sourceTree = "<group>"; };
-		0000000009B0 /* Link+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Link+GPX.swift"; sourceTree = "<group>"; };
-		0000000009C0 /* Person+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Person+GPX.swift"; sourceTree = "<group>"; };
-		0000000009D0 /* Point+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Point+GPX.swift"; sourceTree = "<group>"; };
-		0000000009E0 /* Route+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Route+GPX.swift"; sourceTree = "<group>"; };
-		0000000009F0 /* String+Parsing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Parsing.swift"; sourceTree = "<group>"; };
-		000000000A00 /* Track+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Track+GPX.swift"; sourceTree = "<group>"; };
-		000000000A10 /* TrackSegment+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "TrackSegment+GPX.swift"; sourceTree = "<group>"; };
-		000000000A20 /* Gpxable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Gpxable.swift; sourceTree = "<group>"; };
-		000000000A50 /* File+LOC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "File+LOC.swift"; sourceTree = "<group>"; };
-		000000000A60 /* Link+LOC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Link+LOC.swift"; sourceTree = "<group>"; };
-		000000000A70 /* Point+LOC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Point+LOC.swift"; sourceTree = "<group>"; };
-		000000000A80 /* Locable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Locable.swift; sourceTree = "<group>"; };
-		000000000AB0 /* File+NMEA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "File+NMEA.swift"; sourceTree = "<group>"; };
-		000000000AC0 /* Point+NMEA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Point+NMEA.swift"; sourceTree = "<group>"; };
-		000000000AD0 /* String+NMEA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+NMEA.swift"; sourceTree = "<group>"; };
-		000000000AF0 /* GPGGAParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GPGGAParser.swift; sourceTree = "<group>"; };
-		000000000B00 /* GPGLLParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GPGLLParser.swift; sourceTree = "<group>"; };
-		000000000B10 /* GPRMCParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GPRMCParser.swift; sourceTree = "<group>"; };
-		000000000B20 /* GPWPLParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GPWPLParser.swift; sourceTree = "<group>"; };
-		000000000B30 /* NMEAParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NMEAParser.swift; sourceTree = "<group>"; };
-		000000000B40 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
-		000000000B70 /* Activity+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Activity+TCX.swift"; sourceTree = "<group>"; };
-		000000000B80 /* Author+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Author+TCX.swift"; sourceTree = "<group>"; };
-		000000000B90 /* Course+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Course+TCX.swift"; sourceTree = "<group>"; };
-		000000000BA0 /* File+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "File+TCX.swift"; sourceTree = "<group>"; };
-		000000000BB0 /* Lap+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Lap+TCX.swift"; sourceTree = "<group>"; };
-		000000000BC0 /* Point+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Point+TCX.swift"; sourceTree = "<group>"; };
-		000000000BD0 /* Version+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Version+TCX.swift"; sourceTree = "<group>"; };
-		000000000BE0 /* Tcxable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Tcxable.swift; sourceTree = "<group>"; };
-		000000000C00 /* File+TRACK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "File+TRACK.swift"; sourceTree = "<group>"; };
-		000000000C10 /* TrackParseError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackParseError.swift; sourceTree = "<group>"; };
-		000000000C20 /* TrackParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackParser.swift; sourceTree = "<group>"; };
-		000000000C30 /* TrackType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackType.swift; sourceTree = "<group>"; };
-		000000000C40 /* TrackTypeVersion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackTypeVersion.swift; sourceTree = "<group>"; };
-		000000000C60 /* Fit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fit.framework; path = Sources/Vendor/iOS/Fit.framework; sourceTree = "<group>"; };
-		000000000C80 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		000000000C90 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		000000000CA0 /* TrackKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = TrackKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		000000000CF0 /* AEXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AEXML.framework; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000000D30 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		000000000DB0 /* AEXML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AEXML.xcconfig; sourceTree = "<group>"; };
-		000000000DC0 /* AEXML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AEXML.modulemap; sourceTree = "<group>"; };
-		000000000DD0 /* AEXML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-umbrella.h"; sourceTree = "<group>"; };
-		000000000E00 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		000000000E10 /* AEXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-prefix.pch"; sourceTree = "<group>"; };
-		000000000E20 /* AEXML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AEXML-dummy.m"; sourceTree = "<group>"; };
-		000000000E80 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nimble.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000001340 /* Nimble.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.xcconfig; sourceTree = "<group>"; };
-		000000001350 /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nimble.modulemap; sourceTree = "<group>"; };
-		000000001360 /* Nimble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-umbrella.h"; sourceTree = "<group>"; };
-		000000001380 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		000000001390 /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
-		0000000013A0 /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
-		000000001400 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Quick.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000001660 /* Quick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.xcconfig; sourceTree = "<group>"; };
-		000000001670 /* Quick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Quick.modulemap; sourceTree = "<group>"; };
-		000000001680 /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
-		0000000016A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0000000016B0 /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
-		0000000016C0 /* Quick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Quick-dummy.m"; sourceTree = "<group>"; };
-		000000001720 /* TrackKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TrackKit.framework; path = TrackKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000001B40 /* TrackKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TrackKit.xcconfig; sourceTree = "<group>"; };
-		000000001B50 /* TrackKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TrackKit.modulemap; sourceTree = "<group>"; };
-		000000001B60 /* TrackKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TrackKit-umbrella.h"; sourceTree = "<group>"; };
-		000000001B90 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		000000001BA0 /* TrackKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TrackKit-prefix.pch"; sourceTree = "<group>"; };
-		000000001BB0 /* TrackKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TrackKit-dummy.m"; sourceTree = "<group>"; };
-		000000001C10 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tests.framework; path = "Pods-Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		000000001C60 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		000000001C70 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		000000001C80 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		000000001C90 /* Pods-Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tests.modulemap"; sourceTree = "<group>"; };
-		000000001CA0 /* Pods-Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-umbrella.h"; sourceTree = "<group>"; };
-		000000001CD0 /* Pods-Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-frameworks.sh"; sourceTree = "<group>"; };
-		000000001CE0 /* Pods-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-resources.sh"; sourceTree = "<group>"; };
-		000000001CF0 /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		000000001D00 /* Pods-Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		000000001D10 /* Pods-Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-dummy.m"; sourceTree = "<group>"; };
-		000000001D30 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		000000001DF0 /* AEXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0000000007B0 /* ImprovedFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImprovedFile.swift; sourceTree = "<group>"; };
+		0000000007C0 /* ImprovedFileType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImprovedFileType.swift; sourceTree = "<group>"; };
+		0000000007D0 /* ImprovedParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImprovedParser.swift; sourceTree = "<group>"; };
+		0000000007E0 /* ImprovedRoute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImprovedRoute.swift; sourceTree = "<group>"; };
+		0000000007F0 /* ImprovedTrack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImprovedTrack.swift; sourceTree = "<group>"; };
+		000000000800 /* ImprovePoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImprovePoint.swift; sourceTree = "<group>"; };
+		000000000820 /* Activity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		000000000830 /* Author.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		000000000840 /* Bounds.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Bounds.swift; sourceTree = "<group>"; };
+		000000000850 /* CopyrightNotice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CopyrightNotice.swift; sourceTree = "<group>"; };
+		000000000860 /* Course.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		000000000870 /* File.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		000000000880 /* Lap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Lap.swift; sourceTree = "<group>"; };
+		000000000890 /* Link.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		0000000008A0 /* Person.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		0000000008B0 /* Point.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		0000000008C0 /* Route.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		0000000008D0 /* Track.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		0000000008E0 /* TrackSegment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackSegment.swift; sourceTree = "<group>"; };
+		0000000008F0 /* Version.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		000000000920 /* AEXMLElement+Parsing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "AEXMLElement+Parsing.swift"; sourceTree = "<group>"; };
+		000000000930 /* Point+Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Point+Codable.swift"; sourceTree = "<group>"; };
+		000000000940 /* String+CSV.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+CSV.swift"; sourceTree = "<group>"; };
+		000000000950 /* String+DateParsing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+DateParsing.swift"; sourceTree = "<group>"; };
+		000000000960 /* String+Range.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Range.swift"; sourceTree = "<group>"; };
+		000000000980 /* Activity+FIT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Activity+FIT.swift"; sourceTree = "<group>"; };
+		000000000990 /* Course+FIT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Course+FIT.swift"; sourceTree = "<group>"; };
+		0000000009A0 /* File+FIT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "File+FIT.swift"; sourceTree = "<group>"; };
+		0000000009B0 /* Lap+FIT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Lap+FIT.swift"; sourceTree = "<group>"; };
+		0000000009C0 /* Point+FIT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Point+FIT.swift"; sourceTree = "<group>"; };
+		0000000009F0 /* Bounds+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bounds+GPX.swift"; sourceTree = "<group>"; };
+		000000000A00 /* CopyrightNotice+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CopyrightNotice+GPX.swift"; sourceTree = "<group>"; };
+		000000000A10 /* File+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "File+GPX.swift"; sourceTree = "<group>"; };
+		000000000A20 /* Link+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Link+GPX.swift"; sourceTree = "<group>"; };
+		000000000A30 /* Person+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Person+GPX.swift"; sourceTree = "<group>"; };
+		000000000A40 /* Point+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Point+GPX.swift"; sourceTree = "<group>"; };
+		000000000A50 /* Route+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Route+GPX.swift"; sourceTree = "<group>"; };
+		000000000A60 /* String+Parsing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Parsing.swift"; sourceTree = "<group>"; };
+		000000000A70 /* Track+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Track+GPX.swift"; sourceTree = "<group>"; };
+		000000000A80 /* TrackSegment+GPX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "TrackSegment+GPX.swift"; sourceTree = "<group>"; };
+		000000000A90 /* Gpxable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Gpxable.swift; sourceTree = "<group>"; };
+		000000000AC0 /* File+LOC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "File+LOC.swift"; sourceTree = "<group>"; };
+		000000000AD0 /* Link+LOC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Link+LOC.swift"; sourceTree = "<group>"; };
+		000000000AE0 /* Point+LOC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Point+LOC.swift"; sourceTree = "<group>"; };
+		000000000AF0 /* Locable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Locable.swift; sourceTree = "<group>"; };
+		000000000B20 /* File+NMEA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "File+NMEA.swift"; sourceTree = "<group>"; };
+		000000000B30 /* Point+NMEA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Point+NMEA.swift"; sourceTree = "<group>"; };
+		000000000B40 /* String+NMEA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+NMEA.swift"; sourceTree = "<group>"; };
+		000000000B60 /* GPGGAParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GPGGAParser.swift; sourceTree = "<group>"; };
+		000000000B70 /* GPGLLParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GPGLLParser.swift; sourceTree = "<group>"; };
+		000000000B80 /* GPRMCParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GPRMCParser.swift; sourceTree = "<group>"; };
+		000000000B90 /* GPWPLParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GPWPLParser.swift; sourceTree = "<group>"; };
+		000000000BA0 /* NMEAParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NMEAParser.swift; sourceTree = "<group>"; };
+		000000000BB0 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		000000000BE0 /* Activity+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Activity+TCX.swift"; sourceTree = "<group>"; };
+		000000000BF0 /* Author+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Author+TCX.swift"; sourceTree = "<group>"; };
+		000000000C00 /* Course+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Course+TCX.swift"; sourceTree = "<group>"; };
+		000000000C10 /* File+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "File+TCX.swift"; sourceTree = "<group>"; };
+		000000000C20 /* Lap+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Lap+TCX.swift"; sourceTree = "<group>"; };
+		000000000C30 /* Point+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Point+TCX.swift"; sourceTree = "<group>"; };
+		000000000C40 /* Version+TCX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Version+TCX.swift"; sourceTree = "<group>"; };
+		000000000C50 /* Tcxable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Tcxable.swift; sourceTree = "<group>"; };
+		000000000C70 /* File+TRACK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "File+TRACK.swift"; sourceTree = "<group>"; };
+		000000000C80 /* TrackParseError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackParseError.swift; sourceTree = "<group>"; };
+		000000000C90 /* TrackParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackParser.swift; sourceTree = "<group>"; };
+		000000000CA0 /* TrackType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackType.swift; sourceTree = "<group>"; };
+		000000000CB0 /* TrackTypeVersion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TrackTypeVersion.swift; sourceTree = "<group>"; };
+		000000000CD0 /* Fit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fit.framework; path = Sources/Vendor/iOS/Fit.framework; sourceTree = "<group>"; };
+		000000000CF0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		000000000D00 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		000000000D10 /* TrackKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = TrackKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		000000000D60 /* AEXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AEXML.framework; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000DA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		000000000E20 /* AEXML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AEXML.xcconfig; sourceTree = "<group>"; };
+		000000000E30 /* AEXML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AEXML.modulemap; sourceTree = "<group>"; };
+		000000000E40 /* AEXML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-umbrella.h"; sourceTree = "<group>"; };
+		000000000E70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000E80 /* AEXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-prefix.pch"; sourceTree = "<group>"; };
+		000000000E90 /* AEXML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AEXML-dummy.m"; sourceTree = "<group>"; };
+		000000000EF0 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nimble.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0000000013B0 /* Nimble.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.xcconfig; sourceTree = "<group>"; };
+		0000000013C0 /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nimble.modulemap; sourceTree = "<group>"; };
+		0000000013D0 /* Nimble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-umbrella.h"; sourceTree = "<group>"; };
+		0000000013F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000001400 /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
+		000000001410 /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
+		000000001470 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Quick.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0000000016D0 /* Quick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.xcconfig; sourceTree = "<group>"; };
+		0000000016E0 /* Quick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Quick.modulemap; sourceTree = "<group>"; };
+		0000000016F0 /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
+		000000001710 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000001720 /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
+		000000001730 /* Quick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Quick-dummy.m"; sourceTree = "<group>"; };
+		000000001790 /* TrackKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TrackKit.framework; path = TrackKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000001C10 /* TrackKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TrackKit.xcconfig; sourceTree = "<group>"; };
+		000000001C20 /* TrackKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TrackKit.modulemap; sourceTree = "<group>"; };
+		000000001C30 /* TrackKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TrackKit-umbrella.h"; sourceTree = "<group>"; };
+		000000001C60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000001C70 /* TrackKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TrackKit-prefix.pch"; sourceTree = "<group>"; };
+		000000001C80 /* TrackKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TrackKit-dummy.m"; sourceTree = "<group>"; };
+		000000001CE0 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tests.framework; path = "Pods-Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000001D30 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		000000001D40 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		000000001D50 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000001D60 /* Pods-Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tests.modulemap"; sourceTree = "<group>"; };
+		000000001D70 /* Pods-Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-umbrella.h"; sourceTree = "<group>"; };
+		000000001DA0 /* Pods-Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-frameworks.sh"; sourceTree = "<group>"; };
+		000000001DB0 /* Pods-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-resources.sh"; sourceTree = "<group>"; };
+		000000001DC0 /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		000000001DD0 /* Pods-Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		000000001DE0 /* Pods-Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-dummy.m"; sourceTree = "<group>"; };
+		000000001E00 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		000000001EC0 /* AEXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		000000000D10 /* Frameworks */ = {
+		000000000D80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000D40 /* Foundation.framework in Frameworks */,
+				000000000DB0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000EA0 /* Frameworks */ = {
+		000000000F10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000EB0 /* Foundation.framework in Frameworks */,
+				000000000F20 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000001420 /* Frameworks */ = {
+		000000001490 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000001430 /* Foundation.framework in Frameworks */,
-				000000001D40 /* XCTest.framework in Frameworks */,
+				0000000014A0 /* Foundation.framework in Frameworks */,
+				000000001E10 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000001740 /* Frameworks */ = {
+		0000000017B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000001E00 /* AEXML.framework in Frameworks */,
-				000000001750 /* Foundation.framework in Frameworks */,
+				000000001ED0 /* AEXML.framework in Frameworks */,
+				0000000017C0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000001C30 /* Frameworks */ = {
+		000000001D00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000001C40 /* Foundation.framework in Frameworks */,
+				000000001D10 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,11 +523,11 @@
 		000000000020 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				000000000CF0 /* AEXML.framework */,
-				000000000E80 /* Nimble.framework */,
-				000000001C10 /* Pods_Tests.framework */,
-				000000001400 /* Quick.framework */,
-				000000001720 /* TrackKit.framework */,
+				000000000D60 /* AEXML.framework */,
+				000000000EF0 /* Nimble.framework */,
+				000000001CE0 /* Pods_Tests.framework */,
+				000000001470 /* Quick.framework */,
+				000000001790 /* TrackKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -523,8 +535,8 @@
 		000000000060 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				000000001DF0 /* AEXML.framework */,
-				000000000D20 /* iOS */,
+				000000001EC0 /* AEXML.framework */,
+				000000000D90 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -532,7 +544,7 @@
 		000000000070 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				000000001C50 /* Pods-Tests */,
+				000000001D20 /* Pods-Tests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -563,7 +575,7 @@
 				000000000110 /* Error.swift */,
 				000000000120 /* Options.swift */,
 				000000000130 /* Parser.swift */,
-				000000000DA0 /* Support Files */,
+				000000000E10 /* Support Files */,
 			);
 			name = AEXML;
 			path = AEXML;
@@ -642,7 +654,7 @@
 				0000000003F0 /* ThrowError.swift */,
 				000000000400 /* ToSucceed.swift */,
 				0000000004E0 /* XCTestObservationCenter+Register.m */,
-				000000001330 /* Support Files */,
+				0000000013A0 /* Support Files */,
 			);
 			name = Nimble;
 			path = Nimble;
@@ -683,7 +695,7 @@
 				000000000720 /* World+DSL.h */,
 				0000000005E0 /* World+DSL.swift */,
 				000000000770 /* XCTestSuite+QuickTestSuiteBuilder.m */,
-				000000001650 /* Support Files */,
+				0000000016C0 /* Support Files */,
 			);
 			name = Quick;
 			path = Quick;
@@ -692,297 +704,312 @@
 		0000000000D0 /* TrackKit */ = {
 			isa = PBXGroup;
 			children = (
-				000000000C50 /* Frameworks */,
-				0000000007A0 /* Models */,
-				000000000890 /* Parser */,
-				000000000C70 /* Pod */,
-				000000001B30 /* Support Files */,
+				000000000CC0 /* Frameworks */,
+				0000000007A0 /* Improved */,
+				000000000810 /* Models */,
+				000000000900 /* Parser */,
+				000000000CE0 /* Pod */,
+				000000001C00 /* Support Files */,
 			);
 			name = TrackKit;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		0000000007A0 /* Models */ = {
+		0000000007A0 /* Improved */ = {
 			isa = PBXGroup;
 			children = (
-				0000000007B0 /* Activity.swift */,
-				0000000007C0 /* Author.swift */,
-				0000000007D0 /* Bounds.swift */,
-				0000000007E0 /* CopyrightNotice.swift */,
-				0000000007F0 /* Course.swift */,
-				000000000800 /* File.swift */,
-				000000000810 /* Lap.swift */,
-				000000000820 /* Link.swift */,
-				000000000830 /* Person.swift */,
-				000000000840 /* Point.swift */,
-				000000000850 /* Route.swift */,
-				000000000860 /* Track.swift */,
-				000000000870 /* TrackSegment.swift */,
-				000000000880 /* Version.swift */,
+				0000000007B0 /* ImprovedFile.swift */,
+				0000000007C0 /* ImprovedFileType.swift */,
+				0000000007D0 /* ImprovedParser.swift */,
+				0000000007E0 /* ImprovedRoute.swift */,
+				0000000007F0 /* ImprovedTrack.swift */,
+				000000000800 /* ImprovePoint.swift */,
+			);
+			name = Improved;
+			path = Sources/Classes/Improved;
+			sourceTree = "<group>";
+		};
+		000000000810 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				000000000820 /* Activity.swift */,
+				000000000830 /* Author.swift */,
+				000000000840 /* Bounds.swift */,
+				000000000850 /* CopyrightNotice.swift */,
+				000000000860 /* Course.swift */,
+				000000000870 /* File.swift */,
+				000000000880 /* Lap.swift */,
+				000000000890 /* Link.swift */,
+				0000000008A0 /* Person.swift */,
+				0000000008B0 /* Point.swift */,
+				0000000008C0 /* Route.swift */,
+				0000000008D0 /* Track.swift */,
+				0000000008E0 /* TrackSegment.swift */,
+				0000000008F0 /* Version.swift */,
 			);
 			name = Models;
 			path = Sources/Classes/Models;
 			sourceTree = "<group>";
 		};
-		000000000890 /* Parser */ = {
+		000000000900 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				000000000B40 /* Operators.swift */,
-				000000000C10 /* TrackParseError.swift */,
-				000000000C20 /* TrackParser.swift */,
-				000000000C30 /* TrackType.swift */,
-				000000000C40 /* TrackTypeVersion.swift */,
-				0000000008A0 /* Extensions */,
-				000000000900 /* FIT */,
-				000000000960 /* GPX */,
-				000000000A30 /* LOC */,
-				000000000A90 /* NMEA */,
-				000000000B50 /* TCX */,
-				000000000BF0 /* TRACK */,
+				000000000BB0 /* Operators.swift */,
+				000000000C80 /* TrackParseError.swift */,
+				000000000C90 /* TrackParser.swift */,
+				000000000CA0 /* TrackType.swift */,
+				000000000CB0 /* TrackTypeVersion.swift */,
+				000000000910 /* Extensions */,
+				000000000970 /* FIT */,
+				0000000009D0 /* GPX */,
+				000000000AA0 /* LOC */,
+				000000000B00 /* NMEA */,
+				000000000BC0 /* TCX */,
+				000000000C60 /* TRACK */,
 			);
 			name = Parser;
 			path = Sources/Classes/Parser;
 			sourceTree = "<group>";
 		};
-		0000000008A0 /* Extensions */ = {
+		000000000910 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0000000008B0 /* AEXMLElement+Parsing.swift */,
-				0000000008C0 /* Point+Codable.swift */,
-				0000000008D0 /* String+CSV.swift */,
-				0000000008E0 /* String+DateParsing.swift */,
-				0000000008F0 /* String+Range.swift */,
+				000000000920 /* AEXMLElement+Parsing.swift */,
+				000000000930 /* Point+Codable.swift */,
+				000000000940 /* String+CSV.swift */,
+				000000000950 /* String+DateParsing.swift */,
+				000000000960 /* String+Range.swift */,
 			);
 			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		000000000900 /* FIT */ = {
+		000000000970 /* FIT */ = {
 			isa = PBXGroup;
 			children = (
-				000000000910 /* Activity+FIT.swift */,
-				000000000920 /* Course+FIT.swift */,
-				000000000930 /* File+FIT.swift */,
-				000000000940 /* Lap+FIT.swift */,
-				000000000950 /* Point+FIT.swift */,
+				000000000980 /* Activity+FIT.swift */,
+				000000000990 /* Course+FIT.swift */,
+				0000000009A0 /* File+FIT.swift */,
+				0000000009B0 /* Lap+FIT.swift */,
+				0000000009C0 /* Point+FIT.swift */,
 			);
 			name = FIT;
 			path = FIT;
 			sourceTree = "<group>";
 		};
-		000000000960 /* GPX */ = {
+		0000000009D0 /* GPX */ = {
 			isa = PBXGroup;
 			children = (
-				000000000A20 /* Gpxable.swift */,
-				000000000970 /* Extensions */,
+				000000000A90 /* Gpxable.swift */,
+				0000000009E0 /* Extensions */,
 			);
 			name = GPX;
 			path = GPX;
 			sourceTree = "<group>";
 		};
-		000000000970 /* Extensions */ = {
+		0000000009E0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				000000000980 /* Bounds+GPX.swift */,
-				000000000990 /* CopyrightNotice+GPX.swift */,
-				0000000009A0 /* File+GPX.swift */,
-				0000000009B0 /* Link+GPX.swift */,
-				0000000009C0 /* Person+GPX.swift */,
-				0000000009D0 /* Point+GPX.swift */,
-				0000000009E0 /* Route+GPX.swift */,
-				0000000009F0 /* String+Parsing.swift */,
-				000000000A00 /* Track+GPX.swift */,
-				000000000A10 /* TrackSegment+GPX.swift */,
+				0000000009F0 /* Bounds+GPX.swift */,
+				000000000A00 /* CopyrightNotice+GPX.swift */,
+				000000000A10 /* File+GPX.swift */,
+				000000000A20 /* Link+GPX.swift */,
+				000000000A30 /* Person+GPX.swift */,
+				000000000A40 /* Point+GPX.swift */,
+				000000000A50 /* Route+GPX.swift */,
+				000000000A60 /* String+Parsing.swift */,
+				000000000A70 /* Track+GPX.swift */,
+				000000000A80 /* TrackSegment+GPX.swift */,
 			);
 			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		000000000A30 /* LOC */ = {
+		000000000AA0 /* LOC */ = {
 			isa = PBXGroup;
 			children = (
-				000000000A80 /* Locable.swift */,
-				000000000A40 /* Extensions */,
+				000000000AF0 /* Locable.swift */,
+				000000000AB0 /* Extensions */,
 			);
 			name = LOC;
 			path = LOC;
 			sourceTree = "<group>";
 		};
-		000000000A40 /* Extensions */ = {
+		000000000AB0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				000000000A50 /* File+LOC.swift */,
-				000000000A60 /* Link+LOC.swift */,
-				000000000A70 /* Point+LOC.swift */,
+				000000000AC0 /* File+LOC.swift */,
+				000000000AD0 /* Link+LOC.swift */,
+				000000000AE0 /* Point+LOC.swift */,
 			);
 			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		000000000A90 /* NMEA */ = {
+		000000000B00 /* NMEA */ = {
 			isa = PBXGroup;
 			children = (
-				000000000AA0 /* Extensions */,
-				000000000AE0 /* Parser */,
+				000000000B10 /* Extensions */,
+				000000000B50 /* Parser */,
 			);
 			name = NMEA;
 			path = NMEA;
 			sourceTree = "<group>";
 		};
-		000000000AA0 /* Extensions */ = {
+		000000000B10 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				000000000AB0 /* File+NMEA.swift */,
-				000000000AC0 /* Point+NMEA.swift */,
-				000000000AD0 /* String+NMEA.swift */,
+				000000000B20 /* File+NMEA.swift */,
+				000000000B30 /* Point+NMEA.swift */,
+				000000000B40 /* String+NMEA.swift */,
 			);
 			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		000000000AE0 /* Parser */ = {
+		000000000B50 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				000000000AF0 /* GPGGAParser.swift */,
-				000000000B00 /* GPGLLParser.swift */,
-				000000000B10 /* GPRMCParser.swift */,
-				000000000B20 /* GPWPLParser.swift */,
-				000000000B30 /* NMEAParser.swift */,
+				000000000B60 /* GPGGAParser.swift */,
+				000000000B70 /* GPGLLParser.swift */,
+				000000000B80 /* GPRMCParser.swift */,
+				000000000B90 /* GPWPLParser.swift */,
+				000000000BA0 /* NMEAParser.swift */,
 			);
 			name = Parser;
 			path = Parser;
 			sourceTree = "<group>";
 		};
-		000000000B50 /* TCX */ = {
+		000000000BC0 /* TCX */ = {
 			isa = PBXGroup;
 			children = (
-				000000000BE0 /* Tcxable.swift */,
-				000000000B60 /* Extensions */,
+				000000000C50 /* Tcxable.swift */,
+				000000000BD0 /* Extensions */,
 			);
 			name = TCX;
 			path = TCX;
 			sourceTree = "<group>";
 		};
-		000000000B60 /* Extensions */ = {
+		000000000BD0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				000000000B70 /* Activity+TCX.swift */,
-				000000000B80 /* Author+TCX.swift */,
-				000000000B90 /* Course+TCX.swift */,
-				000000000BA0 /* File+TCX.swift */,
-				000000000BB0 /* Lap+TCX.swift */,
-				000000000BC0 /* Point+TCX.swift */,
-				000000000BD0 /* Version+TCX.swift */,
+				000000000BE0 /* Activity+TCX.swift */,
+				000000000BF0 /* Author+TCX.swift */,
+				000000000C00 /* Course+TCX.swift */,
+				000000000C10 /* File+TCX.swift */,
+				000000000C20 /* Lap+TCX.swift */,
+				000000000C30 /* Point+TCX.swift */,
+				000000000C40 /* Version+TCX.swift */,
 			);
 			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		000000000BF0 /* TRACK */ = {
+		000000000C60 /* TRACK */ = {
 			isa = PBXGroup;
 			children = (
-				000000000C00 /* File+TRACK.swift */,
+				000000000C70 /* File+TRACK.swift */,
 			);
 			name = TRACK;
 			path = TRACK;
 			sourceTree = "<group>";
 		};
-		000000000C50 /* Frameworks */ = {
+		000000000CC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				000000000C60 /* Fit.framework */,
+				000000000CD0 /* Fit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		000000000C70 /* Pod */ = {
+		000000000CE0 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				000000000C80 /* LICENSE */,
-				000000000C90 /* README.md */,
-				000000000CA0 /* TrackKit.podspec */,
+				000000000CF0 /* LICENSE */,
+				000000000D00 /* README.md */,
+				000000000D10 /* TrackKit.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		000000000D20 /* iOS */ = {
+		000000000D90 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				000000000D30 /* Foundation.framework */,
-				000000001D30 /* XCTest.framework */,
+				000000000DA0 /* Foundation.framework */,
+				000000001E00 /* XCTest.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		000000000DA0 /* Support Files */ = {
+		000000000E10 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				000000000DC0 /* AEXML.modulemap */,
-				000000000DB0 /* AEXML.xcconfig */,
-				000000000E20 /* AEXML-dummy.m */,
-				000000000E10 /* AEXML-prefix.pch */,
-				000000000DD0 /* AEXML-umbrella.h */,
-				000000000E00 /* Info.plist */,
+				000000000E30 /* AEXML.modulemap */,
+				000000000E20 /* AEXML.xcconfig */,
+				000000000E90 /* AEXML-dummy.m */,
+				000000000E80 /* AEXML-prefix.pch */,
+				000000000E40 /* AEXML-umbrella.h */,
+				000000000E70 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/AEXML";
 			sourceTree = "<group>";
 		};
-		000000001330 /* Support Files */ = {
+		0000000013A0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				000000001380 /* Info.plist */,
-				000000001350 /* Nimble.modulemap */,
-				000000001340 /* Nimble.xcconfig */,
-				0000000013A0 /* Nimble-dummy.m */,
-				000000001390 /* Nimble-prefix.pch */,
-				000000001360 /* Nimble-umbrella.h */,
+				0000000013F0 /* Info.plist */,
+				0000000013C0 /* Nimble.modulemap */,
+				0000000013B0 /* Nimble.xcconfig */,
+				000000001410 /* Nimble-dummy.m */,
+				000000001400 /* Nimble-prefix.pch */,
+				0000000013D0 /* Nimble-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Nimble";
 			sourceTree = "<group>";
 		};
-		000000001650 /* Support Files */ = {
+		0000000016C0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0000000016A0 /* Info.plist */,
-				000000001670 /* Quick.modulemap */,
-				000000001660 /* Quick.xcconfig */,
-				0000000016C0 /* Quick-dummy.m */,
-				0000000016B0 /* Quick-prefix.pch */,
-				000000001680 /* Quick-umbrella.h */,
+				000000001710 /* Info.plist */,
+				0000000016E0 /* Quick.modulemap */,
+				0000000016D0 /* Quick.xcconfig */,
+				000000001730 /* Quick-dummy.m */,
+				000000001720 /* Quick-prefix.pch */,
+				0000000016F0 /* Quick-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Quick";
 			sourceTree = "<group>";
 		};
-		000000001B30 /* Support Files */ = {
+		000000001C00 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				000000001B90 /* Info.plist */,
-				000000001B50 /* TrackKit.modulemap */,
-				000000001B40 /* TrackKit.xcconfig */,
-				000000001BB0 /* TrackKit-dummy.m */,
-				000000001BA0 /* TrackKit-prefix.pch */,
-				000000001B60 /* TrackKit-umbrella.h */,
+				000000001C60 /* Info.plist */,
+				000000001C20 /* TrackKit.modulemap */,
+				000000001C10 /* TrackKit.xcconfig */,
+				000000001C80 /* TrackKit-dummy.m */,
+				000000001C70 /* TrackKit-prefix.pch */,
+				000000001C30 /* TrackKit-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/TrackKit";
 			sourceTree = "<group>";
 		};
-		000000001C50 /* Pods-Tests */ = {
+		000000001D20 /* Pods-Tests */ = {
 			isa = PBXGroup;
 			children = (
-				000000001C80 /* Info.plist */,
-				000000001C90 /* Pods-Tests.modulemap */,
-				000000001D00 /* Pods-Tests-acknowledgements.markdown */,
-				000000001CF0 /* Pods-Tests-acknowledgements.plist */,
-				000000001D10 /* Pods-Tests-dummy.m */,
-				000000001CD0 /* Pods-Tests-frameworks.sh */,
-				000000001CE0 /* Pods-Tests-resources.sh */,
-				000000001CA0 /* Pods-Tests-umbrella.h */,
-				000000001C70 /* Pods-Tests.debug.xcconfig */,
-				000000001C60 /* Pods-Tests.release.xcconfig */,
+				000000001D50 /* Info.plist */,
+				000000001D60 /* Pods-Tests.modulemap */,
+				000000001DD0 /* Pods-Tests-acknowledgements.markdown */,
+				000000001DC0 /* Pods-Tests-acknowledgements.plist */,
+				000000001DE0 /* Pods-Tests-dummy.m */,
+				000000001DA0 /* Pods-Tests-frameworks.sh */,
+				000000001DB0 /* Pods-Tests-resources.sh */,
+				000000001D70 /* Pods-Tests-umbrella.h */,
+				000000001D40 /* Pods-Tests.debug.xcconfig */,
+				000000001D30 /* Pods-Tests.release.xcconfig */,
 			);
 			name = "Pods-Tests";
 			path = "Target Support Files/Pods-Tests";
@@ -991,72 +1018,72 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		000000000DE0 /* Headers */ = {
+		000000000E50 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000DF0 /* AEXML-umbrella.h in Headers */,
+				000000000E60 /* AEXML-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000001290 /* Headers */ = {
+		000000001300 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0000000012B0 /* CurrentTestCaseTracker.h in Headers */,
-				0000000012F0 /* CwlCatchException.h in Headers */,
-				000000001300 /* CwlMachBadInstructionHandler.h in Headers */,
-				000000001320 /* CwlPreconditionTesting.h in Headers */,
-				0000000012C0 /* DSL.h in Headers */,
-				000000001310 /* mach_excServer.h in Headers */,
-				000000001370 /* Nimble-umbrella.h in Headers */,
-				0000000012A0 /* Nimble.h in Headers */,
-				0000000012D0 /* NMBExceptionCapture.h in Headers */,
-				0000000012E0 /* NMBStringify.h in Headers */,
+				000000001320 /* CurrentTestCaseTracker.h in Headers */,
+				000000001360 /* CwlCatchException.h in Headers */,
+				000000001370 /* CwlMachBadInstructionHandler.h in Headers */,
+				000000001390 /* CwlPreconditionTesting.h in Headers */,
+				000000001330 /* DSL.h in Headers */,
+				000000001380 /* mach_excServer.h in Headers */,
+				0000000013E0 /* Nimble-umbrella.h in Headers */,
+				000000001310 /* Nimble.h in Headers */,
+				000000001340 /* NMBExceptionCapture.h in Headers */,
+				000000001350 /* NMBStringify.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0000000015D0 /* Headers */ = {
+		000000001640 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0000000015F0 /* QCKDSL.h in Headers */,
-				000000001690 /* Quick-umbrella.h in Headers */,
-				000000001610 /* Quick.h in Headers */,
-				0000000015E0 /* QuickConfiguration.h in Headers */,
-				000000001620 /* QuickSpec.h in Headers */,
-				000000001640 /* QuickSpecBase.h in Headers */,
-				000000001600 /* World+DSL.h in Headers */,
-				000000001630 /* World.h in Headers */,
+				000000001660 /* QCKDSL.h in Headers */,
+				000000001700 /* Quick-umbrella.h in Headers */,
+				000000001680 /* Quick.h in Headers */,
+				000000001650 /* QuickConfiguration.h in Headers */,
+				000000001690 /* QuickSpec.h in Headers */,
+				0000000016B0 /* QuickSpecBase.h in Headers */,
+				000000001670 /* World+DSL.h in Headers */,
+				0000000016A0 /* World.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000001B70 /* Headers */ = {
+		000000001C40 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000001B80 /* TrackKit-umbrella.h in Headers */,
+				000000001C50 /* TrackKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000001CB0 /* Headers */ = {
+		000000001D80 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000001CC0 /* Pods-Tests-umbrella.h in Headers */,
+				000000001D90 /* Pods-Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		000000000CB0 /* AEXML */ = {
+		000000000D20 /* AEXML */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 000000000CC0 /* Build configuration list for PBXNativeTarget "AEXML" */;
+			buildConfigurationList = 000000000D30 /* Build configuration list for PBXNativeTarget "AEXML" */;
 			buildPhases = (
-				000000000D00 /* Sources */,
-				000000000D10 /* Frameworks */,
-				000000000DE0 /* Headers */,
+				000000000D70 /* Sources */,
+				000000000D80 /* Frameworks */,
+				000000000E50 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -1064,16 +1091,16 @@
 			);
 			name = AEXML;
 			productName = AEXML;
-			productReference = 000000000CF0 /* AEXML.framework */;
+			productReference = 000000000D60 /* AEXML.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		000000000E40 /* Nimble */ = {
+		000000000EB0 /* Nimble */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 000000000E50 /* Build configuration list for PBXNativeTarget "Nimble" */;
+			buildConfigurationList = 000000000EC0 /* Build configuration list for PBXNativeTarget "Nimble" */;
 			buildPhases = (
-				000000000E90 /* Sources */,
-				000000000EA0 /* Frameworks */,
-				000000001290 /* Headers */,
+				000000000F00 /* Sources */,
+				000000000F10 /* Frameworks */,
+				000000001300 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -1081,16 +1108,16 @@
 			);
 			name = Nimble;
 			productName = Nimble;
-			productReference = 000000000E80 /* Nimble.framework */;
+			productReference = 000000000EF0 /* Nimble.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0000000013C0 /* Quick */ = {
+		000000001430 /* Quick */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0000000013D0 /* Build configuration list for PBXNativeTarget "Quick" */;
+			buildConfigurationList = 000000001440 /* Build configuration list for PBXNativeTarget "Quick" */;
 			buildPhases = (
-				000000001410 /* Sources */,
-				000000001420 /* Frameworks */,
-				0000000015D0 /* Headers */,
+				000000001480 /* Sources */,
+				000000001490 /* Frameworks */,
+				000000001640 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -1098,46 +1125,46 @@
 			);
 			name = Quick;
 			productName = Quick;
-			productReference = 000000001400 /* Quick.framework */;
+			productReference = 000000001470 /* Quick.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0000000016E0 /* TrackKit */ = {
+		000000001750 /* TrackKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0000000016F0 /* Build configuration list for PBXNativeTarget "TrackKit" */;
+			buildConfigurationList = 000000001760 /* Build configuration list for PBXNativeTarget "TrackKit" */;
 			buildPhases = (
-				000000001730 /* Sources */,
-				000000001740 /* Frameworks */,
-				000000001B70 /* Headers */,
+				0000000017A0 /* Sources */,
+				0000000017B0 /* Frameworks */,
+				000000001C40 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				000000001DE0 /* PBXTargetDependency */,
+				000000001EB0 /* PBXTargetDependency */,
 			);
 			name = TrackKit;
 			productName = TrackKit;
-			productReference = 000000001720 /* TrackKit.framework */;
+			productReference = 000000001790 /* TrackKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		000000001BD0 /* Pods-Tests */ = {
+		000000001CA0 /* Pods-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 000000001BE0 /* Build configuration list for PBXNativeTarget "Pods-Tests" */;
+			buildConfigurationList = 000000001CB0 /* Build configuration list for PBXNativeTarget "Pods-Tests" */;
 			buildPhases = (
-				000000001C20 /* Sources */,
-				000000001C30 /* Frameworks */,
-				000000001CB0 /* Headers */,
+				000000001CF0 /* Sources */,
+				000000001D00 /* Frameworks */,
+				000000001D80 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				000000001D60 /* PBXTargetDependency */,
-				000000001D80 /* PBXTargetDependency */,
-				000000001DA0 /* PBXTargetDependency */,
-				000000001DC0 /* PBXTargetDependency */,
+				000000001E30 /* PBXTargetDependency */,
+				000000001E50 /* PBXTargetDependency */,
+				000000001E70 /* PBXTargetDependency */,
+				000000001E90 /* PBXTargetDependency */,
 			);
 			name = "Pods-Tests";
 			productName = "Pods-Tests";
-			productReference = 000000001C10 /* Pods_Tests.framework */;
+			productReference = 000000001CE0 /* Pods_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1161,240 +1188,246 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				000000000CB0 /* AEXML */,
-				000000000E40 /* Nimble */,
-				000000001BD0 /* Pods-Tests */,
-				0000000013C0 /* Quick */,
-				0000000016E0 /* TrackKit */,
+				000000000D20 /* AEXML */,
+				000000000EB0 /* Nimble */,
+				000000001CA0 /* Pods-Tests */,
+				000000001430 /* Quick */,
+				000000001750 /* TrackKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		000000000D00 /* Sources */ = {
+		000000000D70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000E30 /* AEXML-dummy.m in Sources */,
-				000000000D50 /* Document.swift in Sources */,
-				000000000D60 /* Element.swift in Sources */,
-				000000000D70 /* Error.swift in Sources */,
-				000000000D80 /* Options.swift in Sources */,
-				000000000D90 /* Parser.swift in Sources */,
+				000000000EA0 /* AEXML-dummy.m in Sources */,
+				000000000DC0 /* Document.swift in Sources */,
+				000000000DD0 /* Element.swift in Sources */,
+				000000000DE0 /* Error.swift in Sources */,
+				000000000DF0 /* Options.swift in Sources */,
+				000000000E00 /* Parser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000000E90 /* Sources */ = {
+		000000000F00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000000EC0 /* AdapterProtocols.swift in Sources */,
-				000000000F90 /* AllPass.swift in Sources */,
-				000000000ED0 /* AssertionDispatcher.swift in Sources */,
-				000000000EE0 /* AssertionRecorder.swift in Sources */,
-				000000001190 /* Async.swift in Sources */,
-				000000000FA0 /* AsyncMatcherWrapper.swift in Sources */,
-				000000000FB0 /* BeAKindOf.swift in Sources */,
-				000000000FC0 /* BeAnInstanceOf.swift in Sources */,
-				000000000FD0 /* BeCloseTo.swift in Sources */,
-				000000000FE0 /* BeEmpty.swift in Sources */,
-				000000000FF0 /* BeginWith.swift in Sources */,
-				000000001000 /* BeGreaterThan.swift in Sources */,
-				000000001010 /* BeGreaterThanOrEqualTo.swift in Sources */,
-				000000001020 /* BeIdenticalTo.swift in Sources */,
-				000000001030 /* BeLessThan.swift in Sources */,
-				000000001040 /* BeLessThanOrEqual.swift in Sources */,
-				000000001050 /* BeLogical.swift in Sources */,
-				000000001060 /* BeNil.swift in Sources */,
-				000000001070 /* BeVoid.swift in Sources */,
-				000000001080 /* Contain.swift in Sources */,
-				000000001090 /* ContainElementSatisfying.swift in Sources */,
-				000000001260 /* CwlBadInstructionException.swift in Sources */,
-				000000001270 /* CwlCatchBadInstruction.swift in Sources */,
-				000000001230 /* CwlCatchException.m in Sources */,
-				000000001220 /* CwlCatchException.swift in Sources */,
-				000000001280 /* CwlDarwinDefinitions.swift in Sources */,
-				000000001240 /* CwlMachBadInstructionHandler.m in Sources */,
-				000000000F30 /* DSL+Wait.swift in Sources */,
-				0000000011E0 /* DSL.m in Sources */,
-				000000000F40 /* DSL.swift in Sources */,
-				0000000010A0 /* EndWith.swift in Sources */,
-				0000000010B0 /* Equal.swift in Sources */,
-				0000000011A0 /* Errors.swift in Sources */,
-				000000000F50 /* Expectation.swift in Sources */,
-				000000000F60 /* ExpectationMessage.swift in Sources */,
-				000000000F70 /* Expression.swift in Sources */,
-				000000000F80 /* FailureMessage.swift in Sources */,
-				0000000011B0 /* Functional.swift in Sources */,
-				0000000010C0 /* HaveCount.swift in Sources */,
-				000000001250 /* mach_excServer.c in Sources */,
-				0000000010D0 /* Match.swift in Sources */,
-				0000000010E0 /* MatcherFunc.swift in Sources */,
-				0000000010F0 /* MatcherProtocols.swift in Sources */,
-				000000001100 /* MatchError.swift in Sources */,
-				0000000013B0 /* Nimble-dummy.m in Sources */,
-				000000000EF0 /* NimbleEnvironment.swift in Sources */,
-				000000000F00 /* NimbleXCTestHandler.swift in Sources */,
-				0000000011F0 /* NMBExceptionCapture.m in Sources */,
-				000000000F10 /* NMBExpectation.swift in Sources */,
-				000000000F20 /* NMBObjCMatcher.swift in Sources */,
-				000000001200 /* NMBStringify.m in Sources */,
-				000000001110 /* PostNotification.swift in Sources */,
-				000000001120 /* Predicate.swift in Sources */,
-				000000001130 /* RaisesException.swift in Sources */,
-				000000001140 /* SatisfyAllOf.swift in Sources */,
-				000000001150 /* SatisfyAnyOf.swift in Sources */,
-				0000000011C0 /* SourceLocation.swift in Sources */,
-				0000000011D0 /* Stringers.swift in Sources */,
-				000000001160 /* ThrowAssertion.swift in Sources */,
-				000000001170 /* ThrowError.swift in Sources */,
-				000000001180 /* ToSucceed.swift in Sources */,
-				000000001210 /* XCTestObservationCenter+Register.m in Sources */,
+				000000000F30 /* AdapterProtocols.swift in Sources */,
+				000000001000 /* AllPass.swift in Sources */,
+				000000000F40 /* AssertionDispatcher.swift in Sources */,
+				000000000F50 /* AssertionRecorder.swift in Sources */,
+				000000001200 /* Async.swift in Sources */,
+				000000001010 /* AsyncMatcherWrapper.swift in Sources */,
+				000000001020 /* BeAKindOf.swift in Sources */,
+				000000001030 /* BeAnInstanceOf.swift in Sources */,
+				000000001040 /* BeCloseTo.swift in Sources */,
+				000000001050 /* BeEmpty.swift in Sources */,
+				000000001060 /* BeginWith.swift in Sources */,
+				000000001070 /* BeGreaterThan.swift in Sources */,
+				000000001080 /* BeGreaterThanOrEqualTo.swift in Sources */,
+				000000001090 /* BeIdenticalTo.swift in Sources */,
+				0000000010A0 /* BeLessThan.swift in Sources */,
+				0000000010B0 /* BeLessThanOrEqual.swift in Sources */,
+				0000000010C0 /* BeLogical.swift in Sources */,
+				0000000010D0 /* BeNil.swift in Sources */,
+				0000000010E0 /* BeVoid.swift in Sources */,
+				0000000010F0 /* Contain.swift in Sources */,
+				000000001100 /* ContainElementSatisfying.swift in Sources */,
+				0000000012D0 /* CwlBadInstructionException.swift in Sources */,
+				0000000012E0 /* CwlCatchBadInstruction.swift in Sources */,
+				0000000012A0 /* CwlCatchException.m in Sources */,
+				000000001290 /* CwlCatchException.swift in Sources */,
+				0000000012F0 /* CwlDarwinDefinitions.swift in Sources */,
+				0000000012B0 /* CwlMachBadInstructionHandler.m in Sources */,
+				000000000FA0 /* DSL+Wait.swift in Sources */,
+				000000001250 /* DSL.m in Sources */,
+				000000000FB0 /* DSL.swift in Sources */,
+				000000001110 /* EndWith.swift in Sources */,
+				000000001120 /* Equal.swift in Sources */,
+				000000001210 /* Errors.swift in Sources */,
+				000000000FC0 /* Expectation.swift in Sources */,
+				000000000FD0 /* ExpectationMessage.swift in Sources */,
+				000000000FE0 /* Expression.swift in Sources */,
+				000000000FF0 /* FailureMessage.swift in Sources */,
+				000000001220 /* Functional.swift in Sources */,
+				000000001130 /* HaveCount.swift in Sources */,
+				0000000012C0 /* mach_excServer.c in Sources */,
+				000000001140 /* Match.swift in Sources */,
+				000000001150 /* MatcherFunc.swift in Sources */,
+				000000001160 /* MatcherProtocols.swift in Sources */,
+				000000001170 /* MatchError.swift in Sources */,
+				000000001420 /* Nimble-dummy.m in Sources */,
+				000000000F60 /* NimbleEnvironment.swift in Sources */,
+				000000000F70 /* NimbleXCTestHandler.swift in Sources */,
+				000000001260 /* NMBExceptionCapture.m in Sources */,
+				000000000F80 /* NMBExpectation.swift in Sources */,
+				000000000F90 /* NMBObjCMatcher.swift in Sources */,
+				000000001270 /* NMBStringify.m in Sources */,
+				000000001180 /* PostNotification.swift in Sources */,
+				000000001190 /* Predicate.swift in Sources */,
+				0000000011A0 /* RaisesException.swift in Sources */,
+				0000000011B0 /* SatisfyAllOf.swift in Sources */,
+				0000000011C0 /* SatisfyAnyOf.swift in Sources */,
+				000000001230 /* SourceLocation.swift in Sources */,
+				000000001240 /* Stringers.swift in Sources */,
+				0000000011D0 /* ThrowAssertion.swift in Sources */,
+				0000000011E0 /* ThrowError.swift in Sources */,
+				0000000011F0 /* ToSucceed.swift in Sources */,
+				000000001280 /* XCTestObservationCenter+Register.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000001410 /* Sources */ = {
+		000000001480 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000001440 /* Behavior.swift in Sources */,
-				000000001450 /* Callsite.swift in Sources */,
-				0000000014E0 /* Closures.swift in Sources */,
-				000000001460 /* Configuration.swift in Sources */,
-				000000001470 /* DSL.swift in Sources */,
-				000000001490 /* ErrorUtility.swift in Sources */,
-				0000000014A0 /* Example.swift in Sources */,
-				0000000014B0 /* ExampleGroup.swift in Sources */,
-				0000000014F0 /* ExampleHooks.swift in Sources */,
-				0000000014C0 /* ExampleMetadata.swift in Sources */,
-				0000000014D0 /* Filter.swift in Sources */,
-				000000001500 /* HooksPhase.swift in Sources */,
-				000000001520 /* NSBundle+CurrentTestBundle.swift in Sources */,
-				000000001530 /* NSString+C99ExtendedIdentifier.swift in Sources */,
-				000000001590 /* QCKDSL.m in Sources */,
-				0000000016D0 /* Quick-dummy.m in Sources */,
-				000000001580 /* QuickConfiguration.m in Sources */,
-				000000001540 /* QuickSelectedTestSuiteBuilder.swift in Sources */,
-				0000000015A0 /* QuickSpec.m in Sources */,
-				0000000015C0 /* QuickSpecBase.m in Sources */,
-				000000001550 /* QuickTestSuite.swift in Sources */,
-				000000001510 /* SuiteHooks.swift in Sources */,
-				000000001560 /* URL+FileName.swift in Sources */,
-				000000001480 /* World+DSL.swift in Sources */,
-				000000001570 /* World.swift in Sources */,
-				0000000015B0 /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */,
+				0000000014B0 /* Behavior.swift in Sources */,
+				0000000014C0 /* Callsite.swift in Sources */,
+				000000001550 /* Closures.swift in Sources */,
+				0000000014D0 /* Configuration.swift in Sources */,
+				0000000014E0 /* DSL.swift in Sources */,
+				000000001500 /* ErrorUtility.swift in Sources */,
+				000000001510 /* Example.swift in Sources */,
+				000000001520 /* ExampleGroup.swift in Sources */,
+				000000001560 /* ExampleHooks.swift in Sources */,
+				000000001530 /* ExampleMetadata.swift in Sources */,
+				000000001540 /* Filter.swift in Sources */,
+				000000001570 /* HooksPhase.swift in Sources */,
+				000000001590 /* NSBundle+CurrentTestBundle.swift in Sources */,
+				0000000015A0 /* NSString+C99ExtendedIdentifier.swift in Sources */,
+				000000001600 /* QCKDSL.m in Sources */,
+				000000001740 /* Quick-dummy.m in Sources */,
+				0000000015F0 /* QuickConfiguration.m in Sources */,
+				0000000015B0 /* QuickSelectedTestSuiteBuilder.swift in Sources */,
+				000000001610 /* QuickSpec.m in Sources */,
+				000000001630 /* QuickSpecBase.m in Sources */,
+				0000000015C0 /* QuickTestSuite.swift in Sources */,
+				000000001580 /* SuiteHooks.swift in Sources */,
+				0000000015D0 /* URL+FileName.swift in Sources */,
+				0000000014F0 /* World+DSL.swift in Sources */,
+				0000000015E0 /* World.swift in Sources */,
+				000000001620 /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000001730 /* Sources */ = {
+		0000000017A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000001890 /* Activity+FIT.swift in Sources */,
-				000000001A60 /* Activity+TCX.swift in Sources */,
-				000000001760 /* Activity.swift in Sources */,
-				000000001840 /* AEXMLElement+Parsing.swift in Sources */,
-				000000001A70 /* Author+TCX.swift in Sources */,
-				000000001770 /* Author.swift in Sources */,
-				0000000018E0 /* Bounds+GPX.swift in Sources */,
-				000000001780 /* Bounds.swift in Sources */,
-				0000000018F0 /* CopyrightNotice+GPX.swift in Sources */,
-				000000001790 /* CopyrightNotice.swift in Sources */,
-				0000000018A0 /* Course+FIT.swift in Sources */,
-				000000001A80 /* Course+TCX.swift in Sources */,
-				0000000017A0 /* Course.swift in Sources */,
-				0000000018B0 /* File+FIT.swift in Sources */,
-				000000001900 /* File+GPX.swift in Sources */,
-				000000001990 /* File+LOC.swift in Sources */,
-				0000000019D0 /* File+NMEA.swift in Sources */,
-				000000001A90 /* File+TCX.swift in Sources */,
-				000000001AE0 /* File+TRACK.swift in Sources */,
-				0000000017B0 /* File.swift in Sources */,
-				000000001A00 /* GPGGAParser.swift in Sources */,
-				000000001A10 /* GPGLLParser.swift in Sources */,
-				000000001A20 /* GPRMCParser.swift in Sources */,
-				000000001A30 /* GPWPLParser.swift in Sources */,
-				000000001980 /* Gpxable.swift in Sources */,
-				0000000018C0 /* Lap+FIT.swift in Sources */,
-				000000001AA0 /* Lap+TCX.swift in Sources */,
-				0000000017C0 /* Lap.swift in Sources */,
-				000000001910 /* Link+GPX.swift in Sources */,
-				0000000019A0 /* Link+LOC.swift in Sources */,
-				0000000017D0 /* Link.swift in Sources */,
-				0000000019C0 /* Locable.swift in Sources */,
-				000000001A40 /* NMEAParser.swift in Sources */,
-				000000001A50 /* Operators.swift in Sources */,
-				000000001920 /* Person+GPX.swift in Sources */,
-				0000000017E0 /* Person.swift in Sources */,
-				000000001850 /* Point+Codable.swift in Sources */,
-				0000000018D0 /* Point+FIT.swift in Sources */,
-				000000001930 /* Point+GPX.swift in Sources */,
-				0000000019B0 /* Point+LOC.swift in Sources */,
-				0000000019E0 /* Point+NMEA.swift in Sources */,
-				000000001AB0 /* Point+TCX.swift in Sources */,
-				0000000017F0 /* Point.swift in Sources */,
-				000000001940 /* Route+GPX.swift in Sources */,
-				000000001800 /* Route.swift in Sources */,
-				000000001860 /* String+CSV.swift in Sources */,
-				000000001870 /* String+DateParsing.swift in Sources */,
-				0000000019F0 /* String+NMEA.swift in Sources */,
-				000000001950 /* String+Parsing.swift in Sources */,
-				000000001880 /* String+Range.swift in Sources */,
-				000000001AD0 /* Tcxable.swift in Sources */,
-				000000001960 /* Track+GPX.swift in Sources */,
-				000000001810 /* Track.swift in Sources */,
-				000000001BC0 /* TrackKit-dummy.m in Sources */,
-				000000001AF0 /* TrackParseError.swift in Sources */,
-				000000001B00 /* TrackParser.swift in Sources */,
-				000000001970 /* TrackSegment+GPX.swift in Sources */,
-				000000001820 /* TrackSegment.swift in Sources */,
-				000000001B10 /* TrackType.swift in Sources */,
-				000000001B20 /* TrackTypeVersion.swift in Sources */,
-				000000001AC0 /* Version+TCX.swift in Sources */,
-				000000001830 /* Version.swift in Sources */,
+				000000001960 /* Activity+FIT.swift in Sources */,
+				000000001B30 /* Activity+TCX.swift in Sources */,
+				000000001830 /* Activity.swift in Sources */,
+				000000001910 /* AEXMLElement+Parsing.swift in Sources */,
+				000000001B40 /* Author+TCX.swift in Sources */,
+				000000001840 /* Author.swift in Sources */,
+				0000000019B0 /* Bounds+GPX.swift in Sources */,
+				000000001850 /* Bounds.swift in Sources */,
+				0000000019C0 /* CopyrightNotice+GPX.swift in Sources */,
+				000000001860 /* CopyrightNotice.swift in Sources */,
+				000000001970 /* Course+FIT.swift in Sources */,
+				000000001B50 /* Course+TCX.swift in Sources */,
+				000000001870 /* Course.swift in Sources */,
+				000000001980 /* File+FIT.swift in Sources */,
+				0000000019D0 /* File+GPX.swift in Sources */,
+				000000001A60 /* File+LOC.swift in Sources */,
+				000000001AA0 /* File+NMEA.swift in Sources */,
+				000000001B60 /* File+TCX.swift in Sources */,
+				000000001BB0 /* File+TRACK.swift in Sources */,
+				000000001880 /* File.swift in Sources */,
+				000000001AD0 /* GPGGAParser.swift in Sources */,
+				000000001AE0 /* GPGLLParser.swift in Sources */,
+				000000001AF0 /* GPRMCParser.swift in Sources */,
+				000000001B00 /* GPWPLParser.swift in Sources */,
+				000000001A50 /* Gpxable.swift in Sources */,
+				0000000017D0 /* ImprovedFile.swift in Sources */,
+				0000000017E0 /* ImprovedFileType.swift in Sources */,
+				0000000017F0 /* ImprovedParser.swift in Sources */,
+				000000001800 /* ImprovedRoute.swift in Sources */,
+				000000001810 /* ImprovedTrack.swift in Sources */,
+				000000001820 /* ImprovePoint.swift in Sources */,
+				000000001990 /* Lap+FIT.swift in Sources */,
+				000000001B70 /* Lap+TCX.swift in Sources */,
+				000000001890 /* Lap.swift in Sources */,
+				0000000019E0 /* Link+GPX.swift in Sources */,
+				000000001A70 /* Link+LOC.swift in Sources */,
+				0000000018A0 /* Link.swift in Sources */,
+				000000001A90 /* Locable.swift in Sources */,
+				000000001B10 /* NMEAParser.swift in Sources */,
+				000000001B20 /* Operators.swift in Sources */,
+				0000000019F0 /* Person+GPX.swift in Sources */,
+				0000000018B0 /* Person.swift in Sources */,
+				000000001920 /* Point+Codable.swift in Sources */,
+				0000000019A0 /* Point+FIT.swift in Sources */,
+				000000001A00 /* Point+GPX.swift in Sources */,
+				000000001A80 /* Point+LOC.swift in Sources */,
+				000000001AB0 /* Point+NMEA.swift in Sources */,
+				000000001B80 /* Point+TCX.swift in Sources */,
+				0000000018C0 /* Point.swift in Sources */,
+				000000001A10 /* Route+GPX.swift in Sources */,
+				0000000018D0 /* Route.swift in Sources */,
+				000000001930 /* String+CSV.swift in Sources */,
+				000000001940 /* String+DateParsing.swift in Sources */,
+				000000001AC0 /* String+NMEA.swift in Sources */,
+				000000001A20 /* String+Parsing.swift in Sources */,
+				000000001950 /* String+Range.swift in Sources */,
+				000000001BA0 /* Tcxable.swift in Sources */,
+				000000001A30 /* Track+GPX.swift in Sources */,
+				0000000018E0 /* Track.swift in Sources */,
+				000000001C90 /* TrackKit-dummy.m in Sources */,
+				000000001BC0 /* TrackParseError.swift in Sources */,
+				000000001BD0 /* TrackParser.swift in Sources */,
+				000000001A40 /* TrackSegment+GPX.swift in Sources */,
+				0000000018F0 /* TrackSegment.swift in Sources */,
+				000000001BE0 /* TrackType.swift in Sources */,
+				000000001BF0 /* TrackTypeVersion.swift in Sources */,
+				000000001B90 /* Version+TCX.swift in Sources */,
+				000000001900 /* Version.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		000000001C20 /* Sources */ = {
+		000000001CF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000000001D20 /* Pods-Tests-dummy.m in Sources */,
+				000000001DF0 /* Pods-Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		000000001D60 /* PBXTargetDependency */ = {
+		000000001E30 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AEXML;
-			target = 000000000CB0 /* AEXML */;
-			targetProxy = 000000001D50 /* PBXContainerItemProxy */;
+			target = 000000000D20 /* AEXML */;
+			targetProxy = 000000001E20 /* PBXContainerItemProxy */;
 		};
-		000000001D80 /* PBXTargetDependency */ = {
+		000000001E50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Nimble;
-			target = 000000000E40 /* Nimble */;
-			targetProxy = 000000001D70 /* PBXContainerItemProxy */;
+			target = 000000000EB0 /* Nimble */;
+			targetProxy = 000000001E40 /* PBXContainerItemProxy */;
 		};
-		000000001DA0 /* PBXTargetDependency */ = {
+		000000001E70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Quick;
-			target = 0000000013C0 /* Quick */;
-			targetProxy = 000000001D90 /* PBXContainerItemProxy */;
+			target = 000000001430 /* Quick */;
+			targetProxy = 000000001E60 /* PBXContainerItemProxy */;
 		};
-		000000001DC0 /* PBXTargetDependency */ = {
+		000000001E90 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TrackKit;
-			target = 0000000016E0 /* TrackKit */;
-			targetProxy = 000000001DB0 /* PBXContainerItemProxy */;
+			target = 000000001750 /* TrackKit */;
+			targetProxy = 000000001E80 /* PBXContainerItemProxy */;
 		};
-		000000001DE0 /* PBXTargetDependency */ = {
+		000000001EB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AEXML;
-			target = 000000000CB0 /* AEXML */;
-			targetProxy = 000000001DD0 /* PBXContainerItemProxy */;
+			target = 000000000D20 /* AEXML */;
+			targetProxy = 000000001EA0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1520,9 +1553,9 @@
 			};
 			name = Release;
 		};
-		000000000CD0 /* Release */ = {
+		000000000D40 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000DB0 /* AEXML.xcconfig */;
+			baseConfigurationReference = 000000000E20 /* AEXML.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1553,9 +1586,9 @@
 			};
 			name = Release;
 		};
-		000000000CE0 /* Debug */ = {
+		000000000D50 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000000DB0 /* AEXML.xcconfig */;
+			baseConfigurationReference = 000000000E20 /* AEXML.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1585,9 +1618,9 @@
 			};
 			name = Debug;
 		};
-		000000000E60 /* Release */ = {
+		000000000ED0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000001340 /* Nimble.xcconfig */;
+			baseConfigurationReference = 0000000013B0 /* Nimble.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1618,9 +1651,9 @@
 			};
 			name = Release;
 		};
-		000000000E70 /* Debug */ = {
+		000000000EE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000001340 /* Nimble.xcconfig */;
+			baseConfigurationReference = 0000000013B0 /* Nimble.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1650,9 +1683,9 @@
 			};
 			name = Debug;
 		};
-		0000000013E0 /* Release */ = {
+		000000001450 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000001660 /* Quick.xcconfig */;
+			baseConfigurationReference = 0000000016D0 /* Quick.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1683,9 +1716,9 @@
 			};
 			name = Release;
 		};
-		0000000013F0 /* Debug */ = {
+		000000001460 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000001660 /* Quick.xcconfig */;
+			baseConfigurationReference = 0000000016D0 /* Quick.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1715,9 +1748,9 @@
 			};
 			name = Debug;
 		};
-		000000001700 /* Release */ = {
+		000000001770 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000001B40 /* TrackKit.xcconfig */;
+			baseConfigurationReference = 000000001C10 /* TrackKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1748,9 +1781,9 @@
 			};
 			name = Release;
 		};
-		000000001710 /* Debug */ = {
+		000000001780 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000001B40 /* TrackKit.xcconfig */;
+			baseConfigurationReference = 000000001C10 /* TrackKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1780,9 +1813,9 @@
 			};
 			name = Debug;
 		};
-		000000001BF0 /* Release */ = {
+		000000001CC0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000001C60 /* Pods-Tests.release.xcconfig */;
+			baseConfigurationReference = 000000001D30 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1815,9 +1848,9 @@
 			};
 			name = Release;
 		};
-		000000001C00 /* Debug */ = {
+		000000001CD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000000001C70 /* Pods-Tests.debug.xcconfig */;
+			baseConfigurationReference = 000000001D40 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1862,47 +1895,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		000000000CC0 /* Build configuration list for PBXNativeTarget "AEXML" */ = {
+		000000000D30 /* Build configuration list for PBXNativeTarget "AEXML" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				000000000CE0 /* Debug */,
-				000000000CD0 /* Release */,
+				000000000D50 /* Debug */,
+				000000000D40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		000000000E50 /* Build configuration list for PBXNativeTarget "Nimble" */ = {
+		000000000EC0 /* Build configuration list for PBXNativeTarget "Nimble" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				000000000E70 /* Debug */,
-				000000000E60 /* Release */,
+				000000000EE0 /* Debug */,
+				000000000ED0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0000000013D0 /* Build configuration list for PBXNativeTarget "Quick" */ = {
+		000000001440 /* Build configuration list for PBXNativeTarget "Quick" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0000000013F0 /* Debug */,
-				0000000013E0 /* Release */,
+				000000001460 /* Debug */,
+				000000001450 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0000000016F0 /* Build configuration list for PBXNativeTarget "TrackKit" */ = {
+		000000001760 /* Build configuration list for PBXNativeTarget "TrackKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				000000001710 /* Debug */,
-				000000001700 /* Release */,
+				000000001780 /* Debug */,
+				000000001770 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		000000001BE0 /* Build configuration list for PBXNativeTarget "Pods-Tests" */ = {
+		000000001CB0 /* Build configuration list for PBXNativeTarget "Pods-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				000000001C00 /* Debug */,
-				000000001BF0 /* Release */,
+				000000001CD0 /* Debug */,
+				000000001CC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

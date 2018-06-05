@@ -1,0 +1,18 @@
+<gpx version='1.0'>
+    <rte>
+        <rtept lat='41.2' lon='-71.3'>
+            <ele>100</ele>
+        </rtept>
+        <rtept lat='41.201' lon='-71.3'>
+            <ele>80</ele>
+        </rtept>
+    </rte>
+    <rte>
+        <rtept lat='41.202' lon='-71.3'>
+            <ele>130</ele>
+        </rtept>
+        <rtept lat='41.202' lon='-71.3'>
+            <ele>140</ele>
+        </rtept>
+    </rte>
+</gpx>
