@@ -11,7 +11,7 @@ extension File {
         let version = try TrackTypeVersion(type: .nmea, version: "NMEA-0183")
         self.init(type: .nmea, version: version)
 
-        let points = rawData.flatMap { Point(nmea: $0) }
+        let points = rawData.compactMap { Point(nmea: $0) }
         let waypoints = points.filter { $0.recordType?.isWaypoint ?? false }
         let records = points.filter { !($0.recordType?.isWaypoint ?? false) }
 

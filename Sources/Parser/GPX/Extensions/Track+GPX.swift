@@ -16,7 +16,7 @@ extension Track: Gpxable {
 
         // When there are not route points, don't create the instance.
         var routeSegments: [TrackSegment]? = nil
-        routeSegments <~ element["trkseg"].all?.flatMap { TrackSegment(gpx: $0, version: version) }
+        routeSegments <~ element["trkseg"].all?.compactMap { TrackSegment(gpx: $0, version: version) }
         if routeSegments == nil {
             return nil
         }
