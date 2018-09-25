@@ -23,7 +23,7 @@
   "source_files": "Sources/**/*",
   "dependencies": {
     "AEXML": [
-      "~> 4.2"
+      "~> 4.3"
     ]
   }
 }
