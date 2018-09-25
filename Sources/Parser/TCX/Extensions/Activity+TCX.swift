@@ -16,7 +16,7 @@ extension Activity: Tcxable {
 
         // When there are not route points, don't create the instance.
         var laps: [Lap]? = nil
-        laps <~ element["Lap"].all?.flatMap { Lap(tcx: $0) }
+        laps <~ element["Lap"].all?.compactMap { Lap(tcx: $0) }
         if laps == nil {
             return nil
         }

@@ -16,7 +16,7 @@ extension Route: Gpxable {
 
         // When there are not route points, don't create the instance.
         var routePoints: [Point]? = nil
-        routePoints <~ element["rtept"].all?.flatMap { Point(gpx: $0, version: version) }
+        routePoints <~ element["rtept"].all?.compactMap { Point(gpx: $0, version: version) }
         if routePoints == nil {
             return nil
         }

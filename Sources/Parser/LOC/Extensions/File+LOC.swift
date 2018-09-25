@@ -16,7 +16,7 @@ extension File {
         // Fetch the creator from the root element.
         source = rootElement.attributes["src"]
 
-        waypoints <~ rootElement["waypoint"].all?.flatMap { Point(loc: $0) }
+        waypoints <~ rootElement["waypoint"].all?.compactMap { Point(loc: $0) }
     }
 
 }
