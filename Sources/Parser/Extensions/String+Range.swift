@@ -18,8 +18,9 @@ extension String {
             let end = index(startIndex, offsetBy: r.upperBound - r.lowerBound, limitedBy: endIndex) else {
             return nil
         }
-
-        return String(self[Range(start ..< end)])
+        
+        let range = start..<end
+        return String(self[range])
     }
 
 }
