@@ -17,8 +17,9 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-        useSwift4 = %w(TrackKit AEXML Nimble).include?(target.name)
-      config.build_settings['SWIFT_VERSION'] = useSwift4 ? '4.0' : '3.2'
+      if %w(Quick).include?(target.name)
+        config.build_settings['SWIFT_VERSION'] = '4.2'
+      end
     end
   end
 end
