@@ -95,7 +95,7 @@ public enum TrackTypeVersion {
         case .track:
             supportedVersions = ["1.0"]
         }
-        return supportedVersions.index(of: version) != nil
+        return supportedVersions.firstIndex(of: version) != nil
     }
 
 }
