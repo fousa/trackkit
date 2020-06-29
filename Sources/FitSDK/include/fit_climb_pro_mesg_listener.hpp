@@ -15,21 +15,21 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#if !defined(FIT_MESG_DEFINITION_LISTENER_HPP)
-#define FIT_MESG_DEFINITION_LISTENER_HPP
+#if !defined(FIT_CLIMB_PRO_MESG_LISTENER_HPP)
+#define FIT_CLIMB_PRO_MESG_LISTENER_HPP
 
-#include "fit_mesg_definition.hpp"
+#include "fit_climb_pro_mesg.hpp"
 
 namespace fit
 {
 
-class MesgDefinitionListener
+class ClimbProMesgListener
 {
 public:
-    virtual ~MesgDefinitionListener() {}
-    virtual void OnMesgDefinition(MesgDefinition& mesgDef) = 0;
+    virtual ~ClimbProMesgListener() {}
+    virtual void OnMesg(ClimbProMesg& mesg) = 0;
 };
 
 } // namespace fit
 
-#endif // !defined(FIT_MESG_DEFINITION_LISTENER_HPP)
+#endif // !defined(FIT_CLIMB_PRO_MESG_LISTENER_HPP)

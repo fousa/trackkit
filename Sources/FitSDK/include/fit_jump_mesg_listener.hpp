@@ -15,21 +15,21 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#if !defined(FIT_MESG_DEFINITION_LISTENER_HPP)
-#define FIT_MESG_DEFINITION_LISTENER_HPP
+#if !defined(FIT_JUMP_MESG_LISTENER_HPP)
+#define FIT_JUMP_MESG_LISTENER_HPP
 
-#include "fit_mesg_definition.hpp"
+#include "fit_jump_mesg.hpp"
 
 namespace fit
 {
 
-class MesgDefinitionListener
+class JumpMesgListener
 {
 public:
-    virtual ~MesgDefinitionListener() {}
-    virtual void OnMesgDefinition(MesgDefinition& mesgDef) = 0;
+    virtual ~JumpMesgListener() {}
+    virtual void OnMesg(JumpMesg& mesg) = 0;
 };
 
 } // namespace fit
 
-#endif // !defined(FIT_MESG_DEFINITION_LISTENER_HPP)
+#endif // !defined(FIT_JUMP_MESG_LISTENER_HPP)

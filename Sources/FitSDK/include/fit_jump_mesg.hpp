@@ -15,37 +15,38 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#if !defined(FIT_OBDII_DATA_MESG_HPP)
-#define FIT_OBDII_DATA_MESG_HPP
+#if !defined(FIT_JUMP_MESG_HPP)
+#define FIT_JUMP_MESG_HPP
 
 #include "fit_mesg.hpp"
 
 namespace fit
 {
 
-class ObdiiDataMesg : public Mesg
+class JumpMesg : public Mesg
 {
 public:
     class FieldDefNum final
     {
     public:
        static const FIT_UINT8 Timestamp = 253;
-       static const FIT_UINT8 TimestampMs = 0;
-       static const FIT_UINT8 TimeOffset = 1;
-       static const FIT_UINT8 Pid = 2;
-       static const FIT_UINT8 RawData = 3;
-       static const FIT_UINT8 PidDataSize = 4;
-       static const FIT_UINT8 SystemTime = 5;
-       static const FIT_UINT8 StartTimestamp = 6;
-       static const FIT_UINT8 StartTimestampMs = 7;
+       static const FIT_UINT8 Distance = 0;
+       static const FIT_UINT8 Height = 1;
+       static const FIT_UINT8 Rotations = 2;
+       static const FIT_UINT8 HangTime = 3;
+       static const FIT_UINT8 Score = 4;
+       static const FIT_UINT8 PositionLat = 5;
+       static const FIT_UINT8 PositionLong = 6;
+       static const FIT_UINT8 Speed = 7;
+       static const FIT_UINT8 EnhancedSpeed = 8;
        static const FIT_UINT8 Invalid = FIT_FIELD_NUM_INVALID;
     };
 
-    ObdiiDataMesg(void) : Mesg(Profile::MESG_OBDII_DATA)
+    JumpMesg(void) : Mesg(Profile::MESG_JUMP)
     {
     }
 
-    ObdiiDataMesg(const Mesg &mesg) : Mesg(mesg)
+    JumpMesg(const Mesg &mesg) : Mesg(mesg)
     {
     }
 
@@ -67,7 +68,6 @@ public:
     ///////////////////////////////////////////////////////////////////////
     // Returns timestamp field
     // Units: s
-    // Comment: Timestamp message was output
     ///////////////////////////////////////////////////////////////////////
     FIT_DATE_TIME GetTimestamp(void) const
     {
@@ -77,7 +77,6 @@ public:
     ///////////////////////////////////////////////////////////////////////
     // Set timestamp field
     // Units: s
-    // Comment: Timestamp message was output
     ///////////////////////////////////////////////////////////////////////
     void SetTimestamp(FIT_DATE_TIME timestamp)
     {
@@ -85,10 +84,10 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of timestamp_ms field
+    // Checks the validity of distance field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsTimestampMsValid() const
+    FIT_BOOL IsDistanceValid() const
     {
         const Field* field = GetField(0);
         if( FIT_NULL == field )
@@ -100,38 +99,28 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns timestamp_ms field
-    // Units: ms
-    // Comment: Fractional part of timestamp, added to timestamp
+    // Returns distance field
+    // Units: m
     ///////////////////////////////////////////////////////////////////////
-    FIT_UINT16 GetTimestampMs(void) const
+    FIT_FLOAT32 GetDistance(void) const
     {
-        return GetFieldUINT16Value(0, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldFLOAT32Value(0, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set timestamp_ms field
-    // Units: ms
-    // Comment: Fractional part of timestamp, added to timestamp
+    // Set distance field
+    // Units: m
     ///////////////////////////////////////////////////////////////////////
-    void SetTimestampMs(FIT_UINT16 timestampMs)
+    void SetDistance(FIT_FLOAT32 distance)
     {
-        SetFieldUINT16Value(0, timestampMs, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldFLOAT32Value(0, distance, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns number of time_offset
-    ///////////////////////////////////////////////////////////////////////
-    FIT_UINT8 GetNumTimeOffset(void) const
-    {
-        return GetFieldNumValues(1, FIT_SUBFIELD_INDEX_MAIN_FIELD);
-    }
-
-    ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of time_offset field
+    // Checks the validity of height field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsTimeOffsetValid(FIT_UINT8 index) const
+    FIT_BOOL IsHeightValid() const
     {
         const Field* field = GetField(1);
         if( FIT_NULL == field )
@@ -139,34 +128,32 @@ public:
             return FIT_FALSE;
         }
 
-        return field->IsValueValid(index);
+        return field->IsValueValid();
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns time_offset field
-    // Units: ms
-    // Comment: Offset of PID reading [i] from start_timestamp+start_timestamp_ms. Readings may span accross seconds.
+    // Returns height field
+    // Units: m
     ///////////////////////////////////////////////////////////////////////
-    FIT_UINT16 GetTimeOffset(FIT_UINT8 index) const
+    FIT_FLOAT32 GetHeight(void) const
     {
-        return GetFieldUINT16Value(1, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldFLOAT32Value(1, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set time_offset field
-    // Units: ms
-    // Comment: Offset of PID reading [i] from start_timestamp+start_timestamp_ms. Readings may span accross seconds.
+    // Set height field
+    // Units: m
     ///////////////////////////////////////////////////////////////////////
-    void SetTimeOffset(FIT_UINT8 index, FIT_UINT16 timeOffset)
+    void SetHeight(FIT_FLOAT32 height)
     {
-        SetFieldUINT16Value(1, timeOffset, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldFLOAT32Value(1, height, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of pid field
+    // Checks the validity of rotations field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsPidValid() const
+    FIT_BOOL IsRotationsValid() const
     {
         const Field* field = GetField(2);
         if( FIT_NULL == field )
@@ -178,36 +165,26 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns pid field
-    // Comment: Parameter ID
+    // Returns rotations field
     ///////////////////////////////////////////////////////////////////////
-    FIT_BYTE GetPid(void) const
+    FIT_UINT8 GetRotations(void) const
     {
-        return GetFieldBYTEValue(2, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldUINT8Value(2, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set pid field
-    // Comment: Parameter ID
+    // Set rotations field
     ///////////////////////////////////////////////////////////////////////
-    void SetPid(FIT_BYTE pid)
+    void SetRotations(FIT_UINT8 rotations)
     {
-        SetFieldBYTEValue(2, pid, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldUINT8Value(2, rotations, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns number of raw_data
-    ///////////////////////////////////////////////////////////////////////
-    FIT_UINT8 GetNumRawData(void) const
-    {
-        return GetFieldNumValues(3, FIT_SUBFIELD_INDEX_MAIN_FIELD);
-    }
-
-    ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of raw_data field
+    // Checks the validity of hang_time field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsRawDataValid(FIT_UINT8 index) const
+    FIT_BOOL IsHangTimeValid() const
     {
         const Field* field = GetField(3);
         if( FIT_NULL == field )
@@ -215,40 +192,32 @@ public:
             return FIT_FALSE;
         }
 
-        return field->IsValueValid(index);
+        return field->IsValueValid();
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns raw_data field
-    // Comment: Raw parameter data
+    // Returns hang_time field
+    // Units: s
     ///////////////////////////////////////////////////////////////////////
-    FIT_BYTE GetRawData(FIT_UINT8 index) const
+    FIT_FLOAT32 GetHangTime(void) const
     {
-        return GetFieldBYTEValue(3, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldFLOAT32Value(3, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set raw_data field
-    // Comment: Raw parameter data
+    // Set hang_time field
+    // Units: s
     ///////////////////////////////////////////////////////////////////////
-    void SetRawData(FIT_UINT8 index, FIT_BYTE rawData)
+    void SetHangTime(FIT_FLOAT32 hangTime)
     {
-        SetFieldBYTEValue(3, rawData, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldFLOAT32Value(3, hangTime, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns number of pid_data_size
-    ///////////////////////////////////////////////////////////////////////
-    FIT_UINT8 GetNumPidDataSize(void) const
-    {
-        return GetFieldNumValues(4, FIT_SUBFIELD_INDEX_MAIN_FIELD);
-    }
-
-    ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of pid_data_size field
+    // Checks the validity of score field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsPidDataSizeValid(FIT_UINT8 index) const
+    FIT_BOOL IsScoreValid() const
     {
         const Field* field = GetField(4);
         if( FIT_NULL == field )
@@ -256,40 +225,32 @@ public:
             return FIT_FALSE;
         }
 
-        return field->IsValueValid(index);
+        return field->IsValueValid();
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns pid_data_size field
-    // Comment: Optional, data size of PID[i].  If not specified refer to SAE J1979.
+    // Returns score field
+    // Comment: A score for a jump calculated based on hang time, rotations, and distance.
     ///////////////////////////////////////////////////////////////////////
-    FIT_UINT8 GetPidDataSize(FIT_UINT8 index) const
+    FIT_FLOAT32 GetScore(void) const
     {
-        return GetFieldUINT8Value(4, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldFLOAT32Value(4, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set pid_data_size field
-    // Comment: Optional, data size of PID[i].  If not specified refer to SAE J1979.
+    // Set score field
+    // Comment: A score for a jump calculated based on hang time, rotations, and distance.
     ///////////////////////////////////////////////////////////////////////
-    void SetPidDataSize(FIT_UINT8 index, FIT_UINT8 pidDataSize)
+    void SetScore(FIT_FLOAT32 score)
     {
-        SetFieldUINT8Value(4, pidDataSize, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldFLOAT32Value(4, score, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns number of system_time
-    ///////////////////////////////////////////////////////////////////////
-    FIT_UINT8 GetNumSystemTime(void) const
-    {
-        return GetFieldNumValues(5, FIT_SUBFIELD_INDEX_MAIN_FIELD);
-    }
-
-    ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of system_time field
+    // Checks the validity of position_lat field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsSystemTimeValid(FIT_UINT8 index) const
+    FIT_BOOL IsPositionLatValid() const
     {
         const Field* field = GetField(5);
         if( FIT_NULL == field )
@@ -297,32 +258,32 @@ public:
             return FIT_FALSE;
         }
 
-        return field->IsValueValid(index);
+        return field->IsValueValid();
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns system_time field
-    // Comment: System time associated with sample expressed in ms, can be used instead of time_offset.  There will be a system_time value for each raw_data element.  For multibyte pids the system_time is repeated.
+    // Returns position_lat field
+    // Units: semicircles
     ///////////////////////////////////////////////////////////////////////
-    FIT_UINT32 GetSystemTime(FIT_UINT8 index) const
+    FIT_SINT32 GetPositionLat(void) const
     {
-        return GetFieldUINT32Value(5, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldSINT32Value(5, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set system_time field
-    // Comment: System time associated with sample expressed in ms, can be used instead of time_offset.  There will be a system_time value for each raw_data element.  For multibyte pids the system_time is repeated.
+    // Set position_lat field
+    // Units: semicircles
     ///////////////////////////////////////////////////////////////////////
-    void SetSystemTime(FIT_UINT8 index, FIT_UINT32 systemTime)
+    void SetPositionLat(FIT_SINT32 positionLat)
     {
-        SetFieldUINT32Value(5, systemTime, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldSINT32Value(5, positionLat, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of start_timestamp field
+    // Checks the validity of position_long field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsStartTimestampValid() const
+    FIT_BOOL IsPositionLongValid() const
     {
         const Field* field = GetField(6);
         if( FIT_NULL == field )
@@ -334,28 +295,28 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns start_timestamp field
-    // Comment: Timestamp of first sample recorded in the message.  Used with time_offset to generate time of each sample
+    // Returns position_long field
+    // Units: semicircles
     ///////////////////////////////////////////////////////////////////////
-    FIT_DATE_TIME GetStartTimestamp(void) const
+    FIT_SINT32 GetPositionLong(void) const
     {
-        return GetFieldUINT32Value(6, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldSINT32Value(6, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set start_timestamp field
-    // Comment: Timestamp of first sample recorded in the message.  Used with time_offset to generate time of each sample
+    // Set position_long field
+    // Units: semicircles
     ///////////////////////////////////////////////////////////////////////
-    void SetStartTimestamp(FIT_DATE_TIME startTimestamp)
+    void SetPositionLong(FIT_SINT32 positionLong)
     {
-        SetFieldUINT32Value(6, startTimestamp, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldSINT32Value(6, positionLong, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of start_timestamp_ms field
+    // Checks the validity of speed field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsStartTimestampMsValid() const
+    FIT_BOOL IsSpeedValid() const
     {
         const Field* field = GetField(7);
         if( FIT_NULL == field )
@@ -367,27 +328,58 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns start_timestamp_ms field
-    // Units: ms
-    // Comment: Fractional part of start_timestamp
+    // Returns speed field
+    // Units: m/s
     ///////////////////////////////////////////////////////////////////////
-    FIT_UINT16 GetStartTimestampMs(void) const
+    FIT_FLOAT32 GetSpeed(void) const
     {
-        return GetFieldUINT16Value(7, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldFLOAT32Value(7, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set start_timestamp_ms field
-    // Units: ms
-    // Comment: Fractional part of start_timestamp
+    // Set speed field
+    // Units: m/s
     ///////////////////////////////////////////////////////////////////////
-    void SetStartTimestampMs(FIT_UINT16 startTimestampMs)
+    void SetSpeed(FIT_FLOAT32 speed)
     {
-        SetFieldUINT16Value(7, startTimestampMs, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldFLOAT32Value(7, speed, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Checks the validity of enhanced_speed field
+    // Returns FIT_TRUE if field is valid
+    ///////////////////////////////////////////////////////////////////////
+    FIT_BOOL IsEnhancedSpeedValid() const
+    {
+        const Field* field = GetField(8);
+        if( FIT_NULL == field )
+        {
+            return FIT_FALSE;
+        }
+
+        return field->IsValueValid();
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Returns enhanced_speed field
+    // Units: m/s
+    ///////////////////////////////////////////////////////////////////////
+    FIT_FLOAT32 GetEnhancedSpeed(void) const
+    {
+        return GetFieldFLOAT32Value(8, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Set enhanced_speed field
+    // Units: m/s
+    ///////////////////////////////////////////////////////////////////////
+    void SetEnhancedSpeed(FIT_FLOAT32 enhancedSpeed)
+    {
+        SetFieldFLOAT32Value(8, enhancedSpeed, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
 };
 
 } // namespace fit
 
-#endif // !defined(FIT_OBDII_DATA_MESG_HPP)
+#endif // !defined(FIT_JUMP_MESG_HPP)

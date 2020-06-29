@@ -15,34 +15,35 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-#if !defined(FIT_ANT_RX_MESG_HPP)
-#define FIT_ANT_RX_MESG_HPP
+#if !defined(FIT_CLIMB_PRO_MESG_HPP)
+#define FIT_CLIMB_PRO_MESG_HPP
 
 #include "fit_mesg.hpp"
 
 namespace fit
 {
 
-class AntRxMesg : public Mesg
+class ClimbProMesg : public Mesg
 {
 public:
     class FieldDefNum final
     {
     public:
        static const FIT_UINT8 Timestamp = 253;
-       static const FIT_UINT8 FractionalTimestamp = 0;
-       static const FIT_UINT8 MesgId = 1;
-       static const FIT_UINT8 MesgData = 2;
-       static const FIT_UINT8 ChannelNumber = 3;
-       static const FIT_UINT8 Data = 4;
+       static const FIT_UINT8 PositionLat = 0;
+       static const FIT_UINT8 PositionLong = 1;
+       static const FIT_UINT8 ClimbProEvent = 2;
+       static const FIT_UINT8 ClimbNumber = 3;
+       static const FIT_UINT8 ClimbCategory = 4;
+       static const FIT_UINT8 CurrentDist = 5;
        static const FIT_UINT8 Invalid = FIT_FIELD_NUM_INVALID;
     };
 
-    AntRxMesg(void) : Mesg(Profile::MESG_ANT_RX)
+    ClimbProMesg(void) : Mesg(Profile::MESG_CLIMB_PRO)
     {
     }
 
-    AntRxMesg(const Mesg &mesg) : Mesg(mesg)
+    ClimbProMesg(const Mesg &mesg) : Mesg(mesg)
     {
     }
 
@@ -80,10 +81,10 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of fractional_timestamp field
+    // Checks the validity of position_lat field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsFractionalTimestampValid() const
+    FIT_BOOL IsPositionLatValid() const
     {
         const Field* field = GetField(0);
         if( FIT_NULL == field )
@@ -95,28 +96,28 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns fractional_timestamp field
-    // Units: s
+    // Returns position_lat field
+    // Units: semicircles
     ///////////////////////////////////////////////////////////////////////
-    FIT_FLOAT32 GetFractionalTimestamp(void) const
+    FIT_SINT32 GetPositionLat(void) const
     {
-        return GetFieldFLOAT32Value(0, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldSINT32Value(0, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set fractional_timestamp field
-    // Units: s
+    // Set position_lat field
+    // Units: semicircles
     ///////////////////////////////////////////////////////////////////////
-    void SetFractionalTimestamp(FIT_FLOAT32 fractionalTimestamp)
+    void SetPositionLat(FIT_SINT32 positionLat)
     {
-        SetFieldFLOAT32Value(0, fractionalTimestamp, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldSINT32Value(0, positionLat, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of mesg_id field
+    // Checks the validity of position_long field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsMesgIdValid() const
+    FIT_BOOL IsPositionLongValid() const
     {
         const Field* field = GetField(1);
         if( FIT_NULL == field )
@@ -128,34 +129,28 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns mesg_id field
+    // Returns position_long field
+    // Units: semicircles
     ///////////////////////////////////////////////////////////////////////
-    FIT_BYTE GetMesgId(void) const
+    FIT_SINT32 GetPositionLong(void) const
     {
-        return GetFieldBYTEValue(1, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldSINT32Value(1, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set mesg_id field
+    // Set position_long field
+    // Units: semicircles
     ///////////////////////////////////////////////////////////////////////
-    void SetMesgId(FIT_BYTE mesgId)
+    void SetPositionLong(FIT_SINT32 positionLong)
     {
-        SetFieldBYTEValue(1, mesgId, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldSINT32Value(1, positionLong, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns number of mesg_data
-    ///////////////////////////////////////////////////////////////////////
-    FIT_UINT8 GetNumMesgData(void) const
-    {
-        return GetFieldNumValues(2, FIT_SUBFIELD_INDEX_MAIN_FIELD);
-    }
-
-    ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of mesg_data field
+    // Checks the validity of climb_pro_event field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsMesgDataValid(FIT_UINT8 index) const
+    FIT_BOOL IsClimbProEventValid() const
     {
         const Field* field = GetField(2);
         if( FIT_NULL == field )
@@ -163,30 +158,30 @@ public:
             return FIT_FALSE;
         }
 
-        return field->IsValueValid(index);
+        return field->IsValueValid();
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns mesg_data field
+    // Returns climb_pro_event field
     ///////////////////////////////////////////////////////////////////////
-    FIT_BYTE GetMesgData(FIT_UINT8 index) const
+    FIT_CLIMB_PRO_EVENT GetClimbProEvent(void) const
     {
-        return GetFieldBYTEValue(2, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldENUMValue(2, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set mesg_data field
+    // Set climb_pro_event field
     ///////////////////////////////////////////////////////////////////////
-    void SetMesgData(FIT_UINT8 index, FIT_BYTE mesgData)
+    void SetClimbProEvent(FIT_CLIMB_PRO_EVENT climbProEvent)
     {
-        SetFieldBYTEValue(2, mesgData, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldENUMValue(2, climbProEvent, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of channel_number field
+    // Checks the validity of climb_number field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsChannelNumberValid() const
+    FIT_BOOL IsClimbNumberValid() const
     {
         const Field* field = GetField(3);
         if( FIT_NULL == field )
@@ -198,34 +193,26 @@ public:
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns channel_number field
+    // Returns climb_number field
     ///////////////////////////////////////////////////////////////////////
-    FIT_UINT8 GetChannelNumber(void) const
+    FIT_UINT16 GetClimbNumber(void) const
     {
-        return GetFieldUINT8Value(3, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldUINT16Value(3, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set channel_number field
+    // Set climb_number field
     ///////////////////////////////////////////////////////////////////////
-    void SetChannelNumber(FIT_UINT8 channelNumber)
+    void SetClimbNumber(FIT_UINT16 climbNumber)
     {
-        SetFieldUINT8Value(3, channelNumber, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldUINT16Value(3, climbNumber, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns number of data
-    ///////////////////////////////////////////////////////////////////////
-    FIT_UINT8 GetNumData(void) const
-    {
-        return GetFieldNumValues(4, FIT_SUBFIELD_INDEX_MAIN_FIELD);
-    }
-
-    ///////////////////////////////////////////////////////////////////////
-    // Checks the validity of data field
+    // Checks the validity of climb_category field
     // Returns FIT_TRUE if field is valid
     ///////////////////////////////////////////////////////////////////////
-    FIT_BOOL IsDataValid(FIT_UINT8 index) const
+    FIT_BOOL IsClimbCategoryValid() const
     {
         const Field* field = GetField(4);
         if( FIT_NULL == field )
@@ -233,27 +220,60 @@ public:
             return FIT_FALSE;
         }
 
-        return field->IsValueValid(index);
+        return field->IsValueValid();
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Returns data field
+    // Returns climb_category field
     ///////////////////////////////////////////////////////////////////////
-    FIT_BYTE GetData(FIT_UINT8 index) const
+    FIT_UINT8 GetClimbCategory(void) const
     {
-        return GetFieldBYTEValue(4, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        return GetFieldUINT8Value(4, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
     ///////////////////////////////////////////////////////////////////////
-    // Set data field
+    // Set climb_category field
     ///////////////////////////////////////////////////////////////////////
-    void SetData(FIT_UINT8 index, FIT_BYTE data)
+    void SetClimbCategory(FIT_UINT8 climbCategory)
     {
-        SetFieldBYTEValue(4, data, index, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+        SetFieldUINT8Value(4, climbCategory, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Checks the validity of current_dist field
+    // Returns FIT_TRUE if field is valid
+    ///////////////////////////////////////////////////////////////////////
+    FIT_BOOL IsCurrentDistValid() const
+    {
+        const Field* field = GetField(5);
+        if( FIT_NULL == field )
+        {
+            return FIT_FALSE;
+        }
+
+        return field->IsValueValid();
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Returns current_dist field
+    // Units: m
+    ///////////////////////////////////////////////////////////////////////
+    FIT_FLOAT32 GetCurrentDist(void) const
+    {
+        return GetFieldFLOAT32Value(5, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    // Set current_dist field
+    // Units: m
+    ///////////////////////////////////////////////////////////////////////
+    void SetCurrentDist(FIT_FLOAT32 currentDist)
+    {
+        SetFieldFLOAT32Value(5, currentDist, 0, FIT_SUBFIELD_INDEX_MAIN_FIELD);
     }
 
 };
 
 } // namespace fit
 
-#endif // !defined(FIT_ANT_RX_MESG_HPP)
+#endif // !defined(FIT_CLIMB_PRO_MESG_HPP)
