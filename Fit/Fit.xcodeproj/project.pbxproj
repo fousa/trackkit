@@ -6,20 +6,6 @@
 	objectVersion = 48;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		9D27D2032002962F00031749 /* Fit Universal iOS */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 9D27D2042002962F00031749 /* Build configuration list for PBXAggregateTarget "Fit Universal iOS" */;
-			buildPhases = (
-				9D27D2072002963400031749 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "Fit Universal iOS";
-			productName = "Fit iOS Universal";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		9D27D1CF2002905600031749 /* Fit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27CD392002639300031749 /* Fit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D27D1D02002905700031749 /* Fit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D27CD392002639300031749 /* Fit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1832,10 +1818,6 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					9D27D2032002962F00031749 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
 					9D27D20E20029F5600031749 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -1857,7 +1839,6 @@
 			targets = (
 				9D27D1B920028F7D00031749 /* Fit iOS */,
 				9D27D1C620028F9800031749 /* Fit macOS */,
-				9D27D2032002962F00031749 /* Fit Universal iOS */,
 				9D27D20E20029F5600031749 /* Test */,
 			);
 		};
@@ -1894,19 +1875,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9D27D2072002963400031749 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Scripts/build-ios.sh";
-		};
 		9D27D20820029A1200031749 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2253,26 +2221,6 @@
 			};
 			name = Release;
 		};
-		9D27D2052002962F00031749 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BITCODE_GENERATION_MODE = marker;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 743AM63YFU;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		9D27D2062002962F00031749 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BITCODE_GENERATION_MODE = bitcode;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 743AM63YFU;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		9D27D22320029F5600031749 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2325,15 +2273,6 @@
 			buildConfigurations = (
 				9D27D1CD20028F9800031749 /* Debug */,
 				9D27D1CE20028F9800031749 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9D27D2042002962F00031749 /* Build configuration list for PBXAggregateTarget "Fit Universal iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9D27D2052002962F00031749 /* Debug */,
-				9D27D2062002962F00031749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
