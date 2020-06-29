@@ -1,0 +1,1191 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04206A081E16560800B428C2 /* LOCCommonsSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04206A071E16560800B428C2 /* LOCCommonsSpecs.swift */; };
+		04206A0A1E1657EF00B428C2 /* LOCWaypointSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04206A091E1657EF00B428C2 /* LOCWaypointSpecs.swift */; };
+		04206A191E1668CD00B428C2 /* GPXLegacyCommonSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04206A141E1668CD00B428C2 /* GPXLegacyCommonSpecs.swift */; };
+		04206A1B1E1668CD00B428C2 /* GPXLegacyRouteSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04206A161E1668CD00B428C2 /* GPXLegacyRouteSpecs.swift */; };
+		04206A1C1E1668CD00B428C2 /* GPXLegacyTrackSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04206A171E1668CD00B428C2 /* GPXLegacyTrackSpecs.swift */; };
+		04206A1D1E1668CD00B428C2 /* GPXLegacyWaypointSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04206A181E1668CD00B428C2 /* GPXLegacyWaypointSpecs.swift */; };
+		04206A211E1670DD00B428C2 /* LOCParserSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04206A201E1670DD00B428C2 /* LOCParserSpecs.swift */; };
+		042B2F7A1DA18E51003B5E7D /* TCXCourseSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B2F791DA18E51003B5E7D /* TCXCourseSpecs.swift */; };
+		042B2F881DA21F47003B5E7D /* TCXActivitySpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B2F871DA21F47003B5E7D /* TCXActivitySpecs.swift */; };
+		046664D21EE09DE7009701B1 /* NMEAParserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046664D11EE09DE7009701B1 /* NMEAParserSpec.swift */; };
+		046664D61EE0BAE3009701B1 /* NMEAGPGGASpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046664D51EE0BAE3009701B1 /* NMEAGPGGASpec.swift */; };
+		048429DC1EE57AC00079488F /* NMEAGPRMCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048429DB1EE57AC00079488F /* NMEAGPRMCSpec.swift */; };
+		048429DE1EE58C950079488F /* NMEAGPGLLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048429DD1EE58C950079488F /* NMEAGPGLLSpec.swift */; };
+		048429E01EE681F70079488F /* NMEAGPWPLSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048429DF1EE681F70079488F /* NMEAGPWPLSpec.swift */; };
+		607FACEC1AFB9204008FA782 /* GPXCommonSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* GPXCommonSpecs.swift */; };
+		6297A9A21C98C36D00686120 /* GPXWaypointSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A11C98C36D00686120 /* GPXWaypointSpecs.swift */; };
+		6297A9A51C98C4D500686120 /* GPXRouteSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A41C98C4D500686120 /* GPXRouteSpecs.swift */; };
+		6297A9A71C98C69000686120 /* GPXTrackSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9A61C98C69000686120 /* GPXTrackSpecs.swift */; };
+		6297A9C01C99611400686120 /* GPXParserSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297A9BF1C99611400686120 /* GPXParserSpecs.swift */; };
+		62BB32D91D9DAEE100310CF9 /* TrackTypeSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB32D81D9DAEE100310CF9 /* TrackTypeSpecs.swift */; };
+		62BB32DC1D9DB45D00310CF9 /* TCXParserSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB32DB1D9DB45D00310CF9 /* TCXParserSpecs.swift */; };
+		62BB32DE1D9E353100310CF9 /* TCXCommonSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BB32DD1D9E353100310CF9 /* TCXCommonSpecs.swift */; };
+		9D30E39120AA28910009F346 /* HealthFit.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D30E39020AA28910009F346 /* HealthFit.fit */; };
+		9D30E39320AB5D350009F346 /* FITHealthFitSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D30E39220AB5D350009F346 /* FITHealthFitSpecs.swift */; };
+		9D8F1833200A45E2004CDECE /* FITGarminRunSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8F1832200A45E2004CDECE /* FITGarminRunSpecs.swift */; };
+		9D969726200AA2FB00C0061C /* Garmin Run.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969725200AA2FB00C0061C /* Garmin Run.fit */; };
+		9D96972A200AA78D00C0061C /* Multi Activities.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969727200AA78C00C0061C /* Multi Activities.fit */; };
+		9D96972B200AA78D00C0061C /* Multi Sport.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969728200AA78C00C0061C /* Multi Sport.fit */; };
+		9D96972C200AA78D00C0061C /* Sample.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969729200AA78C00C0061C /* Sample.fit */; };
+		9D96972E200AA7C600C0061C /* Garmin Bike Ride.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D96972D200AA7C600C0061C /* Garmin Bike Ride.fit */; };
+		9D969730200AA7E400C0061C /* FITGarminBikeRideSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96972F200AA7E400C0061C /* FITGarminBikeRideSpecs.swift */; };
+		9D969732200AA94D00C0061C /* FITSampleSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D969731200AA94D00C0061C /* FITSampleSpecs.swift */; };
+		9D969734200AAC0200C0061C /* FITMultiActivitiesSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D969733200AAC0200C0061C /* FITMultiActivitiesSpecs.swift */; };
+		9D969736200AAC2300C0061C /* FITMultiSportSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D969735200AAC2300C0061C /* FITMultiSportSpecs.swift */; };
+		9D969748200ACB5800C0061C /* Strava Segment.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969747200ACB5800C0061C /* Strava Segment.fit */; };
+		9D96974A200ACB6F00C0061C /* FITStravaSegmentSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D969749200ACB6F00C0061C /* FITStravaSegmentSpecs.swift */; };
+		9D96974E200ACD5F00C0061C /* Segment.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D96974D200ACD5F00C0061C /* Segment.fit */; };
+		9D969750200ACD6B00C0061C /* FITSegmentSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96974F200ACD6B00C0061C /* FITSegmentSpecs.swift */; };
+		9D969754200B55D200C0061C /* Lilo.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969753200B55D200C0061C /* Lilo.fit */; };
+		9D969756200B564200C0061C /* FITLiloSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D969755200B564200C0061C /* FITLiloSpecs.swift */; };
+		9D96975A200B597E00C0061C /* Course.fit in Resources */ = {isa = PBXBuildFile; fileRef = 9D969759200B597D00C0061C /* Course.fit */; };
+		9D96975C200B5EF000C0061C /* FITCourseSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96975B200B5EF000C0061C /* FITCourseSpecs.swift */; };
+		9DF0E9E624AA322B00A3E021 /* TrackKit_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF0E9E424AA322B00A3E021 /* TrackKit_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DF0EA3724AA325E00A3E021 /* CopyrightNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9ED24AA325E00A3E021 /* CopyrightNotice.swift */; };
+		9DF0EA3824AA325E00A3E021 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9EE24AA325E00A3E021 /* Track.swift */; };
+		9DF0EA3924AA325E00A3E021 /* Bounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9EF24AA325E00A3E021 /* Bounds.swift */; };
+		9DF0EA3A24AA325E00A3E021 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9F024AA325E00A3E021 /* Person.swift */; };
+		9DF0EA3B24AA325E00A3E021 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9F124AA325E00A3E021 /* Link.swift */; };
+		9DF0EA3C24AA325E00A3E021 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9F224AA325E00A3E021 /* Version.swift */; };
+		9DF0EA3D24AA325E00A3E021 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9F324AA325E00A3E021 /* Author.swift */; };
+		9DF0EA3E24AA325E00A3E021 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9F424AA325E00A3E021 /* Point.swift */; };
+		9DF0EA3F24AA325E00A3E021 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9F524AA325E00A3E021 /* File.swift */; };
+		9DF0EA4024AA325E00A3E021 /* TrackSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9F624AA325E00A3E021 /* TrackSegment.swift */; };
+		9DF0EA4124AA325E00A3E021 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9F724AA325E00A3E021 /* Course.swift */; };
+		9DF0EA4224AA325E00A3E021 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9F824AA325E00A3E021 /* Activity.swift */; };
+		9DF0EA4324AA325E00A3E021 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9F924AA325E00A3E021 /* Route.swift */; };
+		9DF0EA4424AA325E00A3E021 /* Lap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9FA24AA325E00A3E021 /* Lap.swift */; };
+		9DF0EA4524AA325E00A3E021 /* TrackParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9FC24AA325E00A3E021 /* TrackParser.swift */; };
+		9DF0EA4624AA325E00A3E021 /* TrackParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9FD24AA325E00A3E021 /* TrackParseError.swift */; };
+		9DF0EA4724AA325E00A3E021 /* File+TRACK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0E9FF24AA325E00A3E021 /* File+TRACK.swift */; };
+		9DF0EA4824AA325E00A3E021 /* NMEAParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA0224AA325E00A3E021 /* NMEAParser.swift */; };
+		9DF0EA4924AA325E00A3E021 /* GPGGAParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA0324AA325E00A3E021 /* GPGGAParser.swift */; };
+		9DF0EA4A24AA325E00A3E021 /* GPGLLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA0424AA325E00A3E021 /* GPGLLParser.swift */; };
+		9DF0EA4B24AA325E00A3E021 /* GPWPLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA0524AA325E00A3E021 /* GPWPLParser.swift */; };
+		9DF0EA4C24AA325E00A3E021 /* GPRMCParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA0624AA325E00A3E021 /* GPRMCParser.swift */; };
+		9DF0EA4D24AA325E00A3E021 /* File+NMEA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA0824AA325E00A3E021 /* File+NMEA.swift */; };
+		9DF0EA4E24AA325E00A3E021 /* Point+NMEA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA0924AA325E00A3E021 /* Point+NMEA.swift */; };
+		9DF0EA4F24AA325E00A3E021 /* String+NMEA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA0A24AA325E00A3E021 /* String+NMEA.swift */; };
+		9DF0EA5024AA325E00A3E021 /* Link+LOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA0D24AA325E00A3E021 /* Link+LOC.swift */; };
+		9DF0EA5124AA325E00A3E021 /* File+LOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA0E24AA325E00A3E021 /* File+LOC.swift */; };
+		9DF0EA5224AA325E00A3E021 /* Point+LOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA0F24AA325E00A3E021 /* Point+LOC.swift */; };
+		9DF0EA5324AA325F00A3E021 /* Locable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1024AA325E00A3E021 /* Locable.swift */; };
+		9DF0EA5424AA325F00A3E021 /* Course+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1224AA325E00A3E021 /* Course+FIT.swift */; };
+		9DF0EA5524AA325F00A3E021 /* Point+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1324AA325E00A3E021 /* Point+FIT.swift */; };
+		9DF0EA5624AA325F00A3E021 /* File+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1424AA325E00A3E021 /* File+FIT.swift */; };
+		9DF0EA5724AA325F00A3E021 /* Activity+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1524AA325E00A3E021 /* Activity+FIT.swift */; };
+		9DF0EA5824AA325F00A3E021 /* Lap+FIT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1624AA325E00A3E021 /* Lap+FIT.swift */; };
+		9DF0EA5924AA325F00A3E021 /* TrackTypeVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1724AA325E00A3E021 /* TrackTypeVersion.swift */; };
+		9DF0EA5A24AA325F00A3E021 /* TrackType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1824AA325E00A3E021 /* TrackType.swift */; };
+		9DF0EA5B24AA325F00A3E021 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1A24AA325E00A3E021 /* String+Range.swift */; };
+		9DF0EA5C24AA325F00A3E021 /* Point+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1B24AA325E00A3E021 /* Point+Codable.swift */; };
+		9DF0EA5D24AA325F00A3E021 /* String+DateParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1C24AA325E00A3E021 /* String+DateParsing.swift */; };
+		9DF0EA5E24AA325F00A3E021 /* AEXMLElement+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1D24AA325E00A3E021 /* AEXMLElement+Parsing.swift */; };
+		9DF0EA5F24AA325F00A3E021 /* String+CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1E24AA325E00A3E021 /* String+CSV.swift */; };
+		9DF0EA6024AA325F00A3E021 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA1F24AA325E00A3E021 /* Operators.swift */; };
+		9DF0EA6124AA325F00A3E021 /* Tcxable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA2124AA325E00A3E021 /* Tcxable.swift */; };
+		9DF0EA6224AA325F00A3E021 /* Author+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA2324AA325E00A3E021 /* Author+TCX.swift */; };
+		9DF0EA6324AA325F00A3E021 /* Course+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA2424AA325E00A3E021 /* Course+TCX.swift */; };
+		9DF0EA6424AA325F00A3E021 /* File+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA2524AA325E00A3E021 /* File+TCX.swift */; };
+		9DF0EA6524AA325F00A3E021 /* Point+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA2624AA325E00A3E021 /* Point+TCX.swift */; };
+		9DF0EA6624AA325F00A3E021 /* Lap+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA2724AA325E00A3E021 /* Lap+TCX.swift */; };
+		9DF0EA6724AA325F00A3E021 /* Version+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA2824AA325E00A3E021 /* Version+TCX.swift */; };
+		9DF0EA6824AA325F00A3E021 /* Activity+TCX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA2924AA325E00A3E021 /* Activity+TCX.swift */; };
+		9DF0EA6924AA325F00A3E021 /* Gpxable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA2B24AA325E00A3E021 /* Gpxable.swift */; };
+		9DF0EA6A24AA325F00A3E021 /* Person+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA2D24AA325E00A3E021 /* Person+GPX.swift */; };
+		9DF0EA6B24AA325F00A3E021 /* Point+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA2E24AA325E00A3E021 /* Point+GPX.swift */; };
+		9DF0EA6C24AA325F00A3E021 /* Track+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA2F24AA325E00A3E021 /* Track+GPX.swift */; };
+		9DF0EA6D24AA325F00A3E021 /* String+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA3024AA325E00A3E021 /* String+Parsing.swift */; };
+		9DF0EA6E24AA325F00A3E021 /* File+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA3124AA325E00A3E021 /* File+GPX.swift */; };
+		9DF0EA6F24AA325F00A3E021 /* CopyrightNotice+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA3224AA325E00A3E021 /* CopyrightNotice+GPX.swift */; };
+		9DF0EA7024AA325F00A3E021 /* Bounds+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA3324AA325E00A3E021 /* Bounds+GPX.swift */; };
+		9DF0EA7124AA325F00A3E021 /* Route+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA3424AA325E00A3E021 /* Route+GPX.swift */; };
+		9DF0EA7224AA325F00A3E021 /* TrackSegment+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA3524AA325E00A3E021 /* TrackSegment+GPX.swift */; };
+		9DF0EA7324AA325F00A3E021 /* Link+GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF0EA3624AA325E00A3E021 /* Link+GPX.swift */; };
+		9DF0EA7624AA329D00A3E021 /* AEXML in Frameworks */ = {isa = PBXBuildFile; productRef = 9DF0EA7524AA329D00A3E021 /* AEXML */; };
+		9DF0EA7924AA32BA00A3E021 /* Fit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF0EA7824AA32BA00A3E021 /* Fit.xcframework */; };
+		9DF0EA7C24AA32F200A3E021 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 9DF0EA7B24AA32F200A3E021 /* Quick */; };
+		9DF0EA7F24AA330400A3E021 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 9DF0EA7E24AA330400A3E021 /* Nimble */; };
+		9DF0EA8324AA333100A3E021 /* TrackKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF0E9E224AA322B00A3E021 /* TrackKit.framework */; };
+		9DFB69C41FDD47D20010D5DE /* TRACKParserSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFB69BF1FDD47D20010D5DE /* TRACKParserSpecs.swift */; };
+		9DFB69C81FDD47D20010D5DE /* TRACKTrackSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFB69C31FDD47D20010D5DE /* TRACKTrackSpecs.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DF0EA8024AA332A00A3E021 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DF0E9E124AA322B00A3E021;
+			remoteInfo = "TrackKit iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04206A071E16560800B428C2 /* LOCCommonsSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LOCCommonsSpecs.swift; sourceTree = "<group>"; };
+		04206A091E1657EF00B428C2 /* LOCWaypointSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LOCWaypointSpecs.swift; sourceTree = "<group>"; };
+		04206A141E1668CD00B428C2 /* GPXLegacyCommonSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXLegacyCommonSpecs.swift; sourceTree = "<group>"; };
+		04206A161E1668CD00B428C2 /* GPXLegacyRouteSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXLegacyRouteSpecs.swift; sourceTree = "<group>"; };
+		04206A171E1668CD00B428C2 /* GPXLegacyTrackSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXLegacyTrackSpecs.swift; sourceTree = "<group>"; };
+		04206A181E1668CD00B428C2 /* GPXLegacyWaypointSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXLegacyWaypointSpecs.swift; sourceTree = "<group>"; };
+		04206A201E1670DD00B428C2 /* LOCParserSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LOCParserSpecs.swift; sourceTree = "<group>"; };
+		042B2F791DA18E51003B5E7D /* TCXCourseSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCXCourseSpecs.swift; sourceTree = "<group>"; };
+		042B2F871DA21F47003B5E7D /* TCXActivitySpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCXActivitySpecs.swift; sourceTree = "<group>"; };
+		046664D11EE09DE7009701B1 /* NMEAParserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMEAParserSpec.swift; sourceTree = "<group>"; };
+		046664D51EE0BAE3009701B1 /* NMEAGPGGASpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMEAGPGGASpec.swift; sourceTree = "<group>"; };
+		048429DB1EE57AC00079488F /* NMEAGPRMCSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMEAGPRMCSpec.swift; sourceTree = "<group>"; };
+		048429DD1EE58C950079488F /* NMEAGPGLLSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMEAGPGLLSpec.swift; sourceTree = "<group>"; };
+		048429DF1EE681F70079488F /* NMEAGPWPLSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMEAGPWPLSpec.swift; sourceTree = "<group>"; };
+		607FACE51AFB9204008FA782 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* GPXCommonSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXCommonSpecs.swift; sourceTree = "<group>"; };
+		6297A9A11C98C36D00686120 /* GPXWaypointSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXWaypointSpecs.swift; sourceTree = "<group>"; };
+		6297A9A41C98C4D500686120 /* GPXRouteSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXRouteSpecs.swift; sourceTree = "<group>"; };
+		6297A9A61C98C69000686120 /* GPXTrackSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPXTrackSpecs.swift; sourceTree = "<group>"; };
+		6297A9BF1C99611400686120 /* GPXParserSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GPXParserSpecs.swift; path = 1.1/GPXParserSpecs.swift; sourceTree = "<group>"; };
+		62BB32D81D9DAEE100310CF9 /* TrackTypeSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTypeSpecs.swift; sourceTree = "<group>"; };
+		62BB32DB1D9DB45D00310CF9 /* TCXParserSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCXParserSpecs.swift; sourceTree = "<group>"; };
+		62BB32DD1D9E353100310CF9 /* TCXCommonSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCXCommonSpecs.swift; sourceTree = "<group>"; };
+		9D30E39020AA28910009F346 /* HealthFit.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = HealthFit.fit; sourceTree = "<group>"; };
+		9D30E39220AB5D350009F346 /* FITHealthFitSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITHealthFitSpecs.swift; sourceTree = "<group>"; };
+		9D8F1832200A45E2004CDECE /* FITGarminRunSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITGarminRunSpecs.swift; sourceTree = "<group>"; };
+		9D969725200AA2FB00C0061C /* Garmin Run.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Garmin Run.fit"; sourceTree = "<group>"; };
+		9D969727200AA78C00C0061C /* Multi Activities.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Multi Activities.fit"; sourceTree = "<group>"; };
+		9D969728200AA78C00C0061C /* Multi Sport.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Multi Sport.fit"; sourceTree = "<group>"; };
+		9D969729200AA78C00C0061C /* Sample.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sample.fit; sourceTree = "<group>"; };
+		9D96972D200AA7C600C0061C /* Garmin Bike Ride.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Garmin Bike Ride.fit"; sourceTree = "<group>"; };
+		9D96972F200AA7E400C0061C /* FITGarminBikeRideSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITGarminBikeRideSpecs.swift; sourceTree = "<group>"; };
+		9D969731200AA94D00C0061C /* FITSampleSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITSampleSpecs.swift; sourceTree = "<group>"; };
+		9D969733200AAC0200C0061C /* FITMultiActivitiesSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITMultiActivitiesSpecs.swift; sourceTree = "<group>"; };
+		9D969735200AAC2300C0061C /* FITMultiSportSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITMultiSportSpecs.swift; sourceTree = "<group>"; };
+		9D969747200ACB5800C0061C /* Strava Segment.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Strava Segment.fit"; sourceTree = "<group>"; };
+		9D969749200ACB6F00C0061C /* FITStravaSegmentSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITStravaSegmentSpecs.swift; sourceTree = "<group>"; };
+		9D96974D200ACD5F00C0061C /* Segment.fit */ = {isa = PBXFileReference; lastKnownFileType = file; name = Segment.fit; path = "../../../../../Fit/Test/Supporting Files/Files/Segment.fit"; sourceTree = "<group>"; };
+		9D96974F200ACD6B00C0061C /* FITSegmentSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITSegmentSpecs.swift; sourceTree = "<group>"; };
+		9D969753200B55D200C0061C /* Lilo.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lilo.fit; sourceTree = "<group>"; };
+		9D969755200B564200C0061C /* FITLiloSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITLiloSpecs.swift; sourceTree = "<group>"; };
+		9D969759200B597D00C0061C /* Course.fit */ = {isa = PBXFileReference; lastKnownFileType = file; path = Course.fit; sourceTree = "<group>"; };
+		9D96975B200B5EF000C0061C /* FITCourseSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FITCourseSpecs.swift; sourceTree = "<group>"; };
+		9DF0E9E224AA322B00A3E021 /* TrackKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrackKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF0E9E424AA322B00A3E021 /* TrackKit_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackKit_iOS.h; sourceTree = "<group>"; };
+		9DF0E9E524AA322B00A3E021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DF0E9ED24AA325E00A3E021 /* CopyrightNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyrightNotice.swift; sourceTree = "<group>"; };
+		9DF0E9EE24AA325E00A3E021 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		9DF0E9EF24AA325E00A3E021 /* Bounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bounds.swift; sourceTree = "<group>"; };
+		9DF0E9F024AA325E00A3E021 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		9DF0E9F124AA325E00A3E021 /* Link.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		9DF0E9F224AA325E00A3E021 /* Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		9DF0E9F324AA325E00A3E021 /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		9DF0E9F424AA325E00A3E021 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		9DF0E9F524AA325E00A3E021 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		9DF0E9F624AA325E00A3E021 /* TrackSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackSegment.swift; sourceTree = "<group>"; };
+		9DF0E9F724AA325E00A3E021 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		9DF0E9F824AA325E00A3E021 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		9DF0E9F924AA325E00A3E021 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		9DF0E9FA24AA325E00A3E021 /* Lap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lap.swift; sourceTree = "<group>"; };
+		9DF0E9FC24AA325E00A3E021 /* TrackParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackParser.swift; sourceTree = "<group>"; };
+		9DF0E9FD24AA325E00A3E021 /* TrackParseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackParseError.swift; sourceTree = "<group>"; };
+		9DF0E9FF24AA325E00A3E021 /* File+TRACK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "File+TRACK.swift"; sourceTree = "<group>"; };
+		9DF0EA0224AA325E00A3E021 /* NMEAParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMEAParser.swift; sourceTree = "<group>"; };
+		9DF0EA0324AA325E00A3E021 /* GPGGAParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPGGAParser.swift; sourceTree = "<group>"; };
+		9DF0EA0424AA325E00A3E021 /* GPGLLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPGLLParser.swift; sourceTree = "<group>"; };
+		9DF0EA0524AA325E00A3E021 /* GPWPLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPWPLParser.swift; sourceTree = "<group>"; };
+		9DF0EA0624AA325E00A3E021 /* GPRMCParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPRMCParser.swift; sourceTree = "<group>"; };
+		9DF0EA0824AA325E00A3E021 /* File+NMEA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "File+NMEA.swift"; sourceTree = "<group>"; };
+		9DF0EA0924AA325E00A3E021 /* Point+NMEA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Point+NMEA.swift"; sourceTree = "<group>"; };
+		9DF0EA0A24AA325E00A3E021 /* String+NMEA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+NMEA.swift"; sourceTree = "<group>"; };
+		9DF0EA0D24AA325E00A3E021 /* Link+LOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Link+LOC.swift"; sourceTree = "<group>"; };
+		9DF0EA0E24AA325E00A3E021 /* File+LOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "File+LOC.swift"; sourceTree = "<group>"; };
+		9DF0EA0F24AA325E00A3E021 /* Point+LOC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Point+LOC.swift"; sourceTree = "<group>"; };
+		9DF0EA1024AA325E00A3E021 /* Locable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locable.swift; sourceTree = "<group>"; };
+		9DF0EA1224AA325E00A3E021 /* Course+FIT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Course+FIT.swift"; sourceTree = "<group>"; };
+		9DF0EA1324AA325E00A3E021 /* Point+FIT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Point+FIT.swift"; sourceTree = "<group>"; };
+		9DF0EA1424AA325E00A3E021 /* File+FIT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "File+FIT.swift"; sourceTree = "<group>"; };
+		9DF0EA1524AA325E00A3E021 /* Activity+FIT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activity+FIT.swift"; sourceTree = "<group>"; };
+		9DF0EA1624AA325E00A3E021 /* Lap+FIT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lap+FIT.swift"; sourceTree = "<group>"; };
+		9DF0EA1724AA325E00A3E021 /* TrackTypeVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTypeVersion.swift; sourceTree = "<group>"; };
+		9DF0EA1824AA325E00A3E021 /* TrackType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackType.swift; sourceTree = "<group>"; };
+		9DF0EA1A24AA325E00A3E021 /* String+Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Range.swift"; sourceTree = "<group>"; };
+		9DF0EA1B24AA325E00A3E021 /* Point+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Point+Codable.swift"; sourceTree = "<group>"; };
+		9DF0EA1C24AA325E00A3E021 /* String+DateParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+DateParsing.swift"; sourceTree = "<group>"; };
+		9DF0EA1D24AA325E00A3E021 /* AEXMLElement+Parsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AEXMLElement+Parsing.swift"; sourceTree = "<group>"; };
+		9DF0EA1E24AA325E00A3E021 /* String+CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+CSV.swift"; sourceTree = "<group>"; };
+		9DF0EA1F24AA325E00A3E021 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		9DF0EA2124AA325E00A3E021 /* Tcxable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tcxable.swift; sourceTree = "<group>"; };
+		9DF0EA2324AA325E00A3E021 /* Author+TCX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Author+TCX.swift"; sourceTree = "<group>"; };
+		9DF0EA2424AA325E00A3E021 /* Course+TCX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Course+TCX.swift"; sourceTree = "<group>"; };
+		9DF0EA2524AA325E00A3E021 /* File+TCX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "File+TCX.swift"; sourceTree = "<group>"; };
+		9DF0EA2624AA325E00A3E021 /* Point+TCX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Point+TCX.swift"; sourceTree = "<group>"; };
+		9DF0EA2724AA325E00A3E021 /* Lap+TCX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lap+TCX.swift"; sourceTree = "<group>"; };
+		9DF0EA2824AA325E00A3E021 /* Version+TCX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Version+TCX.swift"; sourceTree = "<group>"; };
+		9DF0EA2924AA325E00A3E021 /* Activity+TCX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Activity+TCX.swift"; sourceTree = "<group>"; };
+		9DF0EA2B24AA325E00A3E021 /* Gpxable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gpxable.swift; sourceTree = "<group>"; };
+		9DF0EA2D24AA325E00A3E021 /* Person+GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+GPX.swift"; sourceTree = "<group>"; };
+		9DF0EA2E24AA325E00A3E021 /* Point+GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Point+GPX.swift"; sourceTree = "<group>"; };
+		9DF0EA2F24AA325E00A3E021 /* Track+GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Track+GPX.swift"; sourceTree = "<group>"; };
+		9DF0EA3024AA325E00A3E021 /* String+Parsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Parsing.swift"; sourceTree = "<group>"; };
+		9DF0EA3124AA325E00A3E021 /* File+GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "File+GPX.swift"; sourceTree = "<group>"; };
+		9DF0EA3224AA325E00A3E021 /* CopyrightNotice+GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CopyrightNotice+GPX.swift"; sourceTree = "<group>"; };
+		9DF0EA3324AA325E00A3E021 /* Bounds+GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bounds+GPX.swift"; sourceTree = "<group>"; };
+		9DF0EA3424AA325E00A3E021 /* Route+GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Route+GPX.swift"; sourceTree = "<group>"; };
+		9DF0EA3524AA325E00A3E021 /* TrackSegment+GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TrackSegment+GPX.swift"; sourceTree = "<group>"; };
+		9DF0EA3624AA325E00A3E021 /* Link+GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Link+GPX.swift"; sourceTree = "<group>"; };
+		9DF0EA7824AA32BA00A3E021 /* Fit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Fit.xcframework; path = ../../../Fit/Fit.xcframework; sourceTree = "<group>"; };
+		9DFB69BF1FDD47D20010D5DE /* TRACKParserSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRACKParserSpecs.swift; sourceTree = "<group>"; };
+		9DFB69C31FDD47D20010D5DE /* TRACKTrackSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRACKTrackSpecs.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		607FACE21AFB9204008FA782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF0EA8324AA333100A3E021 /* TrackKit.framework in Frameworks */,
+				9DF0EA7C24AA32F200A3E021 /* Quick in Frameworks */,
+				9DF0EA7F24AA330400A3E021 /* Nimble in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF0E9DF24AA322B00A3E021 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF0EA7624AA329D00A3E021 /* AEXML in Frameworks */,
+				9DF0EA7924AA32BA00A3E021 /* Fit.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04206A031E1653AE00B428C2 /* LOC */ = {
+			isa = PBXGroup;
+			children = (
+				04206A071E16560800B428C2 /* LOCCommonsSpecs.swift */,
+				04206A201E1670DD00B428C2 /* LOCParserSpecs.swift */,
+				04206A091E1657EF00B428C2 /* LOCWaypointSpecs.swift */,
+			);
+			path = LOC;
+			sourceTree = "<group>";
+		};
+		04206A121E16686D00B428C2 /* 1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				607FACEB1AFB9204008FA782 /* GPXCommonSpecs.swift */,
+				6297A9A41C98C4D500686120 /* GPXRouteSpecs.swift */,
+				6297A9A61C98C69000686120 /* GPXTrackSpecs.swift */,
+				6297A9A11C98C36D00686120 /* GPXWaypointSpecs.swift */,
+			);
+			path = 1.1;
+			sourceTree = "<group>";
+		};
+		04206A131E1668CD00B428C2 /* 1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				04206A141E1668CD00B428C2 /* GPXLegacyCommonSpecs.swift */,
+				04206A161E1668CD00B428C2 /* GPXLegacyRouteSpecs.swift */,
+				04206A171E1668CD00B428C2 /* GPXLegacyTrackSpecs.swift */,
+				04206A181E1668CD00B428C2 /* GPXLegacyWaypointSpecs.swift */,
+			);
+			path = 1.0;
+			sourceTree = "<group>";
+		};
+		046664D01EE09DD0009701B1 /* NMEA */ = {
+			isa = PBXGroup;
+			children = (
+				046664D51EE0BAE3009701B1 /* NMEAGPGGASpec.swift */,
+				048429DD1EE58C950079488F /* NMEAGPGLLSpec.swift */,
+				048429DB1EE57AC00079488F /* NMEAGPRMCSpec.swift */,
+				048429DF1EE681F70079488F /* NMEAGPWPLSpec.swift */,
+				046664D11EE09DE7009701B1 /* NMEAParserSpec.swift */,
+			);
+			path = NMEA;
+			sourceTree = "<group>";
+		};
+		607FACC71AFB9204008FA782 = {
+			isa = PBXGroup;
+			children = (
+				9DF0E9E324AA322B00A3E021 /* TrackKit iOS */,
+				607FACE81AFB9204008FA782 /* Tests */,
+				607FACD11AFB9204008FA782 /* Products */,
+				9DF0EA8224AA333100A3E021 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		607FACD11AFB9204008FA782 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				607FACE51AFB9204008FA782 /* Tests.xctest */,
+				9DF0E9E224AA322B00A3E021 /* TrackKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		607FACE81AFB9204008FA782 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6297A9A31C98C37700686120 /* Tests */,
+				607FACE91AFB9204008FA782 /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		607FACE91AFB9204008FA782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				607FACEA1AFB9204008FA782 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6297A9A31C98C37700686120 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				62BB32D81D9DAEE100310CF9 /* TrackTypeSpecs.swift */,
+				9D27D20920029DF400031749 /* FIT */,
+				62BB32D31D9C29B600310CF9 /* GPX */,
+				04206A031E1653AE00B428C2 /* LOC */,
+				046664D01EE09DD0009701B1 /* NMEA */,
+				62BB32DA1D9DB45100310CF9 /* TCX */,
+				9DFB69BE1FDD47D20010D5DE /* TRACK */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		62BB32D31D9C29B600310CF9 /* GPX */ = {
+			isa = PBXGroup;
+			children = (
+				6297A9BF1C99611400686120 /* GPXParserSpecs.swift */,
+				04206A131E1668CD00B428C2 /* 1.0 */,
+				04206A121E16686D00B428C2 /* 1.1 */,
+			);
+			path = GPX;
+			sourceTree = "<group>";
+		};
+		62BB32DA1D9DB45100310CF9 /* TCX */ = {
+			isa = PBXGroup;
+			children = (
+				042B2F871DA21F47003B5E7D /* TCXActivitySpecs.swift */,
+				62BB32DD1D9E353100310CF9 /* TCXCommonSpecs.swift */,
+				042B2F791DA18E51003B5E7D /* TCXCourseSpecs.swift */,
+				62BB32DB1D9DB45D00310CF9 /* TCXParserSpecs.swift */,
+			);
+			path = TCX;
+			sourceTree = "<group>";
+		};
+		9D27D20920029DF400031749 /* FIT */ = {
+			isa = PBXGroup;
+			children = (
+				9D96975B200B5EF000C0061C /* FITCourseSpecs.swift */,
+				9D96972F200AA7E400C0061C /* FITGarminBikeRideSpecs.swift */,
+				9D8F1832200A45E2004CDECE /* FITGarminRunSpecs.swift */,
+				9D30E39220AB5D350009F346 /* FITHealthFitSpecs.swift */,
+				9D969755200B564200C0061C /* FITLiloSpecs.swift */,
+				9D969733200AAC0200C0061C /* FITMultiActivitiesSpecs.swift */,
+				9D969735200AAC2300C0061C /* FITMultiSportSpecs.swift */,
+				9D969731200AA94D00C0061C /* FITSampleSpecs.swift */,
+				9D96974F200ACD6B00C0061C /* FITSegmentSpecs.swift */,
+				9D969749200ACB6F00C0061C /* FITStravaSegmentSpecs.swift */,
+				9D969724200AA2EE00C0061C /* Files */,
+			);
+			path = FIT;
+			sourceTree = "<group>";
+		};
+		9D969724200AA2EE00C0061C /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D969759200B597D00C0061C /* Course.fit */,
+				9D96972D200AA7C600C0061C /* Garmin Bike Ride.fit */,
+				9D969725200AA2FB00C0061C /* Garmin Run.fit */,
+				9D30E39020AA28910009F346 /* HealthFit.fit */,
+				9D969753200B55D200C0061C /* Lilo.fit */,
+				9D969727200AA78C00C0061C /* Multi Activities.fit */,
+				9D969728200AA78C00C0061C /* Multi Sport.fit */,
+				9D969729200AA78C00C0061C /* Sample.fit */,
+				9D96974D200ACD5F00C0061C /* Segment.fit */,
+				9D969747200ACB5800C0061C /* Strava Segment.fit */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		9DF0E9E324AA322B00A3E021 /* TrackKit iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0E9E424AA322B00A3E021 /* TrackKit_iOS.h */,
+				9DF0E9EB24AA325E00A3E021 /* Classes */,
+				9DF0E9EA24AA323500A3E021 /* Supporting Files */,
+				9DF0EA7724AA32AD00A3E021 /* Vendor */,
+			);
+			path = "TrackKit iOS";
+			sourceTree = "<group>";
+		};
+		9DF0E9EA24AA323500A3E021 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0E9E524AA322B00A3E021 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9DF0E9EB24AA325E00A3E021 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0E9EC24AA325E00A3E021 /* Models */,
+				9DF0E9FB24AA325E00A3E021 /* Parser */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		9DF0E9EC24AA325E00A3E021 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0E9F824AA325E00A3E021 /* Activity.swift */,
+				9DF0E9F324AA325E00A3E021 /* Author.swift */,
+				9DF0E9EF24AA325E00A3E021 /* Bounds.swift */,
+				9DF0E9ED24AA325E00A3E021 /* CopyrightNotice.swift */,
+				9DF0E9F724AA325E00A3E021 /* Course.swift */,
+				9DF0E9F524AA325E00A3E021 /* File.swift */,
+				9DF0E9FA24AA325E00A3E021 /* Lap.swift */,
+				9DF0E9F124AA325E00A3E021 /* Link.swift */,
+				9DF0E9F024AA325E00A3E021 /* Person.swift */,
+				9DF0E9F424AA325E00A3E021 /* Point.swift */,
+				9DF0E9F924AA325E00A3E021 /* Route.swift */,
+				9DF0E9EE24AA325E00A3E021 /* Track.swift */,
+				9DF0E9F624AA325E00A3E021 /* TrackSegment.swift */,
+				9DF0E9F224AA325E00A3E021 /* Version.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9DF0E9FB24AA325E00A3E021 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0EA1F24AA325E00A3E021 /* Operators.swift */,
+				9DF0E9FD24AA325E00A3E021 /* TrackParseError.swift */,
+				9DF0E9FC24AA325E00A3E021 /* TrackParser.swift */,
+				9DF0EA1824AA325E00A3E021 /* TrackType.swift */,
+				9DF0EA1724AA325E00A3E021 /* TrackTypeVersion.swift */,
+				9DF0EA1924AA325E00A3E021 /* Extensions */,
+				9DF0EA1124AA325E00A3E021 /* FIT */,
+				9DF0EA2A24AA325E00A3E021 /* GPX */,
+				9DF0EA0B24AA325E00A3E021 /* LOC */,
+				9DF0EA0024AA325E00A3E021 /* NMEA */,
+				9DF0EA2024AA325E00A3E021 /* TCX */,
+				9DF0E9FE24AA325E00A3E021 /* TRACK */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		9DF0E9FE24AA325E00A3E021 /* TRACK */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0E9FF24AA325E00A3E021 /* File+TRACK.swift */,
+			);
+			path = TRACK;
+			sourceTree = "<group>";
+		};
+		9DF0EA0024AA325E00A3E021 /* NMEA */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0EA0124AA325E00A3E021 /* Parser */,
+				9DF0EA0724AA325E00A3E021 /* Extensions */,
+			);
+			path = NMEA;
+			sourceTree = "<group>";
+		};
+		9DF0EA0124AA325E00A3E021 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0EA0224AA325E00A3E021 /* NMEAParser.swift */,
+				9DF0EA0324AA325E00A3E021 /* GPGGAParser.swift */,
+				9DF0EA0424AA325E00A3E021 /* GPGLLParser.swift */,
+				9DF0EA0524AA325E00A3E021 /* GPWPLParser.swift */,
+				9DF0EA0624AA325E00A3E021 /* GPRMCParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		9DF0EA0724AA325E00A3E021 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0EA0824AA325E00A3E021 /* File+NMEA.swift */,
+				9DF0EA0924AA325E00A3E021 /* Point+NMEA.swift */,
+				9DF0EA0A24AA325E00A3E021 /* String+NMEA.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9DF0EA0B24AA325E00A3E021 /* LOC */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0EA0C24AA325E00A3E021 /* Extensions */,
+				9DF0EA1024AA325E00A3E021 /* Locable.swift */,
+			);
+			path = LOC;
+			sourceTree = "<group>";
+		};
+		9DF0EA0C24AA325E00A3E021 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0EA0D24AA325E00A3E021 /* Link+LOC.swift */,
+				9DF0EA0E24AA325E00A3E021 /* File+LOC.swift */,
+				9DF0EA0F24AA325E00A3E021 /* Point+LOC.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9DF0EA1124AA325E00A3E021 /* FIT */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0EA1224AA325E00A3E021 /* Course+FIT.swift */,
+				9DF0EA1324AA325E00A3E021 /* Point+FIT.swift */,
+				9DF0EA1424AA325E00A3E021 /* File+FIT.swift */,
+				9DF0EA1524AA325E00A3E021 /* Activity+FIT.swift */,
+				9DF0EA1624AA325E00A3E021 /* Lap+FIT.swift */,
+			);
+			path = FIT;
+			sourceTree = "<group>";
+		};
+		9DF0EA1924AA325E00A3E021 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0EA1A24AA325E00A3E021 /* String+Range.swift */,
+				9DF0EA1B24AA325E00A3E021 /* Point+Codable.swift */,
+				9DF0EA1C24AA325E00A3E021 /* String+DateParsing.swift */,
+				9DF0EA1D24AA325E00A3E021 /* AEXMLElement+Parsing.swift */,
+				9DF0EA1E24AA325E00A3E021 /* String+CSV.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9DF0EA2024AA325E00A3E021 /* TCX */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0EA2124AA325E00A3E021 /* Tcxable.swift */,
+				9DF0EA2224AA325E00A3E021 /* Extensions */,
+			);
+			path = TCX;
+			sourceTree = "<group>";
+		};
+		9DF0EA2224AA325E00A3E021 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0EA2324AA325E00A3E021 /* Author+TCX.swift */,
+				9DF0EA2424AA325E00A3E021 /* Course+TCX.swift */,
+				9DF0EA2524AA325E00A3E021 /* File+TCX.swift */,
+				9DF0EA2624AA325E00A3E021 /* Point+TCX.swift */,
+				9DF0EA2724AA325E00A3E021 /* Lap+TCX.swift */,
+				9DF0EA2824AA325E00A3E021 /* Version+TCX.swift */,
+				9DF0EA2924AA325E00A3E021 /* Activity+TCX.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9DF0EA2A24AA325E00A3E021 /* GPX */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0EA2B24AA325E00A3E021 /* Gpxable.swift */,
+				9DF0EA2C24AA325E00A3E021 /* Extensions */,
+			);
+			path = GPX;
+			sourceTree = "<group>";
+		};
+		9DF0EA2C24AA325E00A3E021 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0EA2D24AA325E00A3E021 /* Person+GPX.swift */,
+				9DF0EA2E24AA325E00A3E021 /* Point+GPX.swift */,
+				9DF0EA2F24AA325E00A3E021 /* Track+GPX.swift */,
+				9DF0EA3024AA325E00A3E021 /* String+Parsing.swift */,
+				9DF0EA3124AA325E00A3E021 /* File+GPX.swift */,
+				9DF0EA3224AA325E00A3E021 /* CopyrightNotice+GPX.swift */,
+				9DF0EA3324AA325E00A3E021 /* Bounds+GPX.swift */,
+				9DF0EA3424AA325E00A3E021 /* Route+GPX.swift */,
+				9DF0EA3524AA325E00A3E021 /* TrackSegment+GPX.swift */,
+				9DF0EA3624AA325E00A3E021 /* Link+GPX.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9DF0EA7724AA32AD00A3E021 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				9DF0EA7824AA32BA00A3E021 /* Fit.xcframework */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		9DF0EA8224AA333100A3E021 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DFB69BE1FDD47D20010D5DE /* TRACK */ = {
+			isa = PBXGroup;
+			children = (
+				9DFB69BF1FDD47D20010D5DE /* TRACKParserSpecs.swift */,
+				9DFB69C31FDD47D20010D5DE /* TRACKTrackSpecs.swift */,
+			);
+			path = TRACK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9DF0E9DD24AA322B00A3E021 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF0E9E624AA322B00A3E021 /* TrackKit_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		607FACE41AFB9204008FA782 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				607FACE11AFB9204008FA782 /* Sources */,
+				607FACE21AFB9204008FA782 /* Frameworks */,
+				607FACE31AFB9204008FA782 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DF0EA8124AA332A00A3E021 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			packageProductDependencies = (
+				9DF0EA7B24AA32F200A3E021 /* Quick */,
+				9DF0EA7E24AA330400A3E021 /* Nimble */,
+			);
+			productName = Tests;
+			productReference = 607FACE51AFB9204008FA782 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9DF0E9E124AA322B00A3E021 /* TrackKit iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DF0E9E924AA322B00A3E021 /* Build configuration list for PBXNativeTarget "TrackKit iOS" */;
+			buildPhases = (
+				9DF0E9DD24AA322B00A3E021 /* Headers */,
+				9DF0E9DE24AA322B00A3E021 /* Sources */,
+				9DF0E9DF24AA322B00A3E021 /* Frameworks */,
+				9DF0E9E024AA322B00A3E021 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TrackKit iOS";
+			packageProductDependencies = (
+				9DF0EA7524AA329D00A3E021 /* AEXML */,
+			);
+			productName = "TrackKit iOS";
+			productReference = 9DF0E9E224AA322B00A3E021 /* TrackKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		607FACC81AFB9204008FA782 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = CocoaPods;
+				TargetAttributes = {
+					607FACE41AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 743AM63YFU;
+						LastSwiftMigration = 1100;
+					};
+					9DF0E9E124AA322B00A3E021 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "TrackKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 607FACC71AFB9204008FA782;
+			packageReferences = (
+				9DF0EA7424AA329D00A3E021 /* XCRemoteSwiftPackageReference "AEXML" */,
+				9DF0EA7A24AA32F200A3E021 /* XCRemoteSwiftPackageReference "Quick" */,
+				9DF0EA7D24AA330400A3E021 /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
+			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DF0E9E124AA322B00A3E021 /* TrackKit iOS */,
+				607FACE41AFB9204008FA782 /* Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		607FACE31AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D969726200AA2FB00C0061C /* Garmin Run.fit in Resources */,
+				9D96972C200AA78D00C0061C /* Sample.fit in Resources */,
+				9D969754200B55D200C0061C /* Lilo.fit in Resources */,
+				9D96972A200AA78D00C0061C /* Multi Activities.fit in Resources */,
+				9D96974E200ACD5F00C0061C /* Segment.fit in Resources */,
+				9D969748200ACB5800C0061C /* Strava Segment.fit in Resources */,
+				9D96975A200B597E00C0061C /* Course.fit in Resources */,
+				9D96972E200AA7C600C0061C /* Garmin Bike Ride.fit in Resources */,
+				9D30E39120AA28910009F346 /* HealthFit.fit in Resources */,
+				9D96972B200AA78D00C0061C /* Multi Sport.fit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF0E9E024AA322B00A3E021 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		607FACE11AFB9204008FA782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DFB69C41FDD47D20010D5DE /* TRACKParserSpecs.swift in Sources */,
+				04206A1C1E1668CD00B428C2 /* GPXLegacyTrackSpecs.swift in Sources */,
+				042B2F7A1DA18E51003B5E7D /* TCXCourseSpecs.swift in Sources */,
+				048429DE1EE58C950079488F /* NMEAGPGLLSpec.swift in Sources */,
+				046664D21EE09DE7009701B1 /* NMEAParserSpec.swift in Sources */,
+				9D969736200AAC2300C0061C /* FITMultiSportSpecs.swift in Sources */,
+				04206A1B1E1668CD00B428C2 /* GPXLegacyRouteSpecs.swift in Sources */,
+				62BB32D91D9DAEE100310CF9 /* TrackTypeSpecs.swift in Sources */,
+				6297A9A21C98C36D00686120 /* GPXWaypointSpecs.swift in Sources */,
+				042B2F881DA21F47003B5E7D /* TCXActivitySpecs.swift in Sources */,
+				9D30E39320AB5D350009F346 /* FITHealthFitSpecs.swift in Sources */,
+				62BB32DE1D9E353100310CF9 /* TCXCommonSpecs.swift in Sources */,
+				62BB32DC1D9DB45D00310CF9 /* TCXParserSpecs.swift in Sources */,
+				048429E01EE681F70079488F /* NMEAGPWPLSpec.swift in Sources */,
+				9D969750200ACD6B00C0061C /* FITSegmentSpecs.swift in Sources */,
+				9D96975C200B5EF000C0061C /* FITCourseSpecs.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* GPXCommonSpecs.swift in Sources */,
+				6297A9C01C99611400686120 /* GPXParserSpecs.swift in Sources */,
+				9D8F1833200A45E2004CDECE /* FITGarminRunSpecs.swift in Sources */,
+				048429DC1EE57AC00079488F /* NMEAGPRMCSpec.swift in Sources */,
+				04206A191E1668CD00B428C2 /* GPXLegacyCommonSpecs.swift in Sources */,
+				04206A0A1E1657EF00B428C2 /* LOCWaypointSpecs.swift in Sources */,
+				6297A9A51C98C4D500686120 /* GPXRouteSpecs.swift in Sources */,
+				04206A1D1E1668CD00B428C2 /* GPXLegacyWaypointSpecs.swift in Sources */,
+				9DFB69C81FDD47D20010D5DE /* TRACKTrackSpecs.swift in Sources */,
+				9D969730200AA7E400C0061C /* FITGarminBikeRideSpecs.swift in Sources */,
+				04206A081E16560800B428C2 /* LOCCommonsSpecs.swift in Sources */,
+				9D969732200AA94D00C0061C /* FITSampleSpecs.swift in Sources */,
+				046664D61EE0BAE3009701B1 /* NMEAGPGGASpec.swift in Sources */,
+				9D969734200AAC0200C0061C /* FITMultiActivitiesSpecs.swift in Sources */,
+				9D96974A200ACB6F00C0061C /* FITStravaSegmentSpecs.swift in Sources */,
+				6297A9A71C98C69000686120 /* GPXTrackSpecs.swift in Sources */,
+				9D969756200B564200C0061C /* FITLiloSpecs.swift in Sources */,
+				04206A211E1670DD00B428C2 /* LOCParserSpecs.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF0E9DE24AA322B00A3E021 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF0EA5924AA325F00A3E021 /* TrackTypeVersion.swift in Sources */,
+				9DF0EA3E24AA325E00A3E021 /* Point.swift in Sources */,
+				9DF0EA4E24AA325E00A3E021 /* Point+NMEA.swift in Sources */,
+				9DF0EA4824AA325E00A3E021 /* NMEAParser.swift in Sources */,
+				9DF0EA4F24AA325E00A3E021 /* String+NMEA.swift in Sources */,
+				9DF0EA5A24AA325F00A3E021 /* TrackType.swift in Sources */,
+				9DF0EA4524AA325E00A3E021 /* TrackParser.swift in Sources */,
+				9DF0EA5124AA325E00A3E021 /* File+LOC.swift in Sources */,
+				9DF0EA5724AA325F00A3E021 /* Activity+FIT.swift in Sources */,
+				9DF0EA5424AA325F00A3E021 /* Course+FIT.swift in Sources */,
+				9DF0EA4124AA325E00A3E021 /* Course.swift in Sources */,
+				9DF0EA4B24AA325E00A3E021 /* GPWPLParser.swift in Sources */,
+				9DF0EA5F24AA325F00A3E021 /* String+CSV.swift in Sources */,
+				9DF0EA6124AA325F00A3E021 /* Tcxable.swift in Sources */,
+				9DF0EA4024AA325E00A3E021 /* TrackSegment.swift in Sources */,
+				9DF0EA6D24AA325F00A3E021 /* String+Parsing.swift in Sources */,
+				9DF0EA5E24AA325F00A3E021 /* AEXMLElement+Parsing.swift in Sources */,
+				9DF0EA5824AA325F00A3E021 /* Lap+FIT.swift in Sources */,
+				9DF0EA6924AA325F00A3E021 /* Gpxable.swift in Sources */,
+				9DF0EA3924AA325E00A3E021 /* Bounds.swift in Sources */,
+				9DF0EA4324AA325E00A3E021 /* Route.swift in Sources */,
+				9DF0EA6424AA325F00A3E021 /* File+TCX.swift in Sources */,
+				9DF0EA6C24AA325F00A3E021 /* Track+GPX.swift in Sources */,
+				9DF0EA3724AA325E00A3E021 /* CopyrightNotice.swift in Sources */,
+				9DF0EA5324AA325F00A3E021 /* Locable.swift in Sources */,
+				9DF0EA3A24AA325E00A3E021 /* Person.swift in Sources */,
+				9DF0EA4224AA325E00A3E021 /* Activity.swift in Sources */,
+				9DF0EA4924AA325E00A3E021 /* GPGGAParser.swift in Sources */,
+				9DF0EA6024AA325F00A3E021 /* Operators.swift in Sources */,
+				9DF0EA7324AA325F00A3E021 /* Link+GPX.swift in Sources */,
+				9DF0EA3824AA325E00A3E021 /* Track.swift in Sources */,
+				9DF0EA6A24AA325F00A3E021 /* Person+GPX.swift in Sources */,
+				9DF0EA4624AA325E00A3E021 /* TrackParseError.swift in Sources */,
+				9DF0EA3C24AA325E00A3E021 /* Version.swift in Sources */,
+				9DF0EA3D24AA325E00A3E021 /* Author.swift in Sources */,
+				9DF0EA3F24AA325E00A3E021 /* File.swift in Sources */,
+				9DF0EA6624AA325F00A3E021 /* Lap+TCX.swift in Sources */,
+				9DF0EA3B24AA325E00A3E021 /* Link.swift in Sources */,
+				9DF0EA5624AA325F00A3E021 /* File+FIT.swift in Sources */,
+				9DF0EA6224AA325F00A3E021 /* Author+TCX.swift in Sources */,
+				9DF0EA6524AA325F00A3E021 /* Point+TCX.swift in Sources */,
+				9DF0EA6824AA325F00A3E021 /* Activity+TCX.swift in Sources */,
+				9DF0EA5224AA325E00A3E021 /* Point+LOC.swift in Sources */,
+				9DF0EA6B24AA325F00A3E021 /* Point+GPX.swift in Sources */,
+				9DF0EA7224AA325F00A3E021 /* TrackSegment+GPX.swift in Sources */,
+				9DF0EA6E24AA325F00A3E021 /* File+GPX.swift in Sources */,
+				9DF0EA7024AA325F00A3E021 /* Bounds+GPX.swift in Sources */,
+				9DF0EA5C24AA325F00A3E021 /* Point+Codable.swift in Sources */,
+				9DF0EA5B24AA325F00A3E021 /* String+Range.swift in Sources */,
+				9DF0EA4724AA325E00A3E021 /* File+TRACK.swift in Sources */,
+				9DF0EA4424AA325E00A3E021 /* Lap.swift in Sources */,
+				9DF0EA4C24AA325E00A3E021 /* GPRMCParser.swift in Sources */,
+				9DF0EA7124AA325F00A3E021 /* Route+GPX.swift in Sources */,
+				9DF0EA6724AA325F00A3E021 /* Version+TCX.swift in Sources */,
+				9DF0EA4D24AA325E00A3E021 /* File+NMEA.swift in Sources */,
+				9DF0EA5024AA325E00A3E021 /* Link+LOC.swift in Sources */,
+				9DF0EA5524AA325F00A3E021 /* Point+FIT.swift in Sources */,
+				9DF0EA5D24AA325F00A3E021 /* String+DateParsing.swift in Sources */,
+				9DF0EA6F24AA325F00A3E021 /* CopyrightNotice+GPX.swift in Sources */,
+				9DF0EA6324AA325F00A3E021 /* Course+TCX.swift in Sources */,
+				9DF0EA4A24AA325E00A3E021 /* GPGLLParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DF0EA8124AA332A00A3E021 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DF0E9E124AA322B00A3E021 /* TrackKit iOS */;
+			targetProxy = 9DF0EA8024AA332A00A3E021 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		607FACED1AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		607FACEE1AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		607FACF31AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				DEVELOPMENT_TEAM = 743AM63YFU;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		607FACF41AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				DEVELOPMENT_TEAM = 743AM63YFU;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9DF0E9E724AA322B00A3E021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "TrackKit iOS/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.fousa.trackkit.ios;
+				PRODUCT_NAME = TrackKit;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9DF0E9E824AA322B00A3E021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "TrackKit iOS/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = be.fousa.trackkit.ios;
+				PRODUCT_NAME = TrackKit;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "TrackKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACED1AFB9204008FA782 /* Debug */,
+				607FACEE1AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACF31AFB9204008FA782 /* Debug */,
+				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DF0E9E924AA322B00A3E021 /* Build configuration list for PBXNativeTarget "TrackKit iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DF0E9E724AA322B00A3E021 /* Debug */,
+				9DF0E9E824AA322B00A3E021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9DF0EA7424AA329D00A3E021 /* XCRemoteSwiftPackageReference "AEXML" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tadija/AEXML.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+		9DF0EA7A24AA32F200A3E021 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		9DF0EA7D24AA330400A3E021 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9DF0EA7524AA329D00A3E021 /* AEXML */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DF0EA7424AA329D00A3E021 /* XCRemoteSwiftPackageReference "AEXML" */;
+			productName = AEXML;
+		};
+		9DF0EA7B24AA32F200A3E021 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DF0EA7A24AA32F200A3E021 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		9DF0EA7E24AA330400A3E021 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DF0EA7D24AA330400A3E021 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
+}

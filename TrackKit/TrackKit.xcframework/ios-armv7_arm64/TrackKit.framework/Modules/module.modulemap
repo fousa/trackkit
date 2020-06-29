@@ -1,0 +1,4 @@
+framework module TrackKit {
+  header "TrackKit-Swift.h"
+  requires objc
+}

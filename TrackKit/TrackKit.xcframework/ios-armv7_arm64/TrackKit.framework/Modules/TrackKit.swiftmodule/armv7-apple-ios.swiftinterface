@@ -1,0 +1,317 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)
+// swift-module-flags: -target armv7-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TrackKit
+import AEXML
+import CoreLocation
+import Fit
+import Foundation
+import Swift
+public enum TrackTypeVersion {
+  case gpx(Swift.String)
+  case loc(Swift.String)
+  case nmea(Swift.String)
+  case tcx(Swift.String)
+  case fit(Swift.String)
+  case track(Swift.String)
+  public init(type: TrackKit.TrackType, version: Swift.String?) throws
+  public var versionString: Swift.String? {
+    get
+  }
+}
+public enum Fix : Swift.String {
+  case none
+  case twoD
+  case threeD
+  case dgps
+  case pps
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum NavigationReceiverWarning : Swift.String {
+  case ok
+  case warning
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum GPSQuality : Swift.String {
+  case invalid
+  case gpsFix
+  case differentialGPSFix
+  case realTimeKinematicFixed
+  case realTimeKinematicFloat
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum RecordType : Swift.String {
+  case gga
+  case rmc
+  case gll
+  case wpl
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+final public class Point : Swift.Codable {
+  final public var coordinate: CoreLocation.CLLocationCoordinate2D?
+  final public var elevation: Swift.Double?
+  final public var distance: Swift.Double?
+  final public var time: Foundation.Date?
+  final public var magneticVariation: Swift.Double?
+  final public var meanSeaLevelHeight: Swift.Double?
+  final public var name: Swift.String?
+  final public var comment: Swift.String?
+  final public var description: Swift.String?
+  final public var source: Swift.String?
+  final public var link: TrackKit.Link?
+  final public var symbol: Swift.String?
+  final public var type: Swift.String?
+  final public var fix: TrackKit.Fix?
+  final public var satelites: Swift.Int?
+  final public var horizontalDilutionOfPrecision: Swift.Double?
+  final public var verticalDilutionOfPrecision: Swift.Double?
+  final public var positionDilutionOfPrecision: Swift.Double?
+  final public var ageOfTheGpxData: Swift.Double?
+  final public var dgpsStationType: Swift.Int?
+  final public var numberOfSatellites: Swift.Int?
+  final public var heightOfGeoid: Swift.Double?
+  final public var timeSinceLastUpdate: Swift.Double?
+  final public var stationId: Swift.String?
+  final public var gpsQuality: TrackKit.GPSQuality?
+  final public var recordType: TrackKit.RecordType?
+  final public var navigationReceiverWarning: TrackKit.NavigationReceiverWarning?
+  final public var trackAngle: Swift.Double?
+  final public var heartRate: Swift.Int?
+  final public var cadence: Swift.Int?
+  final public var airTemperature: Swift.Double?
+  final public var waterTemperature: Swift.Double?
+  final public var depth: Swift.Double?
+  final public var speed: Swift.Double?
+  final public var course: CoreLocation.CLLocationDirection?
+  final public var bearing: Swift.Int?
+  final public var horizontalAccuracy: Swift.Double?
+  final public var verticalAccuracy: Swift.Double?
+  public init()
+  public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+extension String {
+}
+public enum TrackType : Swift.String {
+  case gpx
+  case loc
+  case nmea
+  case tcx
+  case fit
+  case track
+  public init?(fileExtension: Swift.String)
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct TrackParser {
+  public init(data: Foundation.Data?, type: TrackKit.TrackType) throws
+  public func parse() throws -> TrackKit.File
+}
+public enum Intentity : Swift.String {
+  case active
+  case resting
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class Course {
+  final public var name: Swift.String?
+  final public var totalTime: Swift.Double?
+  final public var totalDistance: Swift.Double?
+  final public var beginPosition: CoreLocation.CLLocationCoordinate2D?
+  final public var endPosition: CoreLocation.CLLocationCoordinate2D?
+  final public var intensity: TrackKit.Intentity?
+  final public var points: [TrackKit.Point]?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class TrackSegment {
+  final public var points: [TrackKit.Point]?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class Bounds {
+  final public var minimumCoordinate: CoreLocation.CLLocationCoordinate2D?
+  final public var maximumCoordinate: CoreLocation.CLLocationCoordinate2D?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class Route {
+  final public var name: Swift.String?
+  final public var comment: Swift.String?
+  final public var description: Swift.String?
+  final public var source: Swift.String?
+  final public var link: TrackKit.Link?
+  final public var number: Swift.Int?
+  final public var type: Swift.String?
+  final public var points: [TrackKit.Point]?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class CopyrightNotice {
+  final public var author: Swift.String?
+  final public var year: Swift.Int?
+  final public var license: Foundation.URL?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class Person {
+  final public var name: Swift.String?
+  final public var email: Swift.String?
+  final public var link: TrackKit.Link?
+  @objc deinit
+}
+public enum Sport : Swift.String {
+  case running
+  case biking
+  case other
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class Activity {
+  final public var identifier: Swift.String?
+  final public var sport: TrackKit.Sport?
+  final public var laps: [TrackKit.Lap]?
+  @objc deinit
+}
+precedencegroup OperatorPresedenceGroup {
+  associativity: left
+  higherThan: MultiplicationPrecedence
+}
+infix operator <~ : OperatorPresedenceGroup
+@_hasMissingDesignatedInitializers final public class Track {
+  final public var name: Swift.String?
+  final public var comment: Swift.String?
+  final public var description: Swift.String?
+  final public var source: Swift.String?
+  final public var link: TrackKit.Link?
+  final public var number: Swift.Int?
+  final public var type: Swift.String?
+  final public var segments: [TrackKit.TrackSegment]?
+  final public var points: [TrackKit.Point]?
+  @objc deinit
+}
+public enum TrackParseError : Swift.Error {
+  case invalidData
+  case invalidFormat
+  case invalidVersion
+  public static func == (a: TrackKit.TrackParseError, b: TrackKit.TrackParseError) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+@_hasMissingDesignatedInitializers final public class Version {
+  final public var versionNumber: Swift.String?
+  final public var buildNumber: Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class Author {
+  final public var name: Swift.String?
+  final public var version: TrackKit.Version?
+  final public var language: Swift.String?
+  final public var partNumber: Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class File {
+  final public let type: TrackKit.TrackType
+  final public let typeVersion: TrackKit.TrackTypeVersion
+  final public var creator: Swift.String?
+  final public var source: Swift.String?
+  final public var name: Swift.String?
+  final public var description: Swift.String?
+  final public var author: TrackKit.Person?
+  final public var applicationAuthor: TrackKit.Author?
+  final public var copyrightNotice: TrackKit.CopyrightNotice?
+  final public var link: TrackKit.Link?
+  final public var time: Foundation.Date?
+  final public var keywords: [Swift.String]?
+  final public var bounds: TrackKit.Bounds?
+  final public var waypoints: [TrackKit.Point]?
+  final public var routes: [TrackKit.Route]?
+  final public var tracks: [TrackKit.Track]?
+  final public var courses: [TrackKit.Course]?
+  final public var activities: [TrackKit.Activity]?
+  final public var records: [TrackKit.Point]?
+  final public var locations: [TrackKit.Point]?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class Link {
+  final public var link: Swift.String?
+  final public var text: Swift.String?
+  final public var mimeType: Swift.String?
+  @objc deinit
+}
+extension Point {
+  final public func encode(to encoder: Swift.Encoder) throws
+}
+public enum TriggerMethod : Swift.String {
+  case manual
+  case distance
+  case location
+  case time
+  case heartRate
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class Lap {
+  final public var startTime: Foundation.Date?
+  final public var totalTime: Swift.Double?
+  final public var totalDistance: Swift.Double?
+  final public var maximumSpeed: Swift.Double?
+  final public var calories: Swift.Int?
+  final public var averageHeartRate: Swift.Int?
+  final public var maximumHeartRate: Swift.Int?
+  final public var cadence: Swift.Int?
+  final public var intensity: TrackKit.Intentity?
+  final public var triggerMethod: TrackKit.TriggerMethod?
+  final public var points: [TrackKit.Point]?
+  @objc deinit
+}
+extension TrackKit.Fix : Swift.Equatable {}
+extension TrackKit.Fix : Swift.Hashable {}
+extension TrackKit.Fix : Swift.RawRepresentable {}
+extension TrackKit.NavigationReceiverWarning : Swift.Equatable {}
+extension TrackKit.NavigationReceiverWarning : Swift.Hashable {}
+extension TrackKit.NavigationReceiverWarning : Swift.RawRepresentable {}
+extension TrackKit.GPSQuality : Swift.Equatable {}
+extension TrackKit.GPSQuality : Swift.Hashable {}
+extension TrackKit.GPSQuality : Swift.RawRepresentable {}
+extension TrackKit.RecordType : Swift.Equatable {}
+extension TrackKit.RecordType : Swift.Hashable {}
+extension TrackKit.RecordType : Swift.RawRepresentable {}
+extension TrackKit.TrackType : Swift.Equatable {}
+extension TrackKit.TrackType : Swift.Hashable {}
+extension TrackKit.TrackType : Swift.RawRepresentable {}
+extension TrackKit.Intentity : Swift.Equatable {}
+extension TrackKit.Intentity : Swift.Hashable {}
+extension TrackKit.Intentity : Swift.RawRepresentable {}
+extension TrackKit.Sport : Swift.Equatable {}
+extension TrackKit.Sport : Swift.Hashable {}
+extension TrackKit.Sport : Swift.RawRepresentable {}
+extension TrackKit.TrackParseError : Swift.Equatable {}
+extension TrackKit.TrackParseError : Swift.Hashable {}
+extension TrackKit.TriggerMethod : Swift.Equatable {}
+extension TrackKit.TriggerMethod : Swift.Hashable {}
+extension TrackKit.TriggerMethod : Swift.RawRepresentable {}

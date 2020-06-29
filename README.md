@@ -1,9 +1,6 @@
 TrackKit
 ========
 
-[![CI Status](http://img.shields.io/travis/fousa/trackkit.svg?style=flat)](https://travis-ci.org/fousa/trackkit) [![Version](https://img.shields.io/cocoapods/v/TrackKit.svg?style=flat)](http://cocoapods.org/pods/TrackKit) [![License](https://img.shields.io/cocoapods/l/TrackKit.svg?style=flat)](http://cocoapods.org/pods/TrackKit) [![Platform](https://img.shields.io/cocoapods/p/TrackKit.svg?style=flat)](http://cocoapods.org/pods/TrackKit)
-[![Language Swift 3.0](https://img.shields.io/badge/Language-Swift%203.0-orange.svg?style=flat)](https://swift.org) [![Language Swift 4.0](https://img.shields.io/badge/Language-Swift%204.0-orange.svg?style=flat)](https://swift.org)
-
 `TrackKit` allows you to easily parse log files in Swift.
 
 Supported Formats
@@ -58,17 +55,6 @@ The `TRACK`format is a custom format that is created by yours truly. It looks to
 	}
 ]
 ```
-
-Integration
-===========
-
-Add this pod to your `Podfile` by adding the following line:
-
-``` ruby
-pod 'TrackKit', '~> 2.4'
-```
-
-_It's important to add the version to the `pod 'TrackKit'`, this way you are sure that a next update of the pod will not break your code._
 
 Usage
 =====
@@ -212,8 +198,7 @@ Updating the FIT framework
 --------------------------
 
 1. Make the changes to the `Fit/Fit.xcodeproj`.
-2. Build the `Fit macOS` scheme.
-3. Build the `Fit Universal iOS` scheme.
+2. Run the `Fit/build.sh` script.
 4. Done.
 
 License
