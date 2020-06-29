@@ -1,0 +1,6 @@
+framework module Fit {
+  umbrella header "Fit.h"
+
+  export *
+  module * { export * }
+}

@@ -36,3 +36,4 @@ test_output
 .build
 xcov_report
 xcshareddata
+builds
