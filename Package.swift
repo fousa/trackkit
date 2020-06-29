@@ -3,6 +3,13 @@ import PackageDescription
 
 let package: Package = .init(
     name: "TrackKit",
+    platforms: [
+        .macOS(.v10_11), 
+        .iOS(.v12)
+    ],
+    products: [
+        .library(name: "TrackKit", targets: ["TrackKit"])
+    ],
     dependencies: [
         .package(url: "https://github.com/tadija/AEXML.git", from: "4.5.0")
     ],
