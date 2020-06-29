@@ -14,10 +14,10 @@ FOUNDATION_EXPORT double Fit_VersionNumber;
 //! Project version string for Fit.
 FOUNDATION_EXPORT const unsigned char Fit_VersionString[];
 
-#import "FitReader.h"
+#import "../FitReader.h"
 
-#import "FITFile.h"
-#import "FITActivity.h"
-#import "FITCourse.h"
-#import "FITLap.h"
-#import "FITPoint.h"
+#import "../FITFile.h"
+#import "../FITActivity.h"
+#import "../FITCourse.h"
+#import "../FITLap.h"
+#import "../FITPoint.h"
